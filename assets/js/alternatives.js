@@ -56,9 +56,10 @@
         if (ok) shown++;
       });
 
+      var T = window.EveryItEuro.strings.alternatives;
       countEl.textContent = shown === cards.length
-        ? 'Showing all ' + cards.length + ' entries'
-        : 'Showing ' + shown + ' of ' + cards.length + ' entries';
+        ? window.EveryItEuro.fmt(T.showingAll, { total: cards.length })
+        : window.EveryItEuro.fmt(T.showingSome, { shown: shown, total: cards.length });
       emptyEl.hidden = shown !== 0;
       syncUrl(q, c, k);
     }

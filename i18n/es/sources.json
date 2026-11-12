@@ -1,0 +1,173 @@
+{
+  "nis2-directive": {
+    "summary": "Los art. 21, apartados 2, letra d), y 3, exigen a las entidades esenciales e importantes gestionar la seguridad de la cadena de suministro, y el art. 22 permite evaluaciones coordinadas de riesgos de seguridad a escala de la UE de las cadenas de suministro de TIC críticas, incluidos factores de riesgo no técnicos (considerandos 90-91)."
+  },
+  "nis2-commission-page": {
+    "summary": "Página de la Comisión que confirma que la NIS2 abarca 18 sectores críticos, el plazo de transposición del 17 de octubre de 2024 y la rendición de cuentas de la alta dirección."
+  },
+  "cyber-resilience-act": {
+    "summary": "El art. 71 aplica las obligaciones de notificación de los fabricantes (art. 14) a partir del 11 de septiembre de 2026 y el Reglamento en su conjunto a partir del 11 de diciembre de 2027; el art. 13, apartado 5, exige diligencia debida al integrar componentes de terceros."
+  },
+  "cra-commission-page": {
+    "summary": "Página de la Comisión que confirma que el CRA entró en vigor el 10 de diciembre de 2024, con obligaciones de notificación a partir del 11 de septiembre de 2026 y obligaciones principales a partir del 11 de diciembre de 2027."
+  },
+  "cybersecurity-act-2019": {
+    "summary": "Establece el mandato de ENISA y el marco de certificación de la ciberseguridad de la UE; el art. 56, apartado 2, establece que la certificación es voluntaria salvo que el Derecho de la Unión o de los Estados miembros disponga otra cosa."
+  },
+  "csa2-press-release": {
+    "summary": "Anuncia la propuesta de revisión del Reglamento sobre la Ciberseguridad con un marco de seguridad para una cadena de suministro de TIC de confianza en los 18 sectores críticos de la UE y la reducción obligatoria de riesgos en las redes móviles respecto de proveedores de alto riesgo de terceros países; sujeta a la aprobación del Parlamento y del Consejo."
+  },
+  "csa2-qanda": {
+    "summary": "Explica el marco propuesto de seguridad de la cadena de suministro de TIC frente a la «injerencia extranjera indebida y las dependencias críticas», e indica que «se espera que se reanuden» los trabajos sobre el esquema de nube EUCS (EUCS no adoptado)."
+  },
+  "gdpr": {
+    "summary": "El art. 28, apartado 1, exige a los responsables del tratamiento recurrir únicamente a encargados que ofrezcan garantías suficientes; el art. 48 establece que las resoluciones de órganos jurisdiccionales o autoridades de terceros países que exijan la comunicación de datos personales solo se reconocen o son ejecutables si se basan en un acuerdo internacional."
+  },
+  "data-act": {
+    "summary": "Aplicable a partir del 12 de septiembre de 2025; los art. 23 a 31 exigen a los proveedores de nube eliminar los obstáculos al cambio de proveedor, el art. 29 prohíbe las tarifas por cambio a partir del 12 de enero de 2027 y el art. 32 exige medidas contra el acceso gubernamental ilícito de terceros países a datos no personales."
+  },
+  "data-act-commission-page": {
+    "summary": "Página de la Comisión que confirma que el Reglamento de Datos comenzó a aplicarse el 12 de septiembre de 2025, incluidas las normas sobre el cambio entre proveedores de servicios de tratamiento de datos."
+  },
+  "dora": {
+    "summary": "Aplicable a partir del 17 de enero de 2025; los art. 28 a 30 exigen una estrategia de riesgo de TIC de terceros, una evaluación del riesgo de concentración, la consideración del Derecho de terceros países en materia de aplicación de la ley y estrategias de salida; el considerando 82 establece que DORA no impone ninguna obligación de localización de datos."
+  },
+  "enisa-homepage": {
+    "summary": "Página de inicio de la Agencia de la Unión Europea para la Ciberseguridad, que prepara los esquemas de certificación de la UE y apoya a los Estados miembros y a las instituciones de la UE."
+  },
+  "eucc-implementing-regulation": {
+    "summary": "Adopta el primer esquema de certificación de la ciberseguridad de la UE (EUCC) para productos de TIC, aplicable a partir del 27 de febrero de 2025."
+  },
+  "eu-certification-framework": {
+    "summary": "Indica que el EUCC se aplica en toda la UE con carácter voluntario y menciona un esquema para servicios en la nube (EUCS) entre los esquemas candidatos solicitados, es decir, aún no adoptado."
+  },
+  "eu-5g-toolbox": {
+    "summary": "Conjunto común de medidas estratégicas y técnicas de los Estados miembros para la seguridad del 5G, incluidas restricciones a los proveedores de alto riesgo, adoptado el 29 de enero de 2020."
+  },
+  "5g-communication-2023": {
+    "summary": "La Comisión afirma que Huawei y ZTE «representan, de hecho, riesgos sustancialmente mayores que otros proveedores de 5G» y que las restricciones impuestas por los Estados miembros sobre ellos están justificadas."
+  },
+  "procurement-directive-2014-24": {
+    "summary": "El art. 18, apartado 1, exige un trato igualitario y no discriminatorio de los operadores económicos; el art. 25 exige, para la contratación cubierta, un trato no menos favorable a los operadores de los signatarios del ACP y de otros acuerdos."
+  },
+  "wto-gpa": {
+    "summary": "Describe el ACP como un tratado plurilateral vinculante que abre recíprocamente los mercados de contratación pública entre sus 22 partes."
+  },
+  "wto-gpa-parties": {
+    "summary": "Incluye a la UE (en nombre de sus 27 Estados miembros) y a los Estados Unidos entre las partes del ACP, por lo que los proveedores estadounidenses tienen acceso, en virtud del tratado, a la contratación pública cubierta de la UE."
+  },
+  "cjeu-kolin": {
+    "summary": "Declara que los operadores de terceros países que no tienen un acuerdo de contratación pública con la UE no tienen derecho a un trato «no menos favorable» y que las entidades adjudicadoras pueden establecer para ellos condiciones diferenciadas."
+  },
+  "public-procurement-act-press": {
+    "summary": "Anuncia la propuesta de Reglamento de Contratación Pública con disposiciones sobre seguridad y resiliencia y un marco horizontal de preferencia europea «en consonancia con las obligaciones jurídicas internacionales de la Unión»; deberá ser negociado por el Parlamento y el Consejo."
+  },
+  "public-procurement-act-qanda": {
+    "summary": "Explica que las normas de preferencia europea distinguen entre los operadores cubiertos por el ACP de la OMC o por acuerdos de libre comercio y los no cubiertos, y que la Comisión podría hacer obligatorios los requisitos de preferencia mediante actos delegados en casos definidos."
+  },
+  "public-procurement-act-proposal": {
+    "summary": "Página oficial de la propuesta de la Comisión COM(2026) 590, que sustituiría las directivas de contratación pública de 2014 por un único reglamento."
+  },
+  "draghi-report-part-a": {
+    "summary": "Afirma que tres hiperescaladores estadounidenses representan más del 65 % del mercado europeo de la nube y que la dependencia de Europa de servicios en la nube gestionados por empresas estadounidenses es «masiva» (pp. 24 y 57 de la edición impresa)."
+  },
+  "draghi-report-part-b": {
+    "summary": "Recomienda una política única a escala de la UE para la contratación de servicios en la nube por parte de las administraciones públicas que exija «como mínimo, el control soberano de la UE de los elementos clave de seguridad y cifrado» (p. 84)."
+  },
+  "draghi-report-page": {
+    "summary": "Página de la Comisión que aloja las partes A y B del informe Draghi."
+  },
+  "digital-decade-decision": {
+    "summary": "Fija objetivos para 2030, entre ellos al menos 10 000 nodos periféricos (edge) climáticamente neutros y altamente seguros y que al menos el 75 % de las empresas de la UE adopten la nube, la IA o el big data."
+  },
+  "state-digital-decade-2026": {
+    "summary": "Afirma que «las dependencias de proveedores de fuera de la UE siguen siendo significativas en los servicios en la nube, la ciberseguridad y otras tecnologías estratégicas» e informa de que el 82 % de los europeos está a favor de reducir la dependencia de proveedores de fuera de la UE (Eurobarómetro Especial de 2026)."
+  },
+  "tech-sovereignty-press": {
+    "summary": "Presenta el paquete de soberanía tecnológica (Ley de Chips 2.0, Ley de Desarrollo de la Nube y la IA, Estrategia de Código Abierto, hoja de ruta energética) y señala que Europa «sigue dependiendo en gran medida de proveedores de fuera de la Unión Europea para las tecnologías digitales básicas»."
+  },
+  "tech-sovereignty-qanda": {
+    "summary": "Afirma que «en este momento, Europa depende demasiado de proveedores de fuera de la UE, lo que genera riesgos» y que la CADA pretende definir con claridad la soberanía de la UE en materia de nube e IA («se acabó el sovereign washing»)."
+  },
+  "cada-proposal": {
+    "summary": "Página oficial de la propuesta COM(2026) 502, que crearía un marco único a escala de la UE para evaluar la soberanía en materia de nube e IA; sigue siendo una propuesta en el marco del procedimiento legislativo ordinario."
+  },
+  "france-doctrine-cloud-au-centre": {
+    "summary": "Regla 9 del Estado francés: la nube comercial para datos especialmente sensibles debe contar con la cualificación SecNumCloud (o una cualificación europea equivalente) y ser inmune al acceso no autorizado de autoridades públicas de terceros países."
+  },
+  "anssi-secnumcloud": {
+    "summary": "Página de la ANSSI sobre la cualificación SecNumCloud para proveedores de nube de confianza (la URL funciona, pero está protegida contra bots; contenido no verificado automáticamente, compruébelo manualmente antes de citarlo)."
+  },
+  "bsi-c5": {
+    "summary": "Describe el C5 como un catálogo de criterios de seguridad de referencia para servicios en la nube verificados mediante el examen de un auditor, en el que los clientes son responsables de evaluar los informes; revisado como C5:2026."
+  },
+  "us-18-usc-2713": {
+    "summary": "Disposición de la CLOUD Act (Pub. L. 115-141, div. V) que obliga a los proveedores a divulgar los datos que estén en su «posesión, custodia o control», con independencia de que se encuentren dentro o fuera de los Estados Unidos."
+  },
+  "doj-cloud-act-resources": {
+    "summary": "El Departamento de Justicia de EE. UU. afirma que la CLOUD Act se promulgó en marzo de 2018 para agilizar el acceso a la información electrónica en poder de proveedores globales con sede en EE. UU."
+  },
+  "us-50-usc-1881a": {
+    "summary": "Autoriza la vigilancia de personas que se crea razonablemente que se encuentran fuera de los Estados Unidos para obtener información de inteligencia extranjera, con asistencia obligatoria de los proveedores de servicios de comunicaciones electrónicas."
+  },
+  "cyberscoop-702-extension": {
+    "summary": "Informa de una prórroga provisional de 45 días de la Sección 702 de la FISA aprobada el 30 de abril de 2026; situación posterior a mediados de junio de 2026 no verificada."
+  },
+  "cjeu-schrems-ii": {
+    "summary": "Schrems II: el Escudo de la Privacidad se invalidó porque los programas de vigilancia estadounidenses no se limitaban a lo estrictamente necesario y carecían de vías de recurso efectivas; las cláusulas contractuales tipo siguen siendo válidas, sujetas a una evaluación caso por caso."
+  },
+  "dpf-adequacy-decision": {
+    "summary": "Decisión de adecuación vigente que permite la transferencia de datos personales a empresas estadounidenses certificadas en el marco del Marco de Privacidad de Datos UE-EE. UU."
+  },
+  "general-court-latombe": {
+    "summary": "El Tribunal General confirmó la decisión de adecuación del DPF y señaló que la Comisión debe supervisar continuamente el Derecho estadounidense y puede suspender, modificar o derogar la decisión si este cambia."
+  },
+  "ap-icc-sanctions": {
+    "summary": "AP informó, citando a personal de la CPI, de que tras las sanciones estadounidenses Microsoft canceló la dirección de correo electrónico del fiscal de la CPI, lo que obligó a pasar a Proton Mail; Microsoft no respondió a AP en ese momento."
+  },
+  "heise-microsoft-denies-icc": {
+    "summary": "Recoge la declaración del presidente de Microsoft, Brad Smith, según la cual las medidas relativas al funcionario sancionado no incluyeron en modo alguno la suspensión de servicios a la CPI."
+  },
+  "register-microsoft-icc-correction": {
+    "summary": "Informa de que Microsoft pidió al Parlamento del Reino Unido que corrigiera el testimonio de un testigo y reiteró: «En ningún momento Microsoft cesó ni suspendió sus servicios a la CPI»."
+  },
+  "register-icc-opendesk": {
+    "summary": "Informa de que la CPI confirmó que está pasando de Microsoft Office a openDesk, la suite de código abierto proporcionada por ZenDiS."
+  },
+  "senat-microsoft-france-hearing": {
+    "summary": "Transcripción oficial: preguntado bajo juramento si los datos de los ciudadanos franceses nunca se transmitirían a raíz de un requerimiento estadounidense sin el consentimiento de las autoridades francesas, el director de asuntos públicos y jurídicos de Microsoft Francia respondió «Non, je ne peux pas le garantir»."
+  },
+  "microsoft-european-digital-commitments": {
+    "summary": "Compromiso de Microsoft de impugnar ante los tribunales cualquier orden gubernamental de suspender o cesar las operaciones europeas en la nube y de hacer que este compromiso sea vinculante en los contratos con los gobiernos europeos y la Comisión."
+  },
+  "schleswig-holstein-2024": {
+    "summary": "Decisión del Gobierno regional que convierte LibreOffice en el software ofimático estándar para unos 30 000 empleados del estado federado, con Linux, Nextcloud y Open-Xchange/Thunderbird previstos como pasos posteriores."
+  },
+  "heise-schleswig-holstein-email": {
+    "summary": "Informa de la finalización de la migración de más de 40 000 buzones de Microsoft Exchange/Outlook a Open-Xchange y Thunderbird, y de que el ministro reconoció problemas en la migración."
+  },
+  "heise-denmark-libreoffice": {
+    "summary": "Recoge el anuncio de la ministra danesa de Digitalización, Caroline Stage (entrevista con Politiken), de que el ministerio pasará de Microsoft Office a LibreOffice; posteriormente se informó de que la parte relativa a Linux había sido un malentendido."
+  },
+  "opendesk": {
+    "summary": "Página oficial de openDesk, una suite ofimática y de colaboración de código abierto para la administración pública centrada en la soberanía digital."
+  },
+  "zendis": {
+    "summary": "Centro federal alemán que ayuda a las administraciones públicas a reducir dependencias críticas mediante el código abierto (openCode, openDesk)."
+  },
+  "la-suite-numerique": {
+    "summary": "Suite de puesto de trabajo de código abierto del Estado francés que, según se indica, utilizan mensualmente más de 500 000 empleados públicos en 15 ministerios."
+  },
+  "gaia-x": {
+    "summary": "Sitio oficial de Gaia-X, la iniciativa europea para ecosistemas de datos y nube federados y de confianza."
+  },
+  "ipcei-cis": {
+    "summary": "IPCEI-CIS: hasta 1.200 millones de € de financiación pública de siete Estados miembros, con los que se espera movilizar 1.400 millones de € de inversión privada; 19 empresas desarrollan un continuo nube-edge multiproveedor de código abierto."
+  },
+  "crowdstrike-outage-microsoft": {
+    "summary": "Microsoft estimó que la actualización defectuosa de CrowdStrike afectó a 8,5 millones de dispositivos Windows, menos del uno por ciento de todos los equipos Windows."
+  },
+  "cer-directive": {
+    "summary": "La Directiva CER entró en vigor el 16 de enero de 2023, debía transponerse a más tardar el 17 de octubre de 2024 y abarca once sectores, entre ellos la energía, el transporte, el agua potable, la infraestructura digital y la administración pública."
+  }
+}

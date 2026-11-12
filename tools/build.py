@@ -3,11 +3,17 @@
 Every IT Euro — static build helper (development only; not needed on GitHub Pages).
 
 What it does
-  1. Injects the shared header and footer into every page (between <!-- BEGIN:header --> markers).
+  1. Injects the shared header (with the language switcher) and footer into every page.
   2. Pre-renders data/companies.json into alternatives.html and data/sources.json into sources.html,
-     so the content is readable without JavaScript. JavaScript only adds filtering.
-  3. Rewrites canonical / Open Graph URLs, sitemap.xml and robots.txt from site.config.json.
-  4. Validates: JSON structure, internal links and anchors, asset paths, and citation ids.
+     in every language, so the content is readable without JavaScript. JavaScript only adds filtering.
+  3. Rewrites canonical / Open Graph / hreflang URLs, sitemap.xml and robots.txt from site.config.json.
+  4. Validates: JSON structure, translations, internal links and anchors, asset paths, and citation ids.
+
+Languages
+  English pages live in the repository root. Each translation lives in its own folder (de/, fr/, ...)
+  with the same file names. Interface strings: i18n/<lang>/ui.json. Translated data fields:
+  i18n/<lang>/companies*.json, watchlist.json and sources.json. JavaScript strings:
+  assets/js/i18n/<lang>.js. A language is built when its folder exists.
 
 Usage
   python tools/build.py           # build and validate
@@ -17,6 +23,8 @@ from __future__ import annotations
 
 import html
 import json
+import math
+import posixpath
 import re
 import sys
 from datetime import date
@@ -24,47 +32,58 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 PAGES = [
-    # file, nav label, sitemap priority
-    ("index.html", "Home", "1.0"),
-    ("why-europe.html", "Why Europe", "0.9"),
-    ("cybersecurity.html", "Cybersecurity", "0.9"),
-    ("alternatives.html", "European Alternatives", "0.9"),
-    ("procurement.html", "Procurement", "0.9"),
-    ("sovereignty.html", "Sovereignty Assessment", "0.8"),
-    ("sources.html", "Sources", "0.6"),
-    ("about.html", "About", "0.5"),
+    # file, sitemap priority
+    ("index.html", "1.0"),
+    ("why-europe.html", "0.9"),
+    ("cybersecurity.html", "0.9"),
+    ("alternatives.html", "0.9"),
+    ("procurement.html", "0.9"),
+    ("sovereignty.html", "0.8"),
+    ("sources.html", "0.6"),
+    ("about.html", "0.5"),
 ]
-EXTRA_PAGES = ["404.html"]
+EXTRA_PAGES = ["404.html"]  # English only: GitHub Pages serves the root 404.html for every missing URL.
+
+# Code, native name, HTML lang / hreflang, Open Graph locale. English must stay first (the default).
+LANGUAGES = [
+    ("en", "English", "en", "en_GB"),
+    ("de", "Deutsch", "de", "de_DE"),
+    ("fr", "Français", "fr", "fr_FR"),
+    ("es", "Español", "es", "es_ES"),
+    ("it", "Italiano", "it", "it_IT"),
+    ("pl", "Polski", "pl", "pl_PL"),
+]
+DEFAULT_LANG = "en"
 
 CATEGORIES = [
     "Cybersecurity", "Network Security", "OT Security", "SIEM", "Endpoint Security", "Identity", "PAM",
     "Encryption", "Cloud", "Hosting", "Collaboration", "Email", "Operating Systems", "Infrastructure",
     "Monitoring", "Backup", "Open Source",
 ]
-CLASSIFICATIONS = {
-    "eu-hq": "EU/EEA headquartered",
-    "european-hq": "European headquartered (non-EU)",
-    "european-subsidiary": "Part of a European group",
-    "european-open-source": "European open-source project",
-    "mixed": "Mixed / international ownership",
-}
+CLASSIFICATIONS = ["eu-hq", "european-hq", "european-subsidiary", "european-open-source", "mixed"]
 TRISTATE = {"openSource": {"Yes", "No", "Partly"}, "onPremises": {"Yes", "No", "Optional"}, "cloud": {"Yes", "No", "Optional"}}
 COMPANY_KEYS = [
     "id", "name", "country", "countryCode", "headquarters", "parentCompany", "ownership", "classification",
     "classificationNote", "categories", "description", "products", "deployment", "openSource", "onPremises",
     "cloud", "website", "evaluating", "sources", "lastVerified",
 ]
+# Free-text company fields that are translated in i18n/<lang>/companies*.json.
+COMPANY_TEXT_FIELDS = ["headquarters", "parentCompany", "ownership", "classificationNote", "description", "evaluating"]
 
 LOGO = (
     '<svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">'
     '<rect width="40" height="40" rx="9" fill="#003399"/>'
     + "".join(
-        f'<circle cx="{20 + 12.5 * __import__("math").cos(i * 3.14159265 / 6):.2f}" '
-        f'cy="{20 + 12.5 * __import__("math").sin(i * 3.14159265 / 6):.2f}" r="1.9" fill="#FFCC00"/>'
+        f'<circle cx="{20 + 12.5 * math.cos(i * 3.14159265 / 6):.2f}" '
+        f'cy="{20 + 12.5 * math.sin(i * 3.14159265 / 6):.2f}" r="1.9" fill="#FFCC00"/>'
         for i in range(12)
     )
     + '<path d="M20 12.5l6 2.4v4.6c0 4-2.6 6.9-6 8-3.4-1.1-6-4-6-8v-4.6z" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>'
     "</svg>"
+)
+GLOBE = (
+    '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="lang-icon"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/>'
+    '<path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>'
 )
 
 errors: list[str] = []
@@ -74,18 +93,129 @@ def esc(s) -> str:
     return html.escape(str(s), quote=True)
 
 
+def fmt(template: str, **values) -> str:
+    return re.sub(r"\{(\w+)\}", lambda m: str(values.get(m.group(1), m.group(0))), template)
+
+
+def page_path(lang: str, file: str) -> str:
+    """Repository-relative path of a page in a language."""
+    return file if lang == DEFAULT_LANG else f"{lang}/{file}"
+
+
+# --------------------------------------------------------------------------- strings
+def load_json(rel: str, required: bool = True):
+    p = ROOT / rel
+    if not p.exists():
+        if required:
+            errors.append(f"{rel}: file missing")
+        return None
+    try:
+        return json.loads(p.read_text(encoding="utf-8"))
+    except Exception as e:  # noqa: BLE001
+        errors.append(f"{rel}: invalid JSON ({e})")
+        return None
+
+
+def check_same_keys(ref, other, where: str, path: str = "") -> None:
+    """Every key of the English strings must exist in a translation (and vice versa)."""
+    if isinstance(ref, dict):
+        if not isinstance(other, dict):
+            errors.append(f"{where}: '{path}' should be an object")
+            return
+        for k in ref:
+            if k not in other:
+                errors.append(f"{where}: missing key '{path}{k}'")
+            else:
+                check_same_keys(ref[k], other[k], where, f"{path}{k}.")
+        for k in other:
+            if k not in ref:
+                errors.append(f"{where}: unknown key '{path}{k}'")
+    elif isinstance(ref, str) and not isinstance(other, str):
+        errors.append(f"{where}: '{path.rstrip('.')}' should be a string")
+    elif isinstance(ref, str):
+        if set(re.findall(r"\{\w+\}", ref)) != set(re.findall(r"\{\w+\}", other)):
+            errors.append(f"{where}: placeholders differ in '{path.rstrip('.')}'")
+
+
+def load_ui(lang: str, ref: dict | None) -> dict:
+    data = load_json(f"i18n/{lang}/ui.json") or {}
+    if ref is not None and data:
+        check_same_keys(ref, data, f"i18n/{lang}/ui.json")
+    return data
+
+
+def load_data_translations(lang: str, companies, watchlist, sources) -> dict:
+    """Translated data fields for a language, validated for completeness."""
+    out = {"companies": {}, "watchlist": {}, "sources": {}}
+    if lang == DEFAULT_LANG:
+        return out
+    folder = ROOT / "i18n" / lang
+    for p in sorted(folder.glob("companies*.json")):
+        part = load_json(p.relative_to(ROOT).as_posix()) or {}
+        for cid, fields in part.items():
+            if cid in out["companies"]:
+                errors.append(f"i18n/{lang}: company '{cid}' translated twice")
+            out["companies"][cid] = fields
+    out["watchlist"] = load_json(f"i18n/{lang}/watchlist.json") or {}
+    out["sources"] = load_json(f"i18n/{lang}/sources.json") or {}
+
+    for c in companies:
+        t = out["companies"].get(c["id"])
+        if t is None:
+            errors.append(f"i18n/{lang}: no translation for company '{c['id']}'")
+            continue
+        for k in COMPANY_TEXT_FIELDS:
+            if k not in t:
+                errors.append(f"i18n/{lang}: company '{c['id']}' missing '{k}'")
+        if isinstance(t.get("evaluating"), list) and len(t["evaluating"]) != len(c.get("evaluating", [])):
+            errors.append(f"i18n/{lang}: company '{c['id']}' has a different number of 'evaluating' items")
+    for cid in out["companies"]:
+        if cid not in {c["id"] for c in companies}:
+            errors.append(f"i18n/{lang}: translation for unknown company '{cid}'")
+    for w in watchlist:
+        if "event" not in out["watchlist"].get(w.get("name"), {}):
+            errors.append(f"i18n/{lang}/watchlist.json: missing event for '{w.get('name')}'")
+    for s in sources:
+        if s.get("summary") and "summary" not in out["sources"].get(s["id"], {}):
+            errors.append(f"i18n/{lang}/sources.json: missing summary for '{s['id']}'")
+    return out
+
+
 # --------------------------------------------------------------------------- partials
-def header(current: str) -> str:
+def lang_switch(file: str, lang: str, prefix: str, langs: list[tuple]) -> str:
     items = []
-    for f, label, _ in PAGES:
-        cur = ' aria-current="page"' if f == current else ""
-        items.append(f'<li><a href="{f}"{cur}>{label}</a></li>')
-    return f"""<a class="skip-link" href="#main">Skip to main content</a>
-<header class="site-header">
+    for code, name, hl, _ in langs:
+        if file == "404.html":
+            href = "index.html" if code == DEFAULT_LANG else f"{code}/index.html"
+        else:
+            href = prefix + page_path(code, file)
+        cur = ' aria-current="true"' if code == lang else ""
+        items.append(
+            f'<li><a href="{href}" hreflang="{hl}" lang="{hl}" data-lang="{code}"{cur}>'
+            f'<span class="lang-code" aria-hidden="true">{code.upper()}</span><span class="lang-name">{esc(name)}</span></a></li>'
+        )
+    return "".join(items)
+
+
+def header(file: str, lang: str, prefix: str, ui: dict, langs: list[tuple]) -> str:
+    items = []
+    for f, _ in PAGES:
+        cur = ' aria-current="page"' if f == file else ""
+        items.append(f'<li><a href="{f}"{cur}>{esc(ui["nav"][f])}</a></li>')
+    switch = ""
+    if len(langs) > 1:
+        switch = f"""<div class="lang-bar">
+  <div class="container">
+    <nav class="lang-switch" aria-label="{esc(ui['languageSwitchLabel'])}">{GLOBE}<ul>{lang_switch(file, lang, prefix, langs)}</ul></nav>
+  </div>
+</div>
+"""
+    return f"""<a class="skip-link" href="#main">{esc(ui['skipLink'])}</a>
+{switch}<header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="index.html">{LOGO}<span>Every IT Euro<small>European technology choices</small></span></a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle-icon" aria-hidden="true"></span>Menu</button>
-    <nav id="site-nav" class="site-nav" aria-label="Main">
+    <a class="brand" href="index.html">{LOGO}<span>Every IT Euro<small>{esc(ui['tagline'])}</small></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle-icon" aria-hidden="true"></span>{esc(ui['menu'])}</button>
+    <nav id="site-nav" class="site-nav" aria-label="{esc(ui['mainNavLabel'])}">
       <ul>
         {chr(10).join('        ' + i for i in items).strip()}
       </ul>
@@ -94,46 +224,48 @@ def header(current: str) -> str:
 </header>"""
 
 
-def footer() -> str:
+def footer(ui: dict) -> str:
+    t = ui["footer"]
+    note = f"\n      <p>{esc(t['translationNote'])}</p>" if t.get("translationNote") else ""
     return f"""<footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
         <p class="footer-brand">{LOGO}Every IT Euro</p>
-        <p>An independent, non-commercial information resource on European IT and cybersecurity procurement and digital sovereignty.</p>
-        <p>Not affiliated with the European Union institutions or with any company listed.</p>
+        <p>{esc(t['intro'])}</p>
+        <p>{esc(t['notAffiliated'])}</p>
       </div>
       <div>
-        <h2>Explore</h2>
+        <h2>{esc(t['explore'])}</h2>
         <ul>
-          <li><a href="why-europe.html">Why Europe</a></li>
-          <li><a href="cybersecurity.html">Cybersecurity</a></li>
-          <li><a href="cybersecurity.html#critical-infrastructure">OT &amp; critical infrastructure</a></li>
-          <li><a href="alternatives.html">European alternatives</a></li>
+          <li><a href="why-europe.html">{esc(t['whyEurope'])}</a></li>
+          <li><a href="cybersecurity.html">{esc(t['cybersecurity'])}</a></li>
+          <li><a href="cybersecurity.html#critical-infrastructure">{esc(t['ot'])}</a></li>
+          <li><a href="alternatives.html">{esc(t['alternatives'])}</a></li>
         </ul>
       </div>
       <div>
-        <h2>Tools</h2>
+        <h2>{esc(t['tools'])}</h2>
         <ul>
-          <li><a href="procurement.html#checklist">Procurement checklist</a></li>
-          <li><a href="sovereignty.html">Sovereignty assessment</a></li>
-          <li><a href="why-europe.html#myths">Common arguments</a></li>
-          <li><a href="procurement.html#regulation">Policy &amp; regulation</a></li>
+          <li><a href="procurement.html#checklist">{esc(t['checklist'])}</a></li>
+          <li><a href="sovereignty.html">{esc(t['assessment'])}</a></li>
+          <li><a href="why-europe.html#myths">{esc(t['myths'])}</a></li>
+          <li><a href="procurement.html#regulation">{esc(t['regulation'])}</a></li>
         </ul>
       </div>
       <div>
-        <h2>This website</h2>
+        <h2>{esc(t['website'])}</h2>
         <ul>
-          <li><a href="about.html">About &amp; methodology</a></li>
-          <li><a href="sources.html">Sources</a></li>
-          <li><a href="about.html#corrections">Report a correction</a></li>
-          <li><a href="about.html#privacy">Privacy: no cookies, no tracking</a></li>
+          <li><a href="about.html">{esc(t['about'])}</a></li>
+          <li><a href="sources.html">{esc(t['sources'])}</a></li>
+          <li><a href="about.html#corrections">{esc(t['corrections'])}</a></li>
+          <li><a href="about.html#privacy">{esc(t['privacy'])}</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>Text licensed under CC BY 4.0 · Code under the MIT License</p>
-      <p>Information only — not legal or procurement advice.</p>
+      <p>{esc(t['licence'])}</p>
+      <p>{esc(t['disclaimer'])}</p>{note}
     </div>
   </div>
 </footer>"""
@@ -148,15 +280,6 @@ def replace_block(text: str, name: str, content: str, file: str) -> str:
 
 
 # --------------------------------------------------------------------------- data validation
-def load_json(rel: str):
-    p = ROOT / rel
-    try:
-        return json.loads(p.read_text(encoding="utf-8"))
-    except Exception as e:  # noqa: BLE001
-        errors.append(f"{rel}: invalid JSON ({e})")
-        return None
-
-
 def validate_companies(data) -> list[dict]:
     if not data:
         return []
@@ -203,13 +326,47 @@ def validate_sources(data) -> list[dict]:
     return sources
 
 
+def check_vocabulary(ui: dict, companies, watchlist, sources) -> None:
+    """Every value used in the data must have a label in the English interface strings."""
+    for c in companies:
+        if c.get("country") not in ui["countries"]:
+            errors.append(f"i18n/en/ui.json: no label for country '{c.get('country')}'")
+        for d in c.get("deployment", []):
+            if d not in ui["deployment"]:
+                errors.append(f"i18n/en/ui.json: no label for deployment '{d}'")
+    for w in watchlist:
+        for k in ("origin", "newOwnerCountry"):
+            if w.get(k) not in ui["countries"]:
+                errors.append(f"i18n/en/ui.json: no label for country '{w.get(k)}'")
+    for s in sources:
+        if (s.get("type") or "Other") not in ui["sources"]["types"]:
+            errors.append(f"i18n/en/ui.json: no label for source type '{s.get('type')}'")
+        for t in s.get("topics", []):
+            if t not in ui["sources"]["topicNames"]:
+                errors.append(f"i18n/en/ui.json: no label for topic '{t}'")
+
+
 # --------------------------------------------------------------------------- renderers
-def render_company(c: dict) -> str:
+def localise_company(c: dict, tr: dict) -> dict:
+    t = tr["companies"].get(c["id"], {})
+    out = dict(c)
+    for k in COMPANY_TEXT_FIELDS:
+        if k in t:
+            out[k] = t[k]
+    return out
+
+
+def render_company(original: dict, ui: dict, tr: dict) -> str:
+    c = localise_company(original, tr)
+    T = ui["companies"]
     cats = c.get("categories", [])
-    search = " ".join(
-        [c.get("name", ""), c.get("country", ""), c.get("headquarters", ""), c.get("description", ""),
-         c.get("parentCompany", ""), " ".join(cats), " ".join(c.get("products", [])), " ".join(c.get("evaluating", []))]
-    ).lower()
+    country = ui["countries"].get(c.get("country", ""), c.get("country", ""))
+    # Search matches the translated text and the English original, so both work in every language.
+    parts = [c.get("name", ""), country, c.get("headquarters", ""), c.get("description", ""), c.get("parentCompany", ""),
+             " ".join(ui["categories"].get(x, x) for x in cats), " ".join(c.get("products", [])), " ".join(c.get("evaluating", []))]
+    if c is not original:
+        parts += [original.get("country", ""), original.get("description", ""), " ".join(cats), " ".join(original.get("evaluating", []))]
+    search = " ".join(dict.fromkeys(" ".join(parts).lower().split()))
     cls = c.get("classification", "mixed")
     products = ", ".join(c.get("products", []))
     srcs = "".join(
@@ -217,104 +374,109 @@ def render_company(c: dict) -> str:
         for u in c.get("sources", [])
     )
     evaluating = "".join(f"<li>{esc(e)}</li>" for e in c.get("evaluating", []))
+    V = ui["values"]
     return f"""<article class="card company" id="c-{esc(c['id'])}" data-categories="{esc('|'.join(cats))}" data-country="{esc(c.get('country', ''))}" data-class="{esc(cls)}" data-opensource="{esc(c.get('openSource'))}" data-onprem="{esc(c.get('onPremises'))}" data-search="{esc(search)}">
   <div class="company-head">
     <div>
       <h3>{esc(c['name'])}</h3>
       <p class="hq">{esc(c.get('headquarters', ''))}</p>
     </div>
-    <span class="class-badge class-{esc(cls)}" title="{esc(c.get('classificationNote', ''))}">{esc(CLASSIFICATIONS.get(cls, cls))}</span>
+    <span class="class-badge class-{esc(cls)}" title="{esc(c.get('classificationNote', ''))}">{esc(ui['classifications'][cls])}</span>
   </div>
-  <ul class="tags" aria-label="Categories">{''.join(f'<li>{esc(x)}</li>' for x in cats)}</ul>
+  <ul class="tags" aria-label="{esc(T['categoriesLabel'])}">{''.join(f'<li>{esc(ui["categories"][x])}</li>' for x in cats)}</ul>
   <p class="desc">{esc(c.get('description', ''))}</p>
   <dl class="facts">
-    <dt>Country</dt><dd>{esc(c.get('country', ''))}</dd>
-    <dt>Parent</dt><dd>{esc(c.get('parentCompany', ''))}</dd>
-    <dt>Products</dt><dd>{esc(products)}</dd>
-    <dt>Deployment</dt><dd>{esc(', '.join(c.get('deployment', [])))}</dd>
-    <dt>Open source</dt><dd>{esc(c.get('openSource'))}</dd>
-    <dt>On-premises</dt><dd>{esc(c.get('onPremises'))}</dd>
-    <dt>Cloud</dt><dd>{esc(c.get('cloud'))}</dd>
+    <dt>{esc(T['country'])}</dt><dd>{esc(country)}</dd>
+    <dt>{esc(T['parent'])}</dt><dd>{esc(c.get('parentCompany', ''))}</dd>
+    <dt>{esc(T['products'])}</dt><dd>{esc(products)}</dd>
+    <dt>{esc(T['deployment'])}</dt><dd>{esc(', '.join(ui['deployment'].get(d, d) for d in c.get('deployment', [])))}</dd>
+    <dt>{esc(T['openSource'])}</dt><dd>{esc(V[c.get('openSource')])}</dd>
+    <dt>{esc(T['onPremises'])}</dt><dd>{esc(V[c.get('onPremises')])}</dd>
+    <dt>{esc(T['cloud'])}</dt><dd>{esc(V[c.get('cloud')])}</dd>
   </dl>
   <details>
-    <summary>Ownership, relevance and sources</summary>
-    <p><strong>Ownership:</strong> {esc(c.get('ownership', ''))}</p>
-    <p><strong>Classification:</strong> {esc(c.get('classificationNote', ''))}</p>
-    <p><strong>European options to consider when evaluating:</strong></p>
+    <summary>{esc(T['detailsSummary'])}</summary>
+    <p><strong>{esc(T['ownership'])}</strong> {esc(c.get('ownership', ''))}</p>
+    <p><strong>{esc(T['classification'])}</strong> {esc(c.get('classificationNote', ''))}</p>
+    <p><strong>{esc(T['evaluating'])}</strong></p>
     <ul>{evaluating}</ul>
-    <p><strong>Verified against:</strong></p>
+    <p><strong>{esc(T['verifiedAgainst'])}</strong></p>
     <ul>{srcs}</ul>
   </details>
   <div class="company-foot">
-    <span>Last verified: <time datetime="{esc(c.get('lastVerified'))}">{esc(c.get('lastVerified'))}</time></span>
-    <a href="{esc(c.get('website'))}" rel="noopener noreferrer">Website<span class="visually-hidden"> of {esc(c['name'])}</span> ↗</a>
+    <span>{esc(T['lastVerified'])} <time datetime="{esc(c.get('lastVerified'))}">{esc(c.get('lastVerified'))}</time></span>
+    <a href="{esc(c.get('website'))}" rel="noopener noreferrer" aria-label="{esc(fmt(T['websiteOf'], name=c['name']))}">{esc(T['website'])} ↗</a>
   </div>
 </article>"""
 
 
-def render_filters(companies: list[dict]) -> str:
-    countries = sorted({c.get("country", "") for c in companies if c.get("country")})
+def render_filters(companies: list[dict], ui: dict) -> str:
+    F = ui["filters"]
+    countries = sorted({c.get("country", "") for c in companies if c.get("country")}, key=lambda x: ui["countries"][x].casefold())
     used = {cat for c in companies for cat in c.get("categories", [])}
-    chips = ['<button type="button" class="chip" data-category="All" aria-pressed="true">All</button>']
+    chips = [f'<button type="button" class="chip" data-category="All" aria-pressed="true">{esc(F["all"])}</button>']
     for cat in CATEGORIES:
         if cat in used:
-            chips.append(f'<button type="button" class="chip" data-category="{esc(cat)}" aria-pressed="false">{esc(cat)}</button>')
-    country_opts = "".join(f'<option value="{esc(x)}">{esc(x)}</option>' for x in countries)
-    class_opts = "".join(f'<option value="{k}">{esc(v)}</option>' for k, v in CLASSIFICATIONS.items())
-    return f"""<form id="filter-form" class="filters" role="search" aria-label="Filter European technology alternatives" data-js-only hidden>
+            chips.append(f'<button type="button" class="chip" data-category="{esc(cat)}" aria-pressed="false">{esc(ui["categories"][cat])}</button>')
+    country_opts = "".join(f'<option value="{esc(x)}">{esc(ui["countries"][x])}</option>' for x in countries)
+    class_opts = "".join(f'<option value="{k}">{esc(ui["classifications"][k])}</option>' for k in CLASSIFICATIONS)
+    return f"""<form id="filter-form" class="filters" role="search" aria-label="{esc(F['formLabel'])}" data-js-only hidden>
   <div class="field">
-    <label for="f-search">Search</label>
-    <input id="f-search" type="search" placeholder="Company, product, country or capability" autocomplete="off">
+    <label for="f-search">{esc(F['search'])}</label>
+    <input id="f-search" type="search" placeholder="{esc(F['searchPlaceholder'])}" autocomplete="off">
   </div>
   <div class="field">
-    <label for="f-country">Country</label>
-    <select id="f-country"><option value="">All countries</option>{country_opts}</select>
+    <label for="f-country">{esc(F['country'])}</label>
+    <select id="f-country"><option value="">{esc(F['allCountries'])}</option>{country_opts}</select>
   </div>
   <div class="field">
-    <label for="f-class">Classification</label>
-    <select id="f-class"><option value="">All classifications</option>{class_opts}</select>
+    <label for="f-class">{esc(F['classification'])}</label>
+    <select id="f-class"><option value="">{esc(F['allClassifications'])}</option>{class_opts}</select>
   </div>
   <div class="field">
-    <span class="field-label">Reset</span>
-    <button type="button" id="f-reset" class="btn btn-ghost btn-sm">Clear all filters</button>
+    <span class="field-label">{esc(F['reset'])}</span>
+    <button type="button" id="f-reset" class="btn btn-ghost btn-sm">{esc(F['clearAll'])}</button>
   </div>
   <div class="filter-toggles">
-    <label class="checkbox"><input type="checkbox" id="f-opensource"> Open source (fully or partly)</label>
-    <label class="checkbox"><input type="checkbox" id="f-onprem"> Can run on-premises</label>
+    <label class="checkbox"><input type="checkbox" id="f-opensource"> {esc(F['openSource'])}</label>
+    <label class="checkbox"><input type="checkbox" id="f-onprem"> {esc(F['onPrem'])}</label>
   </div>
 </form>
-<div class="chip-row" role="group" aria-label="Filter by category" data-js-only hidden>
+<div class="chip-row" role="group" aria-label="{esc(F['categoryGroupLabel'])}" data-js-only hidden>
   {''.join(chips)}
 </div>
 <div class="results-bar">
-  <p class="results-count" id="results-count" role="status" aria-live="polite">Showing all {len(companies)} entries</p>
+  <p class="results-count" id="results-count" role="status" aria-live="polite">{esc(fmt(ui['companies']['showingAll'], total=len(companies)))}</p>
 </div>"""
 
 
-def render_companies(companies: list[dict]) -> str:
-    cards = "\n".join(render_company(c) for c in companies)
+def render_companies(companies: list[dict], ui: dict, tr: dict) -> str:
+    cards = "\n".join(render_company(c, ui, tr) for c in companies)
     return f"""<div class="company-grid">
 {cards}
 </div>
 <div class="empty-state" id="results-empty" hidden>
-  <p><strong>No entries match these filters.</strong></p>
-  <p>Try a broader search, or <a href="about.html#corrections">suggest a company</a> that should be listed.</p>
+  <p><strong>{esc(ui['companies']['emptyTitle'])}</strong></p>
+  <p>{ui['companies']['emptyText']}</p>
 </div>"""
 
 
-def render_watchlist(items: list[dict]) -> str:
+def render_watchlist(items: list[dict], ui: dict, tr: dict) -> str:
+    W = ui["watchlist"]
+    C = ui["countries"]
     rows = []
     for w in sorted(items, key=lambda x: (-int(x.get("year") or 0), x.get("name", ""))):
+        event = tr["watchlist"].get(w.get("name"), {}).get("event", w.get("event"))
         rows.append(
-            f"<tr><th scope=\"row\">{esc(w.get('name'))}</th><td>{esc(w.get('origin'))}</td>"
-            f"<td>{esc(w.get('event'))}</td><td>{esc(w.get('year'))}</td>"
-            f"<td>{esc(w.get('newOwnerCountry'))}</td>"
-            f"<td><a href=\"{esc(w.get('source'))}\" rel=\"noopener noreferrer\">Source<span class=\"visually-hidden\"> for {esc(w.get('name'))}</span></a></td></tr>"
+            f"<tr><th scope=\"row\">{esc(w.get('name'))}</th><td>{esc(C.get(w.get('origin'), w.get('origin')))}</td>"
+            f"<td>{esc(event)}</td><td>{esc(w.get('year'))}</td>"
+            f"<td>{esc(C.get(w.get('newOwnerCountry'), w.get('newOwnerCountry')))}</td>"
+            f"<td><a href=\"{esc(w.get('source'))}\" rel=\"noopener noreferrer\" aria-label=\"{esc(fmt(W['sourceFor'], name=w.get('name')))}\">{esc(W['source'])}</a></td></tr>"
         )
     return f"""<div class="table-wrap">
 <table>
-  <caption class="visually-hidden">European-origin technology companies that came under non-European ownership</caption>
-  <thead><tr><th scope="col">Company</th><th scope="col">Origin</th><th scope="col">What happened</th><th scope="col">Year</th><th scope="col">New owner based in</th><th scope="col">Reference</th></tr></thead>
+  <caption class="visually-hidden">{esc(W['caption'])}</caption>
+  <thead><tr><th scope="col">{esc(W['company'])}</th><th scope="col">{esc(W['origin'])}</th><th scope="col">{esc(W['event'])}</th><th scope="col">{esc(W['year'])}</th><th scope="col">{esc(W['newOwner'])}</th><th scope="col">{esc(W['reference'])}</th></tr></thead>
   <tbody>
 {chr(10).join(rows)}
   </tbody>
@@ -322,31 +484,34 @@ def render_watchlist(items: list[dict]) -> str:
 </div>"""
 
 
-TOPIC_ORDER = ["Regulation", "Cybersecurity", "Critical infrastructure", "Cloud", "Jurisdiction", "Procurement", "Sovereignty", "Economy"]
+SOURCE_TYPE_ORDER = ["Legislation", "Court ruling", "Official policy", "Official guidance", "Report", "News", "Company", "Other"]
 
 
-def render_sources(sources: list[dict]) -> str:
+def render_sources(sources: list[dict], ui: dict, tr: dict) -> str:
+    S = ui["sources"]
     groups: dict[str, list[dict]] = {}
     for s in sources:
         groups.setdefault(s.get("type") or "Other", []).append(s)
-    order = ["Legislation", "Court ruling", "Official policy", "Official guidance", "Report", "News", "Company", "Other"]
     out = []
-    for g in sorted(groups, key=lambda x: order.index(x) if x in order else 99):
+    for g in sorted(groups, key=lambda x: SOURCE_TYPE_ORDER.index(x) if x in SOURCE_TYPE_ORDER else 99):
         items = []
         for s in sorted(groups[g], key=lambda x: x.get("title", "").lower()):
-            pub = s.get("published") or "not stated"
+            pub = s.get("published") or S["notStated"]
+            summary = tr["sources"].get(s["id"], {}).get("summary", s.get("summary"))
+            topics = ", ".join(S["topicNames"].get(t, t) for t in s.get("topics", []))
             items.append(f"""<li class="source" id="src-{esc(s['id'])}">
   <h3><a href="{esc(s['url'])}" rel="noopener noreferrer">{esc(s['title'])}</a></h3>
-  <p class="meta">{esc(s.get('organisation', ''))} · Published: {esc(pub)} · Accessed: {esc(s.get('accessed', ''))} · Topics: {esc(', '.join(s.get('topics', [])))}</p>
-  {f"<p>{esc(s['summary'])}</p>" if s.get('summary') else ''}
+  <p class="meta">{esc(s.get('organisation', ''))} · {esc(S['published'])}: {esc(pub)} · {esc(S['accessed'])}: {esc(s.get('accessed', ''))} · {esc(S['topics'])}: {esc(topics)}</p>
+  {f"<p>{esc(summary)}</p>" if summary else ''}
   <p class="src-url">{esc(s['url'])}</p>
 </li>""")
-        out.append(f'<section aria-labelledby="g-{esc(g.lower().replace(" ", "-"))}">\n<h2 id="g-{esc(g.lower().replace(" ", "-"))}">{esc(g)}</h2>\n<ul class="source-list">\n' + "\n".join(items) + "\n</ul>\n</section>")
+        gid = esc(g.lower().replace(" ", "-"))
+        out.append(f'<section aria-labelledby="g-{gid}">\n<h2 id="g-{gid}">{esc(S["types"].get(g, g))}</h2>\n<ul class="source-list">\n' + "\n".join(items) + "\n</ul>\n</section>")
     return "\n".join(out)
 
 
 # --------------------------------------------------------------------------- citations
-def number_citations(text: str) -> str:
+def number_citations(text: str, label: str) -> str:
     """Expand [[source-id]] shorthand and number citations per page in order of first appearance."""
     text = re.sub(r"\[\[([a-z0-9-]+)\]\]", lambda m: f'<a class="cite" href="sources.html#src-{m.group(1)}">0</a>', text)
     order: dict[str, int] = {}
@@ -354,27 +519,57 @@ def number_citations(text: str) -> str:
     def num(m):
         sid = m.group(1)
         order.setdefault(sid, len(order) + 1)
-        return f'<a class="cite" href="sources.html#src-{sid}" aria-label="Source {order[sid]}">{order[sid]}</a>'
+        return f'<a class="cite" href="sources.html#src-{sid}" aria-label="{esc(fmt(label, n=order[sid]))}">{order[sid]}</a>'
 
     return re.sub(r'<a class="cite" href="sources\.html#src-([a-z0-9-]+)"[^>]*>\d+</a>', num, text)
 
 
-# --------------------------------------------------------------------------- site URL
-def apply_site_url(text: str, file: str, site_url: str) -> str:
-    page_url = site_url + ("" if file == "index.html" else file)
-    text = re.sub(r'(<link rel="canonical" href=")[^"]*(")', lambda m: m.group(1) + page_url + m.group(2), text)
-    text = re.sub(r'(<meta property="og:url" content=")[^"]*(")', lambda m: m.group(1) + page_url + m.group(2), text)
+# --------------------------------------------------------------------------- language plumbing
+def localise_paths(text: str, lang: str, prefix: str) -> str:
+    """Set <html lang>, make asset paths work from a language folder and load the right string file."""
+    hl = next(h for c, _, h, _ in LANGUAGES if c == lang)
+    text = re.sub(r"<html lang=\"[^\"]*\"", f'<html lang="{hl}"', text, count=1)
+    if prefix:
+        text = re.sub(r'(\s(?:href|src)=")(?:\.\./)*(assets|data)/', rf"\1{prefix}\2/", text)
+    text = re.sub(r'<script src="[^"]*assets/js/i18n/[a-z]+\.js"></script>\n', "", text)
+    main = f'<script src="{prefix}assets/js/main.js"></script>'
+    if main not in text:
+        errors.append(f"{page_path(lang, 'page')}: main.js script tag not found")
+    return text.replace(main, f'<script src="{prefix}assets/js/i18n/{lang}.js"></script>\n{main}', 1)
+
+
+def page_url(site_url: str, lang: str, file: str) -> str:
+    return site_url + ("" if lang == DEFAULT_LANG else f"{lang}/") + ("" if file == "index.html" else file)
+
+
+def apply_site_url(text: str, file: str, lang: str, site_url: str, langs: list[tuple]) -> str:
+    url = page_url(site_url, lang, file)
+    text = re.sub(r'(<link rel="canonical" href=")[^"]*(")', lambda m: m.group(1) + url + m.group(2), text)
+    text = re.sub(r'(<meta property="og:url" content=")[^"]*(")', lambda m: m.group(1) + url + m.group(2), text)
     text = re.sub(r'(<meta property="og:image" content=")[^"]*(")', lambda m: m.group(1) + site_url + "assets/img/og-image.png" + m.group(2), text)
+    # hreflang alternates and og:locale, regenerated after the canonical link.
+    text = re.sub(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">\n', "", text)
+    text = re.sub(r'<meta property="og:locale(?::alternate)?" content="[^"]*">\n', "", text)
+    alts = "".join(f'<link rel="alternate" hreflang="{h}" href="{page_url(site_url, c, file)}">\n' for c, _, h, _ in langs)
+    alts += f'<link rel="alternate" hreflang="x-default" href="{page_url(site_url, DEFAULT_LANG, file)}">\n'
+    text = re.sub(r'(<link rel="canonical" href="[^"]*">\n)', lambda m: m.group(1) + alts, text, count=1)
+    locale = next(o for c, _, _, o in LANGUAGES if c == lang)
+    text = re.sub(r'(<meta property="og:type" content="[^"]*">\n)', lambda m: m.group(1) + f'<meta property="og:locale" content="{locale}">\n', text, count=1)
     return text
 
 
-def sitemap(site_url: str) -> str:
+def sitemap(site_url: str, langs: list[tuple]) -> str:
     today = date.today().isoformat()
-    urls = "\n".join(
-        f"  <url><loc>{site_url + ('' if f == 'index.html' else f)}</loc><lastmod>{today}</lastmod><priority>{p}</priority></url>"
-        for f, _, p in PAGES
-    )
-    return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}\n</urlset>\n'
+    urls = []
+    for f, prio in PAGES:
+        alts = "".join(
+            f'\n    <xhtml:link rel="alternate" hreflang="{h}" href="{page_url(site_url, c, f)}"/>' for c, _, h, _ in langs
+        ) if len(langs) > 1 else ""
+        for code, *_ in langs:
+            urls.append(f"  <url>\n    <loc>{page_url(site_url, code, f)}</loc>\n    <lastmod>{today}</lastmod>\n    <priority>{prio}</priority>{alts}\n  </url>")
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
+            + "\n".join(urls) + "\n</urlset>\n")
 
 
 def robots(site_url: str) -> str:
@@ -384,8 +579,11 @@ def robots(site_url: str) -> str:
 # --------------------------------------------------------------------------- link checking
 def check_links(files: dict[str, str], source_ids: set[str]) -> None:
     ids_per_file = {f: set(re.findall(r'\sid="([^"]+)"', t)) for f, t in files.items()}
-    ids_per_file["sources.html"] |= {f"src-{i}" for i in source_ids}
+    for f in ids_per_file:
+        if f.endswith("sources.html"):
+            ids_per_file[f] |= {f"src-{i}" for i in source_ids}
     for f, text in files.items():
+        base_dir = "" if f == "404.html" else posixpath.dirname(f)  # 404.html resolves against <base>
         for attr, url in re.findall(r'\s(href|src)="([^"]+)"', re.sub(r"<base [^>]*>", "", text)):
             if re.match(r"^(https?:|mailto:|tel:|data:)", url):
                 if url.startswith("http:"):
@@ -396,8 +594,11 @@ def check_links(files: dict[str, str], source_ids: set[str]) -> None:
                 continue
             path, _, anchor = url.partition("#")
             path = path.split("?")[0]
-            target = f if not path else path
-            if path and not (ROOT / path).exists():
+            target = posixpath.normpath(posixpath.join(base_dir, path)) if path else f
+            if target.startswith(".."):
+                errors.append(f"{f}: link leaves the site: {url}")
+                continue
+            if path and not (ROOT / target).exists():
                 errors.append(f"{f}: broken {attr} -> {url}")
                 continue
             if anchor and target.endswith(".html"):
@@ -405,6 +606,27 @@ def check_links(files: dict[str, str], source_ids: set[str]) -> None:
                     ids_per_file[target] = set(re.findall(r'\sid="([^"]+)"', (ROOT / target).read_text(encoding="utf-8")))
                 if anchor not in ids_per_file[target]:
                     errors.append(f"{f}: missing anchor #{anchor} in {target}")
+
+
+def check_structure(lang: str, file: str, text: str, english: str) -> None:
+    """A translated page must keep the ids, form values and citations of the English page."""
+    def ids(t):
+        return set(re.findall(r'\sid="([^"]+)"', t))
+
+    def values(t):
+        return sorted(re.findall(r'<input[^>]*\svalue="([^"]+)"', t))
+
+    def cites(t):
+        return sorted(set(re.findall(r'sources\.html#src-([a-z0-9-]+)', t)))
+
+    rel = page_path(lang, file)
+    missing = ids(english) - ids(text)
+    if missing:
+        errors.append(f"{rel}: ids missing compared to English: {', '.join(sorted(missing)[:8])}")
+    if values(english) != values(text):
+        errors.append(f"{rel}: form input values differ from English")
+    if cites(english) != cites(text):
+        errors.append(f"{rel}: cited sources differ from English: {sorted(set(cites(english)) ^ set(cites(text)))}")
 
 
 # --------------------------------------------------------------------------- main
@@ -422,34 +644,60 @@ def main() -> int:
     sources = validate_sources(load_json("data/sources.json"))
     source_ids = {s["id"] for s in sources if "id" in s}
 
+    ui_en = load_ui(DEFAULT_LANG, None)
+    if not ui_en:
+        print("ERRORS:\n  - i18n/en/ui.json is required")
+        return 1
+    check_vocabulary(ui_en, companies, watchlist, sources)
+    langs = [l for l in LANGUAGES if l[0] == DEFAULT_LANG or (ROOT / l[0]).is_dir()]
+
     outputs: dict[str, str] = {}
-    for f in [p[0] for p in PAGES] + EXTRA_PAGES:
-        path = ROOT / f
-        if not path.exists():
-            errors.append(f"missing page {f}")
+    for lang, *_ in langs:
+        ui = ui_en if lang == DEFAULT_LANG else load_ui(lang, ui_en)
+        if not ui:
             continue
-        text = path.read_text(encoding="utf-8")
-        text = replace_block(text, "header", header(f), f)
-        text = replace_block(text, "footer", footer(), f)
-        text = number_citations(text)
-        if f == "alternatives.html":
-            text = replace_block(text, "filters", render_filters(companies), f)
-            text = replace_block(text, "companies", render_companies(companies), f)
-            text = replace_block(text, "watchlist", render_watchlist(watchlist), f)
-        if f == "sources.html":
-            text = replace_block(text, "sources", render_sources(sources), f)
-        text = re.sub(r"<!-- COUNT:companies -->\d*<!-- /COUNT -->", f"<!-- COUNT:companies -->{len(companies)}<!-- /COUNT -->", text)
-        text = re.sub(r"<!-- COUNT:sources -->\d*<!-- /COUNT -->", f"<!-- COUNT:sources -->{len(sources)}<!-- /COUNT -->", text)
-        if f == "404.html":
-            base_path = "/" + site_url.split("://", 1)[-1].split("/", 1)[-1] if "/" in site_url.split("://", 1)[-1] else "/"
-            text = re.sub(r'<base href="[^"]*">', f'<base href="{base_path}">', text)
-        else:
-            text = apply_site_url(text, f, site_url)
-        text = re.sub(r'(<a class="repo-link" href=")[^"]*(")', lambda m: m.group(1) + repo_url + m.group(2), text)
-        outputs[f] = text
-        for cid in re.findall(r'sources\.html#src-([a-z0-9-]+)', text):
-            if cid not in source_ids:
-                errors.append(f"{f}: citation to unknown source id '{cid}'")
+        if not (ROOT / "assets/js/i18n" / f"{lang}.js").exists():
+            errors.append(f"assets/js/i18n/{lang}.js: file missing")
+        tr = load_data_translations(lang, companies, watchlist, sources)
+        prefix = "" if lang == DEFAULT_LANG else "../"
+        files = [p[0] for p in PAGES] + (EXTRA_PAGES if lang == DEFAULT_LANG else [])
+        for f in files:
+            rel = page_path(lang, f)
+            path = ROOT / rel
+            if not path.exists():
+                errors.append(f"missing page {rel}")
+                continue
+            text = path.read_text(encoding="utf-8")
+            text = localise_paths(text, lang, prefix)
+            text = replace_block(text, "header", header(f, lang, prefix, ui, langs), rel)
+            text = replace_block(text, "footer", footer(ui), rel)
+            text = number_citations(text, ui["citeLabel"])
+            if f == "alternatives.html":
+                text = replace_block(text, "filters", render_filters(companies, ui), rel)
+                text = replace_block(text, "companies", render_companies(companies, ui, tr), rel)
+                text = replace_block(text, "watchlist", render_watchlist(watchlist, ui, tr), rel)
+            if f == "sources.html":
+                text = replace_block(text, "sources", render_sources(sources, ui, tr), rel)
+            text = re.sub(r"<!-- COUNT:companies -->\d*<!-- /COUNT -->", f"<!-- COUNT:companies -->{len(companies)}<!-- /COUNT -->", text)
+            text = re.sub(r"<!-- COUNT:sources -->\d*<!-- /COUNT -->", f"<!-- COUNT:sources -->{len(sources)}<!-- /COUNT -->", text)
+            if f == "404.html":
+                base_path = "/" + site_url.split("://", 1)[-1].split("/", 1)[-1] if "/" in site_url.split("://", 1)[-1] else "/"
+                text = re.sub(r'<base href="[^"]*">', f'<base href="{base_path}">', text)
+            else:
+                text = apply_site_url(text, f, lang, site_url, langs)
+            text = re.sub(r'(<a class="repo-link" href=")[^"]*(")', lambda m: m.group(1) + repo_url + m.group(2), text)
+            outputs[rel] = text
+            for cid in re.findall(r'sources\.html#src-([a-z0-9-]+)', text):
+                if cid not in source_ids:
+                    errors.append(f"{rel}: citation to unknown source id '{cid}'")
+
+    for lang, *_ in langs:
+        if lang == DEFAULT_LANG:
+            continue
+        for f, _ in PAGES:
+            rel = page_path(lang, f)
+            if rel in outputs and f in outputs:
+                check_structure(lang, f, outputs[rel], outputs[f])
 
     check_links(outputs, source_ids)
 
@@ -457,13 +705,15 @@ def main() -> int:
     for f, text in outputs.items():
         if (ROOT / f).read_text(encoding="utf-8") != text:
             stale.append(f)
-    gen = {"sitemap.xml": sitemap(site_url), "robots.txt": robots(site_url)}
+    gen = {"sitemap.xml": sitemap(site_url, langs), "robots.txt": robots(site_url)}
     for f, text in gen.items():
         existing = (ROOT / f).read_text(encoding="utf-8") if (ROOT / f).exists() else ""
         # lastmod dates change daily; only compare the URLs for staleness.
         if re.sub(r"<lastmod>.*?</lastmod>", "", existing) != re.sub(r"<lastmod>.*?</lastmod>", "", text):
             stale.append(f)
 
+    summary = (f"{len(langs)} languages ({', '.join(l[0] for l in langs)}), {len(companies)} companies, "
+               f"{len(watchlist)} watchlist entries, {len(sources)} sources")
     if errors:
         print("ERRORS:")
         for e in errors:
@@ -475,7 +725,7 @@ def main() -> int:
             for f in stale:
                 print("  -", f)
             return 1
-        print(f"OK — {len(companies)} companies, {len(watchlist)} watchlist entries, {len(sources)} sources, all links valid.")
+        print(f"OK — {summary}, all links valid.")
         return 0
 
     for f, text in outputs.items():
@@ -483,7 +733,7 @@ def main() -> int:
     for f, text in gen.items():
         if f in stale:
             (ROOT / f).write_text(text, encoding="utf-8", newline="\n")
-    print(f"Built {len(outputs)} pages — {len(companies)} companies, {len(watchlist)} watchlist entries, {len(sources)} sources. All links valid.")
+    print(f"Built {len(outputs)} pages — {summary}. All links valid.")
     return 0
 
 

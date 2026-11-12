@@ -1,11 +1,531 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://proadmin007.github.io/every-it-euro/</loc><lastmod>2026-11-12</lastmod><priority>1.0</priority></url>
-  <url><loc>https://proadmin007.github.io/every-it-euro/why-europe.html</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
-  <url><loc>https://proadmin007.github.io/every-it-euro/cybersecurity.html</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
-  <url><loc>https://proadmin007.github.io/every-it-euro/alternatives.html</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
-  <url><loc>https://proadmin007.github.io/every-it-euro/procurement.html</loc><lastmod>2026-11-12</lastmod><priority>0.9</priority></url>
-  <url><loc>https://proadmin007.github.io/every-it-euro/sovereignty.html</loc><lastmod>2026-11-12</lastmod><priority>0.8</priority></url>
-  <url><loc>https://proadmin007.github.io/every-it-euro/sources.html</loc><lastmod>2026-11-12</lastmod><priority>0.6</priority></url>
-  <url><loc>https://proadmin007.github.io/every-it-euro/about.html</loc><lastmod>2026-11-12</lastmod><priority>0.5</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/de/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/fr/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/es/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/it/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/pl/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/why-europe.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/why-europe.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/de/why-europe.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/why-europe.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/fr/why-europe.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/why-europe.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/es/why-europe.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/why-europe.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/it/why-europe.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/why-europe.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/pl/why-europe.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/why-europe.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/why-europe.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/cybersecurity.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/cybersecurity.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/de/cybersecurity.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/cybersecurity.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/fr/cybersecurity.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/cybersecurity.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/es/cybersecurity.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/cybersecurity.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/it/cybersecurity.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/cybersecurity.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/pl/cybersecurity.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/cybersecurity.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/cybersecurity.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/alternatives.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/alternatives.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/de/alternatives.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/alternatives.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/fr/alternatives.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/alternatives.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/es/alternatives.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/alternatives.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/it/alternatives.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/alternatives.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/pl/alternatives.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/alternatives.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/alternatives.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/procurement.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/procurement.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/de/procurement.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/procurement.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/fr/procurement.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/procurement.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/es/procurement.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/procurement.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/it/procurement.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/procurement.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/pl/procurement.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/procurement.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/procurement.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/sovereignty.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/sovereignty.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/de/sovereignty.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/sovereignty.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/fr/sovereignty.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/sovereignty.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/es/sovereignty.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/sovereignty.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/it/sovereignty.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/sovereignty.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/pl/sovereignty.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/sovereignty.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/sovereignty.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/sources.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/sources.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/de/sources.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/sources.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/fr/sources.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/sources.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/es/sources.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/sources.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/it/sources.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/sources.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/pl/sources.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/sources.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/sources.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/about.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/about.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/de/about.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/about.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/fr/about.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/about.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/es/about.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/about.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/it/about.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/about.html"/>
+  </url>
+  <url>
+    <loc>https://proadmin007.github.io/every-it-euro/pl/about.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/about.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/about.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/about.html"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/about.html"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/about.html"/>
+  </url>
 </urlset>

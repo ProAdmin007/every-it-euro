@@ -13,6 +13,23 @@ A static, evidence-based website that explains how European organisations, gover
 
 The editorial position is **European preference where it makes strategic, economic, security and technical sense**. It is not protectionism, and it is not anti-American. The site separates **regulatory requirements** from **strategic procurement choices**, and contains **no fabricated statistics**.
 
+## Languages
+
+The site is available in **English, German, French, Spanish, Italian and Polish**. English pages live in the repository root; each translation lives in its own folder (`de/`, `fr/`, `es/`, `it/`, `pl/`) with the same file names.
+
+- **Automatic language:** on a first visit to an English page, the site opens in the first supported language from the visitor's device/browser preferences (`navigator.languages`). Unsupported languages fall back to English.
+- **Language switcher:** a bar at the top of every page links to the same page in each language. An explicit choice is remembered in `localStorage` (key `every-it-euro-lang`) — no cookies, nothing is sent anywhere. Links to a translated page are always respected; only English pages redirect.
+- **SEO:** every page has `hreflang` alternates (plus `x-default` → English) and the sitemap lists all languages.
+
+| What | Where |
+|---|---|
+| Page text | `<lang>/*.html` (translated copies of the English pages) |
+| Header, footer, labels in generated sections | `i18n/<lang>/ui.json` (same keys as `i18n/en/ui.json`) |
+| Company descriptions, ownership, watchlist events, source summaries | `i18n/<lang>/companies*.json`, `watchlist.json`, `sources.json` |
+| Texts used by the interactive tools | `assets/js/i18n/<lang>.js` (same keys as `en.js`) |
+
+When you change English content, update the translations too. `python tools/build.py --check` fails if a translation is missing keys, ids, form values, citations or data entries; `python tools/check_data_translation.py <lang>` checks the data translations for one language.
+
 ## Contents
 
 | Page | What it contains |
@@ -31,26 +48,30 @@ The editorial position is **European preference where it makes strategic, econom
 ```
 /
 ├── index.html, why-europe.html, cybersecurity.html, alternatives.html,
-│   procurement.html, sovereignty.html, sources.html, about.html, 404.html
+│   procurement.html, sovereignty.html, sources.html, about.html, 404.html   ← English
+├── de/, fr/, es/, it/, pl/    ← translated pages (same file names)
+├── i18n/<lang>/               ← interface strings and translated data fields
 ├── robots.txt, sitemap.xml, site.config.json, .nojekyll
 ├── assets/
 │   ├── css/style.css
 │   ├── js/main.js, alternatives.js, sovereignty.js
+│   ├── js/i18n/<lang>.js       ← strings for the interactive tools
 │   └── img/favicon.svg, og-image.png
 ├── data/
 │   ├── companies.json      ← single source of truth for the alternatives database
 │   └── sources.json        ← single source of truth for the sources page
 ├── tools/build.py          ← development-only helper (Python 3.12+, no dependencies)
+├── tools/check_data_translation.py
 └── .github/                ← CI validation, issue templates, FUNDING.yml
 ```
 
 ### How the data works
 
-`data/companies.json` and `data/sources.json` are the sources of truth. `tools/build.py` renders them into `alternatives.html` and `sources.html`, so **all content is readable without JavaScript**. JavaScript only adds search and filtering. The build script also:
+`data/companies.json` and `data/sources.json` are the sources of truth. `tools/build.py` renders them into `alternatives.html` and `sources.html` in every language, so **all content is readable without JavaScript**. JavaScript only adds search and filtering. The build script also:
 
-- injects the shared header and footer into every page;
-- sets canonical URLs, Open Graph URLs, `sitemap.xml`, `robots.txt` and the 404 `<base>` from `site.config.json`;
-- validates the JSON schema, every internal link and anchor, every asset path and every citation (`sources.html#src-…`).
+- injects the shared header (with the language switcher) and footer into every page;
+- sets canonical URLs, `hreflang` alternates, Open Graph URLs, `sitemap.xml`, `robots.txt` and the 404 `<base>` from `site.config.json`;
+- validates the JSON schema, the translations, every internal link and anchor, every asset path and every citation (`sources.html#src-…`).
 
 ```bash
 python tools/build.py           # rebuild after editing data or pages
@@ -167,7 +188,7 @@ Corrections and suggestions are welcome via the issue templates.
 
 ## Privacy and security
 
-No cookies, analytics, tracking pixels, advertising, external fonts or third-party scripts. Every page has a strict Content Security Policy (`default-src 'self'`). The interactive tools run entirely in the browser and do not store answers.
+No cookies, analytics, tracking pixels, advertising, external fonts or third-party scripts. Every page has a strict Content Security Policy (`default-src 'self'`). The interactive tools run entirely in the browser and do not store answers. The only thing ever stored is a language the visitor picks in the switcher (`localStorage`, never transmitted).
 
 ## Licence
 

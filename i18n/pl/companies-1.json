@@ -1,0 +1,421 @@
+{
+  "3ds-outscale": {
+    "headquarters": "Region paryski, Francja",
+    "parentCompany": "Dassault Systèmes (Francja)",
+    "ownership": "OUTSCALE SASU jest marką i spółką zależną Dassault Systèmes.",
+    "classificationNote": "Spółka operacyjna należy do francuskiej grupy Dassault Systèmes.",
+    "description": "Świadczy usługi chmurowe IaaS, w tym w regionach z kwalifikacją SecNumCloud 3.2, zarządzany Kubernetes (OKS) oraz hostowane modele Mistral AI, skierowane do sektora publicznego, ochrony zdrowia i usług finansowych.",
+    "evaluating": [
+      "Hiperskalowa chmura publiczna (IaaS/PaaS), np. AWS, Microsoft Azure lub Google Cloud",
+      "Suwerenna chmura dla obciążeń regulowanych (SecNumCloud)"
+    ]
+  },
+  "acronis": {
+    "headquarters": "Szafuza, Szwajcaria",
+    "parentCompany": "EQT (Szwecja)",
+    "ownership": "Od 2025 roku większościowym właścicielem jest fundusz EQT X (szwedzki private equity); założyciele, kadra zarządzająca i inwestorzy, w tym CVC i BlackRock Private Equity Partners, zachowują udziały mniejszościowe",
+    "classificationNote": "Siedziba w Szwajcarii, szwedzki właściciel większościowy; część inwestorów mniejszościowych pochodzi spoza Europy.",
+    "description": "Dostawca z siedzibą w Szwajcarii (współzałożony w Singapurze) oferujący kopie zapasowe, odtwarzanie po awarii i zintegrowaną ochronę punktów końcowych, sprzedawane głównie za pośrednictwem dostawców usług zarządzanych (MSP).",
+    "evaluating": [
+      "Platformy kopii zapasowych i odtwarzania po awarii",
+      "Platformy bezpieczeństwa dla MSP",
+      "EDR/XDR dla MŚP"
+    ]
+  },
+  "airbus-protect": {
+    "headquarters": "Francja (grupa Airbus; biura we Francji, w Niemczech, Hiszpanii i Wielkiej Brytanii)",
+    "parentCompany": "Airbus (Holandia/Francja)",
+    "ownership": "Spółka w całości zależna od Airbusa, uruchomiona w 2022 roku",
+    "classificationNote": "Spółka usługowa zależna od europejskiej grupy Airbus.",
+    "description": "Spółka zależna Airbusa świadcząca usługi doradcze i zarządzane w zakresie cyberbezpieczeństwa, bezpieczeństwa (safety) i zrównoważonego rozwoju, w tym prowadzenie SOC dla portów lotniczych i infrastruktury krytycznej.",
+    "evaluating": [
+      "Dostawcy zarządzanych usług bezpieczeństwa (MSSP)",
+      "Zarządzane usługi SOC",
+      "Doradztwo w zakresie bezpieczeństwa OT"
+    ]
+  },
+  "airlock-ergon": {
+    "headquarters": "Zurych, Szwajcaria",
+    "parentCompany": "Afinum (niemiecko-szwajcarski fundusz private equity)",
+    "ownership": "W styczniu 2026 roku Afinum został większościowym udziałowcem Ergon Informatik AG, zastępując założyciela i głównych udziałowców; kadra zarządzająca i wielu pracowników pozostaje udziałowcami",
+    "classificationNote": "Siedziba w Szwajcarii, europejski fundusz private equity jako właściciel większościowy.",
+    "description": "Airlock to linia produktów bezpieczeństwa szwajcarskiej firmy programistycznej Ergon, łącząca zaporę aplikacji webowych i API z zarządzaniem tożsamością i dostępem klientów; w 2026 roku uruchomiono ofertę IAM-as-a-Service.",
+    "evaluating": [
+      "Zapory aplikacji webowych (WAF/WAAP)",
+      "Zarządzanie tożsamością i dostępem klientów (CIAM)",
+      "Bramy API i bezpieczeństwo API"
+    ]
+  },
+  "anydesk": {
+    "headquarters": "Stuttgart, Niemcy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Spółka prywatna finansowana przez fundusze venture capital; wśród inwestorów są EQT Ventures (Szwecja), Insight Partners (USA) i General Atlantic (USA, lider rundy Series C w 2021 roku); wielkość udziałów nie została ujawniona",
+    "classificationNote": "Siedziba w Niemczech, ale amerykańscy inwestorzy wzrostowi (Insight Partners, General Atlantic) posiadają znaczące udziały o nieujawnionej wielkości; nie udało się zweryfikować, że kontrola jest europejska.",
+    "description": "Niemieckie oprogramowanie do zdalnego pulpitu i zdalnej pomocy technicznej, dostępne jako usługa chmurowa lub do wdrożenia on-premises.",
+    "evaluating": [
+      "Narzędzia do zdalnego dostępu i zdalnej pomocy technicznej"
+    ]
+  },
+  "aruba": {
+    "headquarters": "Ponte San Pietro (Bergamo), Włochy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Prywatna włoska spółka założona w 1994 roku, kierowana przez prezesa Stefano Cecconiego; doniesienia prasowe wiążą spółkę z rodziną Cecconi. Nie zidentyfikowano właściciela spoza Europy.",
+    "classificationNote": "Prywatna włoska spółka; nie zidentyfikowano właściciela spoza Europy.",
+    "description": "Świadczy usługi chmurowe, centrów danych, hostingu stron WWW, poczty e-mail, certyfikowanej poczty elektronicznej (PEC) i domen z własnych centrów danych we Włoszech i w Czechach.",
+    "evaluating": [
+      "Hiperskalowa chmura publiczna (IaaS/PaaS)",
+      "Dostawcy hostingu stron WWW i poczty e-mail",
+      "Centra danych kolokacyjne"
+    ]
+  },
+  "bareos": {
+    "headquarters": "Kolonia, Niemcy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Bareos GmbH & Co. KG to prywatna spółka zarządzana przez założycieli, która utrzymuje projekt Bareos na licencji AGPLv3",
+    "classificationNote": "Projekt kopii zapasowych open source rozwijany w Europie, z niemiecką spółką oferującą subskrypcje i wsparcie.",
+    "description": "Oprogramowanie open source do sieciowych kopii zapasowych (fork Bacula z 2010 roku) na licencji AGPLv3; spółka z Kolonii sprzedaje subskrypcje, wsparcie oraz współfinansowanie rozwoju funkcji.",
+    "evaluating": [
+      "Oprogramowanie do kopii zapasowych i odtwarzania dla przedsiębiorstw",
+      "Platformy kopii zapasowych open source"
+    ]
+  },
+  "bitdefender": {
+    "headquarters": "Bukareszt, Rumunia",
+    "parentCompany": "Bitdefender Holding B.V. (Holandia)",
+    "ownership": "Spółka prywatna; założyciele Florin i Mariuca Talpes mają według doniesień kontrolować około 55%; brytyjska firma private equity Vitruvian Partners posiada około 30% (od 2017 roku); spółka nienotowana",
+    "classificationNote": "Działalność w Rumunii pod holenderskim holdingiem, kontrolowana przez założycieli; drugim co do wielkości udziałowcem jest inwestor z Wielkiej Brytanii (europejski, spoza UE). Dane o udziałach pochodzą z doniesień prasowych, a nie z ujawnień spółki.",
+    "description": "Rumuński dostawca cyberbezpieczeństwa założony w 2001 roku, oferujący ochronę punktów końcowych dla konsumentów i firm, EDR/XDR, bezpieczeństwo chmury i MDR. Jego silniki skanujące są licencjonowane także innym dostawcom.",
+    "evaluating": [
+      "Platformy EDR/XDR",
+      "Platformy ochrony punktów końcowych (EPP)",
+      "Ochrona obciążeń chmurowych",
+      "Zarządzane wykrywanie i reagowanie (MDR)"
+    ]
+  },
+  "canonical": {
+    "headquarters": "Londyn, Wielka Brytania",
+    "parentCompany": "Brak (spółka prywatna)",
+    "ownership": "Canonical Group Limited (Londyn) jest spółką prywatną; Companies House wskazuje założyciela Marka Shuttlewortha (Brytyjczyk, zamieszkały na Wyspie Man) jako osobę sprawującą znaczącą kontrolę. Rozważano IPO, ale nie wyznaczono terminu.",
+    "classificationNote": "Siedziba w Wielkiej Brytanii, kontrolowana przez brytyjskiego założyciela.",
+    "description": "Wydaje Ubuntu, szeroko stosowaną dystrybucję Linuksa na serwery, komputery stacjonarne, chmurę i IoT, oraz sprzedaje wsparcie i oprogramowanie infrastrukturalne, takie jak OpenStack, Kubernetes i MAAS.",
+    "evaluating": [
+      "Korporacyjne dystrybucje Linuksa, np. Red Hat Enterprise Linux",
+      "Systemy operacyjne dla komputerów stacjonarnych, np. Windows lub macOS",
+      "Platformy chmury prywatnej, np. VMware"
+    ]
+  },
+  "checkmk": {
+    "headquarters": "Monachium, Niemcy",
+    "parentCompany": "PSG Equity (Stany Zjednoczone), udziałowiec większościowy",
+    "ownership": "Checkmk GmbH (dawniej tribe29 GmbH) otrzymała na początku 2025 roku inwestycję od amerykańskiej firmy private equity PSG Equity, opisywaną jako pakiet większościowy.",
+    "classificationNote": "Siedziba i rozwój w Niemczech, ale według doniesień większościowym właścicielem jest amerykańska firma private equity.",
+    "description": "Rozwija Checkmk, platformę monitorowania infrastruktury IT i aplikacji, dostępną jako open source w edycji Raw oraz w edycjach komercyjnych.",
+    "evaluating": [
+      "Narzędzia do monitorowania infrastruktury, np. Datadog, SolarWinds lub PRTG"
+    ]
+  },
+  "clavister": {
+    "headquarters": "Örnsköldsvik, Szwecja",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Notowana na Nasdaq Stockholm (First North) jako Clavister Holding AB; rozproszony akcjonariat, nie zidentyfikowano akcjonariusza kontrolującego",
+    "classificationNote": "Szwedzka spółka giełdowa o rozproszonym akcjonariacie.",
+    "description": "Szwedzki producent zapór sieciowych nowej generacji oraz produktów do zarządzania tożsamością i dostępem, koncentrujący się na klientach z sektora telekomunikacyjnego i obronnego w Europie.",
+    "evaluating": [
+      "Zapory sieciowe nowej generacji",
+      "Zapory sieciowe o wzmocnionej konstrukcji dla sektora obronnego",
+      "VPN do zdalnego dostępu",
+      "Uwierzytelnianie wieloskładnikowe"
+    ]
+  },
+  "cleura": {
+    "headquarters": "Karlskrona, Szwecja",
+    "parentCompany": "Iver (Szwecja)",
+    "ownership": "Cleura należy do nordyckiej grupy usług IT Iver. Brytyjska Intermediate Capital Group (ICG) uzgodniła w 2021 roku przejęcie Iver od EQT.",
+    "classificationNote": "Spółka operacyjna należy do szwedzkiej grupy Iver, której właścicielem jest inwestor z Wielkiej Brytanii.",
+    "description": "Świadczy usługi chmury publicznej i chmury zgodnej z regulacjami opartej na OpenStack z centrów danych w Szwecji, a także oferuje pakiet do współpracy zbudowany na Nextcloud.",
+    "evaluating": [
+      "Hiperskalowa chmura publiczna (IaaS/PaaS), np. AWS, Microsoft Azure lub Google Cloud"
+    ]
+  },
+  "clever-cloud": {
+    "headquarters": "Nantes, Francja",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Prywatna francuska spółka założona w 2010 roku; wśród wymienionych inwestorów są Kima Ventures, Daphni i French Tech DeepNum20.",
+    "classificationNote": "Francuska spółka z francuskimi inwestorami; nie zidentyfikowano właściciela spoza Europy.",
+    "description": "Oferuje platformę jako usługę (PaaS) do wdrażania i uruchamiania aplikacji oraz zarządzanych baz danych. W kwietniu 2026 roku wchodziła w skład konsorcjum z OVHcloud i DEEP wybranego do umowy ramowej Komisji Europejskiej dotyczącej suwerennej chmury.",
+    "evaluating": [
+      "Oferty platformy jako usługi (PaaS), np. Heroku, AWS Elastic Beanstalk lub Azure App Service"
+    ]
+  },
+  "codeberg-forgejo": {
+    "headquarters": "Berlin, Niemcy",
+    "parentCompany": "Brak (stowarzyszenie non-profit)",
+    "ownership": "Codeberg e.V. to zarejestrowane stowarzyszenie non-profit w Berlinie, finansowane z darowizn i składek członkowskich. Prowadzi Codeberg.org i jest opiekunem projektu Forgejo.",
+    "classificationNote": "Niemieckie stowarzyszenie non-profit zarządzane przez społeczność oraz projekt open source.",
+    "description": "Codeberg.org to prowadzony przez społeczność serwis hostingu kodu dla projektów open source, zbudowany na Forgejo – platformie Git do samodzielnego hostowania, utworzonej w 2022 roku jako społecznościowy fork Gitea.",
+    "evaluating": [
+      "Platformy hostingu kodu i DevOps, np. GitHub lub GitLab"
+    ]
+  },
+  "collabora-productivity": {
+    "headquarters": "Cambridge, Wielka Brytania",
+    "parentCompany": "Collabora Limited (Wielka Brytania), kontrolowana przez kanadyjskie podmioty holdingowe",
+    "ownership": "Companies House wskazuje Collabora Limited oraz Cloudblue IT Limited (kontrolowaną przez Michaela i Julię Meeks, Wielka Brytania) jako osoby sprawujące znaczącą kontrolę nad Collabora Productivity Limited. Osobą sprawującą znaczącą kontrolę nad Collabora Limited jest Philippe Kalaf i jego kanadyjska spółka holdingowa.",
+    "classificationNote": "Siedziba w Wielkiej Brytanii, z udziałami brytyjskiej kadry zarządzającej, ale spółka dominująca Collabora Limited jest kontrolowana przez osobę zamieszkałą w Kanadzie i kanadyjską spółkę holdingową.",
+    "description": "Rozwija Collabora Online i Collabora Office, korporacyjne edycje technologii LibreOffice do edycji dokumentów w przeglądarce i na komputerze, zintegrowane z platformami takimi jak Nextcloud i openDesk.",
+    "evaluating": [
+      "Pakiety biurowe i do współpracy, np. Microsoft 365 lub Google Workspace"
+    ]
+  },
+  "cryptomator": {
+    "headquarters": "Bonn, Niemcy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Rozwijany przez Skymatic GmbH, małą prywatną spółkę z Bonn kierowaną przez współzałożyciela Tobiasa Hagemanna",
+    "classificationNote": "Siedziba w Niemczech i niemiecka własność prywatna.",
+    "description": "Szyfrowanie po stronie klienta, open source, dla plików przechowywanych w dowolnej usłudze przechowywania w chmurze, z komercyjnym Hubem do zarządzania kluczami i dostępem w zespołach.",
+    "evaluating": [
+      "Szyfrowanie plików w chmurze po stronie klienta",
+      "Szyfrowane udostępnianie plików dla zespołów"
+    ]
+  },
+  "cubbit": {
+    "headquarters": "Bolonia, Włochy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Spółka prywatna finansowana przez fundusze venture capital; jej runda z 2024 roku o wartości 12,5 mln USD była współprowadzona przez brytyjskich inwestorów LocalGlobe i ETF Partners. Absolwent programu EIC Scaling Up.",
+    "classificationNote": "Włoska spółka z europejskimi inwestorami.",
+    "description": "Oferuje geograficznie rozproszony, zgodny z S3 magazyn obiektowy, w którym dane są szyfrowane, fragmentowane i replikowane w sieci węzłów; dostawcy usług mogą budować na nim własne oferty przechowywania danych.",
+    "evaluating": [
+      "Usługi magazynu obiektowego, np. Amazon S3 lub Azure Blob Storage",
+      "Docelowe magazyny kopii zapasowych"
+    ]
+  },
+  "darktrace": {
+    "headquarters": "Cambridge, Wielka Brytania",
+    "parentCompany": "Thoma Bravo (Stany Zjednoczone)",
+    "ownership": "Przejęta przez fundusze amerykańskiej firmy private equity Thoma Bravo za 5,3 mld USD; transakcję zamknięto 1 października 2024 roku, a spółkę wycofano z giełdy w Londynie",
+    "classificationNote": "Siedziba i dział badawczo-rozwojowy w Wielkiej Brytanii, ale ostateczna kontrola należy do amerykańskiej firmy private equity.",
+    "description": "Brytyjski dostawca wykrywania anomalii i reagowania opartego na AI, obejmującego sieci, pocztę e-mail, chmurę, punkty końcowe i OT.",
+    "evaluating": [
+      "Wykrywanie i reagowanie w sieci (NDR)",
+      "Bezpieczeństwo poczty e-mail (oparte na API)",
+      "Monitorowanie sieci OT"
+    ]
+  },
+  "detectify": {
+    "headquarters": "Sztokholm, Szwecja",
+    "parentCompany": "Insight Partners (Stany Zjednoczone)",
+    "ownership": "Od października 2024 roku większościowym właścicielem jest amerykańska firma inwestycyjna Insight Partners; Balderton pozostaje udziałowcem mniejszościowym",
+    "classificationNote": "Siedziba i zespół inżynierski w Szwecji, ale kontrola większościowa należy do amerykańskiego inwestora.",
+    "description": "Szwedzka usługa zarządzania powierzchnią ataku i skanowania aplikacji webowych, wykorzystująca badania podatności dostarczane przez etycznych hakerów.",
+    "evaluating": [
+      "Zarządzanie zewnętrzną powierzchnią ataku (EASM)",
+      "Dynamiczne testowanie bezpieczeństwa aplikacji (DAST)"
+    ]
+  },
+  "drivelock": {
+    "headquarters": "Monachium, Niemcy",
+    "parentCompany": "Brak (spółka portfelowa Nordwind)",
+    "ownership": "DriveLock SE jest spółką portfelową monachijskiego inwestora Nordwind (Nordwind Capital / Nordwind Growth), jej inwestora większościowego",
+    "classificationNote": "Siedziba w Niemczech, niemiecki inwestor większościowy; dokładna wielkość udziałów nie została opublikowana.",
+    "description": "Niemiecki dostawca ochrony punktów końcowych skoncentrowany na kontroli urządzeń i aplikacji, szyfrowaniu oraz budowaniu świadomości bezpieczeństwa; w 2025 roku przejął dostawcę bezpiecznych wirtualnych pokojów danych idgard.",
+    "evaluating": [
+      "Kontrola urządzeń i aplikacji",
+      "Zarządzanie szyfrowaniem punktów końcowych",
+      "Bezpieczne wirtualne pokoje danych / udostępnianie plików"
+    ]
+  },
+  "elastic": {
+    "headquarters": "Amsterdam, Holandia (siedziba rejestrowa); spółka określa się jako rozproszona, bez głównego biura wykonawczego",
+    "parentCompany": "Brak (notowana na NYSE)",
+    "ownership": "Elastic N.V. jest zarejestrowana w Holandii i notowana na Nowojorskiej Giełdzie Papierów Wartościowych (ESTC). W dokumentach składanych do SEC podaje adres działalności w Amsterdamie i adres korespondencyjny w San Francisco oraz stwierdza, że nie ma głównego biura wykonawczego.",
+    "classificationNote": "Zarejestrowana w Holandii, z europejskimi korzeniami, ale notowana w USA, ze znaczną działalnością i bazą inwestorów w USA.",
+    "description": "Rozwija Elasticsearch i Elastic Stack do wyszukiwania, obserwowalności i analityki bezpieczeństwa (SIEM i ochrona punktów końcowych), do samodzielnego zarządzania lub jako Elastic Cloud.",
+    "evaluating": [
+      "Platformy obserwowalności, np. Datadog lub Splunk",
+      "Platformy SIEM, np. Microsoft Sentinel lub Splunk Enterprise Security"
+    ]
+  },
+  "elastx": {
+    "headquarters": "Sztokholm, Szwecja",
+    "parentCompany": "Sobro (Szwecja), według doniesień właściciel większościowy",
+    "ownership": "Prywatna spółka Elastx AB; szwedzka spółka inwestycyjna Sobro wymienia Elastx jako spółkę portfelową i według doniesień jest jej właścicielem większościowym od 2020 roku.",
+    "classificationNote": "Szwedzka spółka należąca do szwedzkiego inwestora.",
+    "description": "Oferuje infrastrukturę chmurową opartą na OpenStack i zarządzany Kubernetes z centrów danych w rejonie Sztokholmu.",
+    "evaluating": [
+      "Hiperskalowa chmura publiczna (IaaS/PaaS), np. AWS, Microsoft Azure lub Google Cloud"
+    ]
+  },
+  "element": {
+    "headquarters": "Londyn, Wielka Brytania",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Prowadzona przez New Vector Limited (Londyn), finansowaną przez fundusze venture capital; Companies House nie wskazuje osoby sprawującej znaczącą kontrolę. Ujawnieni inwestorzy to m.in. Notion Capital, Dawn Capital (Wielka Brytania), Metaplanet oraz amerykańskie Automattic i Protocol Labs jako inwestorzy mniejszościowi.",
+    "classificationNote": "Siedziba w Wielkiej Brytanii, brak jednego kontrolującego udziałowca; międzynarodowi inwestorzy posiadają udziały mniejszościowe.",
+    "description": "Rozwija Element, aplikację do szyfrowanej end-to-end komunikacji i współpracy zbudowaną na otwartym protokole Matrix, oraz Element Server Suite do wdrożeń samodzielnie hostowanych. Element został założony przez twórców Matrix.",
+    "evaluating": [
+      "Platformy komunikacji zespołowej, np. Microsoft Teams lub Slack",
+      "Bezpieczna komunikacja dla administracji rządowej i sektora obronnego"
+    ]
+  },
+  "eset": {
+    "headquarters": "Bratysława, Słowacja",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Spółka prywatna należąca do założycieli i niewielkiej grupy właścicieli (Rada Udziałowców); bez kapitału venture capital, bez IPO",
+    "classificationNote": "Siedziba w Bratysławie, własność osób fizycznych ze Słowacji; spółka deklaruje, że nie ma inwestorów zewnętrznych.",
+    "description": "Słowacki producent oprogramowania zabezpieczającego założony w 1992 roku, znany z silnika antywirusowego NOD32. Oferuje ochronę punktów końcowych, EDR/XDR, szyfrowanie i zarządzane usługi wykrywania dla konsumentów i firm.",
+    "evaluating": [
+      "Platformy ochrony punktów końcowych (EPP)",
+      "Platformy EDR/XDR",
+      "Zarządzane wykrywanie i reagowanie (MDR)",
+      "Pełne szyfrowanie dysku"
+    ]
+  },
+  "eviden-atos": {
+    "headquarters": "Bezons (region paryski), Francja",
+    "parentCompany": "Atos SE (Francja)",
+    "ownership": "Eviden to marka produktowa Atos SE (notowanej na Euronext Paris); po restrukturyzacji finansowej w 2024 roku większościowymi właścicielami Atos są jego dawni wierzyciele finansowi; w marcu 2026 roku Atos sprzedał jednostkę Advanced Computing (Bull) państwu francuskiemu, a produkty cyberbezpieczeństwa zachował jako działalność podstawową",
+    "classificationNote": "Linia produktów francuskiej grupy Atos; akcjonariat Atos po restrukturyzacji składa się w dużej mierze z wierzycieli finansowych, których przynależności państwowej nie weryfikowano indywidualnie.",
+    "description": "Portfolio produktów cyberbezpieczeństwa Atos obejmujące sprzętowe moduły bezpieczeństwa i szyfratory (Trustway), zarządzanie tożsamością i dostępem (dawniej Evidian) oraz PKI/tożsamość cyfrową (IDnomic).",
+    "evaluating": [
+      "Sprzętowe moduły bezpieczeństwa (HSM)",
+      "Zarządzanie tożsamością i administrowanie nią (IGA)",
+      "PKI i zarządzanie certyfikatami",
+      "Szyfratory sieciowe"
+    ]
+  },
+  "exeon-analytics": {
+    "headquarters": "Zurych, Szwajcaria",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Prywatny spin-off ETH Zurich finansowany przez fundusze venture capital (ostatnia ujawniona runda w 2021 roku); nie stwierdzono przejęcia",
+    "classificationNote": "Siedziba w Szwajcarii i szwajcarska kontrola (europejskie państwo spoza UE).",
+    "description": "Szwajcarski dostawca oprogramowania do wykrywania i reagowania w sieci, które analizuje metadane sieciowe z użyciem uczenia maszynowego; w 2026 roku dodał moduły UEBA i monitorowania agentów AI.",
+    "evaluating": [
+      "Wykrywanie i reagowanie w sieci (NDR)",
+      "Analityka zachowań użytkowników i podmiotów (UEBA)"
+    ]
+  },
+  "exoscale": {
+    "headquarters": "Lozanna, Szwajcaria",
+    "parentCompany": "A1 Digital / A1 Telekom Austria Group (Austria), w większości należąca do América Movil (Meksyk)",
+    "ownership": "A1 Digital, spółka zależna Telekom Austria (A1 Group), przejęła Exoscale w 2017 roku. América Movil (Meksyk) zwiększyła swój udział w Telekom Austria z 51% do 56,55% w 2023 roku, a później raportowała posiadanie około 58%; austriacki państwowy holding ÖBAG posiada znaczący pakiet mniejszościowy na podstawie umowy akcjonariuszy.",
+    "classificationNote": "Działalność i siedziba są europejskie, ale ostatecznym większościowym udziałowcem grupy dominującej jest meksykańska América Movil.",
+    "description": "Oferuje infrastrukturę chmury publicznej, w tym moc obliczeniową, magazyn obiektowy zgodny z S3, zarządzany Kubernetes (SKS) i zarządzane bazy danych, z centrów danych w Szwajcarii, Austrii, Niemczech i Bułgarii.",
+    "evaluating": [
+      "Hiperskalowa chmura publiczna (IaaS/PaaS), np. AWS, Microsoft Azure lub Google Cloud"
+    ]
+  },
+  "f-secure": {
+    "headquarters": "Helsinki, Finlandia",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Notowana na Nasdaq Helsinki; nie znaleziono ogłoszenia o zmianie kontroli w latach 2025–2026",
+    "classificationNote": "Fińska spółka giełdowa, niezależna od WithSecure od podziału w 2022 roku; nie zidentyfikowano kontrolującego udziałowca spoza Europy.",
+    "description": "Fińska firma zajmująca się cyberbezpieczeństwem konsumenckim, wydzielona z WithSecure w 2022 roku. Sprzedaje konsumentom produkty z zakresu bezpieczeństwa, ochrony tożsamości i ochrony przed oszustwami, głównie za pośrednictwem operatorów telekomunikacyjnych i innych partnerów.",
+    "evaluating": [
+      "Konsumenckie pakiety zabezpieczeń punktów końcowych",
+      "Usługi bezpieczeństwa dostarczane przez operatorów (B2B2C)"
+    ]
+  },
+  "fudo-security": {
+    "headquarters": "Warszawa, Polska",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Spółka prywatna finansowana przez fundusze venture capital (około 10 mln USD pozyskanych w styczniu 2025 roku); posiada także podmiot w USA, Fudo Security Inc. (Newark, Kalifornia)",
+    "classificationNote": "Spółka deklaruje, że ma siedzibę w Warszawie po przeniesieniu jej z powrotem z Doliny Krzemowej; amerykańska spółka zależna nadal istnieje, a niektóre katalogi wciąż podają adres w USA.",
+    "description": "Polski producent rozwiązań do zarządzania dostępem uprzywilejowanym z nagrywaniem sesji i analizą behawioralną opartą na AI.",
+    "evaluating": [
+      "Zarządzanie dostępem uprzywilejowanym (PAM)",
+      "Monitorowanie i nagrywanie sesji uprzywilejowanych"
+    ]
+  },
+  "g-data": {
+    "headquarters": "Bochum, Niemcy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Prywatna niemiecka spółka akcyjna (AG, nienotowana); współzałożyciel Andreas Luning zasiada w zarządzie; lista akcjonariuszy nie jest publicznie ujawniona",
+    "classificationNote": "Siedziba i kadra zarządzająca w Niemczech; brak dowodów na własność spoza Europy, ale dokładnej struktury akcjonariatu nie dało się publicznie zweryfikować.",
+    "description": "Niemiecki pionier oprogramowania antywirusowego (założony w 1985 roku), oferujący ochronę punktów końcowych, zarządzane EDR, szkolenia z zakresu świadomości bezpieczeństwa i reagowanie na incydenty dla firm i konsumentów.",
+    "evaluating": [
+      "Platformy ochrony punktów końcowych (EPP)",
+      "Zarządzane wykrywanie i reagowanie (MDR)",
+      "Szkolenia z zakresu świadomości bezpieczeństwa"
+    ]
+  },
+  "gatewatcher": {
+    "headquarters": "Paryż, Francja",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Spółka prywatna kierowana przez założyciela (Jacques de La Riviere); runda Series A (2022) prowadzona przez Move Capital Fund I (Kepler Cheuvreux Invest); 25 mln EUR finansowania typu venture debt od Europejskiego Banku Inwestycyjnego (2025)",
+    "classificationNote": "Francuska spółka finansowana przez francuskich inwestorów i EBI; szczegółowa struktura udziałowa nie jest publiczna.",
+    "description": "Francuski dostawca produktów do wykrywania i reagowania w sieci (NDR) oraz analizy zagrożeń (threat intelligence), używanych przez przedsiębiorstwa i podmioty publiczne.",
+    "evaluating": [
+      "Wykrywanie i reagowanie w sieci (NDR)",
+      "Systemy wykrywania włamań",
+      "Kanały danych o zagrożeniach (threat intelligence)"
+    ]
+  },
+  "genua": {
+    "headquarters": "Kirchheim bei München, Niemcy",
+    "parentCompany": "Bundesdruckerei Gruppe (Niemcy)",
+    "ownership": "Od 1 stycznia 2020 roku w 100% własnością Bundesdruckerei; Bundesdruckerei Gruppe GmbH jest w całości własnością niemieckiego rządu federalnego",
+    "classificationNote": "Niemiecka spółka operacyjna, której ostateczną spółką dominującą jest niemieckie państwo federalne za pośrednictwem Bundesdruckerei.",
+    "description": "Niemiecki producent produktów bezpieczeństwa IT z dopuszczeniem BSI, takich jak zapory sieciowe o wysokim poziomie zaufania, diody danych, bramy VPN i systemy zdalnego serwisu, używanych przez administrację publiczną i operatorów infrastruktury krytycznej.",
+    "evaluating": [
+      "Zapory sieciowe o wysokim poziomie zaufania",
+      "Diody danych",
+      "Bramy VPN dla danych niejawnych",
+      "Bezpieczny zdalny serwis dla OT"
+    ]
+  },
+  "grafana-labs": {
+    "headquarters": "Nowy Jork, Stany Zjednoczone",
+    "parentCompany": "Brak (spółka prywatna finansowana przez fundusze venture capital)",
+    "ownership": "Spółka prywatna; wśród inwestorów są amerykańskie Lightspeed, Sequoia, Coatue i CapitalG oraz singapurski GIC. Projekt Grafana powstał w Szwecji, a spółka zatrudnia dużą liczbę pracowników w Europie.",
+    "classificationNote": "Projekt open source o europejskim rodowodzie, ale spółka ma siedzibę w Nowym Jorku i jest wspierana głównie przez amerykańskich inwestorów.",
+    "description": "Rozwija Grafanę i stos obserwowalności LGTM (Loki, Grafana, Tempo, Mimir), dostępne jako open source oraz jako hostowana usługa Grafana Cloud.",
+    "evaluating": [
+      "Platformy obserwowalności, np. Datadog, New Relic lub Splunk Observability"
+    ]
+  },
+  "greenbone": {
+    "headquarters": "Osnabrück, Niemcy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Prywatna niemiecka spółka akcyjna (Greenbone AG, zarejestrowana w sądzie rejonowym w Osnabrück); struktura akcjonariatu nie jest publicznie ujawniona",
+    "classificationNote": "Niemiecka spółka rozwijająca skaner open source OpenVAS; brak dowodów na kontrolę spoza Europy, ale akcjonariuszy nie dało się publicznie zweryfikować.",
+    "description": "Niemiecki twórca skanera podatności OpenVAS. Oferuje bezpłatną edycję społecznościową oraz komercyjne urządzenia (appliance) i usługi chmurowe z korporacyjnym kanałem danych o podatnościach.",
+    "evaluating": [
+      "Skanery podatności",
+      "Platformy zarządzania podatnościami"
+    ]
+  },
+  "grommunio": {
+    "headquarters": "Wiedeń, Austria",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "grommunio GmbH (założona jako grammm GmbH w Wiedniu około 2020 roku); spółka prywatna, udziałowcy nie zostali opublikowani.",
+    "classificationNote": "Austriacka spółka; nie zidentyfikowano właściciela spoza Europy.",
+    "description": "Rozwija grommunio, serwer groupware open source implementujący natywne protokoły Exchange (MAPI/HTTP, EWS, ActiveSync), dzięki czemu Outlook i urządzenia mobilne łączą się bez wtyczek; serwer bazowy jest licencjonowany na AGPL-3.0.",
+    "evaluating": [
+      "Serwery poczty e-mail i groupware, np. Microsoft Exchange Server lub Exchange Online"
+    ]
+  },
+  "guardsix": {
+    "headquarters": "Kopenhaga, Dania",
+    "parentCompany": "Summa Equity (Szwecja)",
+    "ownership": "Od 2023 roku większościowym właścicielem jest szwedzka firma private equity Summa Equity (Fund III); Yttrium (dawniej Digital+ Partners) jest znaczącym udziałowcem mniejszościowym; w marcu 2026 roku zmiana marki z Logpoint na guardsix",
+    "classificationNote": "Siedziba w Danii, szwedzki właściciel większościowy.",
+    "description": "Duński dostawca oprogramowania dla centrów operacji bezpieczeństwa, w 2026 roku przemianowany z Logpoint. Oferuje SIEM, SOAR, NDR (z przejęcia Muninn) i powiązane moduły dla przedsiębiorstw i MSSP.",
+    "evaluating": [
+      "Platformy SIEM",
+      "SOAR",
+      "Wykrywanie i reagowanie w sieci (NDR)",
+      "Monitorowanie bezpieczeństwa SAP"
+    ]
+  },
+  "harfanglab": {
+    "headquarters": "Paryż, Francja",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Spółka prywatna finansowana przez fundusze venture capital; runda Series A (2023) prowadzona przez Credit Mutuel Innovation, z udziałem m.in. Elaia i MassMutual Ventures (USA)",
+    "classificationNote": "Siedziba we Francji i francuscy inwestorzy wiodący; amerykański inwestor venture capital posiada udziały mniejszościowe (wielkość nieujawniona).",
+    "description": "Francuski producent oprogramowania do wykrywania i reagowania na punktach końcowych (EDR), założony w 2018 roku. Jego EDR uzyskał certyfikację francuskiej agencji cyberbezpieczeństwa ANSSI.",
+    "evaluating": [
+      "Platformy EDR/XDR",
+      "Platformy ochrony punktów końcowych (EPP)",
+      "EDR dla środowisk odizolowanych (air-gapped) / on-premises"
+    ]
+  }
+}
