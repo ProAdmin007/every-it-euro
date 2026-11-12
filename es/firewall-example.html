@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>50.000 € en cortafuegos: ¿adónde va el dinero? | Every IT Euro</title>
+<meta name="description" content="Un ejemplo práctico basado en cifras anuales publicadas: qué ocurre con 50.000 € gastados en cortafuegos Fortinet FortiGate o Stormshield — canal de distribución, fabricación, I+D, ventas, beneficio, jurisdicción.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#003399">
+<link rel="canonical" href="https://proadmin007.github.io/every-it-euro/es/firewall-example.html">
+<link rel="alternate" hreflang="en" href="https://proadmin007.github.io/every-it-euro/firewall-example.html">
+<link rel="alternate" hreflang="de" href="https://proadmin007.github.io/every-it-euro/de/firewall-example.html">
+<link rel="alternate" hreflang="fr" href="https://proadmin007.github.io/every-it-euro/fr/firewall-example.html">
+<link rel="alternate" hreflang="es" href="https://proadmin007.github.io/every-it-euro/es/firewall-example.html">
+<link rel="alternate" hreflang="it" href="https://proadmin007.github.io/every-it-euro/it/firewall-example.html">
+<link rel="alternate" hreflang="pl" href="https://proadmin007.github.io/every-it-euro/pl/firewall-example.html">
+<link rel="alternate" hreflang="x-default" href="https://proadmin007.github.io/every-it-euro/firewall-example.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Every IT Euro">
+<meta property="og:title" content="50.000 € en cortafuegos: ¿adónde va el dinero?">
+<meta property="og:description" content="Fortinet FortiGate o Stormshield — el mismo presupuesto, seguido a través de las cifras anuales publicadas por cada fabricante.">
+<meta property="og:url" content="https://proadmin007.github.io/every-it-euro/es/firewall-example.html">
+<meta property="og:image" content="https://proadmin007.github.io/every-it-euro/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/css/style.css?v=36e500ecb5">
+<script src="../assets/js/i18n/en.js?v=e2db7cbb23"></script>
+<script src="../assets/js/i18n/es.js?v=e255d7450f"></script>
+<script src="../assets/js/main.js?v=bf1c211b8e"></script>
+<script src="../assets/js/example.js?v=790bd9c68e" defer></script>
+</head>
+<body>
+<!-- BEGIN:header -->
+<a class="skip-link" href="#main">Saltar al contenido principal</a>
+<div class="lang-bar">
+  <div class="container">
+    <nav class="lang-switch" aria-label="Idioma"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" class="lang-icon"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg><ul><li><a href="../firewall-example.html" hreflang="en" lang="en" data-lang="en"><span class="lang-code" aria-hidden="true">EN</span><span class="lang-name">English</span></a></li><li><a href="../de/firewall-example.html" hreflang="de" lang="de" data-lang="de"><span class="lang-code" aria-hidden="true">DE</span><span class="lang-name">Deutsch</span></a></li><li><a href="../fr/firewall-example.html" hreflang="fr" lang="fr" data-lang="fr"><span class="lang-code" aria-hidden="true">FR</span><span class="lang-name">Français</span></a></li><li><a href="../es/firewall-example.html" hreflang="es" lang="es" data-lang="es" aria-current="true"><span class="lang-code" aria-hidden="true">ES</span><span class="lang-name">Español</span></a></li><li><a href="../it/firewall-example.html" hreflang="it" lang="it" data-lang="it"><span class="lang-code" aria-hidden="true">IT</span><span class="lang-name">Italiano</span></a></li><li><a href="../pl/firewall-example.html" hreflang="pl" lang="pl" data-lang="pl"><span class="lang-code" aria-hidden="true">PL</span><span class="lang-name">Polski</span></a></li></ul></nav>
+  </div>
+</div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html"><svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="9" fill="#003399"/><circle cx="32.50" cy="20.00" r="1.9" fill="#FFCC00"/><circle cx="30.83" cy="26.25" r="1.9" fill="#FFCC00"/><circle cx="26.25" cy="30.83" r="1.9" fill="#FFCC00"/><circle cx="20.00" cy="32.50" r="1.9" fill="#FFCC00"/><circle cx="13.75" cy="30.83" r="1.9" fill="#FFCC00"/><circle cx="9.17" cy="26.25" r="1.9" fill="#FFCC00"/><circle cx="7.50" cy="20.00" r="1.9" fill="#FFCC00"/><circle cx="9.17" cy="13.75" r="1.9" fill="#FFCC00"/><circle cx="13.75" cy="9.17" r="1.9" fill="#FFCC00"/><circle cx="20.00" cy="7.50" r="1.9" fill="#FFCC00"/><circle cx="26.25" cy="9.17" r="1.9" fill="#FFCC00"/><circle cx="30.83" cy="13.75" r="1.9" fill="#FFCC00"/><path d="M20 12.5l6 2.4v4.6c0 4-2.6 6.9-6 8-3.4-1.1-6-4-6-8v-4.6z" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Every IT Euro<small>Opciones tecnológicas europeas</small></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle-icon" aria-hidden="true"></span>Menú</button>
+    <nav id="site-nav" class="site-nav" aria-label="Principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="why-europe.html">Por qué Europa</a></li>
+        <li><a href="cybersecurity.html">Ciberseguridad</a></li>
+        <li><a href="alternatives.html">Alternativas</a></li>
+        <li><a href="procurement.html">Contratación</a></li>
+        <li><a href="sovereignty.html">Test de soberanía</a></li>
+        <li><a href="sources.html">Fuentes</a></li>
+        <li><a href="about.html">Acerca de</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- END:header -->
+
+<main id="main">
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="container">
+      <p class="eyebrow">Ejemplo práctico</p>
+      <h1 id="page-title">50.000 € en cortafuegos: ¿adónde va el dinero?</h1>
+      <p class="lead">El mismo presupuesto gastado de dos maneras — en cortafuegos Fortinet FortiGate o en cortafuegos Stormshield Network Security —, seguido a través de las cifras anuales publicadas por cada fabricante.</p>
+      <ul class="toc" aria-label="En esta página">
+        <li><a href="#calculation">El cálculo</a></li>
+        <li><a href="#beyond-money">Más allá del dinero</a></li>
+        <li><a href="#takeaways">Lo que esto muestra — y lo que no</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="read-first">
+    <div class="container narrow">
+      <div class="callout">
+        <span class="callout-title" id="read-first">Lea esto primero</span>
+        <ul>
+          <li><strong>Se trata de una ilustración, no de una comparación de precios o de calidad.</strong> Con el mismo presupuesto se puede obtener de cada fabricante una capacidad, unas funciones y un soporte distintos. Nada de lo que figura aquí indica qué cortafuegos es mejor o más seguro.</li>
+          <li><strong>Cómo se reparte la parte del fabricante:</strong> se toman las cifras globales de cada empresa correspondientes a su último ejercicio y se aplican proporcionalmente al dinero que recibe el fabricante. Una compra real tiene su propia combinación de hardware, suscripciones y soporte.</li>
+          <li><strong>La parte del canal es una hipótesis.</strong> Lo que se quedan los distribuidores, revendedores e integradores no se publica. Puede ajustarla más abajo.</li>
+          <li><strong>Niveles de divulgación distintos.</strong> Fortinet, una empresa estadounidense cotizada, publica una cuenta de resultados completa. Stormshield, filial francesa del grupo Airbus, solo publica su cifra de negocio y su resultado neto en el registro mercantil francés. Por ello, su desglose es menos detallado — una diferencia de divulgación, no de fondo.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="calculation" aria-labelledby="calc-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Interactivo</p>
+        <h2 id="calc-title">El cálculo</h2>
+        <p class="lead">Los importes están redondeados a los 100 € más próximos.</p>
+      </div>
+
+      <form class="example-controls" id="example-form" data-js-only hidden>
+        <div class="field">
+          <label for="ex-budget">Presupuesto (€)</label>
+          <input id="ex-budget" type="number" min="1000" max="10000000" step="1000" value="50000" inputmode="numeric">
+        </div>
+        <div class="field">
+          <label for="ex-channel">Parte que se quedan el distribuidor, el revendedor y el integrador: <output id="ex-channel-out" for="ex-channel">20%</output></label>
+          <input id="ex-channel" type="range" min="0" max="40" step="1" value="20">
+        </div>
+      </form>
+      <p class="note">La parte del canal del 20% es una hipótesis de ejemplo, no una cifra de mercado. Solo a título de referencia: Exclusive Networks, un distribuidor europeo especializado en seguridad informática, declaró en 2023 un margen neto del 9,1% de las ventas brutas, para el conjunto de los fabricantes que distribuye — solo el nivel del distribuidor, antes de los márgenes del revendedor y del integrador.<a class="cite" href="sources.html#src-exclusive-networks-fy23" aria-label="Fuente 1">1</a></p>
+      <noscript><p class="note">JavaScript está desactivado: las cifras siguientes utilizan un presupuesto de 50.000 € y una parte del canal del 20%.</p></noscript>
+
+      <figure class="compare mt-2" aria-labelledby="compare-caption">
+        <figcaption id="compare-caption" class="compare-caption">Reparto del presupuesto de un vistazo (detalles en las tablas siguientes)</figcaption>
+        <div class="compare-row">
+          <span class="compare-label">Fortinet</span>
+              <svg class="split-bar" data-vendor="fortinet" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <rect class="seg seg-channel" data-seg="channel" x="0" y="0" height="10" width="20"/>
+                <rect class="seg seg-cost" data-seg="cost" data-share="0.195438" x="20" y="0" height="10" width="15.64"/>
+                <rect class="seg seg-rd" data-seg="rd" data-share="0.119934" x="35.64" y="0" height="10" width="9.59"/>
+                <rect class="seg seg-sales" data-seg="sales" data-share="0.345241" x="45.23" y="0" height="10" width="27.62"/>
+                <rect class="seg seg-admin" data-seg="admin" data-share="0.032796" x="72.85" y="0" height="10" width="2.62"/>
+                <rect class="seg seg-profit" data-seg="profit" data-share="0.306592" x="75.47" y="0" height="10" width="24.53"/>
+              </svg>
+        </div>
+        <div class="compare-row">
+          <span class="compare-label">Stormshield</span>
+              <svg class="split-bar" data-vendor="stormshield" viewBox="0 0 100 10" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <rect class="seg seg-channel" data-seg="channel" x="0" y="0" height="10" width="20"/>
+                <rect class="seg seg-undisclosed" data-seg="costs" data-share="0.852397" x="20" y="0" height="10" width="68.19"/>
+                <rect class="seg seg-profit" data-seg="profit" data-share="0.147603" x="88.19" y="0" height="10" width="11.81"/>
+              </svg>
+        </div>
+        <ul class="compare-legend">
+          <li><span class="swatch seg-channel" aria-hidden="true"></span>Distribuidor, revendedor, integrador</li>
+          <li><span class="swatch seg-cost" aria-hidden="true"></span>Fabricación y prestación de servicios</li>
+          <li><span class="swatch seg-rd" aria-hidden="true"></span>Investigación y desarrollo</li>
+          <li><span class="swatch seg-sales" aria-hidden="true"></span>Ventas y marketing</li>
+          <li><span class="swatch seg-admin" aria-hidden="true"></span>Administración y otros</li>
+          <li><span class="swatch seg-undisclosed" aria-hidden="true"></span>Todos los costes e impuestos (sin desglosar)</li>
+          <li><span class="swatch seg-profit" aria-hidden="true"></span>Beneficio (Fortinet: beneficio de explotación; Stormshield: beneficio neto)</li>
+        </ul>
+      </figure>
+
+      <div class="example-tables mt-2" id="example">
+        <article class="card example-vendor" data-vendor="fortinet">
+          <h3>Fortinet FortiGate</h3>
+          <p class="text-muted">Fortinet, Inc. — Sunnyvale, California, Estados Unidos. Cotizada en el Nasdaq. Cifras: ejercicio 2025.<a class="cite" href="sources.html#src-fortinet-10k-2025" aria-label="Fuente 2">2</a></p>
+          <div class="table-wrap">
+            <table class="example-table">
+              <caption class="visually-hidden">Adónde van 50.000 € gastados en Fortinet FortiGate</caption>
+              <thead><tr><th scope="col">Destino</th><th scope="col" class="num">Importe</th><th scope="col">Base</th></tr></thead>
+              <tbody>
+                <tr data-seg="channel"><th scope="row"><span class="swatch seg-channel" aria-hidden="true"></span>Distribuidor, revendedor, integrador</th><td class="num" data-amount>10.000 €</td><td>Hipótesis (ajustable). Los socios que atienden a un comprador europeo suelen ser empresas europeas.</td></tr>
+                <tr data-seg="cost" data-share="0.195438"><th scope="row"><span class="swatch seg-cost" aria-hidden="true"></span>Fabricación y prestación de servicios</th><td class="num" data-amount>7800 €</td><td>Coste de los ingresos: 19,5% de los ingresos. Los costes de producto corresponden «principalmente» a fabricación subcontratada a terceros y a materiales; alrededor del 87% del hardware de Fortinet se fabrica en Taiwán.<a class="cite" href="sources.html#src-fortinet-10k-2025" aria-label="Fuente 2">2</a></td></tr>
+                <tr data-seg="rd" data-share="0.119934"><th scope="row"><span class="swatch seg-rd" aria-hidden="true"></span>Investigación y desarrollo</th><td class="num" data-amount>4800 €</td><td>12,0% de los ingresos. El desarrollo se realiza «principalmente en Estados Unidos y Canadá»; alrededor del 78% de los equipos de I+D están en Norteamérica.<a class="cite" href="sources.html#src-fortinet-10k-2025" aria-label="Fuente 2">2</a></td></tr>
+                <tr data-seg="sales" data-share="0.345241"><th scope="row"><span class="swatch seg-sales" aria-hidden="true"></span>Ventas y marketing</th><td class="num" data-amount>13.800 €</td><td>34,5% de los ingresos. Incluye los equipos de ventas y de soporte de todo el mundo. Aproximadamente la mitad de los 15.109 empleados de Fortinet trabaja fuera de Estados Unidos y Canadá, principalmente en Europa, Oriente Medio y África.<a class="cite" href="sources.html#src-fortinet-10k-2025" aria-label="Fuente 2">2</a></td></tr>
+                <tr data-seg="admin" data-share="0.032796"><th scope="row"><span class="swatch seg-admin" aria-hidden="true"></span>Administración y otros</th><td class="num" data-amount>1300 €</td><td>3,3% de los ingresos: gastos generales y de administración, netos de una ganancia extraordinaria.<a class="cite" href="sources.html#src-fortinet-10k-2025" aria-label="Fuente 2">2</a></td></tr>
+                <tr data-seg="profit" data-share="0.306592"><th scope="row"><span class="swatch seg-profit" aria-hidden="true"></span>Beneficio de explotación</th><td class="num" data-amount>12.300 €</td><td>30,7% de los ingresos. El 92% del beneficio antes de impuestos de Fortinet en 2025 se contabilizó en Estados Unidos. Fortinet no reparte dividendos; en 2025 destinó 2290 millones de dólares a la recompra de acciones, más que su beneficio neto de 1850 millones de dólares.<a class="cite" href="sources.html#src-fortinet-10k-2025" aria-label="Fuente 2">2</a></td></tr>
+              </tbody>
+              <tfoot><tr><th scope="row">Total</th><td class="num" data-total>50.000 €</td><td></td></tr></tfoot>
+            </table>
+          </div>
+        </article>
+
+        <article class="card example-vendor" data-vendor="stormshield">
+          <h3>Stormshield Network Security</h3>
+          <p class="text-muted">Stormshield SAS — Issy-les-Moulineaux, Francia. Propiedad al 100% de Airbus Defence and Space. Cifras: ejercicio 2025.<a class="cite" href="sources.html#src-fr-register-stormshield" aria-label="Fuente 3">3</a><a class="cite" href="sources.html#src-stormshield-about" aria-label="Fuente 4">4</a></p>
+          <div class="table-wrap">
+            <table class="example-table">
+              <caption class="visually-hidden">Adónde van 50.000 € gastados en Stormshield</caption>
+              <thead><tr><th scope="col">Destino</th><th scope="col" class="num">Importe</th><th scope="col">Base</th></tr></thead>
+              <tbody>
+                <tr data-seg="channel"><th scope="row"><span class="swatch seg-channel" aria-hidden="true"></span>Distribuidor, revendedor, integrador</th><td class="num" data-amount>10.000 €</td><td>Hipótesis (ajustable). Los socios que atienden a un comprador europeo suelen ser empresas europeas.</td></tr>
+                <tr data-seg="costs" data-share="0.852397"><th scope="row"><span class="swatch seg-undisclosed" aria-hidden="true"></span>Todos los costes e impuestos (desglose no publicado)</th><td class="num" data-amount>34.100 €</td><td>85,2% de los ingresos. Stormshield emplea a entre 250 y 499 personas en Francia, en su sede de Issy-les-Moulineaux y en sus centros de Lyon y Villeneuve-d'Ascq. No se publica dónde se fabrican sus equipos.<a class="cite" href="sources.html#src-fr-register-stormshield" aria-label="Fuente 3">3</a></td></tr>
+                <tr data-seg="profit" data-share="0.147603"><th scope="row"><span class="swatch seg-profit" aria-hidden="true"></span>Beneficio neto (después de impuestos)</th><td class="num" data-amount>5900 €</td><td>14,8% de los ingresos: un resultado neto de 11,3 millones de euros sobre una cifra de negocio de 76,5 millones de euros. El beneficio corresponde al grupo Airbus, cuya matriz, Airbus SE, es una sociedad anónima europea; los Estados francés, alemán y español poseen conjuntamente el 25,7% de sus acciones.<a class="cite" href="sources.html#src-fr-register-stormshield" aria-label="Fuente 3">3</a><a class="cite" href="sources.html#src-airbus-fy2025-results" aria-label="Fuente 5">5</a></td></tr>
+              </tbody>
+              <tfoot><tr><th scope="row">Total</th><td class="num" data-total>50.000 €</td><td></td></tr></tfoot>
+            </table>
+          </div>
+        </article>
+      </div>
+      <p class="note mt-2">El beneficio de explotación de Fortinet (antes de intereses e impuestos) y el beneficio neto de Stormshield (después de impuestos) no son directamente comparables: la cifra de Stormshield es menor en parte porque ya se han deducido los impuestos. El beneficio neto de Fortinet en 2025 fue del 27,3% de los ingresos.<a class="cite" href="sources.html#src-fortinet-10k-2025" aria-label="Fuente 2">2</a></p>
+    </div>
+  </section>
+
+  <section class="section" id="beyond-money" aria-labelledby="beyond-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Control y dependencia</p>
+        <h2 id="beyond-title">Más allá del dinero</h2>
+        <p class="lead">En el caso de un cortafuegos — el dispositivo que decide qué entra en una red y qué sale de ella —, la propiedad, el desarrollo y la jurisdicción pueden importar tanto como el destino final de los euros.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <caption class="visually-hidden">Comparación de Fortinet y Stormshield en materia de control y dependencia</caption>
+          <thead><tr><th scope="col">Aspecto</th><th scope="col">Fortinet</th><th scope="col">Stormshield</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Propietario y jurisdicción</th><td>Fortinet, Inc., una empresa estadounidense cotizada con sede en Sunnyvale, California.<a class="cite" href="sources.html#src-fortinet-10k-2025" aria-label="Fuente 2">2</a></td><td>Stormshield SAS, Francia; propiedad al 100% de Airbus Defence and Space. Airbus SE es una sociedad anónima europea registrada en los Países Bajos.<a class="cite" href="sources.html#src-stormshield-about" aria-label="Fuente 4">4</a><a class="cite" href="sources.html#src-airbus-fy2025-results" aria-label="Fuente 5">5</a></td></tr>
+            <tr><th scope="row">Dónde se desarrolla el software</th><td>Principalmente en Estados Unidos y Canadá; Fortinet declara que no desarrolla código fuente en Rusia ni en China.<a class="cite" href="sources.html#src-fortinet-10k-2025" aria-label="Fuente 2">2</a></td><td>Francia (los centros de investigación no se enumeran formalmente; los establecimientos de Stormshield están en Issy-les-Moulineaux, Lyon y Villeneuve-d'Ascq).<a class="cite" href="sources.html#src-fr-register-stormshield" aria-label="Fuente 3">3</a></td></tr>
+            <tr><th scope="row">Dónde se fabrica el hardware</th><td>Alrededor del 87% en Taiwán, por fabricantes subcontratados; los chips de seguridad propios de Fortinet se fabrican en fundiciones de Taiwán y Japón.<a class="cite" href="sources.html#src-fortinet-10k-2025" aria-label="Fuente 2">2</a></td><td>No publicado.</td></tr>
+            <tr><th scope="row">Control de exportaciones</th><td>Los productos con cifrado están sujetos a los controles de exportación de Estados Unidos: «solo pueden exportarse fuera de Estados Unidos con la licencia de exportación requerida o mediante una excepción a la licencia de exportación, o puede prohibirse por completo su exportación a determinados países».<a class="cite" href="sources.html#src-fortinet-10k-2025" aria-label="Fuente 2">2</a></td><td>No evaluado para este ejemplo.</td></tr>
+            <tr><th scope="row">Presencia en Europa</th><td>Importante: aproximadamente la mitad de todos los empleados trabaja fuera de Estados Unidos y Canadá, principalmente en EMEA. La filial francesa de Valbonne (Sophia Antipolis) emplea a entre 500 y 999 personas y declaró una cifra de negocio de 154,2 millones de euros.<a class="cite" href="sources.html#src-fortinet-10k-2025" aria-label="Fuente 2">2</a><a class="cite" href="sources.html#src-fr-register-fortinet" aria-label="Fuente 6">6</a></td><td>Todos los establecimientos están en Francia; entre 250 y 499 empleados.<a class="cite" href="sources.html#src-fr-register-stormshield" aria-label="Fuente 3">3</a></td></tr>
+            <tr><th scope="row">Cualificaciones europeas de seguridad</th><td>No evaluado para este ejemplo; compruebe las certificaciones vigentes frente a sus requisitos.</td><td>Cualificado por la agencia francesa de ciberseguridad ANSSI en el nivel «estándar» y aprobado para información clasificada como Diffusion Restreinte (difusión restringida, nivel francés), EU RESTRICTED y NATO RESTRICTED (versión 4.3.x, hasta el 21 de marzo de 2027). Common Criteria EAL4+.<a class="cite" href="sources.html#src-anssi-stormshield-qualification-2025" aria-label="Fuente 7">7</a><a class="cite" href="sources.html#src-anssi-cc-2023-62" aria-label="Fuente 8">8</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="takeaways" aria-labelledby="takeaways-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="takeaways-title">Lo que esto muestra — y lo que no</h2>
+      </div>
+      <div class="grid grid-2">
+        <div class="card card-accent">
+          <h3>Lo que muestra</h3>
+          <ul class="check-list">
+            <li>En ambos casos, una parte significativa del presupuesto se queda en distribuidores, revendedores e integradores europeos.</li>
+            <li>Con Fortinet, la parte del fabricante financia en gran medida la fabricación en Asia, el desarrollo en Norteamérica y un beneficio que se contabiliza principalmente en Estados Unidos — aunque Fortinet también emplea a muchas personas en Europa.</li>
+            <li>Con Stormshield, la parte del fabricante financia a una empresa francesa con su personal en Francia, y su beneficio permanece dentro de un grupo europeo.</li>
+            <li>El control también difiere: la jurisdicción aplicable al fabricante, dónde se escribe el código y quién decide sobre las actualizaciones.</li>
+          </ul>
+        </div>
+        <div class="card card-yellow">
+          <h3>Lo que no muestra</h3>
+          <ul class="cross-list">
+            <li>Qué cortafuegos es más seguro, más rápido o más adecuado para su red.</li>
+            <li>Cuánta capacidad, funcionalidad o soporte se obtiene con 50.000 € de cada fabricante.</li>
+            <li>El coste total de propiedad, el esfuerzo de migración o las competencias disponibles en su organización.</li>
+            <li>Lo que ocurre más abajo en la cadena — proveedores, subcontratistas y accionistas de cualquiera de las dos empresas.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-2">Evalúe el peso estratégico del propio sistema con la <a href="sovereignty.html">evaluación de soberanía</a>, plantee las preguntas adecuadas a los proveedores con la <a href="procurement.html#checklist">lista de verificación de contratación</a> y encuentre otros fabricantes europeos de cortafuegos en la <a href="alternatives.html?category=Network+Security">base de datos</a> (incluido <a href="alternatives.html#c-stormshield">Stormshield</a>).</p>
+    </div>
+  </section>
+</main>
+
+<!-- BEGIN:footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand"><svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="9" fill="#003399"/><circle cx="32.50" cy="20.00" r="1.9" fill="#FFCC00"/><circle cx="30.83" cy="26.25" r="1.9" fill="#FFCC00"/><circle cx="26.25" cy="30.83" r="1.9" fill="#FFCC00"/><circle cx="20.00" cy="32.50" r="1.9" fill="#FFCC00"/><circle cx="13.75" cy="30.83" r="1.9" fill="#FFCC00"/><circle cx="9.17" cy="26.25" r="1.9" fill="#FFCC00"/><circle cx="7.50" cy="20.00" r="1.9" fill="#FFCC00"/><circle cx="9.17" cy="13.75" r="1.9" fill="#FFCC00"/><circle cx="13.75" cy="9.17" r="1.9" fill="#FFCC00"/><circle cx="20.00" cy="7.50" r="1.9" fill="#FFCC00"/><circle cx="26.25" cy="9.17" r="1.9" fill="#FFCC00"/><circle cx="30.83" cy="13.75" r="1.9" fill="#FFCC00"/><path d="M20 12.5l6 2.4v4.6c0 4-2.6 6.9-6 8-3.4-1.1-6-4-6-8v-4.6z" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg>Every IT Euro</p>
+        <p>Un recurso informativo independiente y sin ánimo de lucro sobre la contratación europea de TI y ciberseguridad y sobre la soberanía digital.</p>
+        <p>Sin vinculación con las instituciones de la Unión Europea ni con ninguna de las empresas incluidas.</p>
+      </div>
+      <div>
+        <h2>Explorar</h2>
+        <ul>
+          <li><a href="why-europe.html">Por qué Europa</a></li>
+          <li><a href="cybersecurity.html">Ciberseguridad</a></li>
+          <li><a href="cybersecurity.html#critical-infrastructure">OT e infraestructuras críticas</a></li>
+          <li><a href="alternatives.html">Alternativas europeas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Herramientas</h2>
+        <ul>
+          <li><a href="procurement.html#checklist">Lista de verificación de contratación</a></li>
+          <li><a href="sovereignty.html">Evaluación de soberanía</a></li>
+          <li><a href="firewall-example.html">Ejemplo práctico: 50.000 € en cortafuegos</a></li>
+          <li><a href="why-europe.html#myths">Argumentos habituales</a></li>
+          <li><a href="procurement.html#regulation">Políticas y regulación</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Este sitio web</h2>
+        <ul>
+          <li><a href="about.html">Acerca de y metodología</a></li>
+          <li><a href="sources.html">Fuentes</a></li>
+          <li><a href="about.html#corrections">Notificar una corrección</a></li>
+          <li><a href="about.html#privacy">Privacidad: sin cookies, sin seguimiento</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Textos con licencia CC BY 4.0 · Código con licencia MIT</p>
+      <p>Solo información; no constituye asesoramiento jurídico ni de contratación.</p>
+      <p>Traducido del inglés. En caso de duda, prevalece la versión en inglés.</p>
+    </div>
+  </div>
+</footer>
+<!-- END:footer -->
+</body>
+</html>
