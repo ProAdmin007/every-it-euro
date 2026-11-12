@@ -61,7 +61,8 @@ When you change English content, update the translations too. `python tools/buil
 │   ├── companies.json      ← single source of truth for the alternatives database
 │   └── sources.json        ← single source of truth for the sources page
 ├── tools/build.py          ← development-only helper (Python 3.12+, no dependencies)
-├── tools/check_data_translation.py
+├── tools/check_data_translation.py, review.py, add_company.py   ← maintenance helpers
+├── MAINTAINING.md          ← how to review, add companies, process acquisitions, update translations
 └── .github/                ← CI validation, issue templates, FUNDING.yml
 ```
 
@@ -151,6 +152,9 @@ git push -u origin main
 5. We recommend [verifying your custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages) to prevent domain takeover.
 
 ## Maintaining the company database
+
+See **[MAINTAINING.md](MAINTAINING.md)** for the step-by-step guide. In short: run `python tools/review.py` every quarter (stale entries, broken links, websites that now redirect to another company), and add companies with `python tools/add_company.py`.
+
 
 Each entry in `data/companies.json` has this shape:
 

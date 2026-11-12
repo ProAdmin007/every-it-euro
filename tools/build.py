@@ -21,6 +21,7 @@ Usage
 """
 from __future__ import annotations
 
+import hashlib
 import html
 import json
 import math
@@ -71,7 +72,7 @@ COMPANY_KEYS = [
 COMPANY_TEXT_FIELDS = ["headquarters", "parentCompany", "ownership", "classificationNote", "description", "evaluating"]
 
 LOGO = (
-    '<svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">'
+    '<svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true" focusable="false">'
     '<rect width="40" height="40" rx="9" fill="#003399"/>'
     + "".join(
         f'<circle cx="{20 + 12.5 * math.cos(i * 3.14159265 / 6):.2f}" '
@@ -82,7 +83,7 @@ LOGO = (
     "</svg>"
 )
 GLOBE = (
-    '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" class="lang-icon"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/>'
+    '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" class="lang-icon"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/>'
     '<path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>'
 )
 
@@ -524,6 +525,30 @@ def number_citations(text: str, label: str) -> str:
     return re.sub(r'<a class="cite" href="sources\.html#src-([a-z0-9-]+)"[^>]*>\d+</a>', num, text)
 
 
+# --------------------------------------------------------------------------- cache busting
+_asset_versions: dict[str, str] = {}
+
+
+def asset_version(rel: str) -> str:
+    """Short content hash of an asset, so browsers never combine new HTML with a cached old CSS/JS file."""
+    if rel not in _asset_versions:
+        p = ROOT / rel
+        _asset_versions[rel] = hashlib.sha256(p.read_bytes()).hexdigest()[:10] if p.exists() else ""
+    return _asset_versions[rel]
+
+
+def strip_versions(text: str) -> str:
+    return re.sub(r'((?:\.\./)*assets/(?:css|js)/[^"?]+)\?v=[0-9a-f]+', r"\1", text)
+
+
+def add_versions(text: str) -> str:
+    def repl(m):
+        rel = m.group(2)
+        v = asset_version(rel)
+        return f'{m.group(1)}{rel}?v={v}"' if v else m.group(0)
+    return re.sub(r'(\s(?:href|src)="(?:\.\./)*)(assets/(?:css|js)/[^"?]+)"', repl, text)
+
+
 # --------------------------------------------------------------------------- language plumbing
 def localise_paths(text: str, lang: str, prefix: str) -> str:
     """Set <html lang>, make asset paths work from a language folder and load the right string file."""
@@ -667,7 +692,7 @@ def main() -> int:
             if not path.exists():
                 errors.append(f"missing page {rel}")
                 continue
-            text = path.read_text(encoding="utf-8")
+            text = strip_versions(path.read_text(encoding="utf-8"))
             text = localise_paths(text, lang, prefix)
             text = replace_block(text, "header", header(f, lang, prefix, ui, langs), rel)
             text = replace_block(text, "footer", footer(ui), rel)
@@ -686,7 +711,7 @@ def main() -> int:
             else:
                 text = apply_site_url(text, f, lang, site_url, langs)
             text = re.sub(r'(<a class="repo-link" href=")[^"]*(")', lambda m: m.group(1) + repo_url + m.group(2), text)
-            outputs[rel] = text
+            outputs[rel] = add_versions(text)
             for cid in re.findall(r'sources\.html#src-([a-z0-9-]+)', text):
                 if cid not in source_ids:
                     errors.append(f"{rel}: citation to unknown source id '{cid}'")
