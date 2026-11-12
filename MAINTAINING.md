@@ -38,32 +38,32 @@ The script asks every field, validates the answers and inserts the entry alphabe
 - describe neutrally; write *"relevant when evaluating…"*, never *"replacement for…"*;
 - inclusion is not an endorsement.
 
-Then add the translations (see *Translations*) and rebuild.
+No translations are needed: company data is shown in English on every language version. Rebuild and check.
 
 ## Processing an acquisition or ownership change
 
 1. Confirm the change with an official source (press release of buyer or seller, regulator, register).
 2. Update the company in `data/companies.json`: `parentCompany`, `ownership`, `classificationNote`, `sources`, `lastVerified`, and — if control moved outside Europe — `classification` (usually `mixed`, or remove the entry if it no longer meets the criteria).
 3. Add the event to `watchlist` in the same file: `name`, `origin`, `event` (what happened, with date and buyer's country), `year`, `newOwnerCountry`, `source`, `lastVerified`.
-4. Update the same fields in the translations (`i18n/<lang>/companies-*.json` and `i18n/<lang>/watchlist.json`).
-5. Rebuild and check.
+4. Rebuild and check. (Company data and the watchlist are English only; no translations to update.)
 
 ## Changing page text
 
 - Edit the English page in the repository root (`why-europe.html`, …). Text between `<!-- BEGIN:… -->` and `<!-- END:… -->` is generated: change the data or `tools/build.py` instead.
 - Cite sources with `[[source-id]]`; the build turns it into a numbered link. New sources go in `data/sources.json`.
-- Make the same change in `de/`, `fr/`, `es/`, `it/` and `pl/`. The build checks that ids, form values and citations still match the English page.
+- Make the same change in `de/`, `fr/`, `es/`, `it/` and `pl/` when you can. Until then the translated page simply shows the older text; `python tools/build.py` warns when ids, form values or citations no longer match the English page.
 
 ## Translations
 
-| Changed in English | Update in each language |
+The company database, watchlist and source summaries are **English only** — nothing to translate there.
+
+| Changed in English | Update in each language (optional, but recommended) |
 |---|---|
 | A page | `<lang>/<page>.html` |
-| A company, watchlist entry or source summary | `i18n/<lang>/companies-*.json`, `watchlist.json`, `sources.json` |
-| Header, footer, labels, countries, categories | `i18n/<lang>/ui.json` |
+| Header, footer, labels, new country or category | `i18n/<lang>/ui.json` |
 | Texts in the interactive tools | `assets/js/i18n/<lang>.js` |
 
-`python tools/check_data_translation.py <lang>` lists missing data translations. An AI assistant such as Claude can do this in one request, for example: *"Translate company `example-id` into de, fr, es, it and pl"* or *"I changed procurement.html; update the translated pages to match"*. Always keep the English version authoritative.
+Missing translations never break the site: English is used instead and `python tools/build.py` lists them under *WARNINGS*. Work through that list now and then. An AI assistant such as Claude can do it in one request, for example: *"Fix the translation warnings from tools/build.py"* or *"I changed procurement.html; update the translated pages to match"*. The English version is authoritative.
 
 ## Corrections from others
 

@@ -7,13 +7,16 @@ What it does
   2. Pre-renders data/companies.json into alternatives.html and data/sources.json into sources.html,
      in every language, so the content is readable without JavaScript. JavaScript only adds filtering.
   3. Rewrites canonical / Open Graph / hreflang URLs, sitemap.xml and robots.txt from site.config.json.
-  4. Validates: JSON structure, translations, internal links and anchors, asset paths, and citation ids.
+  4. Validates: JSON structure, internal links and anchors, asset paths and citation ids (errors),
+     and translation completeness (warnings).
 
 Languages
   English pages live in the repository root. Each translation lives in its own folder (de/, fr/, ...)
-  with the same file names. Interface strings: i18n/<lang>/ui.json. Translated data fields:
-  i18n/<lang>/companies*.json, watchlist.json and sources.json. JavaScript strings:
+  with the same file names. Interface strings: i18n/<lang>/ui.json; JavaScript strings:
   assets/js/i18n/<lang>.js. A language is built when its folder exists.
+  The company database, watchlist and source summaries are maintained in English only and shown in
+  English on every language version (marked lang="en", so browsers can offer to translate them).
+  Missing translations never block a build: they fall back to English and are reported as warnings.
 
 Usage
   python tools/build.py           # build and validate
@@ -68,8 +71,6 @@ COMPANY_KEYS = [
     "classificationNote", "categories", "description", "products", "deployment", "openSource", "onPremises",
     "cloud", "website", "evaluating", "sources", "lastVerified",
 ]
-# Free-text company fields that are translated in i18n/<lang>/companies*.json.
-COMPANY_TEXT_FIELDS = ["headquarters", "parentCompany", "ownership", "classificationNote", "description", "evaluating"]
 
 LOGO = (
     '<svg viewBox="0 0 40 40" width="34" height="34" aria-hidden="true" focusable="false">'
@@ -88,6 +89,7 @@ GLOBE = (
 )
 
 errors: list[str] = []
+warnings: list[str] = []  # reported, but never block a build
 
 
 def esc(s) -> str:
@@ -125,12 +127,12 @@ def check_same_keys(ref, other, where: str, path: str = "") -> None:
             return
         for k in ref:
             if k not in other:
-                errors.append(f"{where}: missing key '{path}{k}'")
+                warnings.append(f"{where}: missing '{path}{k}' (English used)")
             else:
                 check_same_keys(ref[k], other[k], where, f"{path}{k}.")
         for k in other:
             if k not in ref:
-                errors.append(f"{where}: unknown key '{path}{k}'")
+                warnings.append(f"{where}: unknown key '{path}{k}' (ignored)")
     elif isinstance(ref, str) and not isinstance(other, str):
         errors.append(f"{where}: '{path.rstrip('.')}' should be a string")
     elif isinstance(ref, str):
@@ -138,58 +140,38 @@ def check_same_keys(ref, other, where: str, path: str = "") -> None:
             errors.append(f"{where}: placeholders differ in '{path.rstrip('.')}'")
 
 
+def merge(ref, other):
+    """English strings, overridden by every translated string that exists."""
+    if isinstance(ref, dict):
+        other = other if isinstance(other, dict) else {}
+        return {k: merge(v, other.get(k)) for k, v in ref.items()}
+    return other if isinstance(other, str) and isinstance(ref, str) else ref
+
+
 def load_ui(lang: str, ref: dict | None) -> dict:
-    data = load_json(f"i18n/{lang}/ui.json") or {}
-    if ref is not None and data:
-        check_same_keys(ref, data, f"i18n/{lang}/ui.json")
-    return data
-
-
-def load_data_translations(lang: str, companies, watchlist, sources) -> dict:
-    """Translated data fields for a language, validated for completeness."""
-    out = {"companies": {}, "watchlist": {}, "sources": {}}
-    if lang == DEFAULT_LANG:
-        return out
-    folder = ROOT / "i18n" / lang
-    for p in sorted(folder.glob("companies*.json")):
-        part = load_json(p.relative_to(ROOT).as_posix()) or {}
-        for cid, fields in part.items():
-            if cid in out["companies"]:
-                errors.append(f"i18n/{lang}: company '{cid}' translated twice")
-            out["companies"][cid] = fields
-    out["watchlist"] = load_json(f"i18n/{lang}/watchlist.json") or {}
-    out["sources"] = load_json(f"i18n/{lang}/sources.json") or {}
-
-    for c in companies:
-        t = out["companies"].get(c["id"])
-        if t is None:
-            errors.append(f"i18n/{lang}: no translation for company '{c['id']}'")
-            continue
-        for k in COMPANY_TEXT_FIELDS:
-            if k not in t:
-                errors.append(f"i18n/{lang}: company '{c['id']}' missing '{k}'")
-        if isinstance(t.get("evaluating"), list) and len(t["evaluating"]) != len(c.get("evaluating", [])):
-            errors.append(f"i18n/{lang}: company '{c['id']}' has a different number of 'evaluating' items")
-    for cid in out["companies"]:
-        if cid not in {c["id"] for c in companies}:
-            errors.append(f"i18n/{lang}: translation for unknown company '{cid}'")
-    for w in watchlist:
-        if "event" not in out["watchlist"].get(w.get("name"), {}):
-            errors.append(f"i18n/{lang}/watchlist.json: missing event for '{w.get('name')}'")
-    for s in sources:
-        if s.get("summary") and "summary" not in out["sources"].get(s["id"], {}):
-            errors.append(f"i18n/{lang}/sources.json: missing summary for '{s['id']}'")
-    return out
+    if ref is None:
+        return load_json(f"i18n/{lang}/ui.json") or {}
+    data = load_json(f"i18n/{lang}/ui.json", required=False)
+    if data is None:
+        warnings.append(f"i18n/{lang}/ui.json: missing (English interface strings used)")
+        return ref
+    check_same_keys(ref, data, f"i18n/{lang}/ui.json")
+    return merge(ref, data)
 
 
 # --------------------------------------------------------------------------- partials
+def exists(lang: str, file: str) -> bool:
+    return (ROOT / page_path(lang, file)).exists()
+
+
 def lang_switch(file: str, lang: str, prefix: str, langs: list[tuple]) -> str:
     items = []
     for code, name, hl, _ in langs:
         if file == "404.html":
             href = "index.html" if code == DEFAULT_LANG else f"{code}/index.html"
         else:
-            href = prefix + page_path(code, file)
+            # A page that is not translated (yet) links to the English version.
+            href = prefix + page_path(code if exists(code, file) else DEFAULT_LANG, file)
         cur = ' aria-current="true"' if code == lang else ""
         items.append(
             f'<li><a href="{href}" hreflang="{hl}" lang="{hl}" data-lang="{code}"{cur}>'
@@ -348,25 +330,15 @@ def check_vocabulary(ui: dict, companies, watchlist, sources) -> None:
 
 
 # --------------------------------------------------------------------------- renderers
-def localise_company(c: dict, tr: dict) -> dict:
-    t = tr["companies"].get(c["id"], {})
-    out = dict(c)
-    for k in COMPANY_TEXT_FIELDS:
-        if k in t:
-            out[k] = t[k]
-    return out
-
-
-def render_company(original: dict, ui: dict, tr: dict) -> str:
-    c = localise_company(original, tr)
+def render_company(c: dict, ui: dict, lang: str) -> str:
     T = ui["companies"]
+    en = ' lang="en"' if lang != DEFAULT_LANG else ""  # data text is English on every language version
     cats = c.get("categories", [])
     country = ui["countries"].get(c.get("country", ""), c.get("country", ""))
     # Search matches the translated text and the English original, so both work in every language.
-    parts = [c.get("name", ""), country, c.get("headquarters", ""), c.get("description", ""), c.get("parentCompany", ""),
-             " ".join(ui["categories"].get(x, x) for x in cats), " ".join(c.get("products", [])), " ".join(c.get("evaluating", []))]
-    if c is not original:
-        parts += [original.get("country", ""), original.get("description", ""), " ".join(cats), " ".join(original.get("evaluating", []))]
+    parts = [c.get("name", ""), country, c.get("country", ""), c.get("headquarters", ""), c.get("description", ""),
+             c.get("parentCompany", ""), " ".join(ui["categories"].get(x, x) for x in cats), " ".join(cats),
+             " ".join(c.get("products", [])), " ".join(c.get("evaluating", []))]
     search = " ".join(dict.fromkeys(" ".join(parts).lower().split()))
     cls = c.get("classification", "mixed")
     products = ", ".join(c.get("products", []))
@@ -380,15 +352,15 @@ def render_company(original: dict, ui: dict, tr: dict) -> str:
   <div class="company-head">
     <div>
       <h3>{esc(c['name'])}</h3>
-      <p class="hq">{esc(c.get('headquarters', ''))}</p>
+      <p class="hq"{en}>{esc(c.get('headquarters', ''))}</p>
     </div>
-    <span class="class-badge class-{esc(cls)}" title="{esc(c.get('classificationNote', ''))}">{esc(ui['classifications'][cls])}</span>
+    <span class="class-badge class-{esc(cls)}" title="{esc(c.get('classificationNote', ''))}"{en}>{esc(ui['classifications'][cls])}</span>
   </div>
   <ul class="tags" aria-label="{esc(T['categoriesLabel'])}">{''.join(f'<li>{esc(ui["categories"][x])}</li>' for x in cats)}</ul>
-  <p class="desc">{esc(c.get('description', ''))}</p>
+  <p class="desc"{en}>{esc(c.get('description', ''))}</p>
   <dl class="facts">
     <dt>{esc(T['country'])}</dt><dd>{esc(country)}</dd>
-    <dt>{esc(T['parent'])}</dt><dd>{esc(c.get('parentCompany', ''))}</dd>
+    <dt>{esc(T['parent'])}</dt><dd{en}>{esc(c.get('parentCompany', ''))}</dd>
     <dt>{esc(T['products'])}</dt><dd>{esc(products)}</dd>
     <dt>{esc(T['deployment'])}</dt><dd>{esc(', '.join(ui['deployment'].get(d, d) for d in c.get('deployment', [])))}</dd>
     <dt>{esc(T['openSource'])}</dt><dd>{esc(V[c.get('openSource')])}</dd>
@@ -397,10 +369,10 @@ def render_company(original: dict, ui: dict, tr: dict) -> str:
   </dl>
   <details>
     <summary>{esc(T['detailsSummary'])}</summary>
-    <p><strong>{esc(T['ownership'])}</strong> {esc(c.get('ownership', ''))}</p>
-    <p><strong>{esc(T['classification'])}</strong> {esc(c.get('classificationNote', ''))}</p>
+    <p><strong>{esc(T['ownership'])}</strong> <span{en}>{esc(c.get('ownership', ''))}</span></p>
+    <p><strong>{esc(T['classification'])}</strong> <span{en}>{esc(c.get('classificationNote', ''))}</span></p>
     <p><strong>{esc(T['evaluating'])}</strong></p>
-    <ul>{evaluating}</ul>
+    <ul{en}>{evaluating}</ul>
     <p><strong>{esc(T['verifiedAgainst'])}</strong></p>
     <ul>{srcs}</ul>
   </details>
@@ -446,13 +418,14 @@ def render_filters(companies: list[dict], ui: dict) -> str:
 <div class="chip-row" role="group" aria-label="{esc(F['categoryGroupLabel'])}" data-js-only hidden>
   {''.join(chips)}
 </div>
+{f'<p class="note data-language-note">{esc(ui["companies"]["englishNote"])}</p>' if ui["companies"]["englishNote"] else ""}
 <div class="results-bar">
   <p class="results-count" id="results-count" role="status" aria-live="polite">{esc(fmt(ui['companies']['showingAll'], total=len(companies)))}</p>
 </div>"""
 
 
-def render_companies(companies: list[dict], ui: dict, tr: dict) -> str:
-    cards = "\n".join(render_company(c, ui, tr) for c in companies)
+def render_companies(companies: list[dict], ui: dict, lang: str) -> str:
+    cards = "\n".join(render_company(c, ui, lang) for c in companies)
     return f"""<div class="company-grid">
 {cards}
 </div>
@@ -462,15 +435,16 @@ def render_companies(companies: list[dict], ui: dict, tr: dict) -> str:
 </div>"""
 
 
-def render_watchlist(items: list[dict], ui: dict, tr: dict) -> str:
+def render_watchlist(items: list[dict], ui: dict, lang: str) -> str:
     W = ui["watchlist"]
     C = ui["countries"]
     rows = []
     for w in sorted(items, key=lambda x: (-int(x.get("year") or 0), x.get("name", ""))):
-        event = tr["watchlist"].get(w.get("name"), {}).get("event", w.get("event"))
+        event = w.get("event")
+        en = ' lang="en"' if lang != DEFAULT_LANG else ""
         rows.append(
             f"<tr><th scope=\"row\">{esc(w.get('name'))}</th><td>{esc(C.get(w.get('origin'), w.get('origin')))}</td>"
-            f"<td>{esc(event)}</td><td>{esc(w.get('year'))}</td>"
+            f"<td{en}>{esc(event)}</td><td>{esc(w.get('year'))}</td>"
             f"<td>{esc(C.get(w.get('newOwnerCountry'), w.get('newOwnerCountry')))}</td>"
             f"<td><a href=\"{esc(w.get('source'))}\" rel=\"noopener noreferrer\" aria-label=\"{esc(fmt(W['sourceFor'], name=w.get('name')))}\">{esc(W['source'])}</a></td></tr>"
         )
@@ -488,8 +462,9 @@ def render_watchlist(items: list[dict], ui: dict, tr: dict) -> str:
 SOURCE_TYPE_ORDER = ["Legislation", "Court ruling", "Official policy", "Official guidance", "Report", "News", "Company", "Other"]
 
 
-def render_sources(sources: list[dict], ui: dict, tr: dict) -> str:
+def render_sources(sources: list[dict], ui: dict, lang: str) -> str:
     S = ui["sources"]
+    en = ' lang="en"' if lang != DEFAULT_LANG else ""
     groups: dict[str, list[dict]] = {}
     for s in sources:
         groups.setdefault(s.get("type") or "Other", []).append(s)
@@ -498,17 +473,18 @@ def render_sources(sources: list[dict], ui: dict, tr: dict) -> str:
         items = []
         for s in sorted(groups[g], key=lambda x: x.get("title", "").lower()):
             pub = s.get("published") or S["notStated"]
-            summary = tr["sources"].get(s["id"], {}).get("summary", s.get("summary"))
+            summary = s.get("summary")
             topics = ", ".join(S["topicNames"].get(t, t) for t in s.get("topics", []))
             items.append(f"""<li class="source" id="src-{esc(s['id'])}">
   <h3><a href="{esc(s['url'])}" rel="noopener noreferrer">{esc(s['title'])}</a></h3>
   <p class="meta">{esc(s.get('organisation', ''))} · {esc(S['published'])}: {esc(pub)} · {esc(S['accessed'])}: {esc(s.get('accessed', ''))} · {esc(S['topics'])}: {esc(topics)}</p>
-  {f"<p>{esc(summary)}</p>" if summary else ''}
+  {f"<p{en}>{esc(summary)}</p>" if summary else ''}
   <p class="src-url">{esc(s['url'])}</p>
 </li>""")
         gid = esc(g.lower().replace(" ", "-"))
         out.append(f'<section aria-labelledby="g-{gid}">\n<h2 id="g-{gid}">{esc(S["types"].get(g, g))}</h2>\n<ul class="source-list">\n' + "\n".join(items) + "\n</ul>\n</section>")
-    return "\n".join(out)
+    note = f'<p class="note data-language-note">{esc(S["englishNote"])}</p>\n' if S["englishNote"] else ""
+    return note + "\n".join(out)
 
 
 # --------------------------------------------------------------------------- citations
@@ -560,7 +536,11 @@ def localise_paths(text: str, lang: str, prefix: str) -> str:
     main = f'<script src="{prefix}assets/js/main.js"></script>'
     if main not in text:
         errors.append(f"{page_path(lang, 'page')}: main.js script tag not found")
-    return text.replace(main, f'<script src="{prefix}assets/js/i18n/{lang}.js"></script>\n{main}', 1)
+    # English strings first; a translation file (if any) overrides them key by key in main.js.
+    scripts = f'<script src="{prefix}assets/js/i18n/en.js"></script>\n'
+    if lang != DEFAULT_LANG and (ROOT / "assets/js/i18n" / f"{lang}.js").exists():
+        scripts += f'<script src="{prefix}assets/js/i18n/{lang}.js"></script>\n'
+    return text.replace(main, scripts + main, 1)
 
 
 def page_url(site_url: str, lang: str, file: str) -> str:
@@ -575,7 +555,7 @@ def apply_site_url(text: str, file: str, lang: str, site_url: str, langs: list[t
     # hreflang alternates and og:locale, regenerated after the canonical link.
     text = re.sub(r'<link rel="alternate" hreflang="[^"]*" href="[^"]*">\n', "", text)
     text = re.sub(r'<meta property="og:locale(?::alternate)?" content="[^"]*">\n', "", text)
-    alts = "".join(f'<link rel="alternate" hreflang="{h}" href="{page_url(site_url, c, file)}">\n' for c, _, h, _ in langs)
+    alts = "".join(f'<link rel="alternate" hreflang="{h}" href="{page_url(site_url, c, file)}">\n' for c, _, h, _ in langs if exists(c, file))
     alts += f'<link rel="alternate" hreflang="x-default" href="{page_url(site_url, DEFAULT_LANG, file)}">\n'
     text = re.sub(r'(<link rel="canonical" href="[^"]*">\n)', lambda m: m.group(1) + alts, text, count=1)
     locale = next(o for c, _, _, o in LANGUAGES if c == lang)
@@ -588,9 +568,11 @@ def sitemap(site_url: str, langs: list[tuple]) -> str:
     urls = []
     for f, prio in PAGES:
         alts = "".join(
-            f'\n    <xhtml:link rel="alternate" hreflang="{h}" href="{page_url(site_url, c, f)}"/>' for c, _, h, _ in langs
+            f'\n    <xhtml:link rel="alternate" hreflang="{h}" href="{page_url(site_url, c, f)}"/>' for c, _, h, _ in langs if exists(c, f)
         ) if len(langs) > 1 else ""
         for code, *_ in langs:
+            if not exists(code, f):
+                continue
             urls.append(f"  <url>\n    <loc>{page_url(site_url, code, f)}</loc>\n    <lastmod>{today}</lastmod>\n    <priority>{prio}</priority>{alts}\n  </url>")
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
@@ -647,11 +629,11 @@ def check_structure(lang: str, file: str, text: str, english: str) -> None:
     rel = page_path(lang, file)
     missing = ids(english) - ids(text)
     if missing:
-        errors.append(f"{rel}: ids missing compared to English: {', '.join(sorted(missing)[:8])}")
+        warnings.append(f"{rel}: outdated? ids missing compared to English: {', '.join(sorted(missing)[:8])}")
     if values(english) != values(text):
-        errors.append(f"{rel}: form input values differ from English")
+        warnings.append(f"{rel}: outdated? form input values differ from English")
     if cites(english) != cites(text):
-        errors.append(f"{rel}: cited sources differ from English: {sorted(set(cites(english)) ^ set(cites(text)))}")
+        warnings.append(f"{rel}: outdated? cited sources differ from English: {sorted(set(cites(english)) ^ set(cites(text)))}")
 
 
 # --------------------------------------------------------------------------- main
@@ -682,15 +664,17 @@ def main() -> int:
         if not ui:
             continue
         if not (ROOT / "assets/js/i18n" / f"{lang}.js").exists():
-            errors.append(f"assets/js/i18n/{lang}.js: file missing")
-        tr = load_data_translations(lang, companies, watchlist, sources)
+            warnings.append(f"assets/js/i18n/{lang}.js: missing (English tool texts used)")
         prefix = "" if lang == DEFAULT_LANG else "../"
         files = [p[0] for p in PAGES] + (EXTRA_PAGES if lang == DEFAULT_LANG else [])
         for f in files:
             rel = page_path(lang, f)
             path = ROOT / rel
             if not path.exists():
-                errors.append(f"missing page {rel}")
+                if lang == DEFAULT_LANG:
+                    errors.append(f"missing page {rel}")
+                else:
+                    warnings.append(f"{rel}: not translated yet (the language switcher links to the English page)")
                 continue
             text = strip_versions(path.read_text(encoding="utf-8"))
             text = localise_paths(text, lang, prefix)
@@ -699,10 +683,10 @@ def main() -> int:
             text = number_citations(text, ui["citeLabel"])
             if f == "alternatives.html":
                 text = replace_block(text, "filters", render_filters(companies, ui), rel)
-                text = replace_block(text, "companies", render_companies(companies, ui, tr), rel)
-                text = replace_block(text, "watchlist", render_watchlist(watchlist, ui, tr), rel)
+                text = replace_block(text, "companies", render_companies(companies, ui, lang), rel)
+                text = replace_block(text, "watchlist", render_watchlist(watchlist, ui, lang), rel)
             if f == "sources.html":
-                text = replace_block(text, "sources", render_sources(sources, ui, tr), rel)
+                text = replace_block(text, "sources", render_sources(sources, ui, lang), rel)
             text = re.sub(r"<!-- COUNT:companies -->\d*<!-- /COUNT -->", f"<!-- COUNT:companies -->{len(companies)}<!-- /COUNT -->", text)
             text = re.sub(r"<!-- COUNT:sources -->\d*<!-- /COUNT -->", f"<!-- COUNT:sources -->{len(sources)}<!-- /COUNT -->", text)
             if f == "404.html":
@@ -711,6 +695,11 @@ def main() -> int:
             else:
                 text = apply_site_url(text, f, lang, site_url, langs)
             text = re.sub(r'(<a class="repo-link" href=")[^"]*(")', lambda m: m.group(1) + repo_url + m.group(2), text)
+            if lang != DEFAULT_LANG:
+                # Links to pages that are not translated (yet) go to the English page.
+                for other, _ in PAGES:
+                    if not exists(lang, other):
+                        text = re.sub(rf'(\shref="){re.escape(other)}(?=["#?])', rf"\g<1>{prefix}{other}", text)
             outputs[rel] = add_versions(text)
             for cid in re.findall(r'sources\.html#src-([a-z0-9-]+)', text):
                 if cid not in source_ids:
@@ -739,6 +728,10 @@ def main() -> int:
 
     summary = (f"{len(langs)} languages ({', '.join(l[0] for l in langs)}), {len(companies)} companies, "
                f"{len(watchlist)} watchlist entries, {len(sources)} sources")
+    if warnings:
+        print(f"WARNINGS ({len(warnings)}) — the build still works; English is used where a translation is missing:")
+        for w in warnings:
+            print("  -", w)
     if errors:
         print("ERRORS:")
         for e in errors:

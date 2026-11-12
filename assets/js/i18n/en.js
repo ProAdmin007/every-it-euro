@@ -1,9 +1,10 @@
 /*
  * Every IT Euro — interface strings used by the JavaScript tools (English).
- * Translations live next to this file (de.js, fr.js, es.js, it.js, pl.js) and use exactly the same keys.
+ * Always loaded first. Translations live next to this file (de.js, fr.js, …), use the same keys and
+ * override these texts; any key missing from a translation falls back to the English text here.
  * Placeholders such as {done} and {total} are replaced at runtime and must be kept.
  */
-window.EveryItEuroStrings = {
+window.EveryItEuroStringsEn = {
   copied: 'Copied to clipboard.',
   copyFailed: 'Copying failed. Please select and copy the text manually.',
 

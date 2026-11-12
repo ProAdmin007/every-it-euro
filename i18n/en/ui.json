@@ -1,5 +1,5 @@
 {
-  "_comment": "Interface strings used by tools/build.py for the shared header, footer and generated sections. Translations: i18n/<lang>/ui.json with exactly the same keys. Keep {placeholders}. Keys of maps (nav, categories, countries, ...) are fixed English identifiers: translate only the values.",
+  "_comment": "Interface strings used by tools/build.py for the shared header, footer and generated sections. Translations: i18n/<lang>/ui.json with the same keys; a missing key falls back to the English text here. Keep {placeholders}. Keys of maps (nav, categories, countries, ...) are fixed English identifiers: translate only the values. englishNote is shown on translated pages above data that is maintained in English only.",
   "languageName": "English",
   "languageSwitchLabel": "Language",
   "skipLink": "Skip to main content",
@@ -58,7 +58,8 @@
     "websiteOf": "Website of {name}",
     "emptyTitle": "No entries match these filters.",
     "emptyText": "Try a broader search, or <a href=\"about.html#corrections\">suggest a company</a> that should be listed.",
-    "showingAll": "Showing all {total} entries"
+    "showingAll": "Showing all {total} entries",
+    "englishNote": ""
   },
   "filters": {
     "formLabel": "Filter European technology alternatives",
@@ -156,6 +157,7 @@
     "accessed": "Accessed",
     "topics": "Topics",
     "notStated": "not stated",
+    "englishNote": "",
     "types": {
       "Legislation": "Legislation",
       "Court ruling": "Court ruling",

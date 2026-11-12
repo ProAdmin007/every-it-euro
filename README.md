@@ -25,10 +25,11 @@ The site is available in **English, German, French, Spanish, Italian and Polish*
 |---|---|
 | Page text | `<lang>/*.html` (translated copies of the English pages) |
 | Header, footer, labels in generated sections | `i18n/<lang>/ui.json` (same keys as `i18n/en/ui.json`) |
-| Company descriptions, ownership, watchlist events, source summaries | `i18n/<lang>/companies*.json`, `watchlist.json`, `sources.json` |
 | Texts used by the interactive tools | `assets/js/i18n/<lang>.js` (same keys as `en.js`) |
 
-When you change English content, update the translations too. `python tools/build.py --check` fails if a translation is missing keys, ids, form values, citations or data entries; `python tools/check_data_translation.py <lang>` checks the data translations for one language.
+**The company database, the ownership watchlist and the source summaries are maintained in English only** (`data/*.json`) and shown in English on every language version, with a short note and `lang="en"` so browsers offer to translate them. Category names, countries, classifications and all labels are translated. Adding or updating a company is therefore a change to one file.
+
+**Missing translations never block the site.** If a translated page, a string in `ui.json` or a text in `<lang>.js` is missing, the English text is used (a missing page is linked to its English version) and `python tools/build.py` lists it under *WARNINGS*. Translated pages that no longer match the English page (ids, form values or citations) are reported there as *outdated?*.
 
 ## Contents
 
@@ -50,7 +51,7 @@ When you change English content, update the translations too. `python tools/buil
 ├── index.html, why-europe.html, cybersecurity.html, alternatives.html,
 │   procurement.html, sovereignty.html, sources.html, about.html, 404.html   ← English
 ├── de/, fr/, es/, it/, pl/    ← translated pages (same file names)
-├── i18n/<lang>/               ← interface strings and translated data fields
+├── i18n/<lang>/ui.json       ← translated interface strings
 ├── robots.txt, sitemap.xml, site.config.json, .nojekyll
 ├── assets/
 │   ├── css/style.css
@@ -61,7 +62,7 @@ When you change English content, update the translations too. `python tools/buil
 │   ├── companies.json      ← single source of truth for the alternatives database
 │   └── sources.json        ← single source of truth for the sources page
 ├── tools/build.py          ← development-only helper (Python 3.12+, no dependencies)
-├── tools/check_data_translation.py, review.py, add_company.py   ← maintenance helpers
+├── tools/review.py, add_company.py   ← maintenance helpers
 ├── MAINTAINING.md          ← how to review, add companies, process acquisitions, update translations
 └── .github/                ← CI validation, issue templates, FUNDING.yml
 ```
@@ -72,7 +73,7 @@ When you change English content, update the translations too. `python tools/buil
 
 - injects the shared header (with the language switcher) and footer into every page;
 - sets canonical URLs, `hreflang` alternates, Open Graph URLs, `sitemap.xml`, `robots.txt` and the 404 `<base>` from `site.config.json`;
-- validates the JSON schema, the translations, every internal link and anchor, every asset path and every citation (`sources.html#src-…`).
+- validates the JSON schema, every internal link and anchor, every asset path and every citation (`sources.html#src-…`), and warns about missing or outdated translations.
 
 ```bash
 python tools/build.py           # rebuild after editing data or pages

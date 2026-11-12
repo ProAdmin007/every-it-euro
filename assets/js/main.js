@@ -42,8 +42,19 @@ var LANG_KEY = 'every-it-euro-lang';
 (function () {
   'use strict';
 
-  /* Interface strings come from assets/js/i18n/<lang>.js, which every page loads before this file. */
-  var S = window.EveryItEuroStrings || {};
+  /*
+   * Interface strings: assets/js/i18n/en.js (always loaded) defines the English texts; a translation file
+   * (de.js, fr.js, …) loaded after it overrides them key by key. Missing translations fall back to English.
+   */
+  function mergeStrings(base, over) {
+    if (!over || typeof base !== 'object' || Array.isArray(base)) return over !== undefined ? over : base;
+    var out = {};
+    Object.keys(base).forEach(function (k) {
+      out[k] = (over[k] === undefined) ? base[k] : mergeStrings(base[k], over[k]);
+    });
+    return out;
+  }
+  var S = mergeStrings(window.EveryItEuroStringsEn || {}, window.EveryItEuroStrings);
 
   /* ---------- Language switcher: remember an explicit choice ---------- */
   function initLanguageSwitch() {
