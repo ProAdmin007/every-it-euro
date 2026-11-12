@@ -41,7 +41,6 @@ The site is available in **English, German, French, Spanish, Italian and Polish*
 | `alternatives.html` | Filterable database of European companies, classification criteria, ownership changes to watch |
 | `procurement.html` | What public buyers can and cannot require, printable 25-question checklist, **regulation vs. strategic choice** |
 | `sovereignty.html` | Rule-based Technology Sovereignty Assessment with an explained outcome, Markdown export and a shareable link |
-| `firewall-example.html` | Worked example: €50,000 for Fortinet or Stormshield firewalls, traced through each vendor's published annual figures; adjustable budget and channel share |
 | `sources.html` | All sources with organisation, publication date, access date and topic |
 | `about.html` | Purpose, methodology, corrections, privacy, accessibility, licence |
 
@@ -50,14 +49,13 @@ The site is available in **English, German, French, Spanish, Italian and Polish*
 ```
 /
 ├── index.html, why-europe.html, cybersecurity.html, alternatives.html,
-│   procurement.html, sovereignty.html, sources.html, about.html,
-│   firewall-example.html, 404.html   ← English
+│   procurement.html, sovereignty.html, sources.html, about.html, 404.html   ← English
 ├── de/, fr/, es/, it/, pl/    ← translated pages (same file names)
 ├── i18n/<lang>/ui.json       ← translated interface strings
 ├── robots.txt, sitemap.xml, site.config.json, .nojekyll
 ├── assets/
 │   ├── css/style.css
-│   ├── js/main.js, alternatives.js, sovereignty.js, example.js
+│   ├── js/main.js, alternatives.js, sovereignty.js
 │   ├── js/i18n/<lang>.js       ← strings for the interactive tools
 │   └── img/favicon.svg, og-image.png
 ├── data/

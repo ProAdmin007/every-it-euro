@@ -45,9 +45,7 @@ PAGES = [
     ("sovereignty.html", "0.8"),
     ("sources.html", "0.6"),
     ("about.html", "0.5"),
-    ("firewall-example.html", "0.8"),
 ]
-# The main navigation is the "nav" map in i18n/en/ui.json; pages not in it are linked from content and footer.
 EXTRA_PAGES = ["404.html"]  # English only: GitHub Pages serves the root 404.html for every missing URL.
 
 # Code, native name, HTML lang / hreflang, Open Graph locale. English must stay first (the default).
@@ -184,7 +182,7 @@ def lang_switch(file: str, lang: str, prefix: str, langs: list[tuple]) -> str:
 
 def header(file: str, lang: str, prefix: str, ui: dict, langs: list[tuple]) -> str:
     items = []
-    for f in ui["nav"]:
+    for f, _ in PAGES:
         cur = ' aria-current="page"' if f == file else ""
         items.append(f'<li><a href="{f}"{cur}>{esc(ui["nav"][f])}</a></li>')
     switch = ""
@@ -234,7 +232,6 @@ def footer(ui: dict) -> str:
         <ul>
           <li><a href="procurement.html#checklist">{esc(t['checklist'])}</a></li>
           <li><a href="sovereignty.html">{esc(t['assessment'])}</a></li>
-          <li><a href="firewall-example.html">{esc(t['example'])}</a></li>
           <li><a href="why-europe.html#myths">{esc(t['myths'])}</a></li>
           <li><a href="procurement.html#regulation">{esc(t['regulation'])}</a></li>
         </ul>
