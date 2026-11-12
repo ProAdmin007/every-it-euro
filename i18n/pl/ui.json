@@ -58,7 +58,8 @@
     "websiteOf": "Strona internetowa: {name}",
     "emptyTitle": "Żaden wpis nie spełnia tych kryteriów.",
     "emptyText": "Spróbuj szerszego wyszukiwania albo <a href=\"about.html#corrections\">zaproponuj firmę</a>, która powinna znaleźć się na liście.",
-    "showingAll": "Wyświetlane są wszystkie wpisy (łącznie: {total})"
+    "showingAll": "Wyświetlane są wszystkie wpisy (łącznie: {total})",
+    "englishNote": "Informacje o firmach są aktualizowane wyłącznie w języku angielskim, aby wszędzie były równie aktualne. W razie potrzeby przeglądarka może je przetłumaczyć."
   },
   "filters": {
     "formLabel": "Filtruj europejskie alternatywy technologiczne",
@@ -156,6 +157,7 @@
     "accessed": "Data dostępu",
     "topics": "Tematy",
     "notStated": "nie podano",
+    "englishNote": "Streszczenia źródeł są aktualizowane wyłącznie w języku angielskim. W razie potrzeby przeglądarka może je przetłumaczyć.",
     "types": {
       "Legislation": "Akty prawne",
       "Court ruling": "Orzeczenia sądowe",

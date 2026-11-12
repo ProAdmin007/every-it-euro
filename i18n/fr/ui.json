@@ -58,7 +58,8 @@
     "websiteOf": "Site web de {name}",
     "emptyTitle": "Aucune entrée ne correspond à ces filtres.",
     "emptyText": "Essayez une recherche plus large, ou <a href=\"about.html#corrections\">suggérez une entreprise</a> qui devrait figurer dans la liste.",
-    "showingAll": "Entrées affichées : {total} (toutes)"
+    "showingAll": "Entrées affichées : {total} (toutes)",
+    "englishNote": "Les fiches des entreprises sont tenues à jour uniquement en anglais, afin d’être partout aussi actuelles. Votre navigateur peut les traduire si besoin."
   },
   "filters": {
     "formLabel": "Filtrer les alternatives technologiques européennes",
@@ -156,6 +157,7 @@
     "accessed": "Consultation",
     "topics": "Thèmes",
     "notStated": "non indiquée",
+    "englishNote": "Les résumés des sources sont tenus à jour uniquement en anglais. Votre navigateur peut les traduire si besoin.",
     "types": {
       "Legislation": "Législation",
       "Court ruling": "Décision de justice",

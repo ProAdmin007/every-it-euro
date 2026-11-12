@@ -7,7 +7,7 @@ Usage
 
 Every answer is checked straight away (classification, categories, URLs, …). Nothing is written until
 you confirm at the end. The entry is inserted in alphabetical order and lastVerified is set to today.
-Afterwards the script tells you which translations are still needed.
+Company data is English only, so the new entry appears on every language version straight away.
 """
 from __future__ import annotations
 
@@ -106,7 +106,7 @@ def main() -> int:
     country = ask("Country (English name)")
     new_country = country not in ui["countries"]
     if new_country:
-        print(f"  '{country}' is new: it will be added to every i18n/<lang>/ui.json with the English name; translate it there.")
+        print(f"  '{country}' is new: it will be added to i18n/en/ui.json (other languages show the English name until translated).")
     code = ask("ISO country code (2 letters)", check=lambda v: None if re.fullmatch(r"[A-Za-z]{2}", v) else "Two letters, e.g. DE.").upper()
     hq = ask("Headquarters (city, country)", f", {country}")
     parent = ask("Parent company", "None (independent)")
@@ -144,21 +144,17 @@ def main() -> int:
     data["meta"]["lastUpdated"] = date.today().isoformat()
     COMPANIES.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
     if new_country:
-        for p in sorted((ROOT / "i18n").glob("*/ui.json")):
+        for p in [ROOT / "i18n/en/ui.json"]:  # translations fall back to English until translated
             d = json.loads(p.read_text(encoding="utf-8"))
             d["countries"][country] = country
             d["countries"] = dict(sorted(d["countries"].items()))
             p.write_text(json.dumps(d, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
 
-    langs = [l for l, *_ in build.LANGUAGES[1:] if (ROOT / l).is_dir()]
-    print(f"\nSaved '{cid}' to data/companies.json.")
+    print(f"\nSaved '{cid}' to data/companies.json. Company data is English only, so no translation is needed.")
     print("Next steps:")
-    print(f"  1. Translate the entry: add \"{cid}\" with headquarters, parentCompany, ownership, classificationNote,")
-    print(f"     description and evaluating to one of the i18n/<lang>/companies-*.json files for: {', '.join(langs)}.")
-    print(f"     (Or ask Claude: \"translate company {cid} into all languages\".)")
     if new_country:
-        print(f"  2. Translate the country name '{country}' in i18n/<lang>/ui.json.")
-    print(f"  {3 if new_country else 2}. Run: python tools/build.py")
+        print(f"  - Optional: translate the country name '{country}' in i18n/<lang>/ui.json (English is shown until then).")
+    print("  - Run: python tools/build.py")
     return 0
 
 
