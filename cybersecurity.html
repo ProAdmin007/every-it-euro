@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cybersecurity, OT &amp; Critical Infrastructure | Every IT Euro</title>
+<meta name="description" content="Why technological sovereignty matters for cybersecurity infrastructure, OT, ICS and critical infrastructure — and how to include supplier dependency in risk assessments.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#003399">
+<link rel="canonical" href="https://proadmin007.github.io/every-it-euro/cybersecurity.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Every IT Euro">
+<meta property="og:title" content="The technology that protects everything else">
+<meta property="og:description" content="Technological sovereignty in European cybersecurity, OT and critical infrastructure: dependencies, questions and trade-offs.">
+<meta property="og:url" content="https://proadmin007.github.io/every-it-euro/cybersecurity.html">
+<meta property="og:image" content="https://proadmin007.github.io/every-it-euro/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/main.js"></script>
+</head>
+<body>
+<!-- BEGIN:header -->
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="9" fill="#003399"/><circle cx="32.50" cy="20.00" r="1.9" fill="#FFCC00"/><circle cx="30.83" cy="26.25" r="1.9" fill="#FFCC00"/><circle cx="26.25" cy="30.83" r="1.9" fill="#FFCC00"/><circle cx="20.00" cy="32.50" r="1.9" fill="#FFCC00"/><circle cx="13.75" cy="30.83" r="1.9" fill="#FFCC00"/><circle cx="9.17" cy="26.25" r="1.9" fill="#FFCC00"/><circle cx="7.50" cy="20.00" r="1.9" fill="#FFCC00"/><circle cx="9.17" cy="13.75" r="1.9" fill="#FFCC00"/><circle cx="13.75" cy="9.17" r="1.9" fill="#FFCC00"/><circle cx="20.00" cy="7.50" r="1.9" fill="#FFCC00"/><circle cx="26.25" cy="9.17" r="1.9" fill="#FFCC00"/><circle cx="30.83" cy="13.75" r="1.9" fill="#FFCC00"/><path d="M20 12.5l6 2.4v4.6c0 4-2.6 6.9-6 8-3.4-1.1-6-4-6-8v-4.6z" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Every IT Euro<small>European technology choices</small></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle-icon" aria-hidden="true"></span>Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="why-europe.html">Why Europe</a></li>
+        <li><a href="cybersecurity.html" aria-current="page">Cybersecurity</a></li>
+        <li><a href="alternatives.html">European Alternatives</a></li>
+        <li><a href="procurement.html">Procurement</a></li>
+        <li><a href="sovereignty.html">Sovereignty Assessment</a></li>
+        <li><a href="sources.html">Sources</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- END:header -->
+
+<main id="main">
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="container">
+      <p class="eyebrow">Cybersecurity</p>
+      <h1 id="page-title">The technology that protects everything else</h1>
+      <p class="lead">Security products sit at the most privileged points of an organisation's infrastructure. That makes the question of who controls them, and under which law, especially relevant.</p>
+      <ul class="toc" aria-label="On this page">
+        <li><a href="#why-security">Why security is different</a></li>
+        <li><a href="#dependency-layers">Layers of dependency</a></li>
+        <li><a href="#technologies">Technology areas</a></li>
+        <li><a href="#risk-assessment">Risk assessment</a></li>
+        <li><a href="#critical-infrastructure">OT &amp; critical infrastructure</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="why-security" aria-labelledby="why-security-title">
+    <div class="container">
+      <div class="split">
+        <div>
+          <h2 id="why-security-title">Why security technology is a special case</h2>
+          <p>Most software processes data. Security software is <strong>trusted to see and control almost everything</strong>. To do its job, it typically needs:</p>
+          <ul>
+            <li><strong>Deep privileges</strong> — endpoint agents at operating-system kernel level, identity systems that grant all access, PAM vaults holding administrator credentials, firewalls that can inspect and block all traffic.</li>
+            <li><strong>A continuous update channel</strong> — signatures, detection content and software updates pushed by the vendor, often automatically.</li>
+            <li><strong>Telemetry flowing outward</strong> — events, files and behavioural data sent to the vendor's cloud for analysis.</li>
+            <li><strong>Vendor access</strong> — support engineers, managed detection services and licensing back-ends.</li>
+          </ul>
+          <p>This is why it is reasonable to ask not only <em>how good</em> a security product is, but also <em>who ultimately controls it</em>.</p>
+        </div>
+        <div>
+          <div class="card card-yellow">
+            <h3>An illustration that is not about nationality</h3>
+            <p>On 19 July 2024, a faulty content update for a widely used endpoint security product caused around 8.5 million Windows devices to crash, according to Microsoft's estimate. Airlines, hospitals and banks were affected worldwide.<a class="cite" href="sources.html#src-crowdstrike-outage-microsoft" aria-label="Source 1">1</a></p>
+            <p>The vendor was not malicious and the issue was quickly identified. But the incident showed how a single vendor's update channel can affect critical operations across many countries at once. Control over that channel is a strategic dependency, wherever the vendor is based.</p>
+          </div>
+          <p class="pull-quote">How dependent should European organisations be on non-European suppliers for the technology that protects their most critical systems?</p>
+        </div>
+      </div>
+      <div class="callout">
+        <span class="callout-title">An important caveat</span>
+        <p>European cybersecurity products are <strong>not automatically more secure</strong>. Security depends on engineering quality, secure development practices, vulnerability handling, transparency and track record. The argument here is narrower: geographic, legal, technological and economic dependency are real risk factors and should be <em>included</em> in risk assessments, alongside technical quality.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="dependency-layers" aria-labelledby="layers-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="layers-title">Layers of dependency in a security product</h2>
+        <p class="lead">“European” or “non-European” is too simple. A product can be European at one layer and dependent at another. Map each layer separately.</p>
+      </div>
+      <div class="dep-map">
+        <div class="dep-step"><strong>Ownership</strong><span>Who owns the supplier and its parent — founders, listed shareholders, private equity, a state?</span></div>
+        <div class="dep-step"><strong>Jurisdiction</strong><span>Which country's laws apply to the parent company, including laws with extraterritorial reach?</span></div>
+        <div class="dep-step"><strong>Development</strong><span>Where is the source code written, maintained and reviewed?</span></div>
+        <div class="dep-step"><strong>Update &amp; signing</strong><span>Who operates the update servers and holds the code-signing keys?</span></div>
+        <div class="dep-step"><strong>Cloud back-end</strong><span>Where is telemetry processed, and who operates the infrastructure?</span></div>
+        <div class="dep-step"><strong>Licensing</strong><span>Does the product stop working if it cannot reach the licence server?</span></div>
+        <div class="dep-step"><strong>Support access</strong><span>From which countries can support staff access your environment?</span></div>
+        <div class="dep-step"><strong>Hardware &amp; components</strong><span>Which chips, appliances and third-party libraries does it depend on?</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="technologies" aria-labelledby="tech-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="tech-title">Security technology areas and their sovereignty questions</h2>
+        <p class="lead">Each area has its own dependency profile. Use the key question as a starting point for your evaluation, then check the <a href="alternatives.html?category=Cybersecurity">European options</a>.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <caption class="visually-hidden">Cybersecurity technology areas, what they control and the key sovereignty question for each</caption>
+          <thead><tr><th scope="col">Technology</th><th scope="col">What it controls</th><th scope="col">Key sovereignty question</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">SIEM</th><td>Central log and event data of the entire organisation</td><td>Where are logs stored and analysed, and can the platform run fully under your control?</td></tr>
+            <tr><th scope="row">SOC technology</th><td>Detection, triage and response workflows</td><td>Can your SOC keep operating if a vendor cloud or managed service becomes unavailable?</td></tr>
+            <tr><th scope="row">EDR / XDR</th><td>Kernel-level agents on every endpoint and server</td><td>Who controls the update channel and the remote-response functions?</td></tr>
+            <tr><th scope="row">Firewalls</th><td>All traffic between network zones and the internet</td><td>Do updates, management and licensing depend on the vendor's cloud?</td></tr>
+            <tr><th scope="row">Network Detection &amp; Response</th><td>Full visibility of network traffic</td><td>Is traffic metadata processed locally or sent to an external cloud?</td></tr>
+            <tr><th scope="row">OT security</th><td>Visibility and protection of industrial networks</td><td>Can it run fully on-premises in a segmented or air-gapped network?</td></tr>
+            <tr><th scope="row">ICS monitoring</th><td>Passive monitoring of industrial protocols</td><td>Can signatures and asset databases be updated offline?</td></tr>
+            <tr><th scope="row">PAM</th><td>Administrator credentials and privileged sessions</td><td>Who could, in theory, compel access to the vault or its key material?</td></tr>
+            <tr><th scope="row">Secure remote access</th><td>External access to internal and OT systems</td><td>Does every connection route through the vendor's infrastructure?</td></tr>
+            <tr><th scope="row">Identity &amp; Access Management</th><td>Who can log in to everything</td><td>Can authentication continue if the identity cloud is unavailable or access is restricted?</td></tr>
+            <tr><th scope="row">Vulnerability management</th><td>Knowledge of all your weaknesses</td><td>Where is the list of your unpatched systems stored?</td></tr>
+            <tr><th scope="row">PKI</th><td>Trust anchors for devices, users and code</td><td>Who holds the root keys, and in which hardware?</td></tr>
+            <tr><th scope="row">Encryption</th><td>Confidentiality of data at rest and in transit</td><td>Who controls the keys — you, or the service provider?</td></tr>
+            <tr><th scope="row">Email security</th><td>All inbound and outbound mail</td><td>Where is mail content processed and quarantined?</td></tr>
+            <tr><th scope="row">Threat intelligence</th><td>Situational awareness and attribution</td><td>Whose perspective and priorities shape the intelligence you receive?</td></tr>
+            <tr><th scope="row">Secure collaboration</th><td>Confidential communication and documents</td><td>Is end-to-end encryption under your control, and where are servers operated?</td></tr>
+            <tr><th scope="row">Cloud security</th><td>Configuration and workloads in the cloud</td><td>Does the tool add a second dependency on top of the cloud provider?</td></tr>
+            <tr><th scope="row">Backup</th><td>Your last line of defence against ransomware</td><td>Can you restore without the vendor's cloud, licence server or support?</td></tr>
+            <tr><th scope="row">Incident response technology</th><td>Forensics and containment during a crisis</td><td>Are tools and retainers available when you need them, under suitable jurisdiction?</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="risk-assessment" aria-labelledby="risk-title">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="risk-title">Four dependencies to add to your risk assessment</h2>
+        <p class="lead">Risk frameworks already cover confidentiality, integrity and availability. Supplier dependency is often handled only through contracts. Make it explicit.</p>
+      </div>
+      <div class="grid grid-4">
+        <div class="card card-accent"><h3>Geographic</h3><p>Where are the people, data centres, update servers and support teams? Which of them sit outside Europe?</p></div>
+        <div class="card card-accent"><h3>Legal</h3><p>Which jurisdictions can compel the supplier to disclose data, suspend service or restrict exports?</p></div>
+        <div class="card card-accent"><h3>Technological</h3><p>Can you operate, update and restore without the supplier's cloud? Are formats and protocols open?</p></div>
+        <div class="card card-accent"><h3>Economic</h3><p>What happens if the supplier is acquired, changes its pricing, ends a product line or becomes insolvent?</p></div>
+      </div>
+      <p class="mt-1">Under the NIS2 Directive, essential and important entities must already address supply-chain security, including the security-related aspects of relationships with direct suppliers.<a class="cite" href="sources.html#src-nis2-directive" aria-label="Source 2">2</a> Sovereignty considerations fit naturally into that existing obligation — but NIS2 does not require buying European. See <a href="procurement.html#regulation">regulation vs. choice</a>.</p>
+      <div class="btn-row">
+        <a class="btn btn-blue" href="sovereignty.html">Assess a system</a>
+        <a class="btn btn-ghost" href="procurement.html#checklist">Open the procurement checklist</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="critical-infrastructure" aria-labelledby="ci-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">OT &amp; critical infrastructure</p>
+        <h2 id="ci-title">When technology dependency becomes a societal risk</h2>
+        <p class="lead">In energy, water, telecom and transport, a supplier problem is not only a business problem. It can affect public safety and the functioning of society.</p>
+      </div>
+
+      <div class="grid grid-4">
+        <div class="card"><h3>Energy &amp; electricity</h3><p>Grid control, substations, generation and distributed energy resources.</p></div>
+        <div class="card"><h3>Gas</h3><p>Transmission, compression, storage and metering systems.</p></div>
+        <div class="card"><h3>Water</h3><p>Drinking-water treatment, wastewater and flood control.</p></div>
+        <div class="card"><h3>Telecom</h3><p>Core networks, radio access and network management.</p></div>
+        <div class="card"><h3>Transport</h3><p>Rail signalling, traffic management, ports and aviation.</p></div>
+        <div class="card"><h3>Government</h3><p>Public administration, emergency services and defence-adjacent systems.</p></div>
+        <div class="card"><h3>Industry</h3><p>Manufacturing, chemicals and process industries.</p></div>
+        <div class="card"><h3>OT, ICS &amp; SCADA</h3><p>The control systems that move physical processes — often in service for decades.</p></div>
+      </div>
+
+      <div class="split mt-2">
+        <div>
+          <h3>Why sovereignty is especially relevant here</h3>
+          <ul>
+            <li><strong>Long lifecycles.</strong> OT systems often stay in service for 15 years or longer — far longer than the typical horizon of a vendor's strategy, ownership or pricing.</li>
+            <li><strong>Physical consequences.</strong> Availability and safety come first. Losing access to updates or support can have consequences in the physical world.</li>
+            <li><strong>Segmented networks.</strong> Many OT networks are, or should be, isolated. Products that require continuous cloud connectivity can conflict with that design.</li>
+            <li><strong>Regulation.</strong> Operators in these sectors fall under NIS2 and, for designated critical entities, the Critical Entities Resilience (CER) Directive, which focus on resilience and continuity.<a class="cite" href="sources.html#src-nis2-directive" aria-label="Source 2">2</a><a class="cite" href="sources.html#src-cer-directive" aria-label="Source 3">3</a></li>
+            <li><strong>Geopolitics.</strong> Export controls, sanctions and trade disputes can affect the availability of technology and updates — a scenario that should be planned for, however unlikely it seems today.</li>
+          </ul>
+        </div>
+        <div class="card card-yellow">
+          <h3>Stress-test scenarios</h3>
+          <p>Run these scenarios against each critical supplier:</p>
+          <ul>
+            <li>The vendor is acquired by a company from another jurisdiction.</li>
+            <li>A government restricts exports of the technology or its updates.</li>
+            <li>The vendor discontinues its on-premises version in favour of SaaS.</li>
+            <li>The vendor's cloud service is unavailable for a week.</li>
+            <li>The vendor's update channel is compromised.</li>
+            <li>The vendor becomes insolvent.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="mt-2" id="ot-questions">Twelve questions for OT and critical infrastructure suppliers</h3>
+      <ol class="grid grid-2 ot-questions">
+        <li class="card">Can the system operate without an external cloud service?</li>
+        <li class="card">Can security updates still be obtained during a geopolitical disruption?</li>
+        <li class="card">Who controls the update infrastructure?</li>
+        <li class="card">Where is the source code maintained?</li>
+        <li class="card">Can the product be operated fully on-premises?</li>
+        <li class="card">Does licensing require continuous internet connectivity?</li>
+        <li class="card">Where is telemetry processed?</li>
+        <li class="card">Can the organisation export all configuration and security data?</li>
+        <li class="card">Is there an alternative supplier?</li>
+        <li class="card">What happens if the vendor is acquired?</li>
+        <li class="card">What happens if a foreign government restricts technology exports?</li>
+        <li class="card">Which jurisdiction ultimately applies to the supplier?</li>
+      </ol>
+
+      <div class="callout mt-2">
+        <span class="callout-title">Practical measures that work regardless of supplier origin</span>
+        <p>Prefer products that can run fully on-premises and offline; mirror updates internally and validate them before deployment; negotiate source-code escrow and long-term support commitments; require open, documented protocols and export formats; keep a qualified second supplier for the most critical functions; and follow the IEC 62443 series for industrial security.</p>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn-blue" href="alternatives.html?category=OT+Security">European OT security options</a>
+        <a class="btn btn-ghost" href="sovereignty.html">Run the sovereignty assessment</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- BEGIN:footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="9" fill="#003399"/><circle cx="32.50" cy="20.00" r="1.9" fill="#FFCC00"/><circle cx="30.83" cy="26.25" r="1.9" fill="#FFCC00"/><circle cx="26.25" cy="30.83" r="1.9" fill="#FFCC00"/><circle cx="20.00" cy="32.50" r="1.9" fill="#FFCC00"/><circle cx="13.75" cy="30.83" r="1.9" fill="#FFCC00"/><circle cx="9.17" cy="26.25" r="1.9" fill="#FFCC00"/><circle cx="7.50" cy="20.00" r="1.9" fill="#FFCC00"/><circle cx="9.17" cy="13.75" r="1.9" fill="#FFCC00"/><circle cx="13.75" cy="9.17" r="1.9" fill="#FFCC00"/><circle cx="20.00" cy="7.50" r="1.9" fill="#FFCC00"/><circle cx="26.25" cy="9.17" r="1.9" fill="#FFCC00"/><circle cx="30.83" cy="13.75" r="1.9" fill="#FFCC00"/><path d="M20 12.5l6 2.4v4.6c0 4-2.6 6.9-6 8-3.4-1.1-6-4-6-8v-4.6z" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg>Every IT Euro</p>
+        <p>An independent, non-commercial information resource on European IT and cybersecurity procurement and digital sovereignty.</p>
+        <p>Not affiliated with the European Union institutions or with any company listed.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="why-europe.html">Why Europe</a></li>
+          <li><a href="cybersecurity.html">Cybersecurity</a></li>
+          <li><a href="cybersecurity.html#critical-infrastructure">OT &amp; critical infrastructure</a></li>
+          <li><a href="alternatives.html">European alternatives</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Tools</h2>
+        <ul>
+          <li><a href="procurement.html#checklist">Procurement checklist</a></li>
+          <li><a href="sovereignty.html">Sovereignty assessment</a></li>
+          <li><a href="why-europe.html#myths">Common arguments</a></li>
+          <li><a href="procurement.html#regulation">Policy &amp; regulation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>This website</h2>
+        <ul>
+          <li><a href="about.html">About &amp; methodology</a></li>
+          <li><a href="sources.html">Sources</a></li>
+          <li><a href="about.html#corrections">Report a correction</a></li>
+          <li><a href="about.html#privacy">Privacy: no cookies, no tracking</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Text licensed under CC BY 4.0 · Code under the MIT License</p>
+      <p>Information only — not legal or procurement advice.</p>
+    </div>
+  </div>
+</footer>
+<!-- END:footer -->
+</body>
+</html>

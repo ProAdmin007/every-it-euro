@@ -1,0 +1,826 @@
+{
+  "meta": {
+    "description": "Sources used on Every IT Euro. Each entry was accessed and checked on the stated date.",
+    "lastUpdated": "2026-11-12",
+    "licence": "CC BY 4.0"
+  },
+  "sources": [
+    {
+      "id": "nis2-directive",
+      "title": "Directive (EU) 2022/2555 of the European Parliament and of the Council of 14 December 2022 on measures for a high common level of cybersecurity across the Union (NIS 2 Directive)",
+      "organisation": "European Parliament and Council of the EU (Official Journal of the EU)",
+      "url": "https://eur-lex.europa.eu/eli/dir/2022/2555/oj",
+      "published": "2022-12-27",
+      "accessed": "2026-11-12",
+      "type": "Legislation",
+      "topics": [
+        "Regulation",
+        "Cybersecurity",
+        "Critical infrastructure"
+      ],
+      "summary": "Art. 21(2)(d) and 21(3) require essential and important entities to manage supply-chain security, and Art. 22 allows EU-level coordinated security risk assessments of critical ICT supply chains, including non-technical risk factors (recitals 90-91)."
+    },
+    {
+      "id": "nis2-commission-page",
+      "title": "NIS2 Directive: securing network and information systems",
+      "organisation": "European Commission",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/nis2-directive",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Regulation",
+        "Cybersecurity",
+        "Critical infrastructure"
+      ],
+      "summary": "Commission overview confirming NIS2 covers 18 critical sectors, the 17 October 2024 transposition deadline and top-management accountability."
+    },
+    {
+      "id": "cyber-resilience-act",
+      "title": "Regulation (EU) 2024/2847 of the European Parliament and of the Council of 23 October 2024 on horizontal cybersecurity requirements for products with digital elements (Cyber Resilience Act)",
+      "organisation": "European Parliament and Council of the EU (Official Journal of the EU)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/2847/oj",
+      "published": "2024-11-20",
+      "accessed": "2026-11-12",
+      "type": "Legislation",
+      "topics": [
+        "Regulation",
+        "Cybersecurity"
+      ],
+      "summary": "Art. 71 applies manufacturer reporting obligations (Art. 14) from 11 September 2026 and the Regulation as a whole from 11 December 2027; Art. 13(5) requires due diligence when integrating third-party components."
+    },
+    {
+      "id": "cra-commission-page",
+      "title": "Cyber Resilience Act",
+      "organisation": "European Commission",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/cyber-resilience-act",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Regulation",
+        "Cybersecurity"
+      ],
+      "summary": "Commission page confirming the CRA entered into force on 10 December 2024, with reporting obligations from 11 September 2026 and main obligations from 11 December 2027."
+    },
+    {
+      "id": "cybersecurity-act-2019",
+      "title": "Regulation (EU) 2019/881 of the European Parliament and of the Council of 17 April 2019 on ENISA (the European Union Agency for Cybersecurity) and on information and communications technology cybersecurity certification (Cybersecurity Act)",
+      "organisation": "European Parliament and Council of the EU (Official Journal of the EU)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2019/881/oj",
+      "published": "2019-06-07",
+      "accessed": "2026-11-12",
+      "type": "Legislation",
+      "topics": [
+        "Regulation",
+        "Cybersecurity"
+      ],
+      "summary": "Establishes ENISA's mandate and the EU cybersecurity certification framework; Art. 56(2) states certification is voluntary unless otherwise specified by Union or Member State law."
+    },
+    {
+      "id": "csa2-press-release",
+      "title": "Commission strengthens EU cybersecurity resilience and capabilities (IP/26/105)",
+      "organisation": "European Commission",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_105",
+      "published": "2026-01-20",
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Regulation",
+        "Cybersecurity",
+        "Critical infrastructure",
+        "Sovereignty"
+      ],
+      "summary": "Announces the proposed revised Cybersecurity Act with a trusted ICT supply chain security framework for the EU's 18 critical sectors and mandatory derisking of mobile networks from high-risk third-country suppliers; subject to approval by Parliament and Council."
+    },
+    {
+      "id": "csa2-qanda",
+      "title": "Cybersecurity Package - Questions & Answers",
+      "organisation": "European Commission",
+      "url": "https://digital-strategy.ec.europa.eu/en/faqs/cybersecurity-act-revision-questions-answers",
+      "published": "2026-01-20",
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Regulation",
+        "Cybersecurity",
+        "Cloud",
+        "Critical infrastructure"
+      ],
+      "summary": "Explains the proposed ICT supply chain security framework addressing 'undue foreign interference and critical dependencies', and states work on the EUCS cloud scheme 'is expected to resume' (EUCS not adopted)."
+    },
+    {
+      "id": "gdpr",
+      "title": "Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data (General Data Protection Regulation)",
+      "organisation": "European Parliament and Council of the EU (Official Journal of the EU)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "published": "2016-05-04",
+      "accessed": "2026-11-12",
+      "type": "Legislation",
+      "topics": [
+        "Regulation",
+        "Jurisdiction"
+      ],
+      "summary": "Art. 28(1) requires controllers to use only processors providing sufficient guarantees; Art. 48 states third-country court or authority orders to disclose personal data are only recognised or enforceable if based on an international agreement."
+    },
+    {
+      "id": "data-act",
+      "title": "Regulation (EU) 2023/2854 of the European Parliament and of the Council of 13 December 2023 on harmonised rules on fair access to and use of data (Data Act)",
+      "organisation": "European Parliament and Council of the EU (Official Journal of the EU)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2023/2854/oj",
+      "published": "2023-12-22",
+      "accessed": "2026-11-12",
+      "type": "Legislation",
+      "topics": [
+        "Regulation",
+        "Cloud",
+        "Jurisdiction"
+      ],
+      "summary": "Applies from 12 September 2025; Arts. 23-31 require cloud providers to remove switching obstacles, Art. 29 bans switching charges from 12 January 2027, and Art. 32 requires measures against unlawful third-country governmental access to non-personal data."
+    },
+    {
+      "id": "data-act-commission-page",
+      "title": "Data Act",
+      "organisation": "European Commission",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/data-act",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Regulation",
+        "Cloud"
+      ],
+      "summary": "Commission page confirming the Data Act came into application on 12 September 2025, including rules on switching between data processing service providers."
+    },
+    {
+      "id": "dora",
+      "title": "Regulation (EU) 2022/2554 of the European Parliament and of the Council of 14 December 2022 on digital operational resilience for the financial sector (DORA)",
+      "organisation": "European Parliament and Council of the EU (Official Journal of the EU)",
+      "url": "https://eur-lex.europa.eu/eli/reg/2022/2554/oj",
+      "published": "2022-12-27",
+      "accessed": "2026-11-12",
+      "type": "Legislation",
+      "topics": [
+        "Regulation",
+        "Cybersecurity",
+        "Critical infrastructure",
+        "Jurisdiction"
+      ],
+      "summary": "Applies from 17 January 2025; Arts. 28-30 require an ICT third-party risk strategy, concentration-risk assessment, consideration of third-country law enforcement, and exit strategies; recital 82 states DORA imposes no data localisation obligation."
+    },
+    {
+      "id": "enisa-homepage",
+      "title": "ENISA - European Union Agency for Cybersecurity",
+      "organisation": "ENISA",
+      "url": "https://www.enisa.europa.eu/",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Official guidance",
+      "topics": [
+        "Cybersecurity"
+      ],
+      "summary": "Homepage of the EU Agency for Cybersecurity, which prepares EU certification schemes and supports Member States and EU institutions."
+    },
+    {
+      "id": "eucc-implementing-regulation",
+      "title": "Commission Implementing Regulation (EU) 2024/482 of 31 January 2024 laying down rules for the application of Regulation (EU) 2019/881 as regards the adoption of the European Common Criteria-based cybersecurity certification scheme (EUCC)",
+      "organisation": "European Commission (Official Journal of the EU)",
+      "url": "https://eur-lex.europa.eu/eli/reg_impl/2024/482/oj",
+      "published": "2024-02-07",
+      "accessed": "2026-11-12",
+      "type": "Legislation",
+      "topics": [
+        "Regulation",
+        "Cybersecurity"
+      ],
+      "summary": "Adopts the first EU cybersecurity certification scheme (EUCC) for ICT products, applicable from 27 February 2025."
+    },
+    {
+      "id": "eu-certification-framework",
+      "title": "EU Cybersecurity Certification Framework",
+      "organisation": "European Commission",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/cybersecurity-certification-framework",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Cybersecurity",
+        "Cloud"
+      ],
+      "summary": "States EUCC applies EU-wide on a voluntary basis and lists a scheme for cloud services (EUCS) among requested candidate schemes, i.e. not yet adopted."
+    },
+    {
+      "id": "eu-5g-toolbox",
+      "title": "Cybersecurity of 5G networks - EU Toolbox of risk mitigating measures",
+      "organisation": "NIS Cooperation Group (published by the European Commission)",
+      "url": "https://digital-strategy.ec.europa.eu/en/library/cybersecurity-5g-networks-eu-toolbox-risk-mitigating-measures",
+      "published": "2020-01-29",
+      "accessed": "2026-11-12",
+      "type": "Official guidance",
+      "topics": [
+        "Cybersecurity",
+        "Critical infrastructure",
+        "Sovereignty"
+      ],
+      "summary": "Member States' common set of strategic and technical measures for 5G security, including restrictions on high-risk suppliers, adopted on 29 January 2020."
+    },
+    {
+      "id": "5g-communication-2023",
+      "title": "Commission announces next steps on cybersecurity of 5G networks in complement to latest progress report by Member States (IP/23/3309)",
+      "organisation": "European Commission",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_23_3309",
+      "published": "2023-06-15",
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Cybersecurity",
+        "Critical infrastructure",
+        "Sovereignty"
+      ],
+      "summary": "Commission states that Huawei and ZTE 'represent in fact materially higher risks than other 5G suppliers' and that Member State restrictions on them are justified."
+    },
+    {
+      "id": "procurement-directive-2014-24",
+      "title": "Directive 2014/24/EU of the European Parliament and of the Council of 26 February 2014 on public procurement and repealing Directive 2004/18/EC",
+      "organisation": "European Parliament and Council of the EU (Official Journal of the EU)",
+      "url": "https://eur-lex.europa.eu/eli/dir/2014/24/oj",
+      "published": "2014-03-28",
+      "accessed": "2026-11-12",
+      "type": "Legislation",
+      "topics": [
+        "Procurement",
+        "Regulation"
+      ],
+      "summary": "Art. 18(1) requires equal, non-discriminatory treatment of economic operators; Art. 25 requires no-less-favourable treatment of operators from GPA and other agreement signatories for covered procurement."
+    },
+    {
+      "id": "wto-gpa",
+      "title": "The plurilateral Agreement on Government Procurement (GPA)",
+      "organisation": "World Trade Organization",
+      "url": "https://www.wto.org/english/tratop_e/gproc_e/gp_gpa_e.htm",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Official guidance",
+      "topics": [
+        "Procurement",
+        "Economy"
+      ],
+      "summary": "Describes the GPA as a binding plurilateral treaty that mutually opens government procurement markets among its 22 parties."
+    },
+    {
+      "id": "wto-gpa-parties",
+      "title": "Parties, observers and accessions - Agreement on Government Procurement",
+      "organisation": "World Trade Organization",
+      "url": "https://www.wto.org/english/tratop_e/gproc_e/memobs_e.htm",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Official guidance",
+      "topics": [
+        "Procurement"
+      ],
+      "summary": "Lists the EU (for its 27 Member States) and the United States among GPA parties, so US suppliers have treaty-based access to covered EU public procurement."
+    },
+    {
+      "id": "cjeu-kolin",
+      "title": "Judgment of the Court (Grand Chamber) of 22 October 2024, Kolin Inşaat Turizm Sanayi ve Ticaret AȘ v Državna komisija za kontrolu postupaka javne nabave, Case C-652/22",
+      "organisation": "Court of Justice of the European Union",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:62022CJ0652",
+      "published": "2024-10-22",
+      "accessed": "2026-11-12",
+      "type": "Court ruling",
+      "topics": [
+        "Procurement",
+        "Jurisdiction"
+      ],
+      "summary": "Holds that operators from third countries without a procurement agreement with the EU have no right to 'no less favourable' treatment and contracting entities may set differentiated arrangements for them."
+    },
+    {
+      "id": "public-procurement-act-press",
+      "title": "Commission proposes simpler and more strategic Public Procurement rules (IP/26/1817)",
+      "organisation": "European Commission",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1817",
+      "published": "2026-09-09",
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Procurement",
+        "Sovereignty",
+        "Economy",
+        "Cybersecurity"
+      ],
+      "summary": "Announces the proposed Public Procurement Regulation with security/resilience provisions and a horizontal European preference framework 'in line with the Union's international legal obligations'; to be negotiated by Parliament and Council."
+    },
+    {
+      "id": "public-procurement-act-qanda",
+      "title": "Questions and answers on the EU Public Procurement Act (QANDA/26/1819)",
+      "organisation": "European Commission",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_1819",
+      "published": "2026-09-09",
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Procurement",
+        "Sovereignty",
+        "Cybersecurity"
+      ],
+      "summary": "Explains that European preference rules distinguish operators covered by the WTO GPA or FTAs from non-covered ones, and that the Commission could make preference requirements mandatory via delegated acts in defined cases."
+    },
+    {
+      "id": "public-procurement-act-proposal",
+      "title": "Proposal for a regulation on public contracts and concessions (COM(2026) 590)",
+      "organisation": "European Commission",
+      "url": "https://single-market-economy.ec.europa.eu/publications/proposal-regulation-public-contracts-and-concessions_en",
+      "published": "2026-09-09",
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Procurement",
+        "Regulation"
+      ],
+      "summary": "Official page for the Commission proposal COM(2026) 590 that would replace the 2014 procurement directives with a single regulation."
+    },
+    {
+      "id": "draghi-report-part-a",
+      "title": "The future of European competitiveness - Part A: A competitiveness strategy for Europe",
+      "organisation": "European Commission (report by Mario Draghi)",
+      "url": "https://commission.europa.eu/document/download/97e481fd-2dc3-412d-be4c-f152a8232961_en?filename=The%20future%20of%20European%20competitiveness%20_%20A%20competitiveness%20strategy%20for%20Europe.pdf",
+      "published": "2024-09",
+      "accessed": "2026-11-12",
+      "type": "Report",
+      "topics": [
+        "Economy",
+        "Cloud",
+        "Sovereignty"
+      ],
+      "summary": "States that three US hyperscalers account for over 65% of the European cloud market and that Europe's dependence on US-run cloud services is 'massive' (printed pp. 24, 57)."
+    },
+    {
+      "id": "draghi-report-part-b",
+      "title": "The future of European competitiveness - Part B: In-depth analysis and recommendations",
+      "organisation": "European Commission (report by Mario Draghi)",
+      "url": "https://commission.europa.eu/document/download/ec1409c1-d4b4-4882-8bdd-3519f86bbb92_en?filename=The%20future%20of%20European%20competitiveness_%20In-depth%20analysis%20and%20recommendations_0.pdf",
+      "published": "2024-09",
+      "accessed": "2026-11-12",
+      "type": "Report",
+      "topics": [
+        "Economy",
+        "Cloud",
+        "Procurement",
+        "Sovereignty"
+      ],
+      "summary": "Recommends a single EU-wide policy for public-administration cloud procurement requiring 'as a minimum EU sovereign control of key elements for security and encryption' (p. 84)."
+    },
+    {
+      "id": "draghi-report-page",
+      "title": "The Draghi report on EU competitiveness",
+      "organisation": "European Commission",
+      "url": "https://commission.europa.eu/topics/eu-competitiveness/draghi-report_en",
+      "published": "2024-09-09",
+      "accessed": "2026-11-12",
+      "type": "Report",
+      "topics": [
+        "Economy"
+      ],
+      "summary": "Commission landing page hosting the Draghi report parts A and B."
+    },
+    {
+      "id": "digital-decade-decision",
+      "title": "Decision (EU) 2022/2481 of the European Parliament and of the Council of 14 December 2022 establishing the Digital Decade Policy Programme 2030",
+      "organisation": "European Parliament and Council of the EU (Official Journal of the EU)",
+      "url": "https://eur-lex.europa.eu/eli/dec/2022/2481/oj",
+      "published": "2022-12-19",
+      "accessed": "2026-11-12",
+      "type": "Legislation",
+      "topics": [
+        "Cloud",
+        "Sovereignty",
+        "Economy"
+      ],
+      "summary": "Sets 2030 targets including at least 10 000 climate-neutral highly secure edge nodes and at least 75% of EU enterprises taking up cloud, AI or big data."
+    },
+    {
+      "id": "state-digital-decade-2026",
+      "title": "2026 State of the Digital Decade package",
+      "organisation": "European Commission",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/2026-state-digital-decade-package",
+      "published": "2026-06-17",
+      "accessed": "2026-11-12",
+      "type": "Report",
+      "topics": [
+        "Cloud",
+        "Cybersecurity",
+        "Sovereignty",
+        "Economy"
+      ],
+      "summary": "States 'Dependencies on non-EU providers remain significant in cloud services, cybersecurity and other strategic technologies' and reports 82% of Europeans favour reducing dependence on non-EU suppliers (2026 Special Eurobarometer)."
+    },
+    {
+      "id": "tech-sovereignty-press",
+      "title": "Commission proposes tech sovereignty package to strengthen Europe's digital autonomy and resilience (IP/26/1187)",
+      "organisation": "European Commission",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1187",
+      "published": "2026-06-03",
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Sovereignty",
+        "Cloud",
+        "Economy"
+      ],
+      "summary": "Presents the Tech Sovereignty Package (Chips Act 2.0, Cloud and AI Development Act, Open Source Strategy, energy roadmap), noting Europe 'remains heavily dependent on suppliers outside the European Union for core digital technologies'."
+    },
+    {
+      "id": "tech-sovereignty-qanda",
+      "title": "Questions and answers on the Technological Sovereignty Package (QANDA/26/1188)",
+      "organisation": "European Commission",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_1188",
+      "published": "2026-06-03",
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Sovereignty",
+        "Cloud",
+        "Procurement"
+      ],
+      "summary": "States 'Right now, Europe relies too much on non-EU providers, creating risks' and that CADA aims to define EU cloud and AI sovereignty clearly ('no more sovereign washing')."
+    },
+    {
+      "id": "cada-proposal",
+      "title": "Proposal for the Cloud and AI Development Act (CADA)",
+      "organisation": "European Commission",
+      "url": "https://digital-strategy.ec.europa.eu/en/library/proposal-cloud-and-ai-development-act-cada",
+      "published": "2026-06-03",
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Cloud",
+        "Sovereignty",
+        "Procurement",
+        "Regulation"
+      ],
+      "summary": "Official page for proposal COM(2026) 502, which would create a single EU-wide framework to assess cloud and AI sovereignty; still a proposal under the ordinary legislative procedure."
+    },
+    {
+      "id": "france-doctrine-cloud-au-centre",
+      "title": "Les règles de la doctrine (doctrine « cloud au centre »)",
+      "organisation": "DINUM - Direction interministérielle du numérique (French Government)",
+      "url": "https://www.numerique.gouv.fr/services/cloud/doctrine/",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Cloud",
+        "Procurement",
+        "Jurisdiction",
+        "Sovereignty"
+      ],
+      "summary": "French state rule 9: commercial cloud for particularly sensitive data must hold SecNumCloud (or an equivalent European) qualification and be immune to unauthorised access by third-country public authorities."
+    },
+    {
+      "id": "anssi-secnumcloud",
+      "title": "SecNumCloud",
+      "organisation": "ANSSI - Agence nationale de la sécurité des systèmes d'information",
+      "url": "https://cyber.gouv.fr/secnumcloud",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Official guidance",
+      "topics": [
+        "Cloud",
+        "Cybersecurity",
+        "Jurisdiction"
+      ],
+      "summary": "ANSSI page for the SecNumCloud qualification for trusted cloud providers (URL resolves but is behind bot protection; content not machine-verified, check manually before quoting)."
+    },
+    {
+      "id": "bsi-c5",
+      "title": "C5 criteria catalogue (Cloud Computing Compliance Criteria Catalogue)",
+      "organisation": "BSI - Bundesamt für Sicherheit in der Informationstechnik (Germany)",
+      "url": "https://www.bsi.bund.de/EN/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Empfehlungen-nach-Angriffszielen/Cloud-Computing/Kriterienkatalog-C5/kriterienkatalog-c5_node.html",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Official guidance",
+      "topics": [
+        "Cloud",
+        "Cybersecurity"
+      ],
+      "summary": "Describes C5 as a baseline security criteria catalogue for cloud services verified through auditor examination, with customers responsible for evaluating reports; revised as C5:2026."
+    },
+    {
+      "id": "us-18-usc-2713",
+      "title": "18 U.S. Code § 2713 - Required preservation and disclosure of communications and records",
+      "organisation": "Legal Information Institute, Cornell Law School (US Code text)",
+      "url": "https://www.law.cornell.edu/uscode/text/18/2713",
+      "published": "2018-03-23",
+      "accessed": "2026-11-12",
+      "type": "Legislation",
+      "topics": [
+        "Jurisdiction",
+        "Cloud"
+      ],
+      "summary": "CLOUD Act provision (Pub. L. 115-141, div. V) requiring providers to disclose data in their 'possession, custody, or control' regardless of whether it is located inside or outside the United States."
+    },
+    {
+      "id": "doj-cloud-act-resources",
+      "title": "CLOUD Act Resources",
+      "organisation": "U.S. Department of Justice, Criminal Division",
+      "url": "https://www.justice.gov/criminal/cloud-act-resources",
+      "published": "2019-04-09",
+      "accessed": "2026-11-12",
+      "type": "Official guidance",
+      "topics": [
+        "Jurisdiction",
+        "Cloud"
+      ],
+      "summary": "DOJ states the CLOUD Act was enacted in March 2018 to speed access to electronic information held by US-based global providers."
+    },
+    {
+      "id": "us-50-usc-1881a",
+      "title": "50 U.S. Code § 1881a - Procedures for targeting certain persons outside the United States other than United States persons (FISA Section 702)",
+      "organisation": "Legal Information Institute, Cornell Law School (US Code text)",
+      "url": "https://www.law.cornell.edu/uscode/text/50/1881a",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Legislation",
+      "topics": [
+        "Jurisdiction"
+      ],
+      "summary": "Authorises targeting of persons reasonably believed to be outside the United States to acquire foreign intelligence information, with compelled assistance from electronic communication service providers."
+    },
+    {
+      "id": "cyberscoop-702-extension",
+      "title": "Congress extends Section 702 surveillance 45 days",
+      "organisation": "CyberScoop",
+      "url": "https://cyberscoop.com/congress-extends-section-702-surveillance-45-days/",
+      "published": "2026-04-30",
+      "accessed": "2026-11-12",
+      "type": "News",
+      "topics": [
+        "Jurisdiction"
+      ],
+      "summary": "Reports a 45-day stopgap extension of FISA Section 702 passed on 30 April 2026; status after mid-June 2026 not verified."
+    },
+    {
+      "id": "cjeu-schrems-ii",
+      "title": "Press Release No 91/20: The Court of Justice invalidates Decision 2016/1250 on the adequacy of the protection provided by the EU-US Data Protection Shield (Judgment in Case C-311/18, Data Protection Commissioner v Facebook Ireland and Maximillian Schrems)",
+      "organisation": "Court of Justice of the European Union",
+      "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2020-07/cp200091en.pdf",
+      "published": "2020-07-16",
+      "accessed": "2026-11-12",
+      "type": "Court ruling",
+      "topics": [
+        "Jurisdiction",
+        "Regulation"
+      ],
+      "summary": "Schrems II: Privacy Shield invalidated because US surveillance programmes were not limited to what is strictly necessary and lacked actionable redress; standard contractual clauses remain valid subject to case-by-case assessment."
+    },
+    {
+      "id": "dpf-adequacy-decision",
+      "title": "Commission Implementing Decision (EU) 2023/1795 of 10 July 2023 pursuant to Regulation (EU) 2016/679 on the adequate level of protection of personal data under the EU-US Data Privacy Framework",
+      "organisation": "European Commission (Official Journal of the EU)",
+      "url": "https://eur-lex.europa.eu/eli/dec_impl/2023/1795/oj",
+      "published": "2023-07-10",
+      "accessed": "2026-11-12",
+      "type": "Legislation",
+      "topics": [
+        "Jurisdiction",
+        "Regulation"
+      ],
+      "summary": "Current adequacy decision allowing personal data to flow to US companies certified under the EU-US Data Privacy Framework."
+    },
+    {
+      "id": "general-court-latombe",
+      "title": "Press Release No 106/25: Data Protection: the General Court dismisses an action for annulment of the new framework for the transfer of personal data between the European Union and the United States (Case T-553/23, Latombe v Commission)",
+      "organisation": "Court of Justice of the European Union (General Court)",
+      "url": "https://curia.europa.eu/jcms/upload/docs/application/pdf/2025-09/cp250106en.pdf",
+      "published": "2025-09-03",
+      "accessed": "2026-11-12",
+      "type": "Court ruling",
+      "topics": [
+        "Jurisdiction",
+        "Regulation"
+      ],
+      "summary": "The General Court upheld the DPF adequacy decision, noting the Commission must monitor US law continuously and may suspend, amend or repeal the decision if it changes."
+    },
+    {
+      "id": "ap-icc-sanctions",
+      "title": "Trump's sanctions on ICC's chief prosecutor have halted tribunal's work, officials and lawyers say",
+      "organisation": "Associated Press (republished by PBS NewsHour)",
+      "url": "https://www.pbs.org/newshour/world/trumps-sanctions-on-iccs-chief-prosecutor-have-halted-tribunals-work",
+      "published": "2025-05-15",
+      "accessed": "2026-11-12",
+      "type": "News",
+      "topics": [
+        "Jurisdiction",
+        "Sovereignty"
+      ],
+      "summary": "AP reported, citing ICC staffers, that after US sanctions Microsoft cancelled the ICC prosecutor's email address, forcing a move to Proton Mail; Microsoft did not respond to AP at the time."
+    },
+    {
+      "id": "heise-microsoft-denies-icc",
+      "title": "Microsoft denies mail blockade at the International Criminal Court",
+      "organisation": "heise online",
+      "url": "https://heise.de/-10429628",
+      "published": "2025-06-05",
+      "accessed": "2026-11-12",
+      "type": "News",
+      "topics": [
+        "Jurisdiction"
+      ],
+      "summary": "Reports Microsoft President Brad Smith's statement that measures regarding the sanctioned official in no way included termination of services to the ICC."
+    },
+    {
+      "id": "register-microsoft-icc-correction",
+      "title": "Microsoft throws spox under the bus after Parliament testimony on ICC email kerfuffle",
+      "organisation": "The Register",
+      "url": "https://www.theregister.com/2026/02/18/microsoft_asks_uk_parliament_to_correct_record/",
+      "published": "2026-02-18",
+      "accessed": "2026-11-12",
+      "type": "News",
+      "topics": [
+        "Jurisdiction"
+      ],
+      "summary": "Reports Microsoft asked the UK Parliament to correct a witness's testimony and restated: 'At no point did Microsoft cease or suspend its services to the ICC.'"
+    },
+    {
+      "id": "register-icc-opendesk",
+      "title": "International Criminal Court ditches Office for European open source alternative",
+      "organisation": "The Register",
+      "url": "https://www.theregister.com/2025/10/31/international_criminal_court_ditches_office/",
+      "published": "2025-10-31",
+      "accessed": "2026-11-12",
+      "type": "News",
+      "topics": [
+        "Sovereignty",
+        "Procurement"
+      ],
+      "summary": "Reports the ICC confirmed it is moving from Microsoft Office to openDesk, the open source suite provided by ZenDiS."
+    },
+    {
+      "id": "senat-microsoft-france-hearing",
+      "title": "CE Commande publique : compte rendu de la semaine du 9 juin 2025 (audition de MM. Anton Carniaux et Pierre Lagarde, Microsoft France, mardi 10 juin 2025)",
+      "organisation": "Sénat (French Senate), commission d'enquête sur la commande publique",
+      "url": "https://www.senat.fr/compte-rendu-commissions/20250609/ce_commande_publique.html",
+      "published": "2025-06-10",
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Jurisdiction",
+        "Procurement",
+        "Cloud"
+      ],
+      "summary": "Official transcript: asked under oath whether French citizens' data would never be transmitted following a US injunction without French authorities' consent, Microsoft France's director of public and legal affairs answered 'Non, je ne peux pas le garantir'."
+    },
+    {
+      "id": "microsoft-european-digital-commitments",
+      "title": "Microsoft announces new European digital commitments",
+      "organisation": "Microsoft (Brad Smith, Vice Chair and President)",
+      "url": "https://blogs.microsoft.com/on-the-issues/2025/04/30/european-digital-commitments/",
+      "published": "2025-04-30",
+      "accessed": "2026-11-12",
+      "type": "Company",
+      "topics": [
+        "Cloud",
+        "Jurisdiction",
+        "Sovereignty"
+      ],
+      "summary": "Microsoft's commitment to contest in court any government order to suspend or cease European cloud operations and to make this binding in contracts with European governments and the Commission."
+    },
+    {
+      "id": "schleswig-holstein-2024",
+      "title": "Einstieg in den Umstieg: Schleswig-Holstein setzt auf einen digital souveränen IT-Arbeitsplatz in der Landesverwaltung",
+      "organisation": "Staatskanzlei Schleswig-Holstein (State Government)",
+      "url": "https://www.schleswig-holstein.de/DE/landesregierung/ministerien-behoerden/I/Presse/PI/2024/CdS/240403_cds_it-arbeitsplatz.html",
+      "published": "2024-04-03",
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Sovereignty",
+        "Procurement"
+      ],
+      "summary": "Cabinet decision making LibreOffice the standard office software for around 30,000 state employees, with Linux, Nextcloud and Open-Xchange/Thunderbird planned as further steps."
+    },
+    {
+      "id": "heise-schleswig-holstein-email",
+      "title": "Schleswig-Holstein's e-mail systems converted to open source",
+      "organisation": "heise online",
+      "url": "https://heise.de/-10733737",
+      "published": "2025-10-07",
+      "accessed": "2026-11-12",
+      "type": "News",
+      "topics": [
+        "Sovereignty"
+      ],
+      "summary": "Reports completion of the migration of over 40,000 mailboxes from Microsoft Exchange/Outlook to Open-Xchange and Thunderbird, and that the minister acknowledged migration problems."
+    },
+    {
+      "id": "heise-denmark-libreoffice",
+      "title": "From Word and Excel to LibreOffice: Danish ministry says goodbye to Microsoft",
+      "organisation": "heise online",
+      "url": "https://heise.de/-10438942",
+      "published": "2025-06-10",
+      "accessed": "2026-11-12",
+      "type": "News",
+      "topics": [
+        "Sovereignty"
+      ],
+      "summary": "Reports Danish Minister for Digitalisation Caroline Stage's announcement (interview with Politiken) that the ministry will move from Microsoft Office to LibreOffice; the Linux part was later reported as a misunderstanding."
+    },
+    {
+      "id": "opendesk",
+      "title": "openDesk - The office and collaboration suite for public administration",
+      "organisation": "ZenDiS / Federal Republic of Germany",
+      "url": "https://www.opendesk.eu/en",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Sovereignty",
+        "Procurement"
+      ],
+      "summary": "Official page of openDesk, an open source office and collaboration suite for public administration with a focus on digital sovereignty."
+    },
+    {
+      "id": "zendis",
+      "title": "ZenDiS - Zentrum Digitale Souveränität der Öffentlichen Verwaltung",
+      "organisation": "ZenDiS (Center for Digital Sovereignty in Public Administration, Germany)",
+      "url": "https://www.zendis.de/en",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Sovereignty"
+      ],
+      "summary": "German federal centre helping public administrations reduce critical dependencies through open source (openCode, openDesk)."
+    },
+    {
+      "id": "la-suite-numerique",
+      "title": "LaSuite - L'espace de travail ouvert et souverain des agents de l'État",
+      "organisation": "DINUM (French Government)",
+      "url": "https://lasuite.numerique.gouv.fr/",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Sovereignty"
+      ],
+      "summary": "French state's open source workplace suite, stated to be used monthly by over 500,000 public agents in 15 ministries."
+    },
+    {
+      "id": "gaia-x",
+      "title": "Gaia-X: A Federated Secure Data Infrastructure",
+      "organisation": "Gaia-X European Association for Data and Cloud AISBL",
+      "url": "https://gaia-x.eu/",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Cloud",
+        "Sovereignty"
+      ],
+      "summary": "Official site of Gaia-X, the European initiative for federated, trusted data and cloud ecosystems."
+    },
+    {
+      "id": "ipcei-cis",
+      "title": "Commission approves up to €1.2 billion of State aid by seven Member States for an Important Project of Common European Interest in cloud and edge computing technologies (IP/23/6246)",
+      "organisation": "European Commission",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_23_6246",
+      "published": "2023-12-05",
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Cloud",
+        "Economy",
+        "Sovereignty"
+      ],
+      "summary": "IPCEI-CIS: up to €1.2 billion public funding from seven Member States, expected to unlock €1.4 billion private investment, 19 companies developing an open-source multi-provider cloud-edge continuum."
+    },
+    {
+      "id": "crowdstrike-outage-microsoft",
+      "title": "Helping our customers through the CrowdStrike outage",
+      "organisation": "Microsoft (official blog, David Weston)",
+      "url": "https://blogs.microsoft.com/blog/2024/07/20/helping-our-customers-through-the-crowdstrike-outage/",
+      "published": "2024-07-20",
+      "accessed": "2026-11-12",
+      "type": "Company",
+      "topics": [
+        "Cybersecurity",
+        "Critical infrastructure"
+      ],
+      "summary": "Microsoft estimated that the faulty CrowdStrike update affected 8.5 million Windows devices, less than one percent of all Windows machines."
+    },
+    {
+      "id": "cer-directive",
+      "title": "Critical infrastructure resilience — Directive (EU) 2022/2557 on the resilience of critical entities (CER Directive)",
+      "organisation": "European Commission, DG Migration and Home Affairs",
+      "url": "https://home-affairs.ec.europa.eu/policies/internal-security/counter-terrorism-and-radicalisation/protection/critical-infrastructure_en",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Official policy",
+      "topics": [
+        "Regulation",
+        "Critical infrastructure"
+      ],
+      "summary": "The CER Directive entered into force on 16 January 2023, had to be transposed by 17 October 2024 and covers eleven sectors including energy, transport, drinking water, digital infrastructure and public administration."
+    }
+  ]
+}

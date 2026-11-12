@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://proadmin007.github.io/every-it-euro/sitemap.xml
