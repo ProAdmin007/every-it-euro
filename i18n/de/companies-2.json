@@ -1,0 +1,421 @@
+{
+  "hetzner": {
+    "headquarters": "Gunzenhausen, Deutschland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Hetzner Online GmbH in Privatbesitz; zu den Geschäftsführern gehört Gründer Martin Hetzner. Es wird keine Muttergesellschaft genannt; Angaben zu den Gesellschaftern sind auf der Unternehmenswebsite nicht veröffentlicht.",
+    "classificationNote": "Deutsches Unternehmen in Privatbesitz ohne identifizierte Muttergesellschaft oder außereuropäische Eigentümer.",
+    "description": "Bietet dedizierte Server, Cloud-Server, Objektspeicher, Webhosting und Colocation aus Rechenzentren in Deutschland und Finnland sowie zusätzliche Cloud-Standorte in den USA und Singapur.",
+    "evaluating": [
+      "Hyperscale-Public-Cloud (IaaS) wie AWS EC2 oder virtuelle Server nach Art von DigitalOcean",
+      "Anbieter dedizierter Server"
+    ]
+  },
+  "icinga": {
+    "headquarters": "Nürnberg, Deutschland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Icinga GmbH, 2018 in Nürnberg gegründet, um die Entwicklung des Open-Source-Projekts Icinga zu finanzieren; eng verbunden mit NETWAYS, das Beratung, Schulungen und Hosting anbietet. Gesellschafter nicht veröffentlicht.",
+    "classificationNote": "In Europa entwickeltes Open-Source-Monitoring-Projekt mit einem Nürnberger Unternehmen dahinter.",
+    "description": "Open-Source-Monitoringsystem für Infrastruktur und Dienste, ursprünglich als Fork von Nagios entstanden, mit kommerziellen Subskriptionen der Icinga GmbH.",
+    "evaluating": [
+      "Tools für Infrastruktur-Monitoring wie Nagios XI, SolarWinds oder PRTG"
+    ]
+  },
+  "infomaniak": {
+    "headquarters": "Genf, Schweiz",
+    "parentCompany": "Keine (kontrolliert von der gemeinnützigen Schweizer Infomaniak-Stiftung)",
+    "ownership": "Seit Mai 2026 hält die Infomaniak-Stiftung sämtliche Aktien der Klasse A (63,3 % der Stimmrechte bei 14,7 % des Kapitals); ohne ihre Zustimmung ist keine Übernahme möglich. Die Infomaniak SA ist seit dem 1. Oktober 2026 über eine umgekehrte Übernahme (Reverse Takeover) der Perrot Duval Holding an der SIX Swiss Exchange notiert (Tickersymbol INFO).",
+    "classificationNote": "Hauptsitz in der Schweiz, kontrolliert von einer Schweizer Stiftung.",
+    "description": "Bietet Webhosting, Public Cloud, E-Mail und eine Collaboration-Suite (kSuite) aus Rechenzentren in der Schweiz.",
+    "evaluating": [
+      "Office- und Collaboration-Suiten wie Microsoft 365 oder Google Workspace",
+      "Hyperscale-Public-Cloud (IaaS/PaaS)",
+      "Webhosting-Anbieter"
+    ]
+  },
+  "intigriti": {
+    "headquarters": "Antwerpen, Belgien",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "In Privatbesitz, gründergeführt (Stijn Jans); wagniskapitalfinanziert u. a. durch ETF Partners und Octopus Ventures (Vereinigtes Königreich)",
+    "classificationNote": "Hauptsitz in Belgien; die Investoren sind europäisch (EU und Vereinigtes Königreich).",
+    "description": "Belgische Crowdsourced-Security-Plattform mit Bug-Bounty-, Vulnerability-Disclosure- und hybriden Pentesting-Programmen.",
+    "evaluating": [
+      "Bug-Bounty-Plattformen",
+      "Plattformen für Vulnerability-Disclosure-Programme (VDP)",
+      "Penetration Testing as a Service (PTaaS)"
+    ]
+  },
+  "ionos": {
+    "headquarters": "Montabaur, Deutschland",
+    "parentCompany": "United Internet AG (Deutschland)",
+    "ownership": "Die IONOS Group SE ist in Frankfurt börsennotiert; die United Internet AG hielt zum 31. Dezember 2025 63,8 %. Der US-Investor Warburg Pincus hat seine Minderheitsbeteiligung seit dem Börsengang 2023 reduziert.",
+    "classificationNote": "Börsennotierte operative Gesellschaft, mehrheitlich im Besitz des deutschen United-Internet-Konzerns.",
+    "description": "Bietet Webhosting, Domains, dedizierte Server und eine Infrastruktur-Cloud (IONOS Cloud) für kleine Unternehmen und Großunternehmen, mit Rechenzentren in Europa und den USA.",
+    "evaluating": [
+      "Hyperscale-Public-Cloud (IaaS/PaaS) wie AWS, Microsoft Azure oder Google Cloud",
+      "Webhosting-Anbieter"
+    ]
+  },
+  "jolla": {
+    "headquarters": "Tampere, Finnland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Im November 2023 übernahm das frühere Management im Zuge einer Unternehmensrestrukturierung, nachdem die Jolla Oy sich von Eigentümern mit Russland-Bezug trennen wollte, das Geschäft und die Belegschaft in ein neues Unternehmen. Es firmiert heute als Jolla Group Ltd / Jolla Mobile Ltd unter dem Vorsitz von Mitgründer Antti Saarnio.",
+    "classificationNote": "Finnisches Unternehmen, seit der Restrukturierung 2023 im Besitz seines Managements.",
+    "description": "Entwickelt Sailfish OS, ein Linux-basiertes mobiles Betriebssystem mit Kompatibilität für Android-Apps (AppSupport), das an Gerätehersteller und Regierungen lizenziert wird und auf dem eigenen Jolla Phone (angekündigt im Dezember 2025) ausgeliefert wird.",
+    "evaluating": [
+      "Mobile Betriebssysteme wie Android oder iOS",
+      "Lizenzierbare mobile Betriebssystemplattformen für Behördengeräte"
+    ]
+  },
+  "kubermatic": {
+    "headquarters": "Hamburg, Deutschland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Kubermatic GmbH, 2016 (als Loodse) von Sebastian Scheele und Julian Hansert gegründet; Seed-Finanzierung angeführt von Nauta Capital mit btov Partners. Aufteilung der Anteile nicht veröffentlicht.",
+    "classificationNote": "Deutsches wagniskapitalfinanziertes Unternehmen mit europäischen Investoren.",
+    "description": "Entwickelt eine Open-Source-Plattform zur Automatisierung von Bereitstellung und Betrieb vieler Kubernetes-Cluster über Clouds, On-Premises-Umgebungen und Edge hinweg.",
+    "evaluating": [
+      "Kubernetes-Management-Plattformen wie Red Hat OpenShift, VMware Tanzu oder verwaltetes Kubernetes von Hyperscalern"
+    ]
+  },
+  "la-suite-numerique": {
+    "headquarters": "Paris, Frankreich",
+    "parentCompany": "Französischer Staat (DINUM, Direction interministérielle du numérique)",
+    "ownership": "Projekt des öffentlichen Sektors: entwickelt von der französischen interministeriellen Digitaldirektion (DINUM) für Beschäftigte des öffentlichen Dienstes; der Quellcode ist unter Open-Source-Lizenzen (MIT oder AGPL) veröffentlicht.",
+    "classificationNote": "Französische Open-Source-Collaboration-Suite des öffentlichen Sektors.",
+    "description": "Collaboration-Suite des öffentlichen Sektors für französische Behördenbeschäftigte, u. a. mit Docs (gemeinsames Schreiben), Visio (Videokonferenzen), Fichiers (Dateispeicher), Tchap (Messaging auf Matrix-Basis), Grist und einem KI-Assistenten. Der Zugang ist derzeit über ProConnect auf Behördenbeschäftigte beschränkt.",
+    "evaluating": [
+      "Office- und Collaboration-Suiten wie Microsoft 365 oder Google Workspace",
+      "Videokonferenzplattformen wie Microsoft Teams oder Zoom"
+    ]
+  },
+  "leaseweb": {
+    "headquarters": "Amsterdam, Niederlande",
+    "parentCompany": "OCOM Group (Niederlande)",
+    "ownership": "Die Leaseweb Global B.V. gehört zur Amsterdamer OCOM-Gruppe unter der Leitung von Mitgründer Con Zwinkels; 2025 übernahmen die Co-CEOs Svenja de Vos und Lex Boost die Geschäftsführung von Leaseweb.",
+    "classificationNote": "Die operative Gesellschaft gehört zur niederländischen OCOM-Gruppe.",
+    "description": "Bietet dedizierte Server, Public und Private Cloud, Colocation und CDN-Dienste aus Rechenzentren in Europa, Nordamerika und im asiatisch-pazifischen Raum.",
+    "evaluating": [
+      "Hyperscale-Public-Cloud (IaaS)",
+      "Anbieter dedizierter Server und Colocation"
+    ]
+  },
+  "mailbox-org": {
+    "headquarters": "Berlin, Deutschland",
+    "parentCompany": "Heinlein Gruppe (Deutschland)",
+    "ownership": "Betrieben von der Heinlein Hosting GmbH (Berlin), einer Tochtergesellschaft der Heinlein Support GmbH, die zur gründergeführten Heinlein Gruppe gehört (CEO Peer Heinlein; seit 2025 Co-CEO Jutta Horstmann).",
+    "classificationNote": "Deutsches Unternehmen innerhalb einer deutschen, gründergeführten Gruppe.",
+    "description": "Bietet geschäftliche und private E-Mail, Kalender, Kontakte, Cloud-Speicher und Office-Werkzeuge mit Hosting in Deutschland; 2025 als „digital souveräner Arbeitsplatz“ neu positioniert.",
+    "evaluating": [
+      "Office- und Collaboration-Suiten wie Microsoft 365 oder Google Workspace",
+      "Geschäftliche E-Mail-Dienste"
+    ]
+  },
+  "murena": {
+    "headquarters": "Paris, Frankreich",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Von Gaël Duval gegründetes Unternehmen in Privatbesitz; zu den offengelegten Seed-Investoren zählt Normandie Participations. /e/OS wird gemeinsam mit der eigenständigen gemeinnützigen e Foundation entwickelt.",
+    "classificationNote": "Französisches Unternehmen ohne identifizierten außereuropäischen Eigentümer.",
+    "description": "Vertreibt Smartphones und Dienste mit /e/OS, einem von Google-Diensten befreiten, Android-basierten Open-Source-Mobilbetriebssystem, zusammen mit Cloud-E-Mail und -Speicher von Murena Workspace.",
+    "evaluating": [
+      "Mobile Betriebssysteme wie Android mit Google-Diensten oder iOS"
+    ]
+  },
+  "myra-security": {
+    "headquarters": "München, Deutschland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "GmbH in Privatbesitz, gründergeführt; zu den Investoren zählt round2 Capital (Beteiligungshöhe nicht offengelegt)",
+    "classificationNote": "Hauptsitz und Management in Deutschland; vollständige Gesellschafterstruktur nicht öffentlich.",
+    "description": "Deutscher Anbieter von cloudbasiertem DDoS-Schutz, Web Application Firewall, CDN und sicherem DNS, betrieben auf eigener Infrastruktur in Deutschland und Europa.",
+    "evaluating": [
+      "DDoS-Schutzdienste",
+      "Cloud-WAF / WAAP",
+      "Content Delivery Networks (CDN)",
+      "Managed DNS"
+    ]
+  },
+  "ncp-engineering": {
+    "headquarters": "Nürnberg, Deutschland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Deutsche GmbH in Privatbesitz, gegründet 1986; Gesellschafter nicht öffentlich",
+    "classificationNote": "Hauptsitz in Deutschland; es wurden keine Hinweise auf eine Muttergesellschaft oder außereuropäische Eigentümer gefunden, die Gesellschafterliste war jedoch öffentlich nicht überprüfbar.",
+    "description": "Deutscher Entwickler von IPsec-VPN- und Remote-Access-Software, darunter BSI-zugelassene Clients für Verschlusssachen (VS-NfD) und OEM-VPN-Stacks.",
+    "evaluating": [
+      "Remote-Access-VPN",
+      "Zero Trust Network Access (ZTNA)",
+      "VPN für eingestufte Behördendaten"
+    ]
+  },
+  "netbird": {
+    "headquarters": "Berlin, Deutschland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "In Privatbesitz, wagniskapitalfinanziert; Series A über 10 Mio. USD (Januar 2026) angeführt von Pace Capital (USA) mit Nauta Capital, InReach Ventures und Antler",
+    "classificationNote": "Gründergeführtes Start-up aus Berlin; die jüngste Finanzierungsrunde wurde von einem US-Wagniskapitalgeber angeführt (Minderheitsbeteiligung, Höhe nicht offengelegt).",
+    "description": "Berliner Open-Source-Plattform für Overlay-Netzwerke und Zero-Trust-Zugriff auf Basis von WireGuard, verfügbar selbst gehostet oder als verwalteter Cloud-Dienst.",
+    "evaluating": [
+      "Zero Trust Network Access (ZTNA)",
+      "Mesh-VPN / Overlay-Netzwerke",
+      "Remote-Access-VPN"
+    ]
+  },
+  "nevis-security": {
+    "headquarters": "Zürich, Schweiz",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "In Privatbesitz; 2020 aus AdNovum Informatik ausgegliedert; die Schweizer IHAG Holding wird als Investor genannt (Beteiligungshöhe nicht offengelegt)",
+    "classificationNote": "Hauptsitz in der Schweiz; über die Herkunft aus AdNovum und den Schweizer Investor hinaus sind keine Eigentumsdetails öffentlich.",
+    "description": "Schweizer Anbieter von Customer Identity and Access Management (CIAM) und passwortloser Authentifizierung, weit verbreitet bei Banken und Versicherungen.",
+    "evaluating": [
+      "Customer Identity and Access Management (CIAM)",
+      "Passwortlose Authentifizierung / FIDO2"
+    ]
+  },
+  "nextcloud": {
+    "headquarters": "Stuttgart, Deutschland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Die Nextcloud GmbH wird von ihren Gründern kontrolliert; im Oktober 2026 stieg die Münchner Armira Growth als Minderheitsgesellschafter ein (Konditionen nicht offengelegt). Das Unternehmen gibt an, kein Wagniskapital aufgenommen zu haben.",
+    "classificationNote": "Hauptsitz in Deutschland, mehrheitlich von den Gründern kontrolliert, mit einem deutschen Minderheitsinvestor.",
+    "description": "Entwickelt Nextcloud Hub, eine selbst hostbare Plattform für Dateisynchronisation und -freigabe, Groupware, Chat und Videoanrufe sowie Online-Office-Integration. Die Software ist Open Source unter der AGPL.",
+    "evaluating": [
+      "Dienste für Dateifreigabe und -synchronisation",
+      "Office- und Collaboration-Suiten wie Microsoft 365 oder Google Workspace",
+      "Plattformen für Team-Chat und Videokonferenzen"
+    ]
+  },
+  "nexus-group": {
+    "headquarters": "Stockholm, Schweden",
+    "parentCompany": "IN Groupe (Frankreich)",
+    "ownership": "Teil der IN Groupe, der staatlich getragenen französischen Gruppe für sichere Identitäten",
+    "classificationNote": "Schwedische operative Gesellschaft, deren letztliche Muttergesellschaft die französische IN Groupe ist.",
+    "description": "Schwedischer Anbieter von Public-Key-Infrastruktur, Zertifikatsverwaltung, Smartcard- und Credential-Management sowie Lösungen für physische und digitale Identitäten.",
+    "evaluating": [
+      "PKI und Zertifikats-Lifecycle-Management",
+      "Credential- und Smartcard-Management",
+      "Identitäten für IoT-Geräte"
+    ]
+  },
+  "nitrokey": {
+    "headquarters": "Teltow (bei Berlin), Deutschland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Deutsche GmbH in Privatbesitz, gegründet 2015 (hervorgegangen aus dem Open-Source-Projekt Crypto Stick)",
+    "classificationNote": "Hauptsitz in Deutschland und deutsche Privateigentümer.",
+    "description": "Deutscher Hersteller von Open-Source-Sicherheitshardware: USB-Sicherheitsschlüssel (FIDO2, OpenPGP), ein Netzwerk-HSM sowie gehärtete Laptops und Smartphones. Firmware und Hardware-Designs sind veröffentlicht.",
+    "evaluating": [
+      "Hardware-Sicherheitsschlüssel für FIDO2 / OpenPGP",
+      "Netzwerk-Hardware-Sicherheitsmodule (HSM)",
+      "Gehärtete Endgeräte für besonders gefährdete Nutzer"
+    ]
+  },
+  "nospamproxy": {
+    "headquarters": "Paderborn, Deutschland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Entwickelt von der Net at Work GmbH, einem unabhängigen, inhabergeführten Unternehmen",
+    "classificationNote": "Deutsches inhabergeführtes Unternehmen.",
+    "description": "Deutsche E-Mail-Sicherheitssuite mit Spam- und Malware-Filterung, E-Mail-Verschlüsselung (S/MIME, PGP), Übertragung großer Dateien und digitalen Signaturen, verfügbar On-Premises oder als Cloud-Dienst.",
+    "evaluating": [
+      "Secure E-Mail Gateways",
+      "Gateways für E-Mail-Verschlüsselung",
+      "Sichere Übertragung großer Dateien"
+    ]
+  },
+  "olvid": {
+    "headquarters": "Paris, Frankreich",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Olvid SAS in Privatbesitz; als frühe Investoren werden u. a. Fonds mit Bezug zu French Tech genannt. Keine Muttergesellschaft identifiziert.",
+    "classificationNote": "Französisches Unternehmen mit Hauptsitz in Paris ohne identifizierten außereuropäischen Eigentümer.",
+    "description": "Entwickelt einen Ende-zu-Ende-verschlüsselten Messenger, der ohne Telefonnummer oder zentrales Verzeichnis funktioniert. Olvid ist nach ANSSI CSPN zertifiziert; 2023 wies die französische Regierung die Minister an, ihn anstelle ausländischer Messaging-Apps zu nutzen.",
+    "evaluating": [
+      "Messenger für Privat- und Geschäftskunden wie WhatsApp, Signal oder Telegram"
+    ]
+  },
+  "open-xchange": {
+    "headquarters": "Köln, Deutschland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Open-Xchange AG in Privatbesitz (HRB 95366, Köln). Dem Aufsichtsrat gehören Vertreter der europäischen Wagniskapitalinvestoren eCAPITAL und Iris an; keine Übernahme durch eine Muttergesellschaft festgestellt. Zur OX-Gruppe gehören Dovecot und PowerDNS.",
+    "classificationNote": "Deutsche AG mit Hauptsitz in Köln, europäischen Wagniskapitalinvestoren und ohne identifizierten beherrschenden außereuropäischen Eigentümer.",
+    "description": "Bietet E-Mail- und Produktivitätssoftware (OX App Suite, Dovecot Pro) sowie DNS-Software (PowerDNS), vor allem für Telekommunikationsanbieter, Hosting-Provider und Kunden aus dem öffentlichen Sektor.",
+    "evaluating": [
+      "E-Mail- und Groupware-Plattformen wie Microsoft Exchange oder Gmail",
+      "Mailserver in Carrier-Qualität",
+      "Autoritative und rekursive DNS-Software"
+    ]
+  },
+  "opencloud": {
+    "headquarters": "Berlin, Deutschland",
+    "parentCompany": "Heinlein Gruppe (Deutschland)",
+    "ownership": "Die OpenCloud GmbH wurde im September 2024 innerhalb der Heinlein Gruppe gegründet und nahm im Januar 2025 den Betrieb auf.",
+    "classificationNote": "Tochtergesellschaft der deutschen Heinlein Gruppe.",
+    "description": "Entwickelt OpenCloud, eine Open-Source-Plattform für Dateifreigabe und Zusammenarbeit, die von den früheren Entwicklern als Fork von ownCloud Infinite Scale geschaffen wurde; lizenziert unter Apache 2.0.",
+    "evaluating": [
+      "Dateifreigabedienste wie Dropbox, Box oder OneDrive/SharePoint"
+    ]
+  },
+  "opendesk": {
+    "headquarters": "Berlin, Deutschland",
+    "parentCompany": "Bundesrepublik Deutschland (über die ZenDiS GmbH)",
+    "ownership": "Projekt des öffentlichen Sektors: entwickelt und vertrieben von der ZenDiS (Zentrum für Digitale Souveränität der Öffentlichen Verwaltung) GmbH, die vollständig im Besitz des Bundes ist.",
+    "classificationNote": "Deutsche Open-Source-Arbeitsplatz-Suite des öffentlichen Sektors, aufgebaut aus europäischen Open-Source-Komponenten.",
+    "description": "Open-Source-Arbeitsplatz-Suite des öffentlichen Sektors, die E-Mail, Kalender, Dateien, Office-Bearbeitung, Chat, Videokonferenzen, Wiki und Projektmanagement aus Komponenten wie Nextcloud, Open-Xchange, Collabora, Element, OpenProject, XWiki und Univention kombiniert. Seit 2026 kann sie auch von zugelassenen Partnern aus der Privatwirtschaft angeboten werden.",
+    "evaluating": [
+      "Office- und Collaboration-Suiten wie Microsoft 365 oder Google Workspace"
+    ]
+  },
+  "openproject": {
+    "headquarters": "Berlin, Deutschland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "OpenProject GmbH (HRB 117935 B, Berlin), geführt von CEO Niels Lindenthal. Die Gesellschafter sind auf der Unternehmenswebsite nicht veröffentlicht; keine Muttergesellschaft identifiziert.",
+    "classificationNote": "Berliner GmbH, die die Software entwickelt; kein außereuropäischer Eigentümer identifiziert.",
+    "description": "Entwickelt OpenProject, eine Open-Source-Projektmanagementsoftware für Planung, Aufgabenverfolgung, agile Boards und Zeiterfassung. Sie ist Bestandteil des Behördenarbeitsplatzes openDesk.",
+    "evaluating": [
+      "Projektmanagement-Tools wie Jira, Microsoft Project oder Asana"
+    ]
+  },
+  "opnsense-deciso": {
+    "headquarters": "Middelharnis, Niederlande",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Die Deciso B.V. ist in Privatbesitz; die niederländische Private-Equity-Gesellschaft Nordian tätigte 2026 eine strategische Investition (Beteiligungshöhe nicht offengelegt)",
+    "classificationNote": "Niederländisches Unternehmen, das das Open-Source-Firewall-Projekt OPNsense leitet; der Investor ist ebenfalls niederländisch.",
+    "description": "OPNsense ist eine Open-Source-Plattform für Firewall und Routing (2015 als Fork von pfSense entstanden) unter Leitung des niederländischen Unternehmens Deciso, das eine Business Edition, Support und Hardware-Appliances vertreibt.",
+    "evaluating": [
+      "Next-Generation- / UTM-Firewalls",
+      "Open-Source-Firewall-Plattformen",
+      "VPN-Gateways"
+    ]
+  },
+  "orange-cyberdefense": {
+    "headquarters": "Nanterre / La Défense (Raum Paris), Frankreich",
+    "parentCompany": "Orange SA (Frankreich)",
+    "ownership": "100-prozentige Tochtergesellschaft der Orange SA (in Paris börsennotiert; der französische Staat ist Referenzaktionär)",
+    "classificationNote": "Cybersicherheits-Dienstleistungssparte des französischen Orange-Konzerns.",
+    "description": "Managed Security Service Provider des Orange-Konzerns mit SOC/MDR, CERT, Threat Intelligence, Beratung und Managed Network Security in ganz Europa; 2026 Expansion nach Spanien.",
+    "evaluating": [
+      "Managed Security Service Provider (MSSP)",
+      "Managed Detection and Response (MDR)",
+      "Incident-Response-Retainer"
+    ]
+  },
+  "outpost24": {
+    "headquarters": "Karlskrona / Stockholm, Schweden",
+    "parentCompany": "Vitruvian Partners (Vereinigtes Königreich)",
+    "ownership": "Seit Juli 2022 mehrheitlich im Besitz der britischen Private-Equity-Gesellschaft Vitruvian Partners (übernommen von Monterro)",
+    "classificationNote": "Hauptsitz in Schweden; Mehrheitseigentümer ist eine europäische, aber nicht in der EU ansässige (britische) Private-Equity-Gesellschaft.",
+    "description": "Schwedischer Anbieter von Exposure Management, darunter External Attack Surface Management, Anwendungssicherheitstests, Schwachstellenmanagement sowie Passwort- und Identitätssicherheit (Specops).",
+    "evaluating": [
+      "External Attack Surface Management (EASM)",
+      "Schwachstellenmanagement",
+      "Penetration Testing as a Service (PTaaS)",
+      "Passwortsicherheit für Active Directory"
+    ]
+  },
+  "ovhcloud": {
+    "headquarters": "Roubaix, Frankreich",
+    "parentCompany": "Keine (unabhängig; an der Euronext Paris notiert)",
+    "ownership": "Börsennotiertes Unternehmen, mehrheitlich kontrolliert von der Gründerfamilie Klaba (rund 81 % des Kapitals nach einem im Januar 2025 abgeschlossenen Rückkaufangebot; durch einen Aktienverkauf im Dezember 2025 teilweise reduziert). KKR und TowerBrook halten Minderheitsbeteiligungen. Octave Klaba wurde im Oktober 2025 Chairman und CEO.",
+    "classificationNote": "Französisches börsennotiertes Unternehmen, kontrolliert von seiner Gründerfamilie.",
+    "description": "Betreibt Public Cloud, Private Cloud, Bare-Metal-Server und Webhosting aus eigenen Rechenzentren, überwiegend in Europa, mit SecNumCloud-qualifizierten Angeboten für regulierte Workloads.",
+    "evaluating": [
+      "Hyperscale-Public-Cloud (IaaS/PaaS) wie AWS, Microsoft Azure oder Google Cloud",
+      "Anbieter dedizierter Server und Hosting"
+    ]
+  },
+  "paessler": {
+    "headquarters": "Nürnberg, Deutschland",
+    "parentCompany": "Turn/River Capital (USA), Investor seit 2024",
+    "ownership": "Im Mai 2024 tätigte die in San Francisco ansässige Private-Equity-Gesellschaft Turn/River Capital eine strategische Investition in die Paessler AG; einige Berichte sprechen von einer Mehrheitsbeteiligung, die Mitteilung von Paessler nennt die Höhe jedoch nicht.",
+    "classificationNote": "Hauptsitz und Entwicklung in Deutschland, aber eine US-amerikanische Private-Equity-Gesellschaft hält eine bedeutende (Berichten zufolge mehrheitliche) Beteiligung.",
+    "description": "Entwickelt PRTG, ein Produkt für Netzwerk-, Infrastruktur- und OT-Monitoring, verfügbar On-Premises und als gehosteter Dienst.",
+    "evaluating": [
+      "Tools für Infrastruktur- und Netzwerk-Monitoring wie SolarWinds oder Datadog"
+    ]
+  },
+  "pexip": {
+    "headquarters": "Oslo, Norwegen",
+    "parentCompany": "Keine (an der Oslo Børs notiert)",
+    "ownership": "Die Pexip Holding ASA ist an der Osloer Börse notiert (PEXIP).",
+    "classificationNote": "Börsennotiertes Unternehmen mit Hauptsitz in Norwegen (EWR).",
+    "description": "Bietet Videokonferenzsoftware für selbst gehostete, Private-Cloud- und Hochsicherheitsumgebungen sowie Interoperabilitätsdienste, die Konferenzraumsysteme mit Plattformen wie Microsoft Teams verbinden.",
+    "evaluating": [
+      "Videokonferenzplattformen wie Zoom, Webex oder Microsoft-Teams-Besprechungen",
+      "Selbst gehostete sichere Videokommunikation für Behörden und Verteidigung"
+    ]
+  },
+  "plusserver": {
+    "headquarters": "Köln, Deutschland",
+    "parentCompany": "Von BC Partners (Vereinigtes Königreich) beratene Fonds",
+    "ownership": "2017 von Fonds, die von der Londoner Private-Equity-Gesellschaft BC Partners beraten werden, von GoDaddy übernommen. 2023 wurde über einen Verkaufsprozess berichtet; ein abgeschlossener Kontrollwechsel wurde nicht festgestellt.",
+    "classificationNote": "Deutsche operative Gesellschaft im Besitz eines britischen Private-Equity-Investors; die Eigentümerstruktur sollte bei Ankündigung eines Verkaufs erneut geprüft werden.",
+    "description": "Bietet Managed Hosting, Private Cloud und die OpenStack-basierte souveräne Cloud pluscloud open aus Rechenzentren in Deutschland.",
+    "evaluating": [
+      "Hyperscale-Public-Cloud (IaaS/PaaS)",
+      "Managed Private Cloud und Hosting"
+    ]
+  },
+  "posteo": {
+    "headquarters": "Berlin, Deutschland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Eingetragen als Posteo e.K. (Berlin-Charlottenburg, HRA 47592 B), eine Rechtsform für Einzelkaufleute; das Unternehmen beschreibt sich als unabhängig, eigenfinanziert und werbefrei.",
+    "classificationNote": "Unabhängiges deutsches Unternehmen ohne externe Eigentümer.",
+    "description": "Bietet kostenpflichtige, werbefreie E-Mail-, Kalender- und Adressbuchdienste mit Verschlüsselungsoptionen, betrieben aus Deutschland.",
+    "evaluating": [
+      "E-Mail-Dienste für Privatkunden und kleine Unternehmen wie Gmail oder Outlook.com"
+    ]
+  },
+  "proton": {
+    "headquarters": "Plan-les-Ouates (Genf), Schweiz",
+    "parentCompany": "Proton Foundation (Schweiz)",
+    "ownership": "Die gemeinnützige Schweizer Proton Foundation ist seit Juni 2024 größter stimmberechtigter Aktionär der Proton AG; ohne ihre Zustimmung ist kein Kontrollwechsel möglich",
+    "classificationNote": "Hauptsitz in der Schweiz, kontrolliert von einer Schweizer Stiftung.",
+    "description": "Schweizer Anbieter von Ende-zu-Ende-verschlüsselter E-Mail, Kalender, Dateispeicher, VPN und Passwortverwaltung; die Client-Anwendungen sind Open Source.",
+    "evaluating": [
+      "Verschlüsselte E-Mail-Dienste",
+      "Geschäftliche E-Mail- und Collaboration-Suiten",
+      "Passwortmanager",
+      "VPN-Dienste"
+    ]
+  },
+  "proxmox": {
+    "headquarters": "Wien, Österreich",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Proxmox Server Solutions GmbH (FN 258879f, Wien), 2005 von Martin und Dietmar Maurer gegründet; als gründereigen ohne externe Investoren beschrieben.",
+    "classificationNote": "Österreichisches Unternehmen im Besitz der Gründer.",
+    "description": "Entwickelt Open-Source-Software für Virtualisierung, Backup und E-Mail-Sicherheit, vertrieben mit optionalen Enterprise-Support-Subskriptionen.",
+    "evaluating": [
+      "Server-Virtualisierungsplattformen wie VMware vSphere oder Microsoft Hyper-V",
+      "Backup-Software"
+    ]
+  },
+  "retarus": {
+    "headquarters": "München, Deutschland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Seit 1992 in Familienbesitz und gründergeführt (Gründer Martin Hager)",
+    "classificationNote": "Hauptsitz in Deutschland und deutscher Familienbesitz.",
+    "description": "Deutscher Anbieter cloudbasierter Enterprise-Messaging-Dienste, darunter E-Mail-Sicherheit, sicherer E-Mail-Transport, Fax, SMS und E-Invoicing, betrieben aus eigenen Rechenzentren.",
+    "evaluating": [
+      "Secure E-Mail Gateways",
+      "Dienste für E-Mail-Kontinuität und -Archivierung",
+      "Enterprise-Messaging-Infrastruktur"
+    ]
+  },
+  "rhebo": {
+    "headquarters": "Leipzig, Deutschland",
+    "parentCompany": "Landis+Gyr (Schweiz), Verkauf an Everfield ausstehend",
+    "ownership": "Seit 2021 im Besitz von Landis+Gyr (Schweiz, börsennotiert); im April 2026 vereinbarte Landis+Gyr den Verkauf von Rhebo an Everfield, eine Londoner Softwaregruppe, die von der US-amerikanischen Private-Equity-Gesellschaft Aquiline Capital Partners gegründet wurde; der Vollzug stand unter dem Vorbehalt behördlicher Genehmigungen und wurde in den gefundenen Quellen nicht bestätigt",
+    "classificationNote": "Deutsches Unternehmen, dessen künftiger Eigentümer eine europäische Software-Holding ist, die von einer US-amerikanischen Private-Equity-Gesellschaft gegründet wurde und kontrolliert wird; Stand des Vollzugs vor der Veröffentlichung erneut prüfen.",
+    "description": "Deutscher Anbieter von OT-Netzwerküberwachung und Anomalieerkennung für Industrie- und Energienetze.",
+    "evaluating": [
+      "OT-Netzwerküberwachung und Intrusion Detection",
+      "Anomalieerkennung in Industrieumgebungen"
+    ]
+  },
+  "rohde-schwarz-networks-cybersecurity": {
+    "headquarters": "Würselen (bei Aachen), Deutschland",
+    "parentCompany": "Rohde & Schwarz GmbH & Co. KG (Deutschland)",
+    "ownership": "100-prozentige Tochtergesellschaft des privat gehaltenen Rohde & Schwarz-Konzerns in Familienbesitz (München); entstanden im Juli 2026 durch die Fusion von LANCOM Systems und Rohde & Schwarz Cybersecurity",
+    "classificationNote": "Deutsche operative Gesellschaft innerhalb des deutschen Rohde & Schwarz-Konzerns in Familienbesitz.",
+    "description": "Deutscher Anbieter von Netzwerk- und Sicherheitsprodukten, 2026 aus der Fusion von LANCOM Systems und Rohde & Schwarz Cybersecurity hervorgegangen. Das Portfolio umfasst Router, SD-WAN, Switches, WLAN, Unified Firewalls, Cloud-Management und BSI-zugelassene Verschlüsselung.",
+    "evaluating": [
+      "Next-Generation- / UTM-Firewalls",
+      "SD-WAN",
+      "Enterprise-Switching und WLAN",
+      "Festplattenverschlüsselung für Verschlusssachen (VS-NfD)",
+      "Browser-Isolation"
+    ]
+  }
+}

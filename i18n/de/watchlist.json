@@ -1,0 +1,47 @@
+{
+  "Hornetsecurity": {
+    "event": "Von Proofpoint (USA) für rund 1,8 Mrd. USD übernommen; abgeschlossen am 8. Dezember 2025. Hornetsecurity wird als eigenständige Einheit weitergeführt."
+  },
+  "Vade": {
+    "event": "Im März 2024 von Hornetsecurity (Deutschland) übernommen; kam in US-Besitz, als Proofpoint (USA) im Dezember 2025 die Übernahme von Hornetsecurity abschloss."
+  },
+  "Nozomi Networks": {
+    "event": "In Italien gegründet, später mit Hauptsitz in den USA; von Mitsubishi Electric (Japan) übernommen, angekündigt im September 2025 und abgeschlossen am 28. Januar 2026."
+  },
+  "Zivver": {
+    "event": "Amsterdamer Anbieter sicherer E-Mail, von Kiteworks (USA) übernommen, angekündigt im Juni 2025."
+  },
+  "Tessian": {
+    "event": "Von Proofpoint (USA) übernommen; abgeschlossen am 19. Dezember 2023."
+  },
+  "Boxcryptor (Secomba)": {
+    "event": "Dropbox (USA) erwarb die Schlüsseltechnologie und die IP-Rechte von Boxcryptor von der Secomba GmbH, angekündigt im November 2022; der eigenständige Boxcryptor-Dienst wurde eingestellt."
+  },
+  "Avast": {
+    "event": "Mit NortonLifeLock (USA, umbenannt in Gen Digital) fusioniert; abgeschlossen am 12. September 2022."
+  },
+  "PrimeKey": {
+    "event": "Unter der Marke Keyfactor mit Keyfactor (USA, unterstützt von Insight Partners) fusioniert; nach einer schwedischen Prüfung der nationalen Sicherheit am 30. Juni / 1. Juli 2021 abgeschlossen."
+  },
+  "Avira": {
+    "event": "Von NortonLifeLock (USA, heute Gen Digital) von Investcorp übernommen; abgeschlossen am 8. Januar 2021."
+  },
+  "Veeam": {
+    "event": "Von Insight Partners (USA) für rund 5 Mrd. USD übernommen, abgeschlossen am 2. März 2020; das Unternehmen wurde anschließend zu einem US-Unternehmen mit US-Führung."
+  },
+  "Sentryo": {
+    "event": "OT-Sicherheits-Start-up aus Lyon, von Cisco (USA) übernommen; angekündigt im Juni 2019, abgeschlossen im August 2019; seine Technologie wurde zu Cisco Cyber Vision."
+  },
+  "Skype": {
+    "event": "Die in Luxemburg ansässige Skype Global (Software überwiegend in Estland entwickelt) wurde von Microsoft (USA) für 8,5 Mrd. USD übernommen; abgeschlossen am 13. Oktober 2011."
+  },
+  "Wunderlist (6Wunderkinder)": {
+    "event": "Microsoft übernahm im Juni 2015 das Berliner Unternehmen 6Wunderkinder, Hersteller von Wunderlist, und stellte die App am 6. Mai 2020 zugunsten von Microsoft To Do ein."
+  },
+  "Mojang (Minecraft)": {
+    "event": "Microsoft vereinbarte im September 2014 die Übernahme des Stockholmer Unternehmens Mojang und der Minecraft-Marke für 2,5 Mrd. USD."
+  },
+  "ownCloud": {
+    "event": "Das US-Unternehmen Kiteworks kündigte im November 2023 einen Zusammenschluss mit ownCloud und dem Regensburger Unternehmen DRACOON an, wodurch beide deutschen Filesharing-Anbieter unter das Dach von Kiteworks kamen."
+  }
+}

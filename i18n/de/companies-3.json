@@ -1,0 +1,411 @@
+{
+  "safetica": {
+    "headquarters": "San Jose, Kalifornien, USA (Entwicklung in Brünn und Prag, Tschechien)",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "In Privatbesitz; der tschechische Investor Ondrej Tomek gilt Berichten zufolge als Mehrheitsgesellschafter (rund 55 %), Gründer Jakub Mahdal hält rund 30 %",
+    "classificationNote": "In Tschechien gegründet und überwiegend in tschechischem Besitz, das Unternehmen hat seinen Hauptsitz jedoch in die USA verlegt (Safetica Technologies Inc., San Jose); die Entwicklung verbleibt in Tschechien.",
+    "description": "Software für Data Loss Prevention und Insider-Risiken, ursprünglich in Brünn entwickelt. Überwacht und steuert Datenflüsse auf Endpoints und in Cloud-Anwendungen.",
+    "evaluating": [
+      "Data Loss Prevention (DLP)",
+      "Insider-Risk-Management"
+    ]
+  },
+  "scaleway": {
+    "headquarters": "Paris, Frankreich",
+    "parentCompany": "iliad-Gruppe (Frankreich)",
+    "ownership": "Cloud- und KI-Tochter der französischen Telekommunikationsgruppe iliad. Im Juli 2026 vereinbarte Scaleway die Übernahme des französischen HPC-Spezialisten Qarnot.",
+    "classificationNote": "Die operative Gesellschaft ist eine Tochter der französischen iliad-Gruppe.",
+    "description": "Bietet Public-Cloud-Dienste, darunter Compute, GPU-Instanzen für KI, Objektspeicher, verwaltetes Kubernetes und Datenbanken sowie Bare-Metal-Server, mit Regionen in Frankreich, den Niederlanden, Polen und Italien.",
+    "evaluating": [
+      "Hyperscale-Public-Cloud (IaaS/PaaS) wie AWS, Microsoft Azure oder Google Cloud",
+      "GPU-Cloud für KI-Workloads"
+    ]
+  },
+  "secunet": {
+    "headquarters": "Essen, Deutschland",
+    "parentCompany": "Giesecke+Devrient (Deutschland)",
+    "ownership": "In Frankfurt börsennotiert; die Giesecke+Devrient GmbH (München) hält eine direkte Mehrheitsbeteiligung von 75,12 %",
+    "classificationNote": "Deutsches börsennotiertes Unternehmen, mehrheitlich im Besitz der deutschen G+D-Gruppe.",
+    "description": "Deutscher IT-Sicherheitsanbieter und Sicherheitspartner der Bundesregierung. Liefert Hochsicherheits-Netzwerkverschlüsselung (SINA), Lösungen für Grenzkontrolle und Identität sowie souveräne Cloud-Infrastruktur.",
+    "evaluating": [
+      "Hochsicherheits-Netzwerkverschlüsselungsgeräte",
+      "Sichere Arbeitsplätze für Verschlusssachen",
+      "Souveräne Private-Cloud-Plattformen",
+      "Biometrische Grenzkontrolle"
+    ]
+  },
+  "securepoint": {
+    "headquarters": "Lüneburg, Deutschland",
+    "parentCompany": "Continuation Fund von Maxburg (Deutschland), angeführt von Accel-KKR (USA)",
+    "ownership": "Im Juni 2026 übernahm ein Single-Asset-Continuation-Fund der Münchner Private-Equity-Gesellschaft Maxburg, mit der US-amerikanischen Private-Equity-Gesellschaft Accel-KKR als Lead-Investor, Securepoint von den Gründern und dem früheren Fonds von Maxburg; die behördliche Genehmigung stand zum Zeitpunkt der Ankündigung noch aus",
+    "classificationNote": "Deutsches Unternehmen, das von einer deutschen PE-Gesellschaft verwaltet wird, der Lead-Investor des Vehikels ist jedoch eine US-amerikanische Private-Equity-Gesellschaft.",
+    "description": "Deutscher Anbieter von UTM-Firewalls, VPN, Endpoint-Antivirus, E-Mail-Sicherheit und Backup für KMU, vertrieben über IT-Fachhändler.",
+    "evaluating": [
+      "UTM- / Next-Generation-Firewalls für KMU",
+      "E-Mail-Security-Gateways",
+      "Endpoint-Schutz für KMU",
+      "Backup für KMU"
+    ]
+  },
+  "sekoia-io": {
+    "headquarters": "Paris, Frankreich",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "In Privatbesitz, wagniskapitalfinanziert; Series B über 26 Mio. EUR (April 2025) angeführt von Revaia mit Bright Pixel Capital (Portugal) und bestehenden Investoren",
+    "classificationNote": "Französisches Unternehmen, finanziert von europäischen Investoren; keine Übernahme festgestellt.",
+    "description": "Französischer Anbieter einer cloudbasierten SOC-Plattform, die SIEM, SOAR und Threat Intelligence für Unternehmen und Managed Security Provider kombiniert.",
+    "evaluating": [
+      "Cloud-SIEM",
+      "SOAR",
+      "Plattformen für Cyber Threat Intelligence",
+      "Open XDR"
+    ]
+  },
+  "sep": {
+    "headquarters": "Holzkirchen, Deutschland",
+    "parentCompany": "BIP Investment Partners (Luxemburg)",
+    "ownership": "Seit November 2024 mehrheitlich im Besitz der luxemburgischen Investmentgesellschaft BIP (übernommen von der Gründerfamilie und weiteren Gesellschaftern)",
+    "classificationNote": "Hauptsitz in Deutschland mit luxemburgischem Mehrheitseigentümer.",
+    "description": "Deutscher Entwickler der Backup- und Disaster-Recovery-Software SEP sesam für heterogene On-Premises- und virtualisierte Umgebungen, einschließlich SAP HANA.",
+    "evaluating": [
+      "Enterprise-Software für Backup und Wiederherstellung",
+      "Backup für SAP HANA und Datenbanken"
+    ]
+  },
+  "siemens-industrial-security": {
+    "headquarters": "München, Deutschland",
+    "parentCompany": "Keine (die Siemens AG ist die Konzernmutter)",
+    "ownership": "Die Siemens AG ist an der Frankfurter Wertpapierbörse notiert und befindet sich in Streubesitz",
+    "classificationNote": "Deutscher börsennotierter Industriekonzern; der Eintrag umfasst nur sein OT-Sicherheitsportfolio.",
+    "description": "Siemens bietet OT-Sicherheitsprodukte für industrielle Automatisierungsnetze, darunter SCALANCE-Firewall-/VPN-Appliances und SINEC-Software für Schwachstellenmanagement und Anomalieerkennung.",
+    "evaluating": [
+      "Industrielle Firewalls und VPN",
+      "OT-Asset- und Schwachstellenmanagement",
+      "Anomalieerkennung in OT-Netzwerken"
+    ]
+  },
+  "signicat": {
+    "headquarters": "Trondheim, Norwegen",
+    "parentCompany": "Nordic Capital (nordisches Private Equity)",
+    "ownership": "Seit 2019 mehrheitlich im Besitz von Fonds von Nordic Capital; Viking Venture und Mitarbeitende halten Minderheitsbeteiligungen",
+    "classificationNote": "Norwegen gehört zum EWR; Mehrheitseigentümer ist eine nordische Private-Equity-Gesellschaft.",
+    "description": "Norwegisches Unternehmen für digitale Identität mit Diensten für Identitätsprüfung, eID-Brokering, Authentifizierung und elektronische Signaturen; hat Encap, Dokobit, Connectis, Sphonic und Inverid übernommen.",
+    "evaluating": [
+      "Plattformen für Identitätsprüfung / KYC",
+      "eID- und Authentifizierungs-Broker",
+      "Dienste für elektronische Signaturen"
+    ]
+  },
+  "sophos": {
+    "headquarters": "Abingdon (Oxfordshire), Vereinigtes Königreich",
+    "parentCompany": "Thoma Bravo (USA)",
+    "ownership": "Seit dem Take-Private 2020 im Besitz von Fonds der US-amerikanischen Private-Equity-Gesellschaft Thoma Bravo",
+    "classificationNote": "Hauptsitz und Entwicklung im Vereinigten Königreich, letztlich jedoch von einer US-amerikanischen Private-Equity-Gesellschaft kontrolliert.",
+    "description": "Britischer Sicherheitsanbieter mit Endpoint-Schutz, XDR, MDR, Firewalls und E-Mail-Sicherheit, überwiegend über Channel-Partner vertrieben.",
+    "evaluating": [
+      "EDR/XDR-Plattformen",
+      "Managed Detection and Response (MDR)",
+      "Next-Generation-Firewalls"
+    ]
+  },
+  "ssh-communications-security": {
+    "headquarters": "Helsinki, Finnland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "An der Nasdaq Helsinki notiert (SSH1V); der italienische Rüstungskonzern Leonardo S.p.A. wurde im vierten Quartal 2025 nach einer Investition von 20 Mio. EUR größter Aktionär",
+    "classificationNote": "Finnisches börsennotiertes Unternehmen, dessen größter Aktionär ein europäischer (italienischer) Industriekonzern ist.",
+    "description": "Finnisches Unternehmen, gegründet vom Erfinder des SSH-Protokolls. Entwickelt Produkte für Privileged Access Management, SSH-Schlüsselverwaltung und quantensichere Kommunikation.",
+    "evaluating": [
+      "Privileged Access Management (PAM)",
+      "Verwaltung von SSH-Schlüsseln und Maschinenidentitäten",
+      "Sicheres Messaging und Collaboration für regulierte Branchen",
+      "Netzwerkverschlüsselung"
+    ]
+  },
+  "stackfield": {
+    "headquarters": "München, Deutschland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Stackfield GmbH (HRB 199536, München); der Münchner Wachstumsinvestor Nordwind Growth investierte 2024 einen zweistelligen Millionen-Euro-Betrag. Beteiligungshöhe nicht offengelegt.",
+    "classificationNote": "Deutsches Unternehmen mit deutschem Wachstumsinvestor.",
+    "description": "Bietet eine Collaboration-Plattform, die Team-Chat, Aufgaben- und Projektmanagement, Dateifreigabe und Videoanrufe kombiniert, gehostet in Deutschland mit optionaler Ende-zu-Ende-Verschlüsselung.",
+    "evaluating": [
+      "Team-Collaboration-Tools wie Microsoft Teams, Slack, Asana oder Trello"
+    ]
+  },
+  "stackit": {
+    "headquarters": "Bad Friedrichshall, Deutschland",
+    "parentCompany": "Schwarz Gruppe (Deutschland)",
+    "ownership": "STACKIT ist die Cloud-Marke der Schwarz Digits Cloud GmbH & Co. KG (2026 umbenannt von STACKIT GmbH & Co. KG), Teil von Schwarz Digits, der IT-Sparte der Schwarz Gruppe (Eigentümerin von Lidl und Kaufland). Das Unternehmen gibt an, unabhängig von externen Investoren zu sein.",
+    "classificationNote": "Die operative Gesellschaft gehört zur deutschen Schwarz Gruppe.",
+    "description": "Bietet Public-Cloud-Infrastruktur- und Plattformdienste aus Rechenzentren in Deutschland und Österreich, ausgerichtet auf Unternehmen und den öffentlichen Sektor.",
+    "evaluating": [
+      "Hyperscale-Public-Cloud (IaaS/PaaS) wie AWS, Microsoft Azure oder Google Cloud"
+    ]
+  },
+  "stamus-networks": {
+    "headquarters": "Indianapolis, Indiana, USA und Paris, Frankreich (zwei Standorte)",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "In Privatbesitz; tätig über die Stamus Networks, Inc. (Indianapolis) und die Stamus Networks SAS (Paris)",
+    "classificationNote": "In Frankreich gegründetes Unternehmen auf Basis der Open-Source-Engine Suricata, jedoch mit einer US-Gesellschaft, die neben der Pariser Gesellschaft als Hauptsitz geführt wird.",
+    "description": "Anbieter von Network Detection and Response auf Basis der Open-Source-Engine Suricata, mit einer kostenlosen Open-Source-Distribution (SELKS / Clear NDR Community) und einer kommerziellen Plattform.",
+    "evaluating": [
+      "Network Detection and Response (NDR)",
+      "Intrusion-Detection-Systeme (Suricata-basiert)"
+    ]
+  },
+  "stormshield": {
+    "headquarters": "Region Paris, Frankreich",
+    "parentCompany": "Airbus (Niederlande/Frankreich)",
+    "ownership": "100-prozentige Tochtergesellschaft von Airbus (Airbus Defence and Space)",
+    "classificationNote": "Operative Gesellschaft in Frankreich, deren letztliche Muttergesellschaft der europäische Airbus-Konzern ist.",
+    "description": "Französischer Anbieter von Netzwerk- und Endpoint-Sicherheit (ehemals Arkoon und Netasq) im Besitz von Airbus. Zu den Produkten gehören Next-Generation-Firewalls, Endpoint-Schutz und Datenverschlüsselung, von denen mehrere französische und EU-Zertifizierungen besitzen.",
+    "evaluating": [
+      "Next-Generation-Firewalls",
+      "Industrielle (OT-)Firewalls",
+      "Endpoint-Schutz / EDR",
+      "Datei- und E-Mail-Verschlüsselung"
+    ]
+  },
+  "suse": {
+    "headquarters": "Luxemburg (Satzungssitz); operativer Hauptsitz Nürnberg, Deutschland",
+    "parentCompany": "Fonds von EQT Private Equity (Schweden)",
+    "ownership": "Mehrheitlich im Besitz von Fonds der schwedischen Investmentgesellschaft EQT, die SUSE 2023 von der Börse nahm (Delisting an der Frankfurter Wertpapierbörse). Im März 2026 berichtete Reuters, EQT prüfe einen Verkauf; zum Zeitpunkt der Überprüfung wurde kein abgeschlossener Verkauf festgestellt.",
+    "classificationNote": "Satzungssitz in Luxemburg, operative Leitung aus Nürnberg, im Besitz eines schwedischen Investors; ein möglicher künftiger Verkauf ist zu beobachten.",
+    "description": "Entwickelt Enterprise-Linux-Distributionen und Open-Source-Infrastruktursoftware für Kubernetes-Management, Edge und Sicherheit.",
+    "evaluating": [
+      "Enterprise-Linux-Distributionen wie Red Hat Enterprise Linux",
+      "Kubernetes-Management-Plattformen"
+    ]
+  },
+  "t-cloud-public": {
+    "headquarters": "Frankfurt am Main, Deutschland",
+    "parentCompany": "Deutsche Telekom AG (Deutschland)",
+    "ownership": "Betrieben von der T-Systems International GmbH, einer 100-prozentigen Tochtergesellschaft der Deutschen Telekom AG. Anfang 2026 von Open Telekom Cloud in T Cloud Public umbenannt.",
+    "classificationNote": "Betrieben von einer 100-prozentigen Tochtergesellschaft des deutschen Konzerns Deutsche Telekom.",
+    "description": "Public Cloud (IaaS/PaaS), betrieben aus Rechenzentren in Biere/Magdeburg (Deutschland) und in den Niederlanden, mit einem separaten Angebot für die Schweiz.",
+    "evaluating": [
+      "Hyperscale-Public-Cloud (IaaS/PaaS) wie AWS, Microsoft Azure oder Google Cloud"
+    ]
+  },
+  "teamviewer": {
+    "headquarters": "Göppingen, Deutschland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "An der Frankfurter Wertpapierbörse notiert; der frühere Mehrheitseigentümer Permira verkaufte im September 2025 seine letzten Aktien; Streubesitz",
+    "classificationNote": "Deutsches börsennotiertes Unternehmen mit breit gestreutem Aktionärskreis; Eigentümer des britischen Unternehmens 1E (übernommen 2024/2025).",
+    "description": "Deutscher Anbieter von Software für Fernzugriff, Fernsupport und IT/OT-Geräteverwaltung, durch die Übernahme von 1E um Werkzeuge für Digital Employee Experience erweitert.",
+    "evaluating": [
+      "Tools für Fernzugriff und Fernsupport",
+      "Plattformen für Digital Employee Experience (DEX)",
+      "Remote Monitoring and Management (RMM)"
+    ]
+  },
+  "thales-cybersecurity": {
+    "headquarters": "Meudon, Frankreich",
+    "parentCompany": "Keine (die Thales SA ist die Konzernmutter)",
+    "ownership": "An der Euronext Paris notiert; französischer Staat rund 26,6 % und Dassault Aviation rund 26,6 % (durch eine Aktionärsvereinbarung verbunden), Streubesitz rund 44 % (Stand 30. Juni 2026)",
+    "classificationNote": "Französischer Konzern mit dem französischen Staat und einem Industrieunternehmen als Referenzaktionären; zu beachten ist, dass ein Teil des Cyber-Portfolios (Imperva, 2023 von Thoma Bravo übernommen) ein in den USA ansässiges Geschäft innerhalb des Konzerns ist, sodass einzelne Produkte außerhalb Europas entwickelt und betrieben werden können.",
+    "description": "Französischer Luft- und Raumfahrt-, Verteidigungs- und Digitalsicherheitskonzern. Sein Cybersicherheitsportfolio umfasst Hardware-Sicherheitsmodule, Datenverschlüsselung und Schlüsselverwaltung, Zugriffsmanagement sowie über Imperva Anwendungs- und API-Sicherheit.",
+    "evaluating": [
+      "Hardware-Sicherheitsmodule (HSM)",
+      "Verschlüsselung und Schlüsselverwaltung",
+      "Web Application and API Protection (WAAP)",
+      "Zugriffsmanagement / MFA"
+    ]
+  },
+  "the-document-foundation": {
+    "headquarters": "Berlin, Deutschland",
+    "parentCompany": "Keine (unabhängige Stiftung)",
+    "ownership": "Gemeinnützige Stiftung des bürgerlichen Rechts, im Februar 2012 in Berlin errichtet und als gemeinnützig anerkannt.",
+    "classificationNote": "Deutsche gemeinnützige Stiftung, die ein europäisch geführtes Open-Source-Projekt betreut.",
+    "description": "Betreut LibreOffice, eine freie Open-Source-Office-Suite mit Textverarbeitung, Tabellenkalkulation und Präsentationen auf Basis des OpenDocument-Formats.",
+    "evaluating": [
+      "Desktop-Office-Suiten wie Microsoft Office"
+    ]
+  },
+  "threema": {
+    "headquarters": "Pfäffikon SZ, Schweiz",
+    "parentCompany": "Comitis Capital GmbH (Deutschland)",
+    "ownership": "Anfang 2026 ging das Eigentum an der Threema Holding AG von Afinum auf die Frankfurter Investmentgesellschaft Comitis Capital über. Threema gibt an, dass seine Infrastruktur in der Schweiz verbleibt.",
+    "classificationNote": "Hauptsitz in der Schweiz und im Besitz einer deutschen Investmentgesellschaft, die Kontrolle bleibt somit europäisch.",
+    "description": "Bietet einen Ende-zu-Ende-verschlüsselten Messenger, der keine Telefonnummer erfordert, mit einer Business-Edition (Threema Work) und einer Behörden-Edition. Die Apps sind Open Source.",
+    "evaluating": [
+      "Messenger für Privat- und Geschäftskunden wie WhatsApp oder der Chat in Microsoft Teams"
+    ]
+  },
+  "tresorit": {
+    "headquarters": "Zürich, Schweiz",
+    "parentCompany": "Schweizerische Post (Schweiz)",
+    "ownership": "Die Schweizerische Post erwarb im Juli 2021 eine Mehrheitsbeteiligung; Tresorit agiert als eigenständiges Unternehmen innerhalb des Post-Konzerns. Die Schweizerische Post gehört der Schweizerischen Eidgenossenschaft.",
+    "classificationNote": "Die operative Gesellschaft ist mehrheitlich im Besitz des staatlichen Schweizer Postkonzerns.",
+    "description": "Bietet Ende-zu-Ende-verschlüsselte Dateifreigabe, Synchronisation und Content Collaboration für Unternehmen. In Ungarn gegründet, mit Entwicklung in Budapest.",
+    "evaluating": [
+      "Enterprise-Dateifreigabedienste wie Dropbox, Box oder OneDrive"
+    ]
+  },
+  "tuta": {
+    "headquarters": "Hannover, Deutschland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Die Tutao GmbH gehört vollständig ihren beiden Gründern Arne Mohle und Matthias Pfau; kein Wagniskapital (Angabe des Unternehmens)",
+    "classificationNote": "Hauptsitz in Deutschland und im Besitz deutscher Gründer (laut Unternehmensangabe; Handelsregister nicht geprüft).",
+    "description": "Deutscher Ende-zu-Ende-verschlüsselter E-Mail- und Kalenderdienst (ehemals Tutanota) mit Open-Source-Clients, gehostet in Rechenzentren in Deutschland.",
+    "evaluating": [
+      "Verschlüsselte E-Mail-Dienste",
+      "Geschäftliche E-Mail- und Kalenderdienste"
+    ]
+  },
+  "univention": {
+    "headquarters": "Bremen, Deutschland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Univention GmbH (HRB 20755, Bremen), Geschäftsführer Peter H. Ganten und Stefan Gohmann. Die Gesellschafter sind auf der Unternehmenswebsite nicht veröffentlicht; keine Muttergesellschaft identifiziert.",
+    "classificationNote": "Bremer GmbH ohne identifizierten außereuropäischen Eigentümer.",
+    "description": "Entwickelt den Univention Corporate Server und die Identity-and-Access-Management-Plattform Nubus, die für die zentrale Benutzer- und Rechteverwaltung in Schulen, öffentlicher Verwaltung und Unternehmen eingesetzt werden. Nubus ist die Identitätskomponente von openDesk.",
+    "evaluating": [
+      "Verzeichnis- und Identitätsdienste wie Microsoft Active Directory oder Entra ID"
+    ]
+  },
+  "upcloud": {
+    "headquarters": "Helsinki, Finnland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "UpCloud Oy in Privatbesitz; zu den Investoren zählen finnische und niederländische Wagniskapitalgeber (Inventure, Connected Capital) sowie der finnische Staatsinvestor Tesi.",
+    "classificationNote": "Finnisches Unternehmen mit europäischen Investoren.",
+    "description": "Bietet Cloud-Server, verwaltetes Kubernetes, verwaltete Datenbanken und Objektspeicher mit Rechenzentren in Europa und anderen Regionen.",
+    "evaluating": [
+      "Hyperscale-Public-Cloud (IaaS) wie AWS, Azure oder virtuelle Server nach Art von DigitalOcean"
+    ]
+  },
+  "utimaco": {
+    "headquarters": "Aachen, Deutschland (zweiter Hauptsitz in Campbell, Kalifornien, USA)",
+    "parentCompany": "SGT Capital (Private Equity mit Hauptsitz in Singapur, Büros in Deutschland)",
+    "ownership": "Seit 2022 mehrheitlich im Besitz von SGT Capital (übernommen von EQT); EQT und das Management behielten Minderheitsbeteiligungen; der Geschäftsbereich Lawful Interception wurde 2025 an INVISION und PINOVA verkauft",
+    "classificationNote": "Deutsches Unternehmen mit zweitem Hauptsitz in den USA, dessen Mehrheitseigentümer eine Private-Equity-Gesellschaft mit Hauptsitz in Singapur ist.",
+    "description": "Deutscher Entwickler von Hardware-Sicherheitsmodulen und Schlüsselverwaltung für allgemeine Anwendungen und den Zahlungsverkehr sowie von Datenschutzsoftware (einschließlich der früheren conpal-Produkte).",
+    "evaluating": [
+      "Hardware-Sicherheitsmodule (HSM)",
+      "Payment-HSMs",
+      "Schlüsselverwaltungssysteme",
+      "Datei- und Ordnerverschlüsselung"
+    ]
+  },
+  "vates": {
+    "headquarters": "Grenoble, Frankreich",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Die Mitgründer bleiben Mehrheitsgesellschafter nach einer ersten externen Finanzierungsrunde über 30 Mio. EUR, angeführt von IRIS (Growth-Fonds) und Bpifrance (Large-Venture-Fonds).",
+    "classificationNote": "Französisches Unternehmen, mehrheitlich im Besitz der Gründer, mit französischen Minderheitsinvestoren.",
+    "description": "Entwickelt den Hypervisor XCP-ng und die Management- und Backup-Plattform Xen Orchestra, die gemeinsam als Vates VMS vermarktet werden.",
+    "evaluating": [
+      "Server-Virtualisierungsplattformen wie VMware vSphere oder Microsoft Hyper-V"
+    ]
+  },
+  "veracrypt": {
+    "headquarters": "Paris, Frankreich",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Gepflegt von IDRIX, einem kleinen französischen Unternehmen, das vom Hauptentwickler Mounir Idrassi gegründet wurde",
+    "classificationNote": "In Europa entwickeltes Open-Source-Projekt, gepflegt von einem französischen Kleinstunternehmen.",
+    "description": "Kostenlose Open-Source-Software zur Festplattenverschlüsselung, 2013 als Fork von TrueCrypt entstanden, mit Unterstützung für die Verschlüsselung ganzer Festplatten, Partitionen und Container unter Windows, macOS und Linux.",
+    "evaluating": [
+      "Festplattenvollverschlüsselung",
+      "Verschlüsselte Container / Volumes"
+    ]
+  },
+  "wallix": {
+    "headquarters": "Paris, Frankreich",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "An der Euronext Growth Paris notiert; Gründer/Manager und die Thierry Dassault Holding (T.D.H.) sind die historischen Referenzaktionäre; NextStage AM hat seine Beteiligung 2026 erhöht",
+    "classificationNote": "Französisches börsennotiertes Unternehmen mit französischen Referenzaktionären; 2026 wurde kein öffentliches Übernahmeangebot festgestellt.",
+    "description": "Französischer Anbieter von Software für Privileged Access Management sowie Identitäts- und Zugriffssicherheit, einschließlich Produkten für industrielle (OT-)Umgebungen.",
+    "evaluating": [
+      "Privileged Access Management (PAM)",
+      "Identity-as-a-Service / SSO",
+      "Sicherer Fernzugriff für OT"
+    ]
+  },
+  "wazuh": {
+    "headquarters": "San Jose, Kalifornien, USA (mit einem großen Team in Spanien)",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Wazuh Inc., eine Kapitalgesellschaft in Privatbesitz nach dem Recht von Delaware",
+    "classificationNote": "Open-Source-Projekt mit erheblichen europäischen (spanischen) Entwicklungswurzeln, das Unternehmen ist jedoch in Delaware eingetragen und hat seinen Hauptsitz in Kalifornien.",
+    "description": "Kostenlose Open-Source-Sicherheitsplattform mit SIEM- und XDR-Funktionen (Log-Analyse, Intrusion Detection, Dateiintegritätsüberwachung, Schwachstellenerkennung), ursprünglich als Fork von OSSEC entstanden; ein kommerzieller Cloud-Dienst und Support werden angeboten.",
+    "evaluating": [
+      "SIEM-Plattformen",
+      "Open-Source-XDR / hostbasierte Intrusion Detection",
+      "Dateiintegritätsüberwachung (File Integrity Monitoring)"
+    ]
+  },
+  "wire": {
+    "headquarters": "Berlin, Deutschland",
+    "parentCompany": "Wire Group Holdings GmbH (Deutschland)",
+    "ownership": "Die Muttergesellschaft Wire Group Holdings GmbH ist in Berlin eingetragen; Wire gibt an, dass europäische institutionelle Investoren über 90 % halten und dass eine 2019 geschaffene US-Holdinggesellschaft bis August 2020 wieder aufgelöst wurde. Tochtergesellschaften bestehen in der Schweiz, in Deutschland und in Frankreich.",
+    "classificationNote": "Die Holdinggesellschaft sitzt in Berlin, und das Unternehmen meldet europäisches Eigentum und europäische Kontrolle; eine US-Holdingstruktur aus 2019–2020 wurde aufgelöst.",
+    "description": "Bietet Ende-zu-Ende-verschlüsseltes Messaging, Telefonie, Videokonferenzen und Dateiaustausch für Unternehmen und Behörden auf Basis des Standards Messaging Layer Security (MLS). Übernahm 2025 das französische Filesharing-Unternehmen Pydio.",
+    "evaluating": [
+      "Team-Messaging-Plattformen wie Microsoft Teams oder Slack",
+      "Sicheres Messaging für Behörden"
+    ]
+  },
+  "withsecure": {
+    "headquarters": "Helsinki, Finnland",
+    "parentCompany": "Diana BidCo Oy (Konsortium aus von CVC Capital Partners beratenen Fonds und Risto Siilasmaa)",
+    "ownership": "Seit November 2025 zu rund 93 % im Besitz der Diana BidCo Oy, eines Vehikels eines Konsortiums aus von CVC Capital Partners (europäisches Private Equity) beratenen Fonds und WithSecure-Gründer Risto Siilasmaa; der Bieter erklärte die Absicht, die Aktien von der Nasdaq Helsinki zu nehmen",
+    "classificationNote": "Hauptsitz in Finnland; das Take-Private 2025 wurde von der europäischen Private-Equity-Gesellschaft CVC gemeinsam mit dem finnischen Gründer angeführt, die Kontrolle bleibt somit europäisch (das Übernahmevehikel ist einer luxemburgischen Holding untergeordnet).",
+    "description": "Finnischer Anbieter von Sicherheitssoftware und -diensten für Unternehmen, 2022 durch Abtrennung und Umbenennung des Unternehmenskundengeschäfts von F-Secure entstanden. Bietet Endpoint-Schutz, XDR, Exposure Management und Co-Security-Dienste, überwiegend über Partner.",
+    "evaluating": [
+      "EDR/XDR-Plattformen",
+      "Endpoint-Protection-Plattformen (EPP)",
+      "Exposure- und Schwachstellenmanagement",
+      "Managed Detection and Response (MDR)"
+    ]
+  },
+  "xwiki-cryptpad": {
+    "headquarters": "Paris, Frankreich",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Eigenfinanziertes Unternehmen, dessen Gesellschafter laut Unternehmen Mitarbeitende, ehemalige Mitarbeitende oder Open-Source-Beitragende sind.",
+    "classificationNote": "Französisches Unternehmen im Besitz der Mitarbeitenden.",
+    "description": "Entwickelt XWiki, eine Open-Source-Plattform für Enterprise-Wikis und Wissensmanagement, sowie CryptPad, eine Ende-zu-Ende-verschlüsselte kollaborative Office-Suite.",
+    "evaluating": [
+      "Wiki- und Wissensplattformen wie Confluence oder SharePoint",
+      "Online-Dokumenteditoren wie Google Docs"
+    ]
+  },
+  "yeswehack": {
+    "headquarters": "Paris, Frankreich",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "In Privatbesitz, wagniskapitalfinanziert; Series C über 26 Mio. EUR (2024) mit Investoren wie Seventure und Wendel Growth; übernahm 2025 das französische Audit-Unternehmen Sekost",
+    "classificationNote": "Hauptsitz in Frankreich und französische Lead-Investoren.",
+    "description": "Französische Plattform für Bug Bounty und Schwachstellenmanagement, die Organisationen mit ethischen Hackern zusammenbringt; bietet außerdem Vulnerability-Disclosure-Programme und Pentest-Management.",
+    "evaluating": [
+      "Bug-Bounty-Plattformen",
+      "Plattformen für Vulnerability-Disclosure-Programme (VDP)",
+      "Penetration Testing as a Service (PTaaS)"
+    ]
+  },
+  "yubico": {
+    "headquarters": "Stockholm, Schweden (weitere Hauptsitze in Santa Clara, USA, und seit 2026 in Singapur)",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "An der Nasdaq Stockholm notiert (YUBICO)",
+    "classificationNote": "Schwedisches börsennotiertes Unternehmen mit eingetragener Adresse in Stockholm; zu beachten sind weitere Hauptsitze in den USA und Singapur sowie umfangreiche Geschäftstätigkeit außerhalb Europas.",
+    "description": "Schwedischer Hersteller der Hardware-Sicherheitsschlüssel YubiKey für phishing-resistente Authentifizierung (FIDO2/WebAuthn, Smartcard, OTP) und des Hardware-Sicherheitsmoduls YubiHSM.",
+    "evaluating": [
+      "Phishing-resistente MFA / FIDO2-Hardwareschlüssel",
+      "Smartcard- / PIV-Authentifizierung",
+      "HSMs im kleinen Formfaktor"
+    ]
+  },
+  "zabbix": {
+    "headquarters": "Riga, Lettland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Die Zabbix SIA wurde 2005 von Alexei Vladishev gegründet, den das Unternehmen als CEO und Eigentümer bezeichnet.",
+    "classificationNote": "Lettisches Unternehmen im Besitz seines Gründers.",
+    "description": "Entwickelt Zabbix, eine Open-Source-Monitoringplattform für Netzwerke, Server, Cloud-Dienste und Anwendungen, mit kommerziellem Support und Dienstleistungen.",
+    "evaluating": [
+      "Tools für Infrastruktur-Monitoring wie Datadog, SolarWinds oder PRTG"
+    ]
+  },
+  "zammad": {
+    "headquarters": "Berlin, Deutschland",
+    "parentCompany": "Keine (unabhängig)",
+    "ownership": "Der Quellcode gehört der gemeinnützigen Zammad Foundation; die Zammad GmbH (Berlin, Geschäftsführer Martin Edenhofer) erbringt Hosting, Support und Dienstleistungen.",
+    "classificationNote": "Europäisches Open-Source-Projekt, dessen Code von einer Stiftung gehalten wird, mit einem kommerziellen Unternehmen in Berlin.",
+    "description": "Open-Source-Helpdesk- und Ticketsystem für den Kundensupport, lizenziert unter AGPLv3, verfügbar selbst gehostet oder als gehosteter Dienst.",
+    "evaluating": [
+      "Helpdesk- und Ticketsysteme wie Zendesk, Freshdesk oder ServiceNow"
+    ]
+  }
+}

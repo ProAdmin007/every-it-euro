@@ -1,0 +1,421 @@
+{
+  "hetzner": {
+    "headquarters": "Gunzenhausen, Niemcy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Prywatna spółka Hetzner Online GmbH; wśród członków zarządu jest założyciel Martin Hetzner. Nie wskazano spółki dominującej; szczegóły dotyczące udziałowców nie są publikowane na stronie internetowej spółki.",
+    "classificationNote": "Prywatna niemiecka spółka; nie zidentyfikowano spółki dominującej ani właściciela spoza Europy.",
+    "description": "Oferuje serwery dedykowane, serwery w chmurze, magazyn obiektowy, hosting stron WWW i kolokację z centrów danych w Niemczech i Finlandii, z dodatkowymi lokalizacjami chmurowymi w USA i Singapurze.",
+    "evaluating": [
+      "Hiperskalowa chmura publiczna (IaaS), np. AWS EC2 lub serwery wirtualne w stylu DigitalOcean",
+      "Dostawcy serwerów dedykowanych"
+    ]
+  },
+  "icinga": {
+    "headquarters": "Norymberga, Niemcy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Icinga GmbH, założona w 2018 roku w Norymberdze w celu finansowania rozwoju projektu open source Icinga; blisko związana z NETWAYS, która świadczy usługi doradcze, szkoleniowe i hostingowe. Udziałowcy nie zostali opublikowani.",
+    "classificationNote": "Projekt monitorowania open source rozwijany w Europie, za którym stoi spółka z siedzibą w Norymberdze.",
+    "description": "System monitorowania infrastruktury i usług open source, pierwotnie fork Nagiosa, z komercyjnymi subskrypcjami oferowanymi przez Icinga GmbH.",
+    "evaluating": [
+      "Narzędzia do monitorowania infrastruktury, np. Nagios XI, SolarWinds lub PRTG"
+    ]
+  },
+  "infomaniak": {
+    "headquarters": "Genewa, Szwajcaria",
+    "parentCompany": "Brak (kontrolowana przez szwajcarską fundację pożytku publicznego Infomaniak Foundation)",
+    "ownership": "Od maja 2026 roku Infomaniak Foundation posiada wszystkie akcje serii A (63,3% głosów przy 14,7% kapitału), a przejęcie nie jest możliwe bez jej zgody. Infomaniak SA jest notowana na SIX Swiss Exchange (symbol INFO) od 1 października 2026 roku w wyniku przejęcia odwrotnego Perrot Duval Holding.",
+    "classificationNote": "Siedziba w Szwajcarii, kontrolowana przez szwajcarską fundację.",
+    "description": "Oferuje hosting stron WWW, chmurę publiczną, pocztę e-mail i pakiet do współpracy (kSuite) z centrów danych w Szwajcarii.",
+    "evaluating": [
+      "Pakiety biurowe i do współpracy, np. Microsoft 365 lub Google Workspace",
+      "Hiperskalowa chmura publiczna (IaaS/PaaS)",
+      "Dostawcy hostingu stron WWW"
+    ]
+  },
+  "intigriti": {
+    "headquarters": "Antwerpia, Belgia",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Spółka prywatna kierowana przez założyciela (Stijn Jans); finansowana przez fundusze venture capital ETF Partners, Octopus Ventures (Wielka Brytania) i innych",
+    "classificationNote": "Siedziba w Belgii; inwestorzy są europejscy (z UE i Wielkiej Brytanii).",
+    "description": "Belgijska platforma crowdsourcingowego bezpieczeństwa oferująca programy bug bounty, ujawniania podatności i hybrydowych testów penetracyjnych.",
+    "evaluating": [
+      "Platformy bug bounty",
+      "Platformy programów ujawniania podatności (VDP)",
+      "Testy penetracyjne jako usługa (PTaaS)"
+    ]
+  },
+  "ionos": {
+    "headquarters": "Montabaur, Niemcy",
+    "parentCompany": "United Internet AG (Niemcy)",
+    "ownership": "IONOS Group SE jest notowana we Frankfurcie; United Internet AG posiadała 63,8% według stanu na 31 grudnia 2025 roku. Amerykański inwestor Warburg Pincus zmniejszył swój pakiet mniejszościowy od IPO w 2023 roku.",
+    "classificationNote": "Notowana spółka operacyjna, w większości należąca do niemieckiej grupy United Internet.",
+    "description": "Oferuje hosting stron WWW, domeny, serwery dedykowane i chmurę infrastrukturalną (IONOS Cloud) dla małych firm i przedsiębiorstw, z centrami danych w Europie i USA.",
+    "evaluating": [
+      "Hiperskalowa chmura publiczna (IaaS/PaaS), np. AWS, Microsoft Azure lub Google Cloud",
+      "Dostawcy hostingu stron WWW"
+    ]
+  },
+  "jolla": {
+    "headquarters": "Tampere, Finlandia",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "W listopadzie 2023 roku, w trakcie restrukturyzacji po tym, jak Jolla Oy dążyła do odłączenia się od własności powiązanej z Rosją, dotychczasowa kadra zarządzająca wykupiła działalność i przeniosła pracowników do nowej spółki. Obecnie działa jako Jolla Group Ltd / Jolla Mobile Ltd, a przewodniczącym jest współzałożyciel Antti Saarnio.",
+    "classificationNote": "Fińska spółka należąca do kadry zarządzającej po restrukturyzacji w 2023 roku.",
+    "description": "Rozwija Sailfish OS, mobilny system operacyjny oparty na Linuksie, zgodny z aplikacjami na Androida (AppSupport), licencjonowany producentom urządzeń i rządom oraz dostarczany na własnym telefonie Jolla Phone (zapowiedzianym w grudniu 2025 roku).",
+    "evaluating": [
+      "Mobilne systemy operacyjne, np. Android lub iOS",
+      "Licencjonowane platformy mobilnych systemów operacyjnych dla urządzeń rządowych"
+    ]
+  },
+  "kubermatic": {
+    "headquarters": "Hamburg, Niemcy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Kubermatic GmbH, założona w 2016 roku (jako Loodse) przez Sebastiana Scheelego i Juliana Hanserta; finansowanie zalążkowe prowadzone przez Nauta Capital z udziałem btov Partners. Podział udziałów nie został opublikowany.",
+    "classificationNote": "Niemiecka spółka finansowana przez fundusze venture capital, z europejskimi inwestorami.",
+    "description": "Rozwija platformę open source do automatyzacji wdrażania i eksploatacji wielu klastrów Kubernetes w chmurach, on-premises i na brzegu sieci (edge).",
+    "evaluating": [
+      "Platformy zarządzania Kubernetes, np. Red Hat OpenShift, VMware Tanzu lub zarządzany Kubernetes od dostawców hiperskalowych"
+    ]
+  },
+  "la-suite-numerique": {
+    "headquarters": "Paryż, Francja",
+    "parentCompany": "Państwo francuskie (DINUM, Direction interministérielle du numérique)",
+    "ownership": "Projekt sektora publicznego: rozwijany przez francuską międzyresortową dyrekcję ds. cyfryzacji (DINUM) dla urzędników; kod źródłowy jest publikowany na licencjach open source (MIT lub AGPL).",
+    "classificationNote": "Francuski pakiet do współpracy open source dla sektora publicznego.",
+    "description": "Pakiet do współpracy dla francuskich pracowników sektora publicznego, obejmujący Docs (wspólne redagowanie), Visio (wideokonferencje), Fichiers (przechowywanie plików), Tchap (komunikator oparty na Matrix), Grist oraz asystenta AI. Dostęp jest obecnie ograniczony do pracowników sektora publicznego za pośrednictwem ProConnect.",
+    "evaluating": [
+      "Pakiety biurowe i do współpracy, np. Microsoft 365 lub Google Workspace",
+      "Platformy wideokonferencyjne, np. Microsoft Teams lub Zoom"
+    ]
+  },
+  "leaseweb": {
+    "headquarters": "Amsterdam, Holandia",
+    "parentCompany": "OCOM Group (Holandia)",
+    "ownership": "Leaseweb Global B.V. należy do amsterdamskiej grupy OCOM kierowanej przez współzałożyciela Cona Zwinkelsa; w 2025 roku zarządzanie Leaseweb przejęli współprezesi Svenja de Vos i Lex Boost.",
+    "classificationNote": "Spółka operacyjna należy do holenderskiej grupy OCOM.",
+    "description": "Oferuje serwery dedykowane, chmurę publiczną i prywatną, kolokację oraz usługi CDN z centrów danych w Europie, Ameryce Północnej i regionie Azji i Pacyfiku.",
+    "evaluating": [
+      "Hiperskalowa chmura publiczna (IaaS)",
+      "Dostawcy serwerów dedykowanych i kolokacji"
+    ]
+  },
+  "mailbox-org": {
+    "headquarters": "Berlin, Niemcy",
+    "parentCompany": "Heinlein Group (Niemcy)",
+    "ownership": "Prowadzona przez Heinlein Hosting GmbH (Berlin), spółkę zależną Heinlein Support GmbH, wchodzącą w skład kierowanej przez założyciela Heinlein Group (prezes Peer Heinlein; współprezeska Jutta Horstmann od 2025 roku).",
+    "classificationNote": "Niemiecka spółka w ramach niemieckiej grupy kierowanej przez założyciela.",
+    "description": "Oferuje firmową i prywatną pocztę e-mail, kalendarz, kontakty, przestrzeń w chmurze i narzędzia biurowe hostowane w Niemczech; w 2025 roku zmieniła pozycjonowanie marki na „cyfrowo suwerenne miejsce pracy”.",
+    "evaluating": [
+      "Pakiety biurowe i do współpracy, np. Microsoft 365 lub Google Workspace",
+      "Firmowe usługi poczty e-mail"
+    ]
+  },
+  "murena": {
+    "headquarters": "Paryż, Francja",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Prywatna spółka założona przez Gaëla Duvala; wśród ujawnionych inwestorów zalążkowych jest Normandie Participations. /e/OS jest rozwijany wspólnie z odrębną fundacją non-profit e Foundation.",
+    "classificationNote": "Francuska spółka; nie zidentyfikowano właściciela spoza Europy.",
+    "description": "Sprzedaje smartfony i usługi działające na /e/OS – mobilnym systemie operacyjnym open source opartym na Androidzie, pozbawionym usług Google – wraz z pocztą e-mail i przestrzenią w chmurze Murena Workspace.",
+    "evaluating": [
+      "Mobilne systemy operacyjne, np. Android z usługami Google lub iOS"
+    ]
+  },
+  "myra-security": {
+    "headquarters": "Monachium, Niemcy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Prywatna spółka GmbH zarządzana przez założycieli; wśród inwestorów jest round2 Capital (wielkość udziałów nieujawniona)",
+    "classificationNote": "Siedziba i kadra zarządzająca w Niemczech; pełna struktura udziałowców nie jest publicznie ujawniona.",
+    "description": "Niemiecki dostawca chmurowej ochrony przed atakami DDoS, zapory aplikacji webowych, CDN i bezpiecznego DNS, działający na własnej infrastrukturze w Niemczech i Europie.",
+    "evaluating": [
+      "Usługi ochrony przed atakami DDoS",
+      "Chmurowy WAF / WAAP",
+      "Sieci dostarczania treści (CDN)",
+      "Zarządzany DNS"
+    ]
+  },
+  "ncp-engineering": {
+    "headquarters": "Norymberga, Niemcy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Prywatna niemiecka spółka GmbH założona w 1986 roku; udziałowcy nie są publicznie ujawnieni",
+    "classificationNote": "Siedziba w Niemczech; nie znaleziono dowodów na istnienie spółki dominującej ani właściciela spoza Europy, ale listy udziałowców nie dało się publicznie zweryfikować.",
+    "description": "Niemiecki producent oprogramowania IPsec VPN i do zdalnego dostępu, w tym klientów z dopuszczeniem BSI dla danych niejawnych (VS-NfD) oraz stosów VPN dla producentów OEM.",
+    "evaluating": [
+      "VPN do zdalnego dostępu",
+      "Dostęp do sieci w modelu zero trust (ZTNA)",
+      "VPN dla niejawnych danych rządowych"
+    ]
+  },
+  "netbird": {
+    "headquarters": "Berlin, Niemcy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Spółka prywatna finansowana przez fundusze venture capital; runda Series A o wartości 10 mln USD (styczeń 2026) prowadzona przez Pace Capital (USA) z udziałem Nauta Capital, InReach Ventures i Antler",
+    "classificationNote": "Berliński start-up kierowany przez założycieli; jego ostatnią rundę prowadził amerykański fundusz venture capital (udziały mniejszościowe, wielkość nieujawniona).",
+    "description": "Berlińska platforma open source sieci nakładkowej (overlay) i dostępu w modelu zero trust, zbudowana na WireGuard, dostępna do samodzielnego hostowania lub jako zarządzana usługa chmurowa.",
+    "evaluating": [
+      "Dostęp do sieci w modelu zero trust (ZTNA)",
+      "Mesh VPN / sieci nakładkowe (overlay)",
+      "VPN do zdalnego dostępu"
+    ]
+  },
+  "nevis-security": {
+    "headquarters": "Zurych, Szwajcaria",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Spółka prywatna; wydzielona z AdNovum Informatik w 2020 roku; jako inwestor wskazywany jest szwajcarski IHAG Holding (wielkość udziałów nieujawniona)",
+    "classificationNote": "Siedziba w Szwajcarii; szczegóły dotyczące własności poza pochodzeniem z AdNovum i szwajcarskim inwestorem nie są publicznie ujawnione.",
+    "description": "Szwajcarski dostawca rozwiązań do zarządzania tożsamością i dostępem klientów (CIAM) oraz uwierzytelniania bezhasłowego, szeroko stosowanych przez banki i ubezpieczycieli.",
+    "evaluating": [
+      "Zarządzanie tożsamością i dostępem klientów (CIAM)",
+      "Uwierzytelnianie bezhasłowe / FIDO2"
+    ]
+  },
+  "nextcloud": {
+    "headquarters": "Stuttgart, Niemcy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Nextcloud GmbH jest kontrolowana przez założycieli; w październiku 2026 roku monachijski Armira Growth dołączył jako udziałowiec mniejszościowy (warunki nieujawnione). Spółka deklaruje, że nie pozyskiwała kapitału venture capital.",
+    "classificationNote": "Siedziba w Niemczech, większościowa kontrola założycieli, z niemieckim inwestorem mniejszościowym.",
+    "description": "Rozwija Nextcloud Hub, platformę do samodzielnego hostowania służącą do synchronizacji i udostępniania plików, groupware, czatu i połączeń wideo oraz integracji z pakietem biurowym online. Oprogramowanie jest open source na licencji AGPL.",
+    "evaluating": [
+      "Usługi udostępniania i synchronizacji plików",
+      "Pakiety biurowe i do współpracy, np. Microsoft 365 lub Google Workspace",
+      "Platformy czatu zespołowego i wideokonferencji"
+    ]
+  },
+  "nexus-group": {
+    "headquarters": "Sztokholm, Szwecja",
+    "parentCompany": "IN Groupe (Francja)",
+    "ownership": "Należy do IN Groupe, francuskiej grupy zajmującej się bezpieczną tożsamością, wspieranej przez państwo",
+    "classificationNote": "Szwedzka spółka operacyjna, której ostateczną spółką dominującą jest francuska IN Groupe.",
+    "description": "Szwedzki dostawca infrastruktury klucza publicznego, zarządzania certyfikatami, zarządzania kartami inteligentnymi i poświadczeniami oraz rozwiązań tożsamości fizycznej i cyfrowej.",
+    "evaluating": [
+      "PKI i zarządzanie cyklem życia certyfikatów",
+      "Zarządzanie poświadczeniami i kartami inteligentnymi",
+      "Tożsamość urządzeń IoT"
+    ]
+  },
+  "nitrokey": {
+    "headquarters": "Teltow (koło Berlina), Niemcy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Prywatna niemiecka spółka GmbH założona w 2015 roku (wywodząca się z projektu open source Crypto Stick)",
+    "classificationNote": "Siedziba w Niemczech i niemiecka własność prywatna.",
+    "description": "Niemiecki producent sprzętu bezpieczeństwa open source: kluczy bezpieczeństwa USB (FIDO2, OpenPGP), sieciowego HSM oraz wzmocnionych laptopów i telefonów. Projekty oprogramowania układowego i sprzętu są publikowane.",
+    "evaluating": [
+      "Sprzętowe klucze bezpieczeństwa FIDO2 / OpenPGP",
+      "Sieciowe sprzętowe moduły bezpieczeństwa (HSM)",
+      "Wzmocnione urządzenia końcowe dla użytkowników wysokiego ryzyka"
+    ]
+  },
+  "nospamproxy": {
+    "headquarters": "Paderborn, Niemcy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Rozwijany przez Net at Work GmbH, niezależną spółkę zarządzaną przez właścicieli",
+    "classificationNote": "Niemiecka spółka zarządzana przez właścicieli.",
+    "description": "Niemiecki pakiet bezpieczeństwa poczty e-mail obejmujący filtrowanie spamu i złośliwego oprogramowania, szyfrowanie poczty (S/MIME, PGP), przesyłanie dużych plików i podpisy cyfrowe, dostępny on-premises lub jako usługa chmurowa.",
+    "evaluating": [
+      "Bezpieczne bramy poczty e-mail",
+      "Bramy szyfrowania poczty e-mail",
+      "Bezpieczne przesyłanie dużych plików"
+    ]
+  },
+  "olvid": {
+    "headquarters": "Paryż, Francja",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Prywatna spółka Olvid SAS; wśród wczesnych inwestorów wymieniane są fundusze powiązane z French Tech. Nie zidentyfikowano spółki dominującej.",
+    "classificationNote": "Francuska spółka z siedzibą w Paryżu; nie zidentyfikowano właściciela spoza Europy.",
+    "description": "Rozwija komunikator z szyfrowaniem end-to-end, który działa bez numeru telefonu i bez centralnego katalogu. Olvid posiada certyfikację ANSSI CSPN, a w 2023 roku francuski rząd polecił ministrom korzystanie z niego zamiast zagranicznych komunikatorów.",
+    "evaluating": [
+      "Komunikatory konsumenckie i biznesowe, np. WhatsApp, Signal lub Telegram"
+    ]
+  },
+  "open-xchange": {
+    "headquarters": "Kolonia, Niemcy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Prywatna spółka Open-Xchange AG (HRB 95366, Kolonia). W radzie nadzorczej zasiadają przedstawiciele europejskich inwestorów venture capital eCAPITAL i Iris; nie stwierdzono przejęcia przez spółkę dominującą. W skład grupy OX wchodzą Dovecot i PowerDNS.",
+    "classificationNote": "Niemiecka spółka AG z siedzibą w Kolonii, z europejskimi inwestorami venture capital; nie zidentyfikowano kontrolującego właściciela spoza Europy.",
+    "description": "Dostarcza oprogramowanie do poczty e-mail i pracy biurowej (OX App Suite, Dovecot Pro) oraz oprogramowanie DNS (PowerDNS), sprzedawane głównie operatorom telekomunikacyjnym, dostawcom hostingu i klientom z sektora publicznego.",
+    "evaluating": [
+      "Platformy poczty e-mail i groupware, np. Microsoft Exchange lub Gmail",
+      "Serwery pocztowe klasy operatorskiej",
+      "Oprogramowanie autorytatywnych i rekursywnych serwerów DNS"
+    ]
+  },
+  "opencloud": {
+    "headquarters": "Berlin, Niemcy",
+    "parentCompany": "Heinlein Group (Niemcy)",
+    "ownership": "OpenCloud GmbH została założona we wrześniu 2024 roku w ramach Heinlein Group i rozpoczęła działalność w styczniu 2025 roku.",
+    "classificationNote": "Spółka zależna niemieckiej Heinlein Group.",
+    "description": "Rozwija OpenCloud, platformę open source do udostępniania plików i współpracy, utworzoną przez byłych deweloperów ownCloud Infinite Scale jako jej fork; licencjonowaną na Apache 2.0.",
+    "evaluating": [
+      "Usługi udostępniania plików, np. Dropbox, Box lub OneDrive/SharePoint"
+    ]
+  },
+  "opendesk": {
+    "headquarters": "Berlin, Niemcy",
+    "parentCompany": "Republika Federalna Niemiec (za pośrednictwem ZenDiS GmbH)",
+    "ownership": "Projekt sektora publicznego: rozwijany i dystrybuowany przez ZenDiS (Zentrum für Digitale Souveränität der Öffentlichen Verwaltung) GmbH, która jest w całości własnością niemieckiego rządu federalnego.",
+    "classificationNote": "Niemiecki pakiet stanowiska pracy open source dla sektora publicznego, zbudowany z europejskich komponentów open source.",
+    "description": "Pakiet stanowiska pracy open source dla sektora publicznego, łączący pocztę e-mail, kalendarz, pliki, edycję dokumentów biurowych, czat, wideokonferencje, wiki i zarządzanie projektami z komponentów takich jak Nextcloud, Open-Xchange, Collabora, Element, OpenProject, XWiki i Univention. Od 2026 roku może być także oferowany przez zatwierdzonych partnerów z sektora prywatnego.",
+    "evaluating": [
+      "Pakiety biurowe i do współpracy, np. Microsoft 365 lub Google Workspace"
+    ]
+  },
+  "openproject": {
+    "headquarters": "Berlin, Niemcy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "OpenProject GmbH (HRB 117935 B, Berlin), kierowana przez prezesa Nielsa Lindenthala. Udziałowcy nie są publikowani na stronie internetowej spółki; nie zidentyfikowano spółki dominującej.",
+    "classificationNote": "Berlińska spółka GmbH rozwijająca oprogramowanie; nie zidentyfikowano właściciela spoza Europy.",
+    "description": "Rozwija OpenProject, oprogramowanie open source do zarządzania projektami obejmujące planowanie, śledzenie zadań, tablice zwinne (agile) i rejestrację czasu pracy. Jest komponentem pakietu stanowiska pracy openDesk dla sektora publicznego.",
+    "evaluating": [
+      "Narzędzia do zarządzania projektami, np. Jira, Microsoft Project lub Asana"
+    ]
+  },
+  "opnsense-deciso": {
+    "headquarters": "Middelharnis, Holandia",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Deciso B.V. jest spółką prywatną; holenderska firma private equity Nordian dokonała w 2026 roku inwestycji strategicznej (wielkość udziałów nieujawniona)",
+    "classificationNote": "Holenderska spółka kierująca projektem zapory sieciowej open source OPNsense; inwestor również jest holenderski.",
+    "description": "OPNsense to platforma open source do zapory sieciowej i routingu (fork pfSense z 2015 roku) kierowana przez holenderską spółkę Deciso, która sprzedaje edycję Business Edition, wsparcie i urządzenia sprzętowe.",
+    "evaluating": [
+      "Zapory sieciowe nowej generacji / UTM",
+      "Platformy zapór sieciowych open source",
+      "Bramy VPN"
+    ]
+  },
+  "orange-cyberdefense": {
+    "headquarters": "Nanterre / La Défense (region paryski), Francja",
+    "parentCompany": "Orange SA (Francja)",
+    "ownership": "Spółka w całości zależna od Orange SA (notowanej w Paryżu; państwo francuskie jest akcjonariuszem referencyjnym)",
+    "classificationNote": "Pion usług cyberbezpieczeństwa francuskiej grupy Orange.",
+    "description": "Dostawca zarządzanych usług bezpieczeństwa grupy Orange, oferujący SOC/MDR, CERT, analizę zagrożeń (threat intelligence), doradztwo i zarządzane bezpieczeństwo sieci w całej Europie; w 2026 roku rozszerzył działalność na Hiszpanię.",
+    "evaluating": [
+      "Dostawcy zarządzanych usług bezpieczeństwa (MSSP)",
+      "Zarządzane wykrywanie i reagowanie (MDR)",
+      "Umowy gotowości do reagowania na incydenty (retainer)"
+    ]
+  },
+  "outpost24": {
+    "headquarters": "Karlskrona / Sztokholm, Szwecja",
+    "parentCompany": "Vitruvian Partners (Wielka Brytania)",
+    "ownership": "Od lipca 2022 roku większościowym właścicielem jest brytyjska firma private equity Vitruvian Partners (zakup od Monterro)",
+    "classificationNote": "Siedziba w Szwecji; właścicielem większościowym jest europejska, ale spoza UE (brytyjska) firma private equity.",
+    "description": "Szwedzki dostawca rozwiązań do zarządzania ekspozycją na zagrożenia, w tym zarządzania zewnętrzną powierzchnią ataku, testowania bezpieczeństwa aplikacji, zarządzania podatnościami oraz bezpieczeństwa haseł i tożsamości (Specops).",
+    "evaluating": [
+      "Zarządzanie zewnętrzną powierzchnią ataku (EASM)",
+      "Zarządzanie podatnościami",
+      "Testy penetracyjne jako usługa (PTaaS)",
+      "Bezpieczeństwo haseł w Active Directory"
+    ]
+  },
+  "ovhcloud": {
+    "headquarters": "Roubaix, Francja",
+    "parentCompany": "Brak (niezależna; notowana na Euronext Paris)",
+    "ownership": "Spółka giełdowa kontrolowana większościowo przez rodzinę założycieli Klaba (około 81% kapitału po ofercie odkupu zamkniętej w styczniu 2025 roku; częściowo zmniejszone w wyniku sprzedaży akcji w grudniu 2025 roku). KKR i TowerBrook posiadają pakiety mniejszościowe. Octave Klaba został prezesem zarządu i dyrektorem generalnym w październiku 2025 roku.",
+    "classificationNote": "Francuska spółka giełdowa kontrolowana przez rodzinę założycieli.",
+    "description": "Prowadzi chmurę publiczną, chmurę prywatną, serwery bare-metal i hosting stron WWW z własnych centrów danych, głównie w Europie, z ofertami z kwalifikacją SecNumCloud dla obciążeń regulowanych.",
+    "evaluating": [
+      "Hiperskalowa chmura publiczna (IaaS/PaaS), np. AWS, Microsoft Azure lub Google Cloud",
+      "Dostawcy serwerów dedykowanych i hostingu"
+    ]
+  },
+  "paessler": {
+    "headquarters": "Norymberga, Niemcy",
+    "parentCompany": "Turn/River Capital (Stany Zjednoczone), inwestor od 2024 roku",
+    "ownership": "W maju 2024 roku firma private equity Turn/River Capital z San Francisco dokonała inwestycji strategicznej w Paessler AG; niektóre doniesienia opisują ją jako pakiet większościowy, natomiast komunikat Paessler nie podaje jego wielkości.",
+    "classificationNote": "Siedziba i rozwój w Niemczech, ale amerykańska firma private equity posiada znaczący (według doniesień większościowy) pakiet.",
+    "description": "Rozwija PRTG, produkt do monitorowania sieci, infrastruktury i OT, dostępny on-premises i jako usługa hostowana.",
+    "evaluating": [
+      "Narzędzia do monitorowania infrastruktury i sieci, np. SolarWinds lub Datadog"
+    ]
+  },
+  "pexip": {
+    "headquarters": "Oslo, Norwegia",
+    "parentCompany": "Brak (notowana na Oslo Børs)",
+    "ownership": "Pexip Holding ASA jest notowana na Giełdzie Papierów Wartościowych w Oslo (PEXIP).",
+    "classificationNote": "Spółka giełdowa z siedzibą w Norwegii (EOG).",
+    "description": "Dostarcza oprogramowanie do wideokonferencji do wdrożeń samodzielnie hostowanych, w chmurze prywatnej i wdrożeń o podwyższonym poziomie bezpieczeństwa, a także usługi interoperacyjności łączące systemy sal konferencyjnych z platformami takimi jak Microsoft Teams.",
+    "evaluating": [
+      "Platformy wideokonferencyjne, np. Zoom, Webex lub spotkania Microsoft Teams",
+      "Samodzielnie hostowane bezpieczne wideokonferencje dla administracji rządowej i sektora obronnego"
+    ]
+  },
+  "plusserver": {
+    "headquarters": "Kolonia, Niemcy",
+    "parentCompany": "Fundusze doradzane przez BC Partners (Wielka Brytania)",
+    "ownership": "Przejęta od GoDaddy w 2017 roku przez fundusze doradzane przez londyńską firmę private equity BC Partners. W 2023 roku informowano o procesie sprzedaży; nie stwierdzono sfinalizowanej zmiany kontroli.",
+    "classificationNote": "Niemiecka spółka operacyjna należąca do brytyjskiego inwestora private equity; w razie ogłoszenia sprzedaży należy ponownie sprawdzić aktualną strukturę własnościową.",
+    "description": "Oferuje zarządzany hosting, chmurę prywatną oraz suwerenną chmurę pluscloud open opartą na OpenStack z centrów danych w Niemczech.",
+    "evaluating": [
+      "Hiperskalowa chmura publiczna (IaaS/PaaS)",
+      "Zarządzana chmura prywatna i hosting"
+    ]
+  },
+  "posteo": {
+    "headquarters": "Berlin, Niemcy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Zarejestrowana jako Posteo e.K. (Berlin-Charlottenburg, HRA 47592 B), w formie jednoosobowej działalności gospodarczej; firma określa się jako niezależna, samofinansująca się i wolna od reklam.",
+    "classificationNote": "Niezależne niemieckie przedsiębiorstwo bez zewnętrznego właściciela.",
+    "description": "Oferuje płatne, wolne od reklam usługi poczty e-mail, kalendarza i książki adresowej z opcjami szyfrowania, prowadzone z Niemiec.",
+    "evaluating": [
+      "Usługi poczty e-mail dla konsumentów i małych firm, np. Gmail lub Outlook.com"
+    ]
+  },
+  "proton": {
+    "headquarters": "Plan-les-Ouates (Genewa), Szwajcaria",
+    "parentCompany": "Proton Foundation (Szwajcaria)",
+    "ownership": "Szwajcarska fundacja non-profit Proton Foundation jest od czerwca 2024 roku największym udziałowcem Proton AG pod względem praw głosu; żadna zmiana kontroli nie jest możliwa bez jej zgody",
+    "classificationNote": "Siedziba w Szwajcarii, kontrolowana przez szwajcarską fundację.",
+    "description": "Szwajcarski dostawca szyfrowanej end-to-end poczty e-mail, kalendarza, przechowywania plików, VPN i menedżera haseł; aplikacje klienckie są open source.",
+    "evaluating": [
+      "Szyfrowane usługi poczty e-mail",
+      "Firmowe pakiety poczty e-mail i współpracy",
+      "Menedżery haseł",
+      "Usługi VPN"
+    ]
+  },
+  "proxmox": {
+    "headquarters": "Wiedeń, Austria",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Proxmox Server Solutions GmbH (FN 258879f, Wiedeń), założona w 2005 roku przez Martina i Dietmara Maurerów; opisywana jako należąca do założycieli, bez inwestorów zewnętrznych.",
+    "classificationNote": "Austriacka spółka należąca do założycieli.",
+    "description": "Rozwija oprogramowanie open source do wirtualizacji, kopii zapasowych i bezpieczeństwa poczty e-mail, sprzedawane z opcjonalnymi subskrypcjami wsparcia dla przedsiębiorstw.",
+    "evaluating": [
+      "Platformy wirtualizacji serwerów, np. VMware vSphere lub Microsoft Hyper-V",
+      "Oprogramowanie do kopii zapasowych"
+    ]
+  },
+  "retarus": {
+    "headquarters": "Monachium, Niemcy",
+    "parentCompany": "Brak (niezależna)",
+    "ownership": "Spółka rodzinna zarządzana przez założyciela (Martin Hager) od 1992 roku",
+    "classificationNote": "Siedziba w Niemczech i niemiecka własność rodzinna.",
+    "description": "Niemiecki dostawca chmurowych usług komunikacji dla przedsiębiorstw, w tym bezpieczeństwa poczty e-mail, bezpiecznego transportu poczty, faksu, SMS i e-fakturowania, świadczonych z własnych centrów danych.",
+    "evaluating": [
+      "Bezpieczne bramy poczty e-mail",
+      "Usługi ciągłości działania i archiwizacji poczty e-mail",
+      "Infrastruktura komunikacji dla przedsiębiorstw"
+    ]
+  },
+  "rhebo": {
+    "headquarters": "Lipsk, Niemcy",
+    "parentCompany": "Landis+Gyr (Szwajcaria), sprzedaż na rzecz Everfield w toku",
+    "ownership": "Od 2021 roku własność Landis+Gyr (szwajcarska spółka giełdowa); w kwietniu 2026 roku Landis+Gyr uzgodnił sprzedaż Rhebo na rzecz Everfield, londyńskiej grupy programistycznej utworzonej przez amerykańską firmę private equity Aquiline Capital Partners; zamknięcie transakcji wymagało zgód regulacyjnych i nie zostało potwierdzone w znalezionych źródłach",
+    "classificationNote": "Niemiecka spółka, której przyszłym właścicielem (transakcja w toku) jest europejski holding programistyczny utworzony i kontrolowany przez amerykańską firmę private equity; przed publikacją należy ponownie sprawdzić status zamknięcia transakcji.",
+    "description": "Niemiecki dostawca monitorowania sieci OT i wykrywania anomalii dla sieci przemysłowych i sektora energetycznego.",
+    "evaluating": [
+      "Monitorowanie sieci OT i wykrywanie włamań",
+      "Wykrywanie anomalii w środowiskach przemysłowych"
+    ]
+  },
+  "rohde-schwarz-networks-cybersecurity": {
+    "headquarters": "Würselen (koło Akwizgranu), Niemcy",
+    "parentCompany": "Rohde & Schwarz GmbH & Co. KG (Niemcy)",
+    "ownership": "Spółka w całości zależna od prywatnej, rodzinnej grupy Rohde & Schwarz (Monachium); utworzona w lipcu 2026 roku z połączenia LANCOM Systems i Rohde & Schwarz Cybersecurity",
+    "classificationNote": "Niemiecka spółka operacyjna w ramach rodzinnej niemieckiej grupy Rohde & Schwarz.",
+    "description": "Niemiecki dostawca produktów sieciowych i bezpieczeństwa, utworzony w 2026 roku z połączenia LANCOM Systems i Rohde & Schwarz Cybersecurity. Portfolio obejmuje routery, SD-WAN, przełączniki, Wi-Fi, zunifikowane zapory sieciowe, zarządzanie w chmurze oraz szyfrowanie z dopuszczeniem BSI.",
+    "evaluating": [
+      "Zapory sieciowe nowej generacji / UTM",
+      "SD-WAN",
+      "Przełączniki i Wi-Fi dla przedsiębiorstw",
+      "Szyfrowanie dysków dla danych niejawnych (VS-NfD)",
+      "Izolacja przeglądarki"
+    ]
+  }
+}

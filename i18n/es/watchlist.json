@@ -1,0 +1,47 @@
+{
+  "Hornetsecurity": {
+    "event": "Adquirida por Proofpoint (Estados Unidos) por unos 1.800 millones de USD; operación completada el 8 de diciembre de 2025. Hornetsecurity sigue funcionando como unidad independiente."
+  },
+  "Vade": {
+    "event": "Adquirida por Hornetsecurity (Alemania) en marzo de 2024; pasó a manos estadounidenses cuando Proofpoint (Estados Unidos) completó la adquisición de Hornetsecurity en diciembre de 2025."
+  },
+  "Nozomi Networks": {
+    "event": "Fundada en Italia y con sede posterior en EE. UU.; adquirida por Mitsubishi Electric (Japón), operación anunciada en septiembre de 2025 y completada el 28 de enero de 2026."
+  },
+  "Zivver": {
+    "event": "Proveedor de correo electrónico seguro con sede en Ámsterdam adquirido por Kiteworks (Estados Unidos), operación anunciada en junio de 2025."
+  },
+  "Tessian": {
+    "event": "Adquirida por Proofpoint (Estados Unidos); operación completada el 19 de diciembre de 2023."
+  },
+  "Boxcryptor (Secomba)": {
+    "event": "Dropbox (Estados Unidos) adquirió la tecnología clave y los activos de propiedad intelectual de Boxcryptor a Secomba GmbH, operación anunciada en noviembre de 2022; el servicio independiente Boxcryptor se suspendió."
+  },
+  "Avast": {
+    "event": "Fusionada con NortonLifeLock (Estados Unidos, rebautizada como Gen Digital); operación completada el 12 de septiembre de 2022."
+  },
+  "PrimeKey": {
+    "event": "Fusionada con Keyfactor (Estados Unidos, respaldada por Insight Partners) bajo la marca Keyfactor; operación finalizada el 30 de junio / 1 de julio de 2021 tras una revisión sueca de seguridad nacional."
+  },
+  "Avira": {
+    "event": "Adquirida por NortonLifeLock (Estados Unidos, actualmente Gen Digital) a Investcorp; operación completada el 8 de enero de 2021."
+  },
+  "Veeam": {
+    "event": "Adquirida por Insight Partners (Estados Unidos) por unos 5.000 millones de USD, operación completada el 2 de marzo de 2020; posteriormente la empresa pasó a tener su sede en EE. UU. y una dirección estadounidense."
+  },
+  "Sentryo": {
+    "event": "Start-up de seguridad OT con sede en Lyon adquirida por Cisco (Estados Unidos); operación anunciada en junio de 2019 y completada en agosto de 2019; su tecnología se convirtió en Cisco Cyber Vision."
+  },
+  "Skype": {
+    "event": "Skype Global, con sede en Luxemburgo (software desarrollado en gran parte en Estonia), fue adquirida por Microsoft (Estados Unidos) por 8.500 millones de USD; operación completada el 13 de octubre de 2011."
+  },
+  "Wunderlist (6Wunderkinder)": {
+    "event": "Microsoft adquirió en junio de 2015 la berlinesa 6Wunderkinder, creadora de Wunderlist, y cerró la aplicación el 6 de mayo de 2020 en favor de Microsoft To Do."
+  },
+  "Mojang (Minecraft)": {
+    "event": "Microsoft acordó en septiembre de 2014 adquirir la empresa de Estocolmo Mojang y la franquicia Minecraft por 2.500 millones de USD."
+  },
+  "ownCloud": {
+    "event": "La estadounidense Kiteworks anunció en noviembre de 2023 una combinación con ownCloud y con DRACOON, con sede en Ratisbona, que situó a ambos proveedores alemanes de compartición de archivos bajo Kiteworks."
+  }
+}

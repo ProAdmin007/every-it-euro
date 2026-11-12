@@ -1,0 +1,421 @@
+{
+  "3ds-outscale": {
+    "headquarters": "Région parisienne, France",
+    "parentCompany": "Dassault Systèmes (France)",
+    "ownership": "OUTSCALE SASU est une marque et une filiale de Dassault Systèmes.",
+    "classificationNote": "La société opérationnelle fait partie du groupe français Dassault Systèmes.",
+    "description": "Fournit des services cloud IaaS, notamment des régions qualifiées SecNumCloud 3.2, du Kubernetes managé (OKS) et des modèles Mistral AI hébergés, à destination du secteur public, de la santé et des services financiers.",
+    "evaluating": [
+      "Cloud public hyperscale (IaaS/PaaS), comme AWS, Microsoft Azure ou Google Cloud",
+      "Cloud souverain pour les charges de travail réglementées (SecNumCloud)"
+    ]
+  },
+  "acronis": {
+    "headquarters": "Schaffhouse, Suisse",
+    "parentCompany": "EQT (Suède)",
+    "ownership": "Détenue majoritairement par le fonds EQT X (capital-investissement suédois) depuis 2025 ; les fondateurs, la direction et des investisseurs dont CVC et BlackRock Private Equity Partners conservent des participations minoritaires",
+    "classificationNote": "Siège en Suisse et actionnaire majoritaire suédois ; certains investisseurs minoritaires ne sont pas européens.",
+    "description": "Éditeur dont le siège est en Suisse (cofondé à Singapour), spécialisé dans la sauvegarde, la reprise après sinistre et la sécurité intégrée des terminaux, commercialisées principalement via des fournisseurs de services managés.",
+    "evaluating": [
+      "Plateformes de sauvegarde et de reprise après sinistre",
+      "Plateformes de sécurité pour MSP",
+      "EDR/XDR pour les PME"
+    ]
+  },
+  "airbus-protect": {
+    "headquarters": "France (groupe Airbus ; bureaux en France, en Allemagne, en Espagne et au Royaume-Uni)",
+    "parentCompany": "Airbus (Pays-Bas/France)",
+    "ownership": "Filiale à 100 % d'Airbus, lancée en 2022",
+    "classificationNote": "Filiale de services du groupe européen Airbus.",
+    "description": "Filiale d'Airbus proposant du conseil et des services managés en cybersécurité, en sûreté et en développement durable, notamment l'exploitation de SOC pour des aéroports et des infrastructures critiques.",
+    "evaluating": [
+      "Fournisseurs de services de sécurité managés (MSSP)",
+      "Services de SOC managé",
+      "Conseil en sécurité OT"
+    ]
+  },
+  "airlock-ergon": {
+    "headquarters": "Zurich, Suisse",
+    "parentCompany": "Afinum (capital-investissement germano-suisse)",
+    "ownership": "Afinum est devenu l'actionnaire majoritaire d'Ergon Informatik AG en janvier 2026, succédant au fondateur et aux actionnaires de référence ; la direction et de nombreux salariés restent actionnaires",
+    "classificationNote": "Siège en Suisse et actionnaire majoritaire européen issu du capital-investissement.",
+    "description": "Airlock est la gamme de produits de sécurité de l'éditeur suisse Ergon. Elle associe un pare-feu pour applications web et API à une solution de gestion des identités et des accès clients ; une offre d'IAM en tant que service a été lancée en 2026.",
+    "evaluating": [
+      "Pare-feu pour applications web (WAF/WAAP)",
+      "Gestion des identités et des accès clients (CIAM)",
+      "Passerelles API et sécurité des API"
+    ]
+  },
+  "anydesk": {
+    "headquarters": "Stuttgart, Allemagne",
+    "parentCompany": "Aucune (indépendante)",
+    "ownership": "Société non cotée, financée par du capital-risque ; parmi les investisseurs figurent EQT Ventures (Suède), Insight Partners (États-Unis) et General Atlantic (États-Unis, chef de file de la série C en 2021) ; participations non divulguées",
+    "classificationNote": "Siège en Allemagne, mais des investisseurs de croissance américains (Insight Partners, General Atlantic) détiennent des participations importantes, d'un montant non divulgué ; le caractère européen du contrôle n'a pas pu être vérifié.",
+    "description": "Logiciel allemand de bureau à distance et d'assistance à distance, disponible en service cloud ou en déploiement sur site.",
+    "evaluating": [
+      "Outils d'accès à distance et d'assistance à distance"
+    ]
+  },
+  "aruba": {
+    "headquarters": "Ponte San Pietro (Bergame), Italie",
+    "parentCompany": "Aucune (indépendante)",
+    "ownership": "Société italienne non cotée fondée en 1994, dirigée par son CEO Stefano Cecconi ; la presse associe l'entreprise à la famille Cecconi. Aucun propriétaire non européen identifié.",
+    "classificationNote": "Société italienne non cotée ; aucun propriétaire non européen identifié.",
+    "description": "Fournit des services de cloud, de centre de données, d'hébergement web, de messagerie, de courrier électronique certifié (PEC) et de noms de domaine depuis ses propres centres de données en Italie et en République tchèque.",
+    "evaluating": [
+      "Cloud public hyperscale (IaaS/PaaS)",
+      "Fournisseurs d'hébergement web et de messagerie",
+      "Centres de données de colocation"
+    ]
+  },
+  "bareos": {
+    "headquarters": "Cologne, Allemagne",
+    "parentCompany": "Aucune (indépendante)",
+    "ownership": "Bareos GmbH & Co. KG est une société non cotée, dirigée par ses fondateurs, qui maintient le projet Bareos sous licence AGPLv3",
+    "classificationNote": "Projet de sauvegarde open source développé en Europe, avec une société allemande qui fournit abonnements et support.",
+    "description": "Logiciel open source de sauvegarde réseau (fork de Bacula créé en 2010) sous licence AGPLv3 ; la société de Cologne commercialise des abonnements, du support et le cofinancement de fonctionnalités.",
+    "evaluating": [
+      "Logiciels de sauvegarde et de restauration pour l'entreprise",
+      "Plateformes de sauvegarde open source"
+    ]
+  },
+  "bitdefender": {
+    "headquarters": "Bucarest, Roumanie",
+    "parentCompany": "Bitdefender Holding B.V. (Pays-Bas)",
+    "ownership": "Société non cotée ; les fondateurs Florin et Mariuca Talpes contrôleraient environ 55 % ; la société britannique de capital-investissement Vitruvian Partners détient environ 30 % (depuis 2017) ; non cotée en Bourse",
+    "classificationNote": "Activités roumaines regroupées sous une holding néerlandaise, contrôlée par les fondateurs ; le deuxième actionnaire est un investisseur britannique (européen, hors UE). Les chiffres de l'actionnariat proviennent d'articles de presse, et non de publications de l'entreprise.",
+    "description": "Éditeur roumain de cybersécurité fondé en 2001, proposant la protection des terminaux pour les particuliers et les entreprises, de l'EDR/XDR, de la sécurité cloud et du MDR. Ses moteurs d'analyse sont également concédés sous licence à d'autres éditeurs.",
+    "evaluating": [
+      "Plateformes EDR/XDR",
+      "Plateformes de protection des terminaux (EPP)",
+      "Protection des charges de travail cloud",
+      "Détection et réponse managées (MDR)"
+    ]
+  },
+  "canonical": {
+    "headquarters": "Londres, Royaume-Uni",
+    "parentCompany": "Aucune (société non cotée)",
+    "ownership": "Canonical Group Limited (Londres) est une société non cotée ; Companies House désigne le fondateur Mark Shuttleworth (britannique, résidant sur l'île de Man) comme personne exerçant un contrôle significatif. Une introduction en Bourse a été évoquée, mais n'est pas programmée.",
+    "classificationNote": "Siège au Royaume-Uni et contrôle exercé par son fondateur britannique.",
+    "description": "Publie Ubuntu, une distribution Linux largement utilisée pour les serveurs, les postes de travail, le cloud et l'IoT, et commercialise du support ainsi que des logiciels d'infrastructure tels qu'OpenStack, Kubernetes et MAAS.",
+    "evaluating": [
+      "Distributions Linux d'entreprise, comme Red Hat Enterprise Linux",
+      "Systèmes d'exploitation pour postes de travail, comme Windows ou macOS",
+      "Plateformes de cloud privé, comme VMware"
+    ]
+  },
+  "checkmk": {
+    "headquarters": "Munich, Allemagne",
+    "parentCompany": "PSG Equity (États-Unis), actionnaire majoritaire",
+    "ownership": "Checkmk GmbH (anciennement tribe29 GmbH) a reçu début 2025 un investissement de la société américaine de capital-investissement PSG Equity, présenté comme une participation majoritaire.",
+    "classificationNote": "Siège et développement en Allemagne, mais la majorité du capital serait détenue par une société américaine de capital-investissement.",
+    "description": "Développe Checkmk, une plateforme de supervision de l'infrastructure informatique et des applications, disponible en édition Raw open source et en éditions commerciales.",
+    "evaluating": [
+      "Outils de supervision d'infrastructure, comme Datadog, SolarWinds ou PRTG"
+    ]
+  },
+  "clavister": {
+    "headquarters": "Örnsköldsvik, Suède",
+    "parentCompany": "Aucune (indépendante)",
+    "ownership": "Cotée sur Nasdaq Stockholm (First North) sous le nom de Clavister Holding AB ; actionnariat dispersé, aucun actionnaire de contrôle identifié",
+    "classificationNote": "Société suédoise cotée à l'actionnariat dispersé.",
+    "description": "Développeur suédois de pare-feu de nouvelle génération et de produits d'identité et d'accès, axé sur les clients des télécommunications et de la défense en Europe.",
+    "evaluating": [
+      "Pare-feu de nouvelle génération",
+      "Pare-feu durcis pour la défense",
+      "VPN d'accès à distance",
+      "Authentification multifacteur"
+    ]
+  },
+  "cleura": {
+    "headquarters": "Karlskrona, Suède",
+    "parentCompany": "Iver (Suède)",
+    "ownership": "Cleura fait partie du groupe nordique de services informatiques Iver. La société britannique Intermediate Capital Group (ICG) a accepté en 2021 de racheter Iver à EQT.",
+    "classificationNote": "La société opérationnelle appartient au groupe suédois Iver, détenu par un investisseur britannique.",
+    "description": "Fournit des services de cloud public et de cloud conforme basés sur OpenStack depuis des centres de données en Suède, ainsi qu'une suite collaborative construite avec Nextcloud.",
+    "evaluating": [
+      "Cloud public hyperscale (IaaS/PaaS), comme AWS, Microsoft Azure ou Google Cloud"
+    ]
+  },
+  "clever-cloud": {
+    "headquarters": "Nantes, France",
+    "parentCompany": "Aucune (indépendante)",
+    "ownership": "Société française non cotée fondée en 2010 ; parmi les investisseurs mentionnés figurent Kima Ventures, Daphni et French Tech DeepNum20.",
+    "classificationNote": "Société française avec des investisseurs français ; aucun propriétaire non européen identifié.",
+    "description": "Fournit une plateforme en tant que service (PaaS) pour déployer et exécuter des applications et des bases de données managées. En avril 2026, elle faisait partie d'un consortium avec OVHcloud et DEEP retenu pour un accord-cadre de cloud souverain de la Commission européenne.",
+    "evaluating": [
+      "Offres de plateforme en tant que service, comme Heroku, AWS Elastic Beanstalk ou Azure App Service"
+    ]
+  },
+  "codeberg-forgejo": {
+    "headquarters": "Berlin, Allemagne",
+    "parentCompany": "Aucune (association à but non lucratif)",
+    "ownership": "Codeberg e.V. est une association à but non lucratif enregistrée à Berlin, financée par des dons et les cotisations de ses membres. Elle exploite Codeberg.org et assure la gestion du projet Forgejo.",
+    "classificationNote": "Association allemande à but non lucratif et projet open source, à gouvernance communautaire.",
+    "description": "Codeberg.org est un service d'hébergement de code géré par la communauté pour les projets open source, reposant sur Forgejo, une forge Git auto-hébergeable créée en 2022 en tant que fork communautaire de Gitea.",
+    "evaluating": [
+      "Plateformes d'hébergement de code et DevOps, comme GitHub ou GitLab"
+    ]
+  },
+  "collabora-productivity": {
+    "headquarters": "Cambridge, Royaume-Uni",
+    "parentCompany": "Collabora Limited (Royaume-Uni), contrôlée par des intérêts de holding canadiens",
+    "ownership": "Companies House désigne Collabora Limited et Cloudblue IT Limited (contrôlée par Michael et Julia Meeks, Royaume-Uni) comme personnes exerçant un contrôle significatif sur Collabora Productivity Limited. La personne exerçant un contrôle significatif sur Collabora Limited est Philippe Kalaf, avec sa holding canadienne.",
+    "classificationNote": "Siège au Royaume-Uni avec une participation de la direction britannique, mais sa société mère Collabora Limited est contrôlée par une personne résidant au Canada et par une holding canadienne.",
+    "description": "Développe Collabora Online et Collabora Office, des éditions entreprise de la technologie LibreOffice pour l'édition de documents dans le navigateur et sur poste de travail, intégrées à des plateformes comme Nextcloud et openDesk.",
+    "evaluating": [
+      "Suites bureautiques et collaboratives, comme Microsoft 365 ou Google Workspace"
+    ]
+  },
+  "cryptomator": {
+    "headquarters": "Bonn, Allemagne",
+    "parentCompany": "Aucune (indépendante)",
+    "ownership": "Développé par Skymatic GmbH, une petite société non cotée de Bonn dirigée par son cofondateur Tobias Hagemann",
+    "classificationNote": "Siège en Allemagne et actionnariat privé allemand.",
+    "description": "Chiffrement open source côté client pour les fichiers stockés dans n'importe quel service de stockage cloud, avec un Hub commercial pour la gestion des clés et des accès en équipe.",
+    "evaluating": [
+      "Chiffrement côté client des fichiers dans le cloud",
+      "Partage de fichiers chiffrés pour les équipes"
+    ]
+  },
+  "cubbit": {
+    "headquarters": "Bologne, Italie",
+    "parentCompany": "Aucune (indépendante)",
+    "ownership": "Société non cotée, financée par du capital-risque ; sa levée de 12,5 M USD en 2024 a été codirigée par les investisseurs britanniques LocalGlobe et ETF Partners. Ancienne participante au programme EIC Scaling Up.",
+    "classificationNote": "Société italienne avec des investisseurs européens.",
+    "description": "Fournit un stockage objet géodistribué compatible S3, dans lequel les données sont chiffrées, fragmentées et répliquées sur un réseau de nœuds ; les fournisseurs de services peuvent s'en servir pour bâtir leurs propres offres de stockage.",
+    "evaluating": [
+      "Services de stockage objet, comme Amazon S3 ou Azure Blob Storage",
+      "Cibles de stockage pour la sauvegarde"
+    ]
+  },
+  "darktrace": {
+    "headquarters": "Cambridge, Royaume-Uni",
+    "parentCompany": "Thoma Bravo (États-Unis)",
+    "ownership": "Rachetée par des fonds de la société américaine de capital-investissement Thoma Bravo pour 5,3 Md USD ; opération finalisée le 1er octobre 2024, la société a été retirée de la cote à Londres",
+    "classificationNote": "Siège et R&D au Royaume-Uni, mais contrôle ultime exercé par une société américaine de capital-investissement.",
+    "description": "Éditeur britannique de détection d'anomalies et de réponse fondées sur l'IA, couvrant les réseaux, la messagerie, le cloud, les terminaux et l'OT.",
+    "evaluating": [
+      "Détection et réponse réseau (NDR)",
+      "Sécurité de la messagerie (par API)",
+      "Supervision des réseaux OT"
+    ]
+  },
+  "detectify": {
+    "headquarters": "Stockholm, Suède",
+    "parentCompany": "Insight Partners (États-Unis)",
+    "ownership": "Détenue majoritairement par la société d'investissement américaine Insight Partners depuis octobre 2024 ; Balderton reste actionnaire minoritaire",
+    "classificationNote": "Siège et ingénierie en Suède, mais le contrôle majoritaire revient à un investisseur américain.",
+    "description": "Service suédois de gestion de la surface d'attaque et d'analyse des applications web, qui s'appuie sur des travaux de recherche de vulnérabilités fournis par des hackers éthiques.",
+    "evaluating": [
+      "Gestion de la surface d'attaque externe (EASM)",
+      "Tests dynamiques de sécurité des applications (DAST)"
+    ]
+  },
+  "drivelock": {
+    "headquarters": "Munich, Allemagne",
+    "parentCompany": "Aucune (société du portefeuille de Nordwind)",
+    "ownership": "DriveLock SE est une société du portefeuille de l'investisseur munichois Nordwind (Nordwind Capital / Nordwind Growth), son investisseur majoritaire",
+    "classificationNote": "Siège en Allemagne et investisseur majoritaire allemand ; la participation exacte n'est pas publiée.",
+    "description": "Éditeur allemand de sécurité des terminaux axé sur le contrôle des périphériques et des applications, le chiffrement et la sensibilisation à la sécurité ; a racheté en 2025 idgard, fournisseur de salles de données sécurisées.",
+    "evaluating": [
+      "Contrôle des périphériques et des applications",
+      "Gestion du chiffrement des terminaux",
+      "Salles de données sécurisées / partage de fichiers"
+    ]
+  },
+  "elastic": {
+    "headquarters": "Amsterdam, Pays-Bas (siège statutaire) ; se présente comme une entreprise distribuée sans siège de direction principal",
+    "parentCompany": "Aucune (cotée au NYSE)",
+    "ownership": "Elastic N.V. est immatriculée aux Pays-Bas et cotée à la Bourse de New York (ESTC). Ses déclarations auprès de la SEC indiquent une adresse professionnelle à Amsterdam et une adresse postale à San Francisco, et précisent qu'elle n'a pas de siège de direction principal.",
+    "classificationNote": "Immatriculée aux Pays-Bas et d'origine européenne, mais cotée aux États-Unis, avec d'importantes activités et une large base d'investisseurs aux États-Unis.",
+    "description": "Développe Elasticsearch et la Suite Elastic (Elastic Stack) pour la recherche, l'observabilité et l'analytique de sécurité (SIEM et protection des terminaux), en autogestion ou via Elastic Cloud.",
+    "evaluating": [
+      "Plateformes d'observabilité, comme Datadog ou Splunk",
+      "Plateformes SIEM, comme Microsoft Sentinel ou Splunk Enterprise Security"
+    ]
+  },
+  "elastx": {
+    "headquarters": "Stockholm, Suède",
+    "parentCompany": "Sobro (Suède), actionnaire majoritaire selon les informations disponibles",
+    "ownership": "Elastx AB est une société non cotée ; la société d'investissement suédoise Sobro mentionne Elastx parmi ses participations et en serait l'actionnaire majoritaire depuis 2020.",
+    "classificationNote": "Société suédoise détenue par un investisseur suédois.",
+    "description": "Fournit une infrastructure cloud basée sur OpenStack et du Kubernetes managé depuis des centres de données de la région de Stockholm.",
+    "evaluating": [
+      "Cloud public hyperscale (IaaS/PaaS), comme AWS, Microsoft Azure ou Google Cloud"
+    ]
+  },
+  "element": {
+    "headquarters": "Londres, Royaume-Uni",
+    "parentCompany": "Aucune (indépendante)",
+    "ownership": "Exploitée par New Vector Limited (Londres), financée par du capital-risque ; Companies House n'indique aucune personne exerçant un contrôle significatif. Parmi les investisseurs connus figurent Notion Capital, Dawn Capital (Royaume-Uni), Metaplanet, ainsi que les américains Automattic et Protocol Labs en tant qu'investisseurs minoritaires.",
+    "classificationNote": "Siège au Royaume-Uni, sans actionnaire de contrôle unique ; des investisseurs internationaux détiennent des participations minoritaires.",
+    "description": "Développe Element, une application de messagerie et de collaboration chiffrée de bout en bout reposant sur le protocole ouvert Matrix, ainsi qu'Element Server Suite pour les déploiements auto-hébergés. Element a été fondée par les créateurs de Matrix.",
+    "evaluating": [
+      "Plateformes de messagerie d'équipe, comme Microsoft Teams ou Slack",
+      "Messagerie sécurisée pour les administrations et la défense"
+    ]
+  },
+  "eset": {
+    "headquarters": "Bratislava, Slovaquie",
+    "parentCompany": "Aucune (indépendante)",
+    "ownership": "Détenue à titre privé par ses fondateurs et un petit groupe de propriétaires (Board of Shareholders) ; pas de capital-risque, pas d'introduction en Bourse",
+    "classificationNote": "Siège à Bratislava et détenue par des personnes physiques slovaques ; l'entreprise indique ne compter aucun investisseur extérieur.",
+    "description": "Éditeur slovaque de logiciels de sécurité fondé en 1992, connu pour son moteur antivirus NOD32. Propose la protection des terminaux, de l'EDR/XDR, du chiffrement et des services de détection managée pour les particuliers et les entreprises.",
+    "evaluating": [
+      "Plateformes de protection des terminaux (EPP)",
+      "Plateformes EDR/XDR",
+      "Détection et réponse managées (MDR)",
+      "Chiffrement intégral du disque"
+    ]
+  },
+  "eviden-atos": {
+    "headquarters": "Bezons (région parisienne), France",
+    "parentCompany": "Atos SE (France)",
+    "ownership": "Eviden est la marque produits d'Atos SE (cotée sur Euronext Paris) ; depuis la restructuration financière de 2024, Atos est détenue majoritairement par ses anciens créanciers financiers ; Atos a cédé son activité Advanced Computing (Bull) à l'État français en mars 2026 et a conservé les produits de cybersécurité comme activité stratégique",
+    "classificationNote": "Gamme de produits du groupe français Atos ; l'actionnariat d'Atos après la restructuration se compose en grande partie de créanciers financiers dont la nationalité n'a pas été vérifiée individuellement.",
+    "description": "Portefeuille de produits de cybersécurité d'Atos couvrant les modules matériels de sécurité et les chiffreurs (Trustway), la gestion des identités et des accès (anciennement Evidian) et la PKI / l'identité numérique (IDnomic).",
+    "evaluating": [
+      "Modules matériels de sécurité (HSM)",
+      "Gouvernance et administration des identités (IGA)",
+      "PKI et gestion des certificats",
+      "Chiffreurs réseau"
+    ]
+  },
+  "exeon-analytics": {
+    "headquarters": "Zurich, Suisse",
+    "parentCompany": "Aucune (indépendante)",
+    "ownership": "Spin-off non cotée de l'ETH Zurich ; financée par du capital-risque (dernière levée connue en 2021) ; aucune acquisition constatée",
+    "classificationNote": "Siège et contrôle en Suisse (pays européen hors UE).",
+    "description": "Éditeur suisse de logiciels de détection et de réponse réseau qui analyse les métadonnées réseau par apprentissage automatique ; a ajouté en 2026 des modules d'UEBA et de supervision des agents IA.",
+    "evaluating": [
+      "Détection et réponse réseau (NDR)",
+      "Analyse du comportement des utilisateurs et des entités (UEBA)"
+    ]
+  },
+  "exoscale": {
+    "headquarters": "Lausanne, Suisse",
+    "parentCompany": "A1 Digital / A1 Telekom Austria Group (Autriche), détenu majoritairement par América Movil (Mexique)",
+    "ownership": "A1 Digital, filiale de Telekom Austria (A1 Group), a racheté Exoscale en 2017. América Movil (Mexique) a porté sa participation dans Telekom Austria de 51 % à 56,55 % en 2023 et a ensuite déclaré en détenir environ 58 % ; la holding publique autrichienne ÖBAG détient une participation minoritaire importante dans le cadre d'un pacte d'actionnaires.",
+    "classificationNote": "Activités et siège en Europe, mais l'actionnaire majoritaire ultime du groupe parent est América Movil, basé au Mexique.",
+    "description": "Fournit une infrastructure de cloud public comprenant du calcul, du stockage objet compatible S3, du Kubernetes managé (SKS) et des bases de données managées, depuis des centres de données situés en Suisse, en Autriche, en Allemagne et en Bulgarie.",
+    "evaluating": [
+      "Cloud public hyperscale (IaaS/PaaS), comme AWS, Microsoft Azure ou Google Cloud"
+    ]
+  },
+  "f-secure": {
+    "headquarters": "Helsinki, Finlande",
+    "parentCompany": "Aucune (indépendante)",
+    "ownership": "Cotée sur Nasdaq Helsinki ; aucune annonce de changement de contrôle constatée pour 2025-2026",
+    "classificationNote": "Société finlandaise cotée, indépendante de WithSecure depuis la scission de 2022 ; aucun actionnaire de contrôle non européen identifié.",
+    "description": "Société finlandaise de cybersécurité grand public, issue de la scission avec WithSecure en 2022. Commercialise des produits de sécurité, de protection de l'identité et de protection contre les arnaques auprès des particuliers, en grande partie via des opérateurs télécoms et d'autres partenaires.",
+    "evaluating": [
+      "Suites de sécurité grand public pour terminaux",
+      "Services de sécurité distribués par les opérateurs (B2B2C)"
+    ]
+  },
+  "fudo-security": {
+    "headquarters": "Varsovie, Pologne",
+    "parentCompany": "Aucune (indépendante)",
+    "ownership": "Société non cotée, financée par du capital-risque (environ 10 M USD levés en janvier 2025) ; dispose aussi d'une entité américaine, Fudo Security Inc. (Newark, Californie)",
+    "classificationNote": "L'entreprise indique avoir son siège à Varsovie après l'avoir rapatrié de la Silicon Valley ; une filiale américaine subsiste et certains annuaires mentionnent encore l'adresse américaine.",
+    "description": "Développeur polonais de gestion des accès à privilèges, avec enregistrement des sessions et analyse comportementale fondée sur l'IA.",
+    "evaluating": [
+      "Gestion des accès à privilèges (PAM)",
+      "Supervision et enregistrement des sessions à privilèges"
+    ]
+  },
+  "g-data": {
+    "headquarters": "Bochum, Allemagne",
+    "parentCompany": "Aucune (indépendante)",
+    "ownership": "Société anonyme allemande non cotée (AG) ; le cofondateur Andreas Luning siège au directoire ; la liste des actionnaires n'est pas rendue publique",
+    "classificationNote": "Siège et direction en Allemagne ; aucun indice d'actionnariat non européen, mais la structure exacte de l'actionnariat n'a pas pu être vérifiée publiquement.",
+    "description": "Pionnier allemand de l'antivirus (fondé en 1985) proposant la protection des terminaux, de l'EDR managé, de la formation de sensibilisation à la sécurité et de la réponse aux incidents pour les entreprises et les particuliers.",
+    "evaluating": [
+      "Plateformes de protection des terminaux (EPP)",
+      "Détection et réponse managées (MDR)",
+      "Formation de sensibilisation à la sécurité"
+    ]
+  },
+  "gatewatcher": {
+    "headquarters": "Paris, France",
+    "parentCompany": "Aucune (indépendante)",
+    "ownership": "Société non cotée, dirigée par son fondateur (Jacques de La Riviere) ; série A (2022) menée par Move Capital Fund I (Kepler Cheuvreux Invest) ; 25 M EUR de dette de capital-risque accordés par la Banque européenne d'investissement (2025)",
+    "classificationNote": "Société française financée par des investisseurs français et par la BEI ; la table de capitalisation détaillée n'est pas publique.",
+    "description": "Éditeur français de produits de détection et de réponse réseau (NDR) et de renseignement sur les menaces, utilisés par des entreprises et des organismes publics.",
+    "evaluating": [
+      "Détection et réponse réseau (NDR)",
+      "Systèmes de détection d'intrusion",
+      "Flux de renseignement sur les menaces"
+    ]
+  },
+  "genua": {
+    "headquarters": "Kirchheim bei München, Allemagne",
+    "parentCompany": "Bundesdruckerei Gruppe (Allemagne)",
+    "ownership": "Détenue à 100 % par Bundesdruckerei depuis le 1er janvier 2020 ; Bundesdruckerei Gruppe GmbH est détenue en totalité par le gouvernement fédéral allemand",
+    "classificationNote": "Société opérationnelle allemande dont la maison mère ultime est l'État fédéral allemand, via Bundesdruckerei.",
+    "description": "Développeur allemand de produits de sécurité informatique agréés par le BSI, tels que des pare-feu à haut niveau d'assurance, des diodes de données, des passerelles VPN et des systèmes de télémaintenance, utilisés par les administrations et les opérateurs d'infrastructures critiques.",
+    "evaluating": [
+      "Pare-feu à haut niveau d'assurance",
+      "Diodes de données",
+      "Passerelles VPN pour données classifiées",
+      "Télémaintenance sécurisée pour l'OT"
+    ]
+  },
+  "grafana-labs": {
+    "headquarters": "New York, États-Unis",
+    "parentCompany": "Aucune (société non cotée, financée par du capital-risque)",
+    "ownership": "Société non cotée ; parmi les investisseurs figurent les américains Lightspeed, Sequoia, Coatue et CapitalG ainsi que GIC (Singapour). Le projet Grafana est né en Suède et l'entreprise conserve un effectif important en Europe.",
+    "classificationNote": "Projet open source d'origine européenne, mais l'entreprise a son siège à New York et est financée principalement par des investisseurs américains.",
+    "description": "Développe Grafana et la pile d'observabilité LGTM (Loki, Grafana, Tempo, Mimir), disponibles en open source et sous forme de service hébergé, Grafana Cloud.",
+    "evaluating": [
+      "Plateformes d'observabilité, comme Datadog, New Relic ou Splunk Observability"
+    ]
+  },
+  "greenbone": {
+    "headquarters": "Osnabrück, Allemagne",
+    "parentCompany": "Aucune (indépendante)",
+    "ownership": "Société anonyme allemande non cotée (Greenbone AG, immatriculée auprès du tribunal d'instance d'Osnabrück) ; la structure de l'actionnariat n'est pas rendue publique",
+    "classificationNote": "Société allemande qui développe le scanner open source OpenVAS ; aucun indice de contrôle non européen, mais les actionnaires n'ont pas pu être vérifiés publiquement.",
+    "description": "Développeur allemand du scanner de vulnérabilités OpenVAS. Propose une édition communautaire gratuite ainsi que des appliances et des services cloud commerciaux dotés d'un flux de vulnérabilités de niveau entreprise.",
+    "evaluating": [
+      "Scanners de vulnérabilités",
+      "Plateformes de gestion des vulnérabilités"
+    ]
+  },
+  "grommunio": {
+    "headquarters": "Vienne, Autriche",
+    "parentCompany": "Aucune (indépendante)",
+    "ownership": "grommunio GmbH (fondée sous le nom de grammm GmbH à Vienne vers 2020) ; société non cotée, actionnaires non publiés.",
+    "classificationNote": "Société autrichienne ; aucun propriétaire non européen identifié.",
+    "description": "Développe grommunio, un serveur de groupware open source qui implémente nativement les protocoles Exchange (MAPI/HTTP, EWS, ActiveSync), de sorte qu'Outlook et les appareils mobiles s'y connectent sans plug-in ; le serveur principal est distribué sous licence AGPL-3.0.",
+    "evaluating": [
+      "Serveurs de messagerie et de groupware, comme Microsoft Exchange Server ou Exchange Online"
+    ]
+  },
+  "guardsix": {
+    "headquarters": "Copenhague, Danemark",
+    "parentCompany": "Summa Equity (Suède)",
+    "ownership": "Détenue majoritairement par la société suédoise de capital-investissement Summa Equity (Fund III) depuis 2023 ; Yttrium (anciennement Digital+ Partners) est un actionnaire minoritaire important ; Logpoint a été renommée guardsix en mars 2026",
+    "classificationNote": "Siège au Danemark et actionnaire majoritaire suédois.",
+    "description": "Éditeur danois de logiciels pour les opérations de sécurité, anciennement Logpoint (renommé en 2026). Propose SIEM, SOAR, NDR (issu de l'acquisition de Muninn) et des modules associés pour les entreprises et les MSSP.",
+    "evaluating": [
+      "Plateformes SIEM",
+      "SOAR",
+      "Détection et réponse réseau (NDR)",
+      "Supervision de la sécurité SAP"
+    ]
+  },
+  "harfanglab": {
+    "headquarters": "Paris, France",
+    "parentCompany": "Aucune (indépendante)",
+    "ownership": "Société non cotée, financée par du capital-risque ; série A (2023) menée par Credit Mutuel Innovation, avec Elaia et MassMutual Ventures (États-Unis) parmi les investisseurs",
+    "classificationNote": "Siège en France et investisseurs principaux français ; un investisseur américain en capital-risque détient une participation minoritaire (montant non divulgué).",
+    "description": "Développeur français de logiciels de détection et de réponse sur les terminaux (EDR), fondé en 2018. Son EDR a été certifié par l'agence française de cybersécurité, l'ANSSI.",
+    "evaluating": [
+      "Plateformes EDR/XDR",
+      "Plateformes de protection des terminaux (EPP)",
+      "EDR isolé (air gap) / sur site"
+    ]
+  }
+}
