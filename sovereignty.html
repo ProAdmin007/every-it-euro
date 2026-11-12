@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Technology Sovereignty Assessment | Every IT Euro</title>
+<meta name="description" content="A transparent, rule-based tool to assess how relevant technological sovereignty is for a specific IT or cybersecurity system — from low relevance to strategic technology.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="theme-color" content="#003399">
+<link rel="canonical" href="https://proadmin007.github.io/every-it-euro/sovereignty.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Every IT Euro">
+<meta property="og:title" content="Technology Sovereignty Assessment">
+<meta property="og:description" content="How sovereignty-relevant is your system? A transparent assessment with an explained outcome.">
+<meta property="og:url" content="https://proadmin007.github.io/every-it-euro/sovereignty.html">
+<meta property="og:image" content="https://proadmin007.github.io/every-it-euro/assets/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/main.js"></script>
+<script src="assets/js/sovereignty.js" defer></script>
+</head>
+<body>
+<!-- BEGIN:header -->
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="9" fill="#003399"/><circle cx="32.50" cy="20.00" r="1.9" fill="#FFCC00"/><circle cx="30.83" cy="26.25" r="1.9" fill="#FFCC00"/><circle cx="26.25" cy="30.83" r="1.9" fill="#FFCC00"/><circle cx="20.00" cy="32.50" r="1.9" fill="#FFCC00"/><circle cx="13.75" cy="30.83" r="1.9" fill="#FFCC00"/><circle cx="9.17" cy="26.25" r="1.9" fill="#FFCC00"/><circle cx="7.50" cy="20.00" r="1.9" fill="#FFCC00"/><circle cx="9.17" cy="13.75" r="1.9" fill="#FFCC00"/><circle cx="13.75" cy="9.17" r="1.9" fill="#FFCC00"/><circle cx="20.00" cy="7.50" r="1.9" fill="#FFCC00"/><circle cx="26.25" cy="9.17" r="1.9" fill="#FFCC00"/><circle cx="30.83" cy="13.75" r="1.9" fill="#FFCC00"/><path d="M20 12.5l6 2.4v4.6c0 4-2.6 6.9-6 8-3.4-1.1-6-4-6-8v-4.6z" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg><span>Every IT Euro<small>European technology choices</small></span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle-icon" aria-hidden="true"></span>Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="why-europe.html">Why Europe</a></li>
+        <li><a href="cybersecurity.html">Cybersecurity</a></li>
+        <li><a href="alternatives.html">European Alternatives</a></li>
+        <li><a href="procurement.html">Procurement</a></li>
+        <li><a href="sovereignty.html" aria-current="page">Sovereignty Assessment</a></li>
+        <li><a href="sources.html">Sources</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- END:header -->
+
+<main id="main">
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="container">
+      <p class="eyebrow">Interactive tool</p>
+      <h1 id="page-title">Technology Sovereignty Assessment</h1>
+      <p class="lead">Answer 15 questions about one specific system, such as your EDR platform, identity provider or SCADA historian. You get a classification and an explanation of why it was produced.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow">
+      <div class="callout">
+        <span class="callout-title">How to read the outcome</span>
+        <p>The outcome follows a small set of <a href="#rules">published rules</a>. It is <strong>not a scientific score</strong>, and it does not say whether a product is good or bad. It shows how much weight sovereignty deserves in your decision. Your answers stay in your browser: nothing is stored or sent anywhere.</p>
+      </div>
+      <noscript>
+        <div class="callout callout-yellow"><p>The interactive assessment needs JavaScript. You can still use the questions below together with the <a href="#rules">published rules</a> to classify a system by hand.</p></div>
+      </noscript>
+
+      <form id="assessment" novalidate>
+      <h2 class="assess-group-title h3" id="part-impact">Part 1 — How important is the system?</h2>
+      <fieldset class="assess-q" id="q-critical" data-q="critical" data-kind="impact">
+        <legend>Is this system business critical?</legend>
+        <p class="hint">Would your core processes stop or degrade seriously without it?</p>
+        <div class="assess-options">
+          <label><input type="radio" name="critical" value="yes" data-effect="impact" data-reason="Business-critical system"><span>Yes</span></label>
+          <label><input type="radio" name="critical" value="no" data-effect="none"><span>No</span></label>
+          <label><input type="radio" name="critical" value="unsure" data-effect="unknown" data-reason="business criticality"><span>Not sure</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="assess-q" id="q-sensitive" data-q="sensitive" data-kind="impact">
+        <legend>Does it process sensitive information?</legend>
+        <p class="hint">Personal data, trade secrets, classified or security-relevant information.</p>
+        <div class="assess-options">
+          <label><input type="radio" name="sensitive" value="yes" data-effect="impact" data-reason="Processes sensitive or confidential information"><span>Yes</span></label>
+          <label><input type="radio" name="sensitive" value="no" data-effect="none"><span>No</span></label>
+          <label><input type="radio" name="sensitive" value="unsure" data-effect="unknown" data-reason="sensitivity of the information"><span>Not sure</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="assess-q" id="q-ci" data-q="ci" data-kind="impact">
+        <legend>Is it part of critical infrastructure or an essential service?</legend>
+        <p class="hint">For example energy, water, telecom, transport, health or public administration — including entities in scope of NIS2.</p>
+        <div class="assess-options">
+          <label><input type="radio" name="ci" value="yes" data-effect="impact" data-reason="Part of critical infrastructure or an essential service"><span>Yes</span></label>
+          <label><input type="radio" name="ci" value="no" data-effect="none"><span>No</span></label>
+          <label><input type="radio" name="ci" value="unsure" data-effect="unknown" data-reason="critical-infrastructure status"><span>Not sure</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="assess-q" id="q-ot" data-q="ot" data-kind="impact">
+        <legend>Is it connected to OT or ICS?</legend>
+        <p class="hint">Industrial control systems, SCADA, building automation or other operational technology.</p>
+        <div class="assess-options">
+          <label><input type="radio" name="ot" value="yes" data-effect="impact" data-reason="Connected to OT / ICS environments"><span>Yes</span></label>
+          <label><input type="radio" name="ot" value="no" data-effect="none"><span>No</span></label>
+          <label><input type="radio" name="ot" value="unsure" data-effect="unknown" data-reason="connection to OT / ICS"><span>Not sure</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="assess-q" id="q-outage" data-q="outage" data-kind="impact">
+        <legend>Would a supplier outage affect operations?</legend>
+        <p class="hint">Think of a multi-day outage of the supplier's cloud, support or licensing service.</p>
+        <div class="assess-options">
+          <label><input type="radio" name="outage" value="yes" data-effect="impact" data-reason="A supplier outage would directly affect operations"><span>Yes</span></label>
+          <label><input type="radio" name="outage" value="no" data-effect="none"><span>No</span></label>
+          <label><input type="radio" name="outage" value="unsure" data-effect="unknown" data-reason="impact of a supplier outage"><span>Not sure</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="assess-q" id="q-security" data-q="security" data-kind="impact">
+        <legend>Is it a security control that protects other systems?</legend>
+        <p class="hint">Examples: EDR, firewall, identity, PAM, SIEM, backup. These usually hold privileged access.</p>
+        <div class="assess-options">
+          <label><input type="radio" name="security" value="yes" data-effect="impact" data-reason="Security control with privileged access to other systems"><span>Yes</span></label>
+          <label><input type="radio" name="security" value="no" data-effect="none"><span>No</span></label>
+          <label><input type="radio" name="security" value="unsure" data-effect="unknown" data-reason="role as a security control"><span>Not sure</span></label>
+        </div>
+      </fieldset>
+      <h2 class="assess-group-title h3" id="part-dependency">Part 2 — How dependent are you on the supplier?</h2>
+      <fieldset class="assess-q" id="q-cloud" data-q="cloud" data-kind="dependency">
+        <legend>Does it require continuous access to the supplier's cloud?</legend>
+        <p class="hint">Including cloud-only management consoles and licence checks.</p>
+        <div class="assess-options">
+          <label><input type="radio" name="cloud" value="yes" data-effect="dep" data-reason="Requires continuous connectivity to the supplier's cloud"><span>Yes</span></label>
+          <label><input type="radio" name="cloud" value="no" data-effect="ok" data-reason="Does not require continuous cloud connectivity"><span>No</span></label>
+          <label><input type="radio" name="cloud" value="unsure" data-effect="unknown" data-reason="cloud connectivity requirements"><span>Not sure</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="assess-q" id="q-independent" data-q="independent" data-kind="dependency">
+        <legend>Can it run independently of the supplier?</legend>
+        <p class="hint">Could you keep it running for months without the supplier's involvement?</p>
+        <div class="assess-options">
+          <label><input type="radio" name="independent" value="yes" data-effect="ok" data-reason="Can run independently of the supplier"><span>Yes</span></label>
+          <label><input type="radio" name="independent" value="no" data-effect="dep" data-reason="Cannot run independently of the supplier"><span>No</span></label>
+          <label><input type="radio" name="independent" value="unsure" data-effect="unknown" data-reason="ability to run independently"><span>Not sure</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="assess-q" id="q-export" data-q="export" data-kind="dependency">
+        <legend>Can your organisation export all data and configuration?</legend>
+        <p class="hint">In documented, usable formats — not only as a vendor-specific backup.</p>
+        <div class="assess-options">
+          <label><input type="radio" name="export" value="yes" data-effect="ok" data-reason="All data and configuration can be exported"><span>Yes</span></label>
+          <label><input type="radio" name="export" value="no" data-effect="dep" data-reason="Data or configuration cannot be fully exported"><span>No</span></label>
+          <label><input type="radio" name="export" value="unsure" data-effect="unknown" data-reason="data and configuration export"><span>Not sure</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="assess-q" id="q-standards" data-q="standards" data-kind="dependency">
+        <legend>Are open standards used?</legend>
+        <p class="hint">Open protocols, file formats and documented APIs that other products also support.</p>
+        <div class="assess-options">
+          <label><input type="radio" name="standards" value="yes" data-effect="ok" data-reason="Uses open standards and documented APIs"><span>Yes</span></label>
+          <label><input type="radio" name="standards" value="no" data-effect="dep" data-reason="Relies on proprietary formats or protocols"><span>No</span></label>
+          <label><input type="radio" name="standards" value="unsure" data-effect="unknown" data-reason="use of open standards"><span>Not sure</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="assess-q" id="q-alternative" data-q="alternative" data-kind="dependency">
+        <legend>Is there a viable European alternative?</legend>
+        <p class="hint">Check the European alternatives database. “Viable” means technically and operationally realistic for you.</p>
+        <div class="assess-options">
+          <label><input type="radio" name="alternative" value="yes" data-effect="ok" data-reason="A viable European alternative exists"><span>Yes</span></label>
+          <label><input type="radio" name="alternative" value="no" data-effect="dep" data-reason="No viable European alternative (concentration risk)"><span>No</span></label>
+          <label><input type="radio" name="alternative" value="unsure" data-effect="unknown" data-reason="availability of European alternatives"><span>Not sure</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="assess-q" id="q-jurisdiction" data-q="jurisdiction" data-kind="dependency">
+        <legend>Which jurisdiction ultimately controls the supplier?</legend>
+        <p class="hint">The law that applies to the company that makes the final decisions — not the local sales office.</p>
+        <div class="assess-options">
+          <label><input type="radio" name="jurisdiction" value="eu" data-effect="ok" data-reason="Supplier controlled under EU/EEA jurisdiction"><span>EU / EEA</span></label>
+          <label><input type="radio" name="jurisdiction" value="europe" data-effect="ok" data-reason="Supplier controlled under a European, non-EU jurisdiction"><span>Other European</span></label>
+          <label><input type="radio" name="jurisdiction" value="non-eu" data-effect="dep" data-reason="Supplier ultimately controlled under non-European jurisdiction"><span>Non-European</span></label>
+          <label><input type="radio" name="jurisdiction" value="unsure" data-effect="unknown" data-reason="the supplier's controlling jurisdiction"><span>Not sure</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="assess-q" id="q-parent" data-q="parent" data-kind="dependency">
+        <legend>Where is the ultimate parent company located?</legend>
+        <p class="hint">Follow the ownership chain to the top, including private-equity owners.</p>
+        <div class="assess-options">
+          <label><input type="radio" name="parent" value="eu" data-effect="ok" data-reason="Ultimate parent company in the EU/EEA"><span>EU / EEA</span></label>
+          <label><input type="radio" name="parent" value="europe" data-effect="ok" data-reason="Ultimate parent company in a European, non-EU country"><span>Other European</span></label>
+          <label><input type="radio" name="parent" value="non-eu" data-effect="dep" data-reason="Ultimate parent company outside Europe"><span>Non-European</span></label>
+          <label><input type="radio" name="parent" value="unsure" data-effect="unknown" data-reason="the location of the ultimate parent company"><span>Not sure</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="assess-q" id="q-exportctl" data-q="exportctl" data-kind="dependency">
+        <legend>Could export restrictions or sanctions affect the technology?</legend>
+        <p class="hint">Including restrictions on updates, licences, support or underlying components.</p>
+        <div class="assess-options">
+          <label><input type="radio" name="exportctl" value="yes" data-effect="dep" data-reason="Export restrictions or sanctions could affect access or updates"><span>Yes</span></label>
+          <label><input type="radio" name="exportctl" value="no" data-effect="ok" data-reason="Export restrictions are unlikely to affect the technology"><span>No</span></label>
+          <label><input type="radio" name="exportctl" value="unsure" data-effect="unknown" data-reason="exposure to export restrictions"><span>Not sure</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="assess-q" id="q-remote" data-q="remote" data-kind="dependency">
+        <legend>Does the supplier have remote access, push updates or receive telemetry?</legend>
+        <p class="hint">Any channel through which the supplier can change or observe the system.</p>
+        <div class="assess-options">
+          <label><input type="radio" name="remote" value="yes" data-effect="dep" data-reason="Supplier has a remote access, update or telemetry channel"><span>Yes</span></label>
+          <label><input type="radio" name="remote" value="no" data-effect="ok" data-reason="No remote supplier channel into the system"><span>No</span></label>
+          <label><input type="radio" name="remote" value="unsure" data-effect="unknown" data-reason="remote supplier access"><span>Not sure</span></label>
+        </div>
+      </fieldset>
+
+        <div id="assessment-error" class="callout callout-yellow" tabindex="-1" role="alert" hidden></div>
+        <div class="btn-row" data-js-only hidden>
+          <button type="submit" class="btn btn-blue">Show my outcome</button>
+          <button type="reset" class="btn btn-ghost">Start again</button>
+        </div>
+      </form>
+
+      <div id="assessment-result" class="result" tabindex="-1" aria-live="polite" hidden></div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="rules" aria-labelledby="rules-title">
+    <div class="container narrow">
+      <h2 id="rules-title">How the classification works</h2>
+      <p>Each answer counts as an <strong>importance factor</strong> (Part 1), a <strong>dependency factor</strong> (Part 2) or a <strong>mitigating factor</strong>. “Not sure” is treated as a cautious “yes” for importance and as a dependency, and is listed as an open question for you to resolve. The rules are applied from top to bottom:</p>
+      <div class="table-wrap">
+        <table>
+          <caption class="visually-hidden">Classification rules of the Technology Sovereignty Assessment</caption>
+          <thead><tr><th scope="col">Outcome</th><th scope="col">Rule</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Strategic technology</th><td>Critical infrastructure <em>or</em> OT/ICS, <em>and</em> business critical or outage-sensitive, <em>and</em> 3 or more dependency factors — <em>or</em> 5 or more importance factors together with 5 or more dependency factors.</td></tr>
+            <tr><th scope="row">High relevance</th><td>3 or more importance factors with 2 or more dependency factors — <em>or</em> critical infrastructure/OT with at least 1 dependency factor — <em>or</em> a security control with 3 or more dependency factors.</td></tr>
+            <tr><th scope="row">Medium relevance</th><td>At least 1 importance factor with at least 1 dependency factor — <em>or</em> 3 or more importance factors — <em>or</em> 4 or more dependency factors.</td></tr>
+            <tr><th scope="row">Low relevance</th><td>None of the above.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h3 class="mt-2">Limitations</h3>
+      <ul>
+        <li>The thresholds are editorial judgements, chosen to be simple and explainable. They are not validated statistically.</li>
+        <li>The tool does not assess technical security, quality or cost. Those remain essential.</li>
+        <li>Use the outcome to decide <em>how much attention</em> sovereignty needs, then do the work with the <a href="procurement.html#checklist">procurement checklist</a>.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<!-- BEGIN:footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="9" fill="#003399"/><circle cx="32.50" cy="20.00" r="1.9" fill="#FFCC00"/><circle cx="30.83" cy="26.25" r="1.9" fill="#FFCC00"/><circle cx="26.25" cy="30.83" r="1.9" fill="#FFCC00"/><circle cx="20.00" cy="32.50" r="1.9" fill="#FFCC00"/><circle cx="13.75" cy="30.83" r="1.9" fill="#FFCC00"/><circle cx="9.17" cy="26.25" r="1.9" fill="#FFCC00"/><circle cx="7.50" cy="20.00" r="1.9" fill="#FFCC00"/><circle cx="9.17" cy="13.75" r="1.9" fill="#FFCC00"/><circle cx="13.75" cy="9.17" r="1.9" fill="#FFCC00"/><circle cx="20.00" cy="7.50" r="1.9" fill="#FFCC00"/><circle cx="26.25" cy="9.17" r="1.9" fill="#FFCC00"/><circle cx="30.83" cy="13.75" r="1.9" fill="#FFCC00"/><path d="M20 12.5l6 2.4v4.6c0 4-2.6 6.9-6 8-3.4-1.1-6-4-6-8v-4.6z" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/></svg>Every IT Euro</p>
+        <p>An independent, non-commercial information resource on European IT and cybersecurity procurement and digital sovereignty.</p>
+        <p>Not affiliated with the European Union institutions or with any company listed.</p>
+      </div>
+      <div>
+        <h2>Explore</h2>
+        <ul>
+          <li><a href="why-europe.html">Why Europe</a></li>
+          <li><a href="cybersecurity.html">Cybersecurity</a></li>
+          <li><a href="cybersecurity.html#critical-infrastructure">OT &amp; critical infrastructure</a></li>
+          <li><a href="alternatives.html">European alternatives</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Tools</h2>
+        <ul>
+          <li><a href="procurement.html#checklist">Procurement checklist</a></li>
+          <li><a href="sovereignty.html">Sovereignty assessment</a></li>
+          <li><a href="why-europe.html#myths">Common arguments</a></li>
+          <li><a href="procurement.html#regulation">Policy &amp; regulation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>This website</h2>
+        <ul>
+          <li><a href="about.html">About &amp; methodology</a></li>
+          <li><a href="sources.html">Sources</a></li>
+          <li><a href="about.html#corrections">Report a correction</a></li>
+          <li><a href="about.html#privacy">Privacy: no cookies, no tracking</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Text licensed under CC BY 4.0 · Code under the MIT License</p>
+      <p>Information only — not legal or procurement advice.</p>
+    </div>
+  </div>
+</footer>
+<!-- END:footer -->
+</body>
+</html>

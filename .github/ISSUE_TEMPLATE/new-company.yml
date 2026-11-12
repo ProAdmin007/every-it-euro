@@ -1,0 +1,48 @@
+name: Suggest a European company
+description: Propose a European IT or cybersecurity company for the alternatives database.
+title: "[Company] "
+labels: ["new company"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Company name
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: Official website
+    validations:
+      required: true
+  - type: input
+    id: hq
+    attributes:
+      label: Headquarters (city, country)
+    validations:
+      required: true
+  - type: textarea
+    id: ownership
+    attributes:
+      label: Ownership and ultimate parent company
+      description: Who owns or controls the company? Please include sources.
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Main category
+      options: [Cybersecurity, Network Security, OT Security, SIEM, Endpoint Security, Identity, PAM, Encryption, Cloud, Hosting, Collaboration, Email, Operating Systems, Infrastructure, Monitoring, Backup, Open Source]
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why is it relevant?
+      description: Products, deployment options (on-premises/cloud), open source status.
+  - type: checkboxes
+    id: disclosure
+    attributes:
+      label: Disclosure
+      options:
+        - label: I am affiliated with this company (this is fine — please disclose it).

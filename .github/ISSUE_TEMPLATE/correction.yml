@@ -1,0 +1,31 @@
+name: Correction
+description: Report an error, outdated ownership information or a broken source.
+title: "[Correction] "
+labels: ["correction"]
+body:
+  - type: input
+    id: where
+    attributes:
+      label: Page or company entry
+      description: For example "alternatives.html – WALLIX" or "procurement.html#regulation".
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What is incorrect?
+    validations:
+      required: true
+  - type: textarea
+    id: correct
+    attributes:
+      label: What should it say?
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: A link to an official or otherwise reliable source (company imprint, investor relations, EUR-Lex, reputable news).
+    validations:
+      required: true
