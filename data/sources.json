@@ -821,6 +821,117 @@
         "Critical infrastructure"
       ],
       "summary": "The CER Directive entered into force on 16 January 2023, had to be transposed by 17 October 2024 and covers eleven sectors including energy, transport, drinking water, digital infrastructure and public administration."
+    },
+    {
+      "id": "fortinet-10k-2025",
+      "title": "Fortinet, Inc. Annual Report on Form 10-K for the fiscal year ended December 31, 2025",
+      "organisation": "Fortinet, Inc. (filed with the US Securities and Exchange Commission)",
+      "url": "https://www.sec.gov/Archives/edgar/data/1262039/000126203926000007/ftnt-20251231.htm",
+      "published": "2026-02-25",
+      "accessed": "2026-11-12",
+      "type": "Company",
+      "topics": [
+        "Economy",
+        "Cybersecurity",
+        "Jurisdiction"
+      ],
+      "summary": "FY2025: revenue $6,799.6m (EMEA 42%); cost of revenue $1,328.9m; R&D $815.5m; sales and marketing $2,347.5m; G&A $233.4m; operating income $2,084.7m; net income $1,853.4m. Pre-tax income: $2,106.8m domestic (US), $175.4m foreign. Share repurchases $2.29bn; no dividends. 15,109 employees (about 30% US, 20% Canada, 50% elsewhere, primarily EMEA); R&D primarily in the US and Canada (about 78% of R&D teams in North America); about 87% of hardware manufactured in Taiwan; products with encryption subject to US export controls."
+    },
+    {
+      "id": "fr-register-fortinet",
+      "title": "FORTINET (SIREN 448 852 756) — financial data",
+      "organisation": "Annuaire des Entreprises, French government (DINUM)",
+      "url": "https://annuaire-entreprises.data.gouv.fr/donnees-financieres/448852756",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Other",
+      "topics": [
+        "Economy"
+      ],
+      "summary": "Fortinet's French subsidiary in Valbonne (Sophia Antipolis): revenue €154,191,798 and net result €8,586,380 for the financial year 2025; 500–999 employees (2024)."
+    },
+    {
+      "id": "fr-register-stormshield",
+      "title": "STORMSHIELD (SIREN 428 173 975) — company and financial data",
+      "organisation": "Annuaire des Entreprises, French government (DINUM)",
+      "url": "https://annuaire-entreprises.data.gouv.fr/donnees-financieres/428173975",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Other",
+      "topics": [
+        "Economy",
+        "Sovereignty"
+      ],
+      "summary": "Stormshield SAS, Issy-les-Moulineaux: revenue €76,464,286 and net result €11,286,281 for the financial year 2025; 250–499 employees (2024); establishments in Issy-les-Moulineaux, Lyon and Villeneuve-d'Ascq. No cost breakdown is published."
+    },
+    {
+      "id": "stormshield-about",
+      "title": "Stormshield, the European cybersecurity choice",
+      "organisation": "Stormshield",
+      "url": "https://stormshield.com/about-us/the-european-cybersecurity-choice/",
+      "published": null,
+      "accessed": "2026-11-12",
+      "type": "Company",
+      "topics": [
+        "Sovereignty",
+        "Cybersecurity"
+      ],
+      "summary": "Describes Stormshield as a wholly-owned subsidiary of the cyber division of Airbus Defence and Space."
+    },
+    {
+      "id": "anssi-stormshield-qualification-2025",
+      "title": "Décision n° 234/ANSSI/SDE/NP — qualification and approval of Stormshield Network Security UTM / NG-Firewall Software Suite",
+      "organisation": "ANSSI (French National Cybersecurity Agency)",
+      "url": "https://messervices.cyber.gouv.fr/visas/2025_234_np.pdf",
+      "published": "2025-02-13",
+      "accessed": "2026-11-12",
+      "type": "Official guidance",
+      "topics": [
+        "Cybersecurity",
+        "Sovereignty"
+      ],
+      "summary": "Qualifies Stormshield Network Security 4.3.x (x ≥ 12) at standard level and approves its firewall and VPN functions for information marked Diffusion Restreinte, EU RESTRICTED and NATO RESTRICTED, until 21 March 2027."
+    },
+    {
+      "id": "anssi-cc-2023-62",
+      "title": "Certification report ANSSI-CC-2023/62: Stormshield Network Security UTM/NG-Firewall Software Suite 4.3.12.2",
+      "organisation": "ANSSI (French National Cybersecurity Agency)",
+      "url": "https://cyber.gouv.fr/sites/default/files/document_type/ANSSI-CC-2023_62.pdf",
+      "published": "2023-12-28",
+      "accessed": "2026-11-12",
+      "type": "Official guidance",
+      "topics": [
+        "Cybersecurity"
+      ],
+      "summary": "Common Criteria certification at EAL4 augmented (ALC_FLR.3)."
+    },
+    {
+      "id": "airbus-fy2025-results",
+      "title": "Airbus Full Year 2025 results presentation",
+      "organisation": "Airbus SE",
+      "url": "https://www.airbus.com/sites/g/files/jlcbta136/files/2026-03/airbus_fy_2025_final_for_publication.pdf",
+      "published": "2026-02",
+      "accessed": "2026-11-12",
+      "type": "Company",
+      "topics": [
+        "Economy",
+        "Sovereignty"
+      ],
+      "summary": "Shareholding at 31 December 2025: free float 73.7%, SOGEPA (French state) 10.8%, GZBV (German state) 10.8%, SEPI (Spanish state) 4.1%, treasury shares 0.6%."
+    },
+    {
+      "id": "exclusive-networks-fy23",
+      "title": "Exclusive Networks FY-23 financial results",
+      "organisation": "Exclusive Networks SA (published via AMF/DILA)",
+      "url": "https://echanges.dila.gouv.fr/OPENDATA/AMF/BWR/2024/02/FCBWR155376_20240229.pdf",
+      "published": "2024-02-29",
+      "accessed": "2026-11-12",
+      "type": "Company",
+      "topics": [
+        "Economy",
+        "Cybersecurity"
+      ],
+      "summary": "European specialist cybersecurity distributor: gross sales €5,145m and net margin €468m (9.1% of gross sales) in 2023, across all vendors; gross sales is a non-GAAP measure."
     }
   ]
 }
