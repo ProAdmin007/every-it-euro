@@ -64,6 +64,7 @@ The site is available in **English, German, French, Spanish, Italian and Polish*
 ├── tools/build.py          ← development-only helper (Python 3.12+, no dependencies)
 ├── tools/review.py, add_company.py   ← maintenance helpers
 ├── MAINTAINING.md          ← how to review, add companies, process acquisitions, update translations
+├── methodology/            ← the rules: what makes a company European, inclusion, sources, editorial principles, tools, languages
 └── .github/                ← CI validation, issue templates, FUNDING.yml
 ```
 
@@ -154,7 +155,7 @@ git push -u origin main
 
 ## Maintaining the company database
 
-See **[MAINTAINING.md](MAINTAINING.md)** for the step-by-step guide. In short: run `python tools/review.py` every quarter (stale entries, broken links, websites that now redirect to another company), and add companies with `python tools/add_company.py`.
+The rules behind the database — what makes a company European, when a company is included or moved to the watchlist, which sources count — are in **[methodology/](methodology/README.md)**. See **[MAINTAINING.md](MAINTAINING.md)** for the step-by-step guide. In short: run `python tools/review.py` every quarter (stale entries, broken links, websites that now redirect to another company), and add companies with `python tools/add_company.py`.
 
 
 Each entry in `data/companies.json` has this shape:
