@@ -45,7 +45,9 @@ PAGES = [
     ("sovereignty.html", "0.8"),
     ("sources.html", "0.6"),
     ("about.html", "0.5"),
+    ("firewall-example.html", "0.8"),
 ]
+# The main navigation is the "nav" map in i18n/en/ui.json; pages not in it are linked from content and footer.
 EXTRA_PAGES = ["404.html"]  # English only: GitHub Pages serves the root 404.html for every missing URL.
 
 # Code, native name, HTML lang / hreflang, Open Graph locale. English must stay first (the default).
@@ -87,6 +89,10 @@ GLOBE = (
     '<svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false" class="lang-icon"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/>'
     '<path d="M3 12h18M12 3c2.6 2.6 3.8 5.6 3.8 9s-1.2 6.4-3.8 9c-2.6-2.6-3.8-5.6-3.8-9S9.4 5.6 12 3z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>'
 )
+
+# One Content Security Policy for every page: only resources from this website.
+CSP = ("default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; "
+       "connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'")
 
 errors: list[str] = []
 warnings: list[str] = []  # reported, but never block a build
@@ -182,7 +188,7 @@ def lang_switch(file: str, lang: str, prefix: str, langs: list[tuple]) -> str:
 
 def header(file: str, lang: str, prefix: str, ui: dict, langs: list[tuple]) -> str:
     items = []
-    for f, _ in PAGES:
+    for f in ui["nav"]:
         cur = ' aria-current="page"' if f == file else ""
         items.append(f'<li><a href="{f}"{cur}>{esc(ui["nav"][f])}</a></li>')
     switch = ""
@@ -232,6 +238,7 @@ def footer(ui: dict) -> str:
         <ul>
           <li><a href="procurement.html#checklist">{esc(t['checklist'])}</a></li>
           <li><a href="sovereignty.html">{esc(t['assessment'])}</a></li>
+          <li><a href="firewall-example.html">{esc(t['example'])}</a></li>
           <li><a href="why-europe.html#myths">{esc(t['myths'])}</a></li>
           <li><a href="procurement.html#regulation">{esc(t['regulation'])}</a></li>
         </ul>
@@ -525,6 +532,68 @@ def add_versions(text: str) -> str:
     return re.sub(r'(\s(?:href|src)="(?:\.\./)*)(assets/(?:css|js)/[^"?]+)"', repl, text)
 
 
+# --------------------------------------------------------------------------- search engines
+BRAND = "Every IT Euro"
+COMPANY_COUNT = 0  # set in main() from data/companies.json
+
+
+def apply_seo(text: str, file: str, lang: str, seo: dict, rel: str) -> tuple[str, str, str]:
+    """Title, meta description and Open Graph texts from i18n/seo.json. Returns (text, title, description)."""
+    entry = seo.get(lang, {}).get(file)
+    if not entry:
+        if file != "404.html":
+            warnings.append(f"i18n/seo.json: no title/description for {rel} (page text used)")
+        title = html.unescape(re.search(r"<title>(.*?)</title>", text).group(1)).split(" | ")[0]
+        m = re.search(r'<meta name="description" content="([^"]*)"', text)
+        return text, title, html.unescape(m.group(1)) if m else ""
+    title, desc = entry["title"], entry["description"].replace("{companies}", str(COMPANY_COUNT))
+    full = f"{title} | {BRAND}"
+    if len(full) > 65:
+        warnings.append(f"i18n/seo.json: title for {rel} is {len(full)} characters (keep it under about 60)")
+    if not 100 <= len(desc) <= 165:
+        warnings.append(f"i18n/seo.json: description for {rel} is {len(desc)} characters (aim for 120-160)")
+    text = re.sub(r"<title>.*?</title>", lambda m: f"<title>{esc(full)}</title>", text, count=1)
+    text = re.sub(r'(<meta name="description" content=")[^"]*(")', lambda m: m.group(1) + esc(desc) + m.group(2), text, count=1)
+    text = re.sub(r'(<meta property="og:title" content=")[^"]*(")', lambda m: m.group(1) + esc(title) + m.group(2), text, count=1)
+    text = re.sub(r'(<meta property="og:description" content=")[^"]*(")', lambda m: m.group(1) + esc(desc) + m.group(2), text, count=1)
+    return text, title, desc
+
+
+def structured_data(text: str, file: str, lang: str, title: str, desc: str, site_url: str, ui: dict,
+                    langs: list[tuple], dataset: dict | None) -> str:
+    """schema.org JSON-LD (WebSite, WebPage, BreadcrumbList and, for the database, Dataset).
+    A JSON-LD block is data, not script: the strict Content Security Policy does not apply to it."""
+    hl = next(h for c, _, h, _ in LANGUAGES if c == lang)
+    url = page_url(site_url, lang, file)
+    home = page_url(site_url, lang, "index.html")
+    website = {"@type": "WebSite", "@id": site_url + "#website", "url": site_url, "name": BRAND,
+               "inLanguage": [h for _, _, h, _ in langs]}
+    page = {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": title, "description": desc,
+            "inLanguage": hl, "isPartOf": {"@id": site_url + "#website"},
+            "license": "https://creativecommons.org/licenses/by/4.0/"}
+    graph = [website, page]
+    if file != "index.html":
+        crumbs = {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": ui["nav"]["index.html"], "item": home},
+            {"@type": "ListItem", "position": 2, "name": ui["nav"].get(file, title), "item": url}]}
+        page["breadcrumb"] = crumbs
+        graph.append(crumbs)
+    if dataset is not None:
+        graph.append({
+            "@type": "Dataset", "@id": url + "#dataset", "name": title, "description": desc, "url": url,
+            "isAccessibleForFree": True, "license": "https://creativecommons.org/licenses/by/4.0/",
+            "creator": {"@type": "Organization", "name": BRAND, "url": site_url},
+            "dateModified": dataset["lastUpdated"], "spatialCoverage": "Europe",
+            "keywords": ["European technology companies", "cybersecurity vendors", "digital sovereignty", "cloud providers"],
+            "distribution": [{"@type": "DataDownload", "encodingFormat": "application/json",
+                              "contentUrl": site_url + "data/companies.json"}]})
+    block = ('<script type="application/ld+json">'
+             + json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":"))
+             + "</script>\n")
+    text = re.sub(r'<script type="application/ld\+json">.*?</script>\n', "", text, flags=re.S)
+    return text.replace("</head>", block + "</head>", 1)
+
+
 # --------------------------------------------------------------------------- language plumbing
 def localise_paths(text: str, lang: str, prefix: str) -> str:
     """Set <html lang>, make asset paths work from a language folder and load the right string file."""
@@ -559,7 +628,8 @@ def apply_site_url(text: str, file: str, lang: str, site_url: str, langs: list[t
     alts += f'<link rel="alternate" hreflang="x-default" href="{page_url(site_url, DEFAULT_LANG, file)}">\n'
     text = re.sub(r'(<link rel="canonical" href="[^"]*">\n)', lambda m: m.group(1) + alts, text, count=1)
     locale = next(o for c, _, _, o in LANGUAGES if c == lang)
-    text = re.sub(r'(<meta property="og:type" content="[^"]*">\n)', lambda m: m.group(1) + f'<meta property="og:locale" content="{locale}">\n', text, count=1)
+    alt_locales = "".join(f'<meta property="og:locale:alternate" content="{o}">\n' for c, _, _, o in langs if c != lang and exists(c, file))
+    text = re.sub(r'(<meta property="og:type" content="[^"]*">\n)', lambda m: m.group(1) + f'<meta property="og:locale" content="{locale}">\n' + alt_locales, text, count=1)
     return text
 
 
@@ -657,6 +727,9 @@ def main() -> int:
         return 1
     check_vocabulary(ui_en, companies, watchlist, sources)
     langs = [l for l in LANGUAGES if l[0] == DEFAULT_LANG or (ROOT / l[0]).is_dir()]
+    seo = load_json("i18n/seo.json") or {}
+    global COMPANY_COUNT
+    COMPANY_COUNT = len(companies)
 
     outputs: dict[str, str] = {}
     for lang, *_ in langs:
@@ -677,6 +750,8 @@ def main() -> int:
                     warnings.append(f"{rel}: not translated yet (the language switcher links to the English page)")
                 continue
             text = strip_versions(path.read_text(encoding="utf-8"))
+            # One Content Security Policy for every page, defined above.
+            text = re.sub(r'(<meta http-equiv="Content-Security-Policy" content=")[^"]*(")', lambda m: m.group(1) + CSP + m.group(2), text)
             text = localise_paths(text, lang, prefix)
             text = replace_block(text, "header", header(f, lang, prefix, ui, langs), rel)
             text = replace_block(text, "footer", footer(ui), rel)
@@ -694,6 +769,9 @@ def main() -> int:
                 text = re.sub(r'<base href="[^"]*">', f'<base href="{base_path}">', text)
             else:
                 text = apply_site_url(text, f, lang, site_url, langs)
+                text, title, desc = apply_seo(text, f, lang, seo, rel)
+                text = structured_data(text, f, lang, title, desc, site_url, ui, langs,
+                                       (cdata or {}).get("meta") if f == "alternatives.html" else None)
             text = re.sub(r'(<a class="repo-link" href=")[^"]*(")', lambda m: m.group(1) + repo_url + m.group(2), text)
             if lang != DEFAULT_LANG:
                 # Links to pages that are not translated (yet) go to the English page.

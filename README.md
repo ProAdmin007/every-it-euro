@@ -26,6 +26,7 @@ The site is available in **English, German, French, Spanish, Italian and Polish*
 | Page text | `<lang>/*.html` (translated copies of the English pages) |
 | Header, footer, labels in generated sections | `i18n/<lang>/ui.json` (same keys as `i18n/en/ui.json`) |
 | Texts used by the interactive tools | `assets/js/i18n/<lang>.js` (same keys as `en.js`) |
+| Search-engine titles and descriptions | `i18n/seo.json` (per language and page; the build warns about titles or descriptions that are too long) |
 
 **The company database, the ownership watchlist and the source summaries are maintained in English only** (`data/*.json`) and shown in English on every language version, with a short note and `lang="en"` so browsers offer to translate them. Category names, countries, classifications and all labels are translated. Adding or updating a company is therefore a change to one file.
 
@@ -73,6 +74,7 @@ The site is available in **English, German, French, Spanish, Italian and Polish*
 `data/companies.json` and `data/sources.json` are the sources of truth. `tools/build.py` renders them into `alternatives.html` and `sources.html` in every language, so **all content is readable without JavaScript**. JavaScript only adds search and filtering. The build script also:
 
 - injects the shared header (with the language switcher) and footer into every page;
+- sets page titles, meta descriptions and schema.org structured data (JSON-LD: WebSite, WebPage, breadcrumbs, and a Dataset for the company database) from `i18n/seo.json`;
 - sets canonical URLs, `hreflang` alternates, Open Graph URLs, `sitemap.xml`, `robots.txt` and the 404 `<base>` from `site.config.json`;
 - validates the JSON schema, every internal link and anchor, every asset path and every citation (`sources.html#src-…`), and warns about missing or outdated translations.
 

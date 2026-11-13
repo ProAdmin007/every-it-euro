@@ -588,3 +588,31 @@ section[id], h2[id], h3[id] { scroll-margin-top: 90px; }
 /* Long compound words (German, Polish, …) must not push headings off small screens. */
 h1, h2, h3, h4 { overflow-wrap: break-word; }
 html:not([lang="en"]) h1, html:not([lang="en"]) h2 { hyphens: auto; }
+
+/* ---------- Worked example: firewall cost of ownership ---------- */
+.tco { margin: 1rem 0 0; }
+.tco-shared { max-width: 26rem; margin-bottom: 1rem; }
+.tco-shared input[type="range"] { width: 100%; accent-color: var(--accent); }
+.tco-shared output { font-weight: 700; }
+.tco-offers { display: grid; gap: 1rem 1.5rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); }
+.tco-offer { margin: 0; padding: 1rem 1.25rem; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); min-width: 0; }
+.tco-offer legend { font-weight: 700; padding: 0 .35rem; }
+.tco-offer .field { margin-bottom: .75rem; }
+.tco-offer label { display: block; font-size: .9rem; margin-bottom: .25rem; }
+.tco-offer input { width: 100%; font: inherit; padding: .5rem .65rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg); color: var(--text); }
+.tco-result .num, .per100 .num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.tco-result tfoot th, .tco-result tfoot td, .per100 tfoot th, .per100 tfoot td { font-weight: 700; }
+.per100 caption { caption-side: top; text-align: left; font-weight: 700; padding: .75rem 1rem .25rem; }
+.scenario h3 { margin-bottom: .5rem; }
+.scenario p { margin-bottom: .6rem; }
+
+/* ---------- Worked example: what comes back to Europe ---------- */
+.stat-card .stat-label { font-weight: 650; margin-bottom: .25rem; }
+.stat-card .stat-value { font-size: clamp(2rem, 4vw, 2.6rem); font-weight: 800; letter-spacing: -.02em; color: var(--accent); margin: 0 0 .35rem; font-variant-numeric: tabular-nums; }
+.stat-card .stat-note { font-size: .9rem; color: var(--text-muted); margin: 0; }
+.europe-table td { min-width: 16rem; }
+.europe-table td strong { display: block; font-size: 1.05rem; }
+.europe-table .where { display: flex; align-items: center; gap: .5rem; margin: .35rem 0 .4rem; }
+.europe-table .where .scale-label { font-size: .85rem; font-weight: 600; }
+.europe-table .where .scale { width: 64px; flex: none; }
+.europe-table .where .scale-label { margin-top: 0; }

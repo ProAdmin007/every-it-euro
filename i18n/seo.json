@@ -1,0 +1,231 @@
+{
+  "_comment": "Search-engine titles and descriptions per language and page, applied by tools/build.py to <title>, meta description and Open Graph. Titles: about 40–45 characters (the build appends ' | Every IT Euro'). Descriptions: about 120–160 characters. A missing entry keeps the page's own text and is reported as a warning. Use {companies} for the current number of companies in the database.",
+  "en": {
+    "index.html": {
+      "title": "Why Buy European IT and Cybersecurity?",
+      "description": "Every IT euro is a strategic choice. Evidence-based guidance on European IT and cybersecurity procurement, digital sovereignty and European alternatives."
+    },
+    "why-europe.html": {
+      "title": "Digital Sovereignty: Why Buy European IT",
+      "description": "Why EU hosting is not sovereignty, how jurisdiction and the CLOUD Act matter, and what Europe gains from buying European technology — with sources."
+    },
+    "cybersecurity.html": {
+      "title": "Cybersecurity Supplier Risk and Sovereignty",
+      "description": "Why dependency matters most for security tooling: supply-chain risk, updates and control, and twelve questions for OT and critical infrastructure."
+    },
+    "alternatives.html": {
+      "title": "European Alternatives to US IT and Security",
+      "description": "Searchable database of {companies} European cybersecurity, cloud, collaboration and infrastructure vendors, with ownership, classification and sources."
+    },
+    "procurement.html": {
+      "title": "Sovereign IT Procurement Checklist and NIS2",
+      "description": "A printable 25-question procurement checklist, what public buyers may require, and how NIS2, the CRA, GDPR, the Data Act and DORA relate to suppliers."
+    },
+    "sovereignty.html": {
+      "title": "Technology Sovereignty Assessment Tool",
+      "description": "Free, transparent assessment: answer questions about an IT system and see whether sovereignty relevance is low, medium, high or strategic — and why."
+    },
+    "sources.html": {
+      "title": "Sources and Evidence",
+      "description": "All sources behind Every IT Euro: EU legislation, court rulings, official policy, annual reports and news, each with publication and access dates."
+    },
+    "about.html": {
+      "title": "About, Methodology and Privacy",
+      "description": "How Every IT Euro works: editorial principles, how we classify European companies, sources, corrections and privacy — no cookies, no tracking."
+    },
+    "firewall-example.html": {
+      "title": "How Much of Your IT Budget Stays in Europe?",
+      "description": "secunet vs Fortinet on their 2025 annual reports: of every €100, how much goes to salaries, taxes, development and profit in Europe."
+    }
+  },
+  "de": {
+    "index.html": {
+      "title": "Warum europäische IT und Cybersicherheit?",
+      "description": "Jeder IT-Euro ist eine strategische Entscheidung. Belegte Orientierung zur Beschaffung europäischer IT und Cybersicherheit und zu digitaler Souveränität."
+    },
+    "why-europe.html": {
+      "title": "Digitale Souveränität: Warum europäisch?",
+      "description": "Warum EU-Hosting keine Souveränität ist, welche Rolle Rechtsordnung und CLOUD Act spielen und was Europa von europäischer Technologie hat – mit Quellen."
+    },
+    "cybersecurity.html": {
+      "title": "Cybersicherheit: Lieferantenrisiko",
+      "description": "Warum Abhängigkeit bei Sicherheitslösungen besonders zählt: Lieferkette, Updates und Kontrolle – plus zwölf Fragen für OT und kritische Infrastruktur."
+    },
+    "alternatives.html": {
+      "title": "Europäische Alternativen zu US-IT",
+      "description": "Durchsuchbare Datenbank mit {companies} europäischen Anbietern für Cybersicherheit, Cloud, Kollaboration und Infrastruktur – mit Eigentümern und Quellen."
+    },
+    "procurement.html": {
+      "title": "Checkliste souveräne IT-Beschaffung, NIS2",
+      "description": "Druckbare Checkliste mit 25 Fragen, was öffentliche Auftraggeber verlangen dürfen und wie NIS2, CRA, DSGVO, Data Act und DORA die Lieferantenwahl betreffen."
+    },
+    "sovereignty.html": {
+      "title": "Test zur Technologiesouveränität",
+      "description": "Kostenlose, transparente Bewertung: Beantworten Sie Fragen zu einem IT-System und sehen Sie, ob Souveränität gering, mittel, hoch oder strategisch relevant ist."
+    },
+    "sources.html": {
+      "title": "Quellen und Belege",
+      "description": "Alle Quellen von Every IT Euro: EU-Recht, Urteile, offizielle Politik, Geschäftsberichte und Nachrichten – jeweils mit Veröffentlichungs- und Abrufdatum."
+    },
+    "about.html": {
+      "title": "Über uns, Methodik und Datenschutz",
+      "description": "Wie Every IT Euro arbeitet: redaktionelle Grundsätze, Einstufung europäischer Unternehmen, Quellen, Korrekturen und Datenschutz – ohne Cookies und Tracking."
+    },
+    "firewall-example.html": {
+      "title": "Wie viel Ihres IT-Budgets bleibt in Europa?",
+      "description": "secunet und Fortinet im Vergleich ihrer Geschäftsberichte 2025: Wie viel von 100 € fließt in Europa in Gehälter, Steuern, Entwicklung und Gewinn?"
+    }
+  },
+  "fr": {
+    "index.html": {
+      "title": "Acheter européen : IT et cybersécurité",
+      "description": "Chaque euro informatique est un choix stratégique. Des repères sourcés sur l’achat européen en IT et cybersécurité et sur la souveraineté numérique."
+    },
+    "why-europe.html": {
+      "title": "Souveraineté numérique : pourquoi l’Europe",
+      "description": "Pourquoi l’hébergement dans l’UE ne suffit pas, le rôle de la juridiction et du CLOUD Act, et ce que l’Europe gagne à acheter européen — avec sources."
+    },
+    "cybersecurity.html": {
+      "title": "Cybersécurité : risque fournisseur",
+      "description": "Pourquoi la dépendance compte surtout pour les outils de sécurité : chaîne d’approvisionnement, mises à jour, contrôle — et douze questions pour l’OT."
+    },
+    "alternatives.html": {
+      "title": "Alternatives européennes aux solutions US",
+      "description": "Base de données de {companies} fournisseurs européens en cybersécurité, cloud, collaboration et infrastructure, avec actionnariat, classification et sources."
+    },
+    "procurement.html": {
+      "title": "Checklist d’achat IT souverain et NIS 2",
+      "description": "Une checklist imprimable de 25 questions, ce que les acheteurs publics peuvent exiger, et le lien entre NIS 2, CRA, RGPD, Data Act, DORA et fournisseurs."
+    },
+    "sovereignty.html": {
+      "title": "Évaluation de la souveraineté technologique",
+      "description": "Évaluation gratuite et transparente : répondez à des questions sur un système et voyez si la souveraineté est un enjeu faible, moyen, élevé ou stratégique."
+    },
+    "sources.html": {
+      "title": "Sources et preuves",
+      "description": "Toutes les sources d’Every IT Euro : législation de l’UE, jurisprudence, politiques publiques, rapports annuels et presse, avec dates de publication et d’accès."
+    },
+    "about.html": {
+      "title": "À propos, méthodologie et confidentialité",
+      "description": "Le fonctionnement d’Every IT Euro : principes éditoriaux, classification des entreprises européennes, sources, corrections et confidentialité, sans cookies."
+    },
+    "firewall-example.html": {
+      "title": "Quelle part du budget IT reste en Europe ?",
+      "description": "secunet et Fortinet selon leurs rapports annuels 2025 : sur 100 €, combien vont aux salaires, impôts, développement et bénéfices en Europe ?"
+    }
+  },
+  "es": {
+    "index.html": {
+      "title": "Comprar TI y ciberseguridad europeas",
+      "description": "Cada euro de TI es una decisión estratégica. Orientación basada en fuentes sobre la compra europea de TI y ciberseguridad y la soberanía digital."
+    },
+    "why-europe.html": {
+      "title": "Soberanía digital: por qué comprar europeo",
+      "description": "Por qué alojar datos en la UE no es soberanía, el papel de la jurisdicción y la CLOUD Act, y lo que gana Europa al comprar tecnología europea, con fuentes."
+    },
+    "cybersecurity.html": {
+      "title": "Ciberseguridad: riesgo de proveedor",
+      "description": "Por qué la dependencia importa sobre todo en seguridad: cadena de suministro, actualizaciones y control, y doce preguntas para OT e infraestructuras críticas."
+    },
+    "alternatives.html": {
+      "title": "Alternativas europeas a la TI de EE. UU.",
+      "description": "Base de datos de {companies} proveedores europeos de ciberseguridad, nube, colaboración e infraestructura, con propiedad, clasificación y fuentes."
+    },
+    "procurement.html": {
+      "title": "Lista de compra de TI soberana y NIS 2",
+      "description": "Lista imprimible de 25 preguntas, qué pueden exigir los compradores públicos y cómo se relacionan NIS 2, CRA, RGPD, Reglamento de Datos y DORA con los proveedores."
+    },
+    "sovereignty.html": {
+      "title": "Evaluación de soberanía tecnológica",
+      "description": "Evaluación gratuita y transparente: responda preguntas sobre un sistema y vea si la soberanía es poco, medianamente, muy relevante o estratégica."
+    },
+    "sources.html": {
+      "title": "Fuentes y evidencias",
+      "description": "Todas las fuentes de Every IT Euro: legislación de la UE, sentencias, políticas oficiales, informes anuales y noticias, con fechas de publicación y consulta."
+    },
+    "about.html": {
+      "title": "Acerca de, metodología y privacidad",
+      "description": "Cómo funciona Every IT Euro: principios editoriales, clasificación de empresas europeas, fuentes, correcciones y privacidad, sin cookies ni seguimiento."
+    },
+    "firewall-example.html": {
+      "title": "¿Cuánto del presupuesto TI queda en Europa?",
+      "description": "secunet frente a Fortinet según sus informes anuales de 2025: de cada 100 €, cuánto va a salarios, impuestos, desarrollo y beneficios en Europa."
+    }
+  },
+  "it": {
+    "index.html": {
+      "title": "Perché acquistare IT e cybersicurezza europee",
+      "description": "Ogni euro IT è una scelta strategica. Indicazioni documentate sull’acquisto europeo di IT e cybersicurezza e sulla sovranità digitale."
+    },
+    "why-europe.html": {
+      "title": "Sovranità digitale: perché scegliere europeo",
+      "description": "Perché l’hosting nell’UE non basta, il ruolo della giurisdizione e del CLOUD Act e cosa guadagna l’Europa acquistando tecnologia europea, con fonti."
+    },
+    "cybersecurity.html": {
+      "title": "Cybersicurezza: rischio fornitore",
+      "description": "Perché la dipendenza conta soprattutto negli strumenti di sicurezza: catena di fornitura, aggiornamenti e controllo, più dodici domande per l’OT."
+    },
+    "alternatives.html": {
+      "title": "Alternative europee all’IT statunitense",
+      "description": "Database di {companies} fornitori europei di cybersicurezza, cloud, collaborazione e infrastruttura, con assetto proprietario, classificazione e fonti."
+    },
+    "procurement.html": {
+      "title": "Checklist per acquisti IT sovrani e NIS 2",
+      "description": "Una checklist stampabile di 25 domande, cosa possono richiedere gli acquirenti pubblici e come NIS 2, CRA, GDPR, Data Act e DORA riguardano i fornitori."
+    },
+    "sovereignty.html": {
+      "title": "Valutazione della sovranità tecnologica",
+      "description": "Valutazione gratuita e trasparente: rispondete a domande su un sistema IT e scoprite se la sovranità è poco, mediamente, molto rilevante o strategica."
+    },
+    "sources.html": {
+      "title": "Fonti ed evidenze",
+      "description": "Tutte le fonti di Every IT Euro: legislazione UE, sentenze, politiche ufficiali, relazioni annuali e notizie, con data di pubblicazione e di consultazione."
+    },
+    "about.html": {
+      "title": "Chi siamo, metodologia e privacy",
+      "description": "Come funziona Every IT Euro: principi editoriali, classificazione delle aziende europee, fonti, correzioni e privacy, senza cookie né tracciamento."
+    },
+    "firewall-example.html": {
+      "title": "Quanto del budget IT resta in Europa?",
+      "description": "secunet e Fortinet a confronto sui bilanci 2025: di ogni 100 €, quanto va in Europa a stipendi, imposte, sviluppo e utili?"
+    }
+  },
+  "pl": {
+    "index.html": {
+      "title": "Europejskie IT i cyberbezpieczeństwo",
+      "description": "Każde euro wydane na IT to wybór strategiczny. Rzetelne wskazówki dotyczące zakupów europejskiego IT i cyberbezpieczeństwa oraz suwerenności cyfrowej."
+    },
+    "why-europe.html": {
+      "title": "Suwerenność cyfrowa: dlaczego Europa",
+      "description": "Dlaczego hosting w UE to nie suwerenność, jaką rolę odgrywa jurysdykcja i CLOUD Act oraz co zyskuje Europa, kupując europejskie technologie – ze źródłami."
+    },
+    "cybersecurity.html": {
+      "title": "Cyberbezpieczeństwo: ryzyko dostawcy",
+      "description": "Dlaczego zależność ma szczególne znaczenie w narzędziach bezpieczeństwa: łańcuch dostaw, aktualizacje i kontrola oraz dwanaście pytań dla OT."
+    },
+    "alternatives.html": {
+      "title": "Europejskie alternatywy dla IT z USA",
+      "description": "Baza {companies} europejskich dostawców cyberbezpieczeństwa, chmury, narzędzi do współpracy i infrastruktury – z właścicielami, klasyfikacją i źródłami."
+    },
+    "procurement.html": {
+      "title": "Suwerenne zakupy IT: lista kontrolna i NIS 2",
+      "description": "Lista kontrolna 25 pytań do druku, czego mogą wymagać zamawiający publiczni oraz jak NIS 2, CRA, RODO, akt w sprawie danych i DORA dotyczą dostawców."
+    },
+    "sovereignty.html": {
+      "title": "Test suwerenności technologicznej",
+      "description": "Bezpłatna, przejrzysta ocena: odpowiedz na pytania o system IT i sprawdź, czy suwerenność ma znaczenie niskie, średnie, wysokie czy strategiczne."
+    },
+    "sources.html": {
+      "title": "Źródła i dowody",
+      "description": "Wszystkie źródła Every IT Euro: prawo UE, orzeczenia, oficjalne polityki, raporty roczne i wiadomości – z datą publikacji i dostępu."
+    },
+    "about.html": {
+      "title": "O projekcie, metodologia i prywatność",
+      "description": "Jak działa Every IT Euro: zasady redakcyjne, klasyfikacja firm europejskich, źródła, korekty i prywatność – bez plików cookie i śledzenia."
+    },
+    "firewall-example.html": {
+      "title": "Ile z budżetu IT zostaje w Europie?",
+      "description": "secunet i Fortinet według raportów rocznych za 2025 r.: ile ze 100 € trafia w Europie na wynagrodzenia, podatki, rozwój i zysk?"
+    }
+  }
+}
