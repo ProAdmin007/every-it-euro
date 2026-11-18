@@ -1,5 +1,5 @@
 /*
- * Every IT Euro — interface strings used by the JavaScript tools (English).
+ * EU Tech Compass — interface strings used by the JavaScript tools (English).
  * Always loaded first. Translations live next to this file (de.js, fr.js, …), use the same keys and
  * override these texts; any key missing from a translation falls back to the English text here.
  * Placeholders such as {done} and {total} are replaced at runtime and must be kept.

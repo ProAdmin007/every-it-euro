@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Every IT Euro — static build helper (development only; not needed on GitHub Pages).
+EU Tech Compass — static build helper (development only; not needed on GitHub Pages).
 
 What it does
   1. Injects the shared header (with the language switcher) and footer into every page.
@@ -58,6 +58,7 @@ LANGUAGES = [
     ("es", "Español", "es", "es_ES"),
     ("it", "Italiano", "it", "it_IT"),
     ("pl", "Polski", "pl", "pl_PL"),
+    ("nl", "Nederlands", "nl", "nl_NL"),
 ]
 DEFAULT_LANG = "en"
 
@@ -202,7 +203,7 @@ def header(file: str, lang: str, prefix: str, ui: dict, langs: list[tuple]) -> s
     return f"""<a class="skip-link" href="#main">{esc(ui['skipLink'])}</a>
 {switch}<header class="site-header">
   <div class="container header-inner">
-    <a class="brand" href="index.html">{LOGO}<span>Every IT Euro<small>{esc(ui['tagline'])}</small></span></a>
+    <a class="brand" href="index.html">{LOGO}<span>EU Tech Compass<small>{esc(ui['tagline'])}</small></span></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle-icon" aria-hidden="true"></span>{esc(ui['menu'])}</button>
     <nav id="site-nav" class="site-nav" aria-label="{esc(ui['mainNavLabel'])}">
       <ul>
@@ -220,7 +221,7 @@ def footer(ui: dict) -> str:
   <div class="container">
     <div class="footer-grid">
       <div>
-        <p class="footer-brand">{LOGO}Every IT Euro</p>
+        <p class="footer-brand">{LOGO}EU Tech Compass</p>
         <p>{esc(t['intro'])}</p>
         <p>{esc(t['notAffiliated'])}</p>
       </div>
@@ -533,7 +534,7 @@ def add_versions(text: str) -> str:
 
 
 # --------------------------------------------------------------------------- search engines
-BRAND = "Every IT Euro"
+BRAND = "EU Tech Compass"
 COMPANY_COUNT = 0  # set in main() from data/companies.json
 
 

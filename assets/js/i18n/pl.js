@@ -1,5 +1,5 @@
 /*
- * Every IT Euro — interface strings used by the JavaScript tools (Polish / Polski).
+ * EU Tech Compass — interface strings used by the JavaScript tools (Polish / Polski).
  * Same keys as en.js. Placeholders such as {done} and {total} are replaced at runtime and must be kept.
  * Count strings are phrased so that they are grammatical for any number (Polish plural forms vary).
  */

@@ -1,5 +1,5 @@
 /*
- * Every IT Euro — interface strings used by the JavaScript tools (Italian / Italiano).
+ * EU Tech Compass — interface strings used by the JavaScript tools (Italian / Italiano).
  * Same keys as en.js. Placeholders such as {done} and {total} are replaced at runtime and must be kept.
  */
 window.EveryItEuroStrings = {

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Every IT Euro — add a company to data/companies.json by answering a few questions.
+EU Tech Compass — add a company to data/companies.json by answering a few questions.
 
 Usage
   python tools/add_company.py
@@ -94,7 +94,7 @@ def main() -> int:
     ui = json.loads((ROOT / "i18n/en/ui.json").read_text(encoding="utf-8"))
     ids = {c["id"] for c in data["companies"]}
 
-    print("Add a company to Every IT Euro. Use neutral, factual wording and official sources.\n")
+    print("Add a company to EU Tech Compass. Use neutral, factual wording and official sources.\n")
     name = ask("Company name (as on its own website)")
     slug = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
     cid = ask("Id (lowercase, hyphens)", slug,

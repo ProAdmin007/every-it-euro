@@ -2,7 +2,7 @@
 
 ## Languages offered
 
-English (default, in the repository root) plus German, French, Spanish, Italian and Polish — the five largest native languages in the EU — each in its own folder (`de/`, `fr/`, `es/`, `it/`, `pl/`).
+English (default, in the repository root) plus German, French, Spanish, Italian and Polish — the five largest native languages in the EU — and Dutch, each in its own folder (`de/`, `fr/`, `es/`, `it/`, `pl/`, `nl/`).
 
 ## What is translated
 

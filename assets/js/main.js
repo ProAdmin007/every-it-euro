@@ -1,5 +1,5 @@
 /*
- * Every IT Euro — shared behaviour.
+ * EU Tech Compass — shared behaviour.
  * Loaded synchronously in <head> so the "js" class is set (and any language redirect happens)
  * before first paint; everything else waits for DOMContentLoaded.
  * No tracking and no cookies. The only thing ever stored is a language you pick yourself in the
@@ -10,15 +10,15 @@ document.documentElement.classList.add('js');
 var LANG_KEY = 'every-it-euro-lang';
 
 /*
- * Language selection. English pages live in the site root, translations in /de/, /fr/, /es/, /it/
- * and /pl/. Only root (English) pages redirect, so a link to a translated page is always respected:
+ * Language selection. English pages live in the site root, translations in /de/, /fr/, /es/, /it/,
+ * /pl/ and /nl/. Only root (English) pages redirect, so a link to a translated page is always respected:
  *   1. a language the visitor picked earlier in the switcher wins;
  *   2. otherwise the first supported language in the browser/device preferences is used;
  *   3. otherwise the page stays in English.
  */
 (function () {
   'use strict';
-  var SUPPORTED = ['en', 'de', 'fr', 'es', 'it', 'pl'];
+  var SUPPORTED = ['en', 'de', 'fr', 'es', 'it', 'pl', 'nl'];
   var root = document.documentElement;
   if (root.getAttribute('lang') !== 'en' || root.hasAttribute('data-no-lang-redirect')) return;
 

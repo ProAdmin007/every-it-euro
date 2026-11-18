@@ -1,6 +1,6 @@
 # Methodology
 
-This folder is the reference for **how Every IT Euro works**: what we call European, which companies we list, which sources we accept, how the tools reach their results and how translations are handled. The website shows a public summary (`about.html`, `alternatives.html#classification`, `sovereignty.html`); these documents hold the full rules.
+This folder is the reference for **how EU Tech Compass works**: what we call European, which companies we list, which sources we accept, how the tools reach their results and how translations are handled. The website shows a public summary (`about.html`, `alternatives.html#classification`, `sovereignty.html`); these documents hold the full rules.
 
 | Document | Answers |
 |---|---|

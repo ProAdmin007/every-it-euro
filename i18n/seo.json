@@ -1,9 +1,9 @@
 {
-  "_comment": "Search-engine titles and descriptions per language and page, applied by tools/build.py to <title>, meta description and Open Graph. Titles: about 40–45 characters (the build appends ' | Every IT Euro'). Descriptions: about 120–160 characters. A missing entry keeps the page's own text and is reported as a warning. Use {companies} for the current number of companies in the database.",
+  "_comment": "Search-engine titles and descriptions per language and page, applied by tools/build.py to <title>, meta description and Open Graph. Titles: about 40–45 characters (the build appends ' | EU Tech Compass'). Descriptions: about 120–160 characters. A missing entry keeps the page's own text and is reported as a warning. Use {companies} for the current number of companies in the database.",
   "en": {
     "index.html": {
       "title": "Why Buy European IT and Cybersecurity?",
-      "description": "Every IT euro is a strategic choice. Evidence-based guidance on European IT and cybersecurity procurement, digital sovereignty and European alternatives."
+      "description": "Every euro spent on IT & tech is a strategic choice. Evidence-based guidance on European IT and cybersecurity, digital sovereignty and European alternatives."
     },
     "why-europe.html": {
       "title": "Digital Sovereignty: Why Buy European IT",
@@ -27,11 +27,11 @@
     },
     "sources.html": {
       "title": "Sources and Evidence",
-      "description": "All sources behind Every IT Euro: EU legislation, court rulings, official policy, annual reports and news, each with publication and access dates."
+      "description": "All sources behind EU Tech Compass: EU legislation, court rulings, official policy, annual reports and news, each with publication and access dates."
     },
     "about.html": {
       "title": "About, Methodology and Privacy",
-      "description": "How Every IT Euro works: editorial principles, how we classify European companies, sources, corrections and privacy — no cookies, no tracking."
+      "description": "How EU Tech Compass works: editorial principles, how we classify European companies, sources, corrections and privacy — no cookies, no tracking."
     },
     "firewall-example.html": {
       "title": "How Much of Your IT Budget Stays in Europe?",
@@ -41,7 +41,7 @@
   "de": {
     "index.html": {
       "title": "Warum europäische IT und Cybersicherheit?",
-      "description": "Jeder IT-Euro ist eine strategische Entscheidung. Belegte Orientierung zur Beschaffung europäischer IT und Cybersicherheit und zu digitaler Souveränität."
+      "description": "Jeder Euro für IT & Technik ist eine strategische Entscheidung. Belegte Orientierung zu europäischer IT, Cybersicherheit und digitaler Souveränität."
     },
     "why-europe.html": {
       "title": "Digitale Souveränität: Warum europäisch?",
@@ -65,11 +65,11 @@
     },
     "sources.html": {
       "title": "Quellen und Belege",
-      "description": "Alle Quellen von Every IT Euro: EU-Recht, Urteile, offizielle Politik, Geschäftsberichte und Nachrichten – jeweils mit Veröffentlichungs- und Abrufdatum."
+      "description": "Alle Quellen von EU Tech Compass: EU-Recht, Urteile, offizielle Politik, Geschäftsberichte und Nachrichten – jeweils mit Veröffentlichungs- und Abrufdatum."
     },
     "about.html": {
       "title": "Über uns, Methodik und Datenschutz",
-      "description": "Wie Every IT Euro arbeitet: redaktionelle Grundsätze, Einstufung europäischer Unternehmen, Quellen, Korrekturen und Datenschutz – ohne Cookies und Tracking."
+      "description": "Wie EU Tech Compass arbeitet: redaktionelle Grundsätze, Einstufung europäischer Unternehmen, Quellen, Korrekturen und Datenschutz – ohne Cookies und Tracking."
     },
     "firewall-example.html": {
       "title": "Wie viel Ihres IT-Budgets bleibt in Europa?",
@@ -79,7 +79,7 @@
   "fr": {
     "index.html": {
       "title": "Acheter européen : IT et cybersécurité",
-      "description": "Chaque euro informatique est un choix stratégique. Des repères sourcés sur l’achat européen en IT et cybersécurité et sur la souveraineté numérique."
+      "description": "Chaque euro dépensé en IT et en tech est un choix stratégique. Des repères sourcés sur l’achat européen en IT et cybersécurité et sur la souveraineté numérique."
     },
     "why-europe.html": {
       "title": "Souveraineté numérique : pourquoi l’Europe",
@@ -103,11 +103,11 @@
     },
     "sources.html": {
       "title": "Sources et preuves",
-      "description": "Toutes les sources d’Every IT Euro : législation de l’UE, jurisprudence, politiques publiques, rapports annuels et presse, avec dates de publication et d’accès."
+      "description": "Toutes les sources d’EU Tech Compass : législation de l’UE, jurisprudence, politiques publiques, rapports annuels et presse, avec dates de publication et d’accès."
     },
     "about.html": {
       "title": "À propos, méthodologie et confidentialité",
-      "description": "Le fonctionnement d’Every IT Euro : principes éditoriaux, classification des entreprises européennes, sources, corrections et confidentialité, sans cookies."
+      "description": "Le fonctionnement d’EU Tech Compass : principes éditoriaux, classification des entreprises européennes, sources, corrections et confidentialité, sans cookies."
     },
     "firewall-example.html": {
       "title": "Quelle part du budget IT reste en Europe ?",
@@ -117,7 +117,7 @@
   "es": {
     "index.html": {
       "title": "Comprar TI y ciberseguridad europeas",
-      "description": "Cada euro de TI es una decisión estratégica. Orientación basada en fuentes sobre la compra europea de TI y ciberseguridad y la soberanía digital."
+      "description": "Cada euro gastado en TI y tecnología es una decisión estratégica. Orientación con fuentes sobre TI y ciberseguridad europeas y soberanía digital."
     },
     "why-europe.html": {
       "title": "Soberanía digital: por qué comprar europeo",
@@ -141,11 +141,11 @@
     },
     "sources.html": {
       "title": "Fuentes y evidencias",
-      "description": "Todas las fuentes de Every IT Euro: legislación de la UE, sentencias, políticas oficiales, informes anuales y noticias, con fechas de publicación y consulta."
+      "description": "Todas las fuentes de EU Tech Compass: legislación de la UE, sentencias, políticas oficiales, informes anuales y noticias, con fechas de publicación y consulta."
     },
     "about.html": {
       "title": "Acerca de, metodología y privacidad",
-      "description": "Cómo funciona Every IT Euro: principios editoriales, clasificación de empresas europeas, fuentes, correcciones y privacidad, sin cookies ni seguimiento."
+      "description": "Cómo funciona EU Tech Compass: principios editoriales, clasificación de empresas europeas, fuentes, correcciones y privacidad, sin cookies ni seguimiento."
     },
     "firewall-example.html": {
       "title": "¿Cuánto del presupuesto TI queda en Europa?",
@@ -155,7 +155,7 @@
   "it": {
     "index.html": {
       "title": "Perché acquistare IT e cybersicurezza europee",
-      "description": "Ogni euro IT è una scelta strategica. Indicazioni documentate sull’acquisto europeo di IT e cybersicurezza e sulla sovranità digitale."
+      "description": "Ogni euro speso in IT e tecnologia è una scelta strategica. Indicazioni documentate sull’acquisto europeo di IT e cybersicurezza e sulla sovranità digitale."
     },
     "why-europe.html": {
       "title": "Sovranità digitale: perché scegliere europeo",
@@ -179,11 +179,11 @@
     },
     "sources.html": {
       "title": "Fonti ed evidenze",
-      "description": "Tutte le fonti di Every IT Euro: legislazione UE, sentenze, politiche ufficiali, relazioni annuali e notizie, con data di pubblicazione e di consultazione."
+      "description": "Tutte le fonti di EU Tech Compass: legislazione UE, sentenze, politiche ufficiali, relazioni annuali e notizie, con data di pubblicazione e di consultazione."
     },
     "about.html": {
       "title": "Chi siamo, metodologia e privacy",
-      "description": "Come funziona Every IT Euro: principi editoriali, classificazione delle aziende europee, fonti, correzioni e privacy, senza cookie né tracciamento."
+      "description": "Come funziona EU Tech Compass: principi editoriali, classificazione delle aziende europee, fonti, correzioni e privacy, senza cookie né tracciamento."
     },
     "firewall-example.html": {
       "title": "Quanto del budget IT resta in Europa?",
@@ -193,7 +193,7 @@
   "pl": {
     "index.html": {
       "title": "Europejskie IT i cyberbezpieczeństwo",
-      "description": "Każde euro wydane na IT to wybór strategiczny. Rzetelne wskazówki dotyczące zakupów europejskiego IT i cyberbezpieczeństwa oraz suwerenności cyfrowej."
+      "description": "Każde euro wydane na IT i technologie to wybór strategiczny. Rzetelne wskazówki dotyczące zakupów europejskiego IT i cyberbezpieczeństwa oraz suwerenności cyfrowej."
     },
     "why-europe.html": {
       "title": "Suwerenność cyfrowa: dlaczego Europa",
@@ -217,15 +217,53 @@
     },
     "sources.html": {
       "title": "Źródła i dowody",
-      "description": "Wszystkie źródła Every IT Euro: prawo UE, orzeczenia, oficjalne polityki, raporty roczne i wiadomości – z datą publikacji i dostępu."
+      "description": "Wszystkie źródła EU Tech Compass: prawo UE, orzeczenia, oficjalne polityki, raporty roczne i wiadomości – z datą publikacji i dostępu."
     },
     "about.html": {
       "title": "O projekcie, metodologia i prywatność",
-      "description": "Jak działa Every IT Euro: zasady redakcyjne, klasyfikacja firm europejskich, źródła, korekty i prywatność – bez plików cookie i śledzenia."
+      "description": "Jak działa EU Tech Compass: zasady redakcyjne, klasyfikacja firm europejskich, źródła, korekty i prywatność – bez plików cookie i śledzenia."
     },
     "firewall-example.html": {
       "title": "Ile z budżetu IT zostaje w Europie?",
       "description": "secunet i Fortinet według raportów rocznych za 2025 r.: ile ze 100 € trafia w Europie na wynagrodzenia, podatki, rozwój i zysk?"
+    }
+  },
+  "nl": {
+    "index.html": {
+      "title": "Waarom Europese IT en cybersecurity kopen?",
+      "description": "Elke euro uitgegeven aan IT & tech is een strategische keuze. Onderbouwde informatie over Europese IT, cybersecurity en digitale soevereiniteit."
+    },
+    "why-europe.html": {
+      "title": "Digitale soevereiniteit: waarom Europees?",
+      "description": "Waarom hosting in de EU geen soevereiniteit is, welke rol jurisdictie en de CLOUD Act spelen en wat Europa wint met Europese technologie – met bronnen."
+    },
+    "cybersecurity.html": {
+      "title": "Cybersecurity en leveranciersrisico",
+      "description": "Waarom afhankelijkheid juist bij beveiligingsproducten telt: toeleveringsketen, updates en controle, plus twaalf vragen voor OT en vitale infrastructuur."
+    },
+    "alternatives.html": {
+      "title": "Europese alternatieven voor Amerikaanse IT",
+      "description": "Doorzoekbare database met {companies} Europese leveranciers van cybersecurity, cloud, samenwerking en infrastructuur, met eigenaren, classificatie en bronnen."
+    },
+    "procurement.html": {
+      "title": "Checklist soevereine IT-inkoop en NIS2",
+      "description": "Een printbare checklist met 25 vragen, wat publieke inkopers mogen eisen en hoe NIS2, de CRA, de AVG, de Dataverordening en DORA leveranciers raken."
+    },
+    "sovereignty.html": {
+      "title": "Test technologische soevereiniteit",
+      "description": "Gratis en transparant: beantwoord vragen over een IT-systeem en zie of soevereiniteit laag, gemiddeld, hoog of strategisch relevant is – en waarom."
+    },
+    "sources.html": {
+      "title": "Bronnen en onderbouwing",
+      "description": "Alle bronnen van EU Tech Compass: EU-wetgeving, rechtspraak, officieel beleid, jaarverslagen en nieuws, elk met datum van publicatie en raadpleging."
+    },
+    "about.html": {
+      "title": "Over, methodiek en privacy",
+      "description": "Hoe EU Tech Compass werkt: redactionele uitgangspunten, hoe we Europese bedrijven indelen, bronnen, correcties en privacy – zonder cookies en tracking."
+    },
+    "firewall-example.html": {
+      "title": "Hoeveel van uw IT-budget blijft in Europa?",
+      "description": "secunet en Fortinet volgens hun jaarverslagen 2025: hoeveel van elke € 100 gaat in Europa naar salarissen, belastingen, ontwikkeling en winst?"
     }
   }
 }

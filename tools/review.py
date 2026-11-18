@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Every IT Euro — periodic review of the company database (development only, no dependencies).
+EU Tech Compass — periodic review of the company database (development only, no dependencies).
 
 Produces a work list:
   1. companies and watchlist entries whose "lastVerified" date is older than N months;
@@ -36,7 +36,7 @@ COMPANIES = ROOT / "data" / "companies.json"
 SOURCES = ROOT / "data" / "sources.json"
 # A generic, non-identifying client name. Some sites still block automated requests (403/429);
 # those are reported separately as "check by hand", not as broken.
-USER_AGENT = "Mozilla/5.0 (compatible; EveryITEuro-LinkCheck/1.0)"
+USER_AGENT = "Mozilla/5.0 (compatible; EUTechCompass-LinkCheck/1.0)"
 TIMEOUT = 20
 
 
@@ -149,7 +149,7 @@ def run_link_check(cdata: dict, sdata: dict, workers: int) -> dict[str, list]:
 
 # --------------------------------------------------------------------------- report
 def report(stale, links, months: int) -> str:
-    lines = [f"# Every IT Euro — review work list ({date.today().isoformat()})", ""]
+    lines = [f"# EU Tech Compass — review work list ({date.today().isoformat()})", ""]
     lines.append(f"## Not verified in the last {months} months ({len(stale)})")
     lines.append("")
     if stale:
@@ -204,7 +204,7 @@ def mark_verified(ids: list[str]) -> int:
 
 
 def main() -> int:
-    ap = argparse.ArgumentParser(description="Review the Every IT Euro company database.")
+    ap = argparse.ArgumentParser(description="Review the EU Tech Compass company database.")
     ap.add_argument("--months", type=int, default=12, help="age limit for lastVerified (default 12)")
     ap.add_argument("--no-links", action="store_true", help="skip the link check")
     ap.add_argument("--markdown", metavar="FILE", help="also write the work list to this Markdown file")

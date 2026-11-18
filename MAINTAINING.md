@@ -1,4 +1,4 @@
-# Maintaining Every IT Euro
+# Maintaining EU Tech Compass
 
 A short guide to keeping the site correct and current. Every task ends with the same two commands:
 

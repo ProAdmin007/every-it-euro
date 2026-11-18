@@ -1,4 +1,4 @@
-# Every IT Euro — Why buying European IT and cybersecurity products strengthens Europe
+# EU Tech Compass — Why buying European IT and cybersecurity products strengthens Europe
 
 [![Validate site](https://github.com/ProAdmin007/every-it-euro/actions/workflows/validate.yml/badge.svg)](https://github.com/ProAdmin007/every-it-euro/actions/workflows/validate.yml)
 ![Static site](https://img.shields.io/badge/site-static%20HTML%2FCSS%2FJS-003399)
@@ -7,7 +7,7 @@
 [![Content: CC BY 4.0](https://img.shields.io/badge/content-CC%20BY%204.0-lightgrey)](https://creativecommons.org/licenses/by/4.0/)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/proadmin007)
 
-> **Every IT euro is also a strategic choice.**
+> **Every euro spent on IT & tech is also a strategic choice.**
 
 A static, evidence-based website that explains how European organisations, governments, critical infrastructure operators and consumers can strengthen Europe's technological sovereignty by considering European alternatives when they buy cybersecurity, cloud, infrastructure, networking and software products. It is written for CISOs, CTOs, security architects, OT security professionals, procurement teams and policymakers.
 
@@ -15,7 +15,7 @@ The editorial position is **European preference where it makes strategic, econom
 
 ## Languages
 
-The site is available in **English, German, French, Spanish, Italian and Polish**. English pages live in the repository root; each translation lives in its own folder (`de/`, `fr/`, `es/`, `it/`, `pl/`) with the same file names.
+The site is available in **English, German, French, Spanish, Italian, Polish and Dutch**. English pages live in the repository root; each translation lives in its own folder (`de/`, `fr/`, `es/`, `it/`, `pl/`, `nl/`) with the same file names.
 
 - **Automatic language:** on a first visit to an English page, the site opens in the first supported language from the visitor's device/browser preferences (`navigator.languages`). Unsupported languages fall back to English.
 - **Language switcher:** a bar at the top of every page links to the same page in each language. An explicit choice is remembered in `localStorage` (key `every-it-euro-lang`) — no cookies, nothing is sent anywhere. Links to a translated page are always respected; only English pages redirect.
@@ -51,7 +51,7 @@ The site is available in **English, German, French, Spanish, Italian and Polish*
 /
 ├── index.html, why-europe.html, cybersecurity.html, alternatives.html,
 │   procurement.html, sovereignty.html, sources.html, about.html, 404.html   ← English
-├── de/, fr/, es/, it/, pl/    ← translated pages (same file names)
+├── de/, fr/, es/, it/, pl/, nl/   ← translated pages (same file names)
 ├── i18n/<lang>/ui.json       ← translated interface strings
 ├── robots.txt, sitemap.xml, site.config.json, .nojekyll
 ├── assets/
@@ -125,7 +125,7 @@ Then run `python tools/build.py`. This updates canonical URLs, Open Graph tags, 
 cd path/to/this/folder
 git init
 git add .
-git commit -m "Initial commit: Every IT Euro website"
+git commit -m "Initial commit: EU Tech Compass website"
 git branch -M main
 git remote add origin https://github.com/YOUR-USERNAME/every-it-euro.git
 git push -u origin main
@@ -147,7 +147,7 @@ git push -u origin main
 
 ### 7. Use a custom domain later (optional)
 
-1. In **Settings → Pages → Custom domain**, enter your domain (for example `everyiteuro.eu`) and click **Save**. GitHub then adds a `CNAME` file to the repository.
+1. In **Settings → Pages → Custom domain**, enter your domain (for example `eutechcompass.eu`) and click **Save**. GitHub then adds a `CNAME` file to the repository.
 2. At your DNS provider:
    - for an apex domain (`example.eu`), create `A` records pointing to `185.199.108.153`, `185.199.109.153`, `185.199.110.153` and `185.199.111.153` (and optionally the matching `AAAA` records listed in GitHub's documentation);
    - for a subdomain (`www.example.eu`), create a `CNAME` record pointing to `YOUR-USERNAME.github.io`.

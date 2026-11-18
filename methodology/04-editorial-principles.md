@@ -1,6 +1,6 @@
 # 04 — Editorial principles
 
-> **Every IT euro is also a strategic choice.**
+> **Every euro spent on IT & tech is also a strategic choice.**
 
 ## Position
 
