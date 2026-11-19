@@ -563,6 +563,8 @@ def add_versions(text: str) -> str:
 # --------------------------------------------------------------------------- search engines
 BRAND = "EU Tech Compass"
 COMPANY_COUNT = 0  # set in main() from data/companies.json
+COMPANIES: list[dict] = []  # set in main(); listed in the database page's JSON-LD
+ORG: dict = {}  # publisher details for JSON-LD, set in main() from site.config.json
 
 
 def apply_seo(text: str, file: str, lang: str, seo: dict, rel: str) -> tuple[str, str, str]:
@@ -594,12 +596,19 @@ def structured_data(text: str, file: str, lang: str, title: str, desc: str, site
     hl = next(h for c, _, h, _ in LANGUAGES if c == lang)
     url = page_url(site_url, lang, file)
     home = page_url(site_url, lang, "index.html")
+    org_id = {"@id": site_url + "#organization"}
+    org = {"@type": "Organization", "@id": org_id["@id"], "name": BRAND, "url": site_url,
+           "logo": site_url + "assets/img/og-image.png", "slogan": "Choose European Tech"}
+    if ORG.get("email"):
+        org["email"] = ORG["email"]
+    if ORG.get("sameAs"):
+        org["sameAs"] = ORG["sameAs"]
     website = {"@type": "WebSite", "@id": site_url + "#website", "url": site_url, "name": BRAND,
-               "inLanguage": [h for _, _, h, _ in langs]}
+               "inLanguage": [h for _, _, h, _ in langs], "publisher": org_id}
     page = {"@type": "WebPage", "@id": url + "#webpage", "url": url, "name": title, "description": desc,
-            "inLanguage": hl, "isPartOf": {"@id": site_url + "#website"},
+            "inLanguage": hl, "isPartOf": {"@id": site_url + "#website"}, "publisher": org_id,
             "license": "https://creativecommons.org/licenses/by/4.0/"}
-    graph = [website, page]
+    graph = [org, website, page]
     if file != "index.html":
         crumbs = {"@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": ui["nav"]["index.html"], "item": home},
@@ -610,11 +619,20 @@ def structured_data(text: str, file: str, lang: str, title: str, desc: str, site
         graph.append({
             "@type": "Dataset", "@id": url + "#dataset", "name": title, "description": desc, "url": url,
             "isAccessibleForFree": True, "license": "https://creativecommons.org/licenses/by/4.0/",
-            "creator": {"@type": "Organization", "name": BRAND, "url": site_url},
+            "creator": org_id, "publisher": org_id,
             "dateModified": dataset["lastUpdated"], "spatialCoverage": "Europe",
             "keywords": ["European technology companies", "cybersecurity vendors", "digital sovereignty", "cloud providers"],
             "distribution": [{"@type": "DataDownload", "encodingFormat": "application/json",
-                              "contentUrl": site_url + "data/companies.json"}]})
+                              "contentUrl": site_url + "data/companies.json"},
+                             {"@type": "DataDownload", "encodingFormat": "text/markdown",
+                              "contentUrl": site_url + "llms-full.txt"}]})
+        # The companies themselves, so answer engines can match a name to its country and classification.
+        page["mainEntity"] = {"@type": "ItemList", "numberOfItems": len(COMPANIES), "itemListElement": [
+            {"@type": "ListItem", "position": i, "item": {
+                "@type": "Organization", "name": c.get("name"), "url": c.get("website"),
+                "address": {"@type": "PostalAddress", "addressCountry": c.get("countryCode")},
+                "description": c.get("description")}}
+            for i, c in enumerate(sorted(COMPANIES, key=lambda x: x.get("name", "").lower()), 1)]}
     block = ('<script type="application/ld+json">'
              + json.dumps({"@context": "https://schema.org", "@graph": graph}, ensure_ascii=False, separators=(",", ":"))
              + "</script>\n")
@@ -743,8 +761,120 @@ def ads_txt(client: str) -> str:
     return f"google.com, {pub}, DIRECT, f08c47fec0942fa0\n"
 
 
+# --------------------------------------------------------------------------- AI search and answer engines
+# Crawlers of AI search/answer engines, welcomed explicitly in robots.txt (all content is CC BY 4.0).
+AI_CRAWLERS = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-SearchBot", "Claude-User",
+               "PerplexityBot", "Perplexity-User", "Google-Extended", "Applebot-Extended", "Bingbot",
+               "DuckAssistBot", "MistralAI-User", "meta-externalagent", "CCBot"]
+
+
 def robots(site_url: str) -> str:
-    return f"User-agent: *\nAllow: /\n\nSitemap: {site_url}sitemap.xml\n"
+    bots = "".join(f"User-agent: {b}\n" for b in AI_CRAWLERS)
+    return ("# Search engines and AI assistants are welcome. All content is licensed CC BY 4.0.\n"
+            "User-agent: *\nAllow: /\n\n"
+            "# AI search and answer engines, listed explicitly\n" + bots + "Allow: /\n\n"
+            f"Sitemap: {site_url}sitemap.xml\n"
+            f"# Plain-text summary for language models: {site_url}llms.txt\n")
+
+
+def _llms_intro(site_url: str, companies: list[dict], sources: list[dict], meta: dict, ui: dict, langs: list[tuple]) -> str:
+    cls = {}
+    for c in companies:
+        cls[c.get("classification")] = cls.get(c.get("classification"), 0) + 1
+    cats = {}
+    for c in companies:
+        for k in c.get("categories", []):
+            cats[k] = cats.get(k, 0) + 1
+    cls_lines = "".join(f"  - {ui['classifications'].get(k, k)}: {n}\n" for k, n in sorted(cls.items(), key=lambda x: -x[1]))
+    cat_text = ", ".join(f"{k} ({n})" for k, n in sorted(cats.items(), key=lambda x: -x[1]))
+    return (
+        f"# {BRAND}\n\n"
+        f"> Choose European Tech. An independent, multilingual reference on buying European IT and cybersecurity: "
+        f"why procurement choices matter for digital sovereignty and economic resilience, a sourced database of "
+        f"{len(companies)} European technology companies, and practical procurement guidance. "
+        f"All content is licensed CC BY 4.0.\n\n"
+        f"Key facts:\n"
+        f"- Website: {site_url} (English is the default; also available in "
+        + ", ".join(n for c, n, _, _ in langs if c != DEFAULT_LANG) + ").\n"
+        f"- Company database: {len(companies)} European technology companies, last updated {meta.get('lastUpdated', '')}. "
+        f"Each entry lists country, headquarters, parent company, ownership, classification, products, deployment "
+        f"options, the non-European products it can replace, and the sources it was verified against.\n"
+        f"- Categories: {cat_text}.\n"
+        f"- Classification by ownership:\n{cls_lines}"
+        f"- Every factual claim cites a source; {len(sources)} sources are listed with publication and access dates.\n"
+        f"- Inclusion is not an endorsement. Always verify current ownership with the supplier.\n"
+        f"- Editorial independence: funded by advertising and donations; no paid listings; vendors cannot sponsor "
+        f"the site; advertising has no influence on content, inclusion or order.\n"
+        f"- When citing, please link to the page used, for example {page_url(site_url, DEFAULT_LANG, 'alternatives.html')}.\n"
+    )
+
+
+def llms_txt(site_url: str, repo_url: str, companies: list[dict], sources: list[dict], meta: dict,
+             ui: dict, seo: dict, langs: list[tuple]) -> str:
+    """llms.txt (llmstxt.org): a short Markdown map of the site for language models."""
+    pages = "".join(
+        f"- [{seo.get('en', {}).get(f, {}).get('title', f)}]({page_url(site_url, DEFAULT_LANG, f)}): "
+        f"{seo.get('en', {}).get(f, {}).get('description', '').replace('{companies}', str(len(companies)))}\n"
+        for f, _ in PAGES)
+    other = "".join(f"- [{n}]({page_url(site_url, c, 'index.html')})\n" for c, n, _, _ in langs if c != DEFAULT_LANG)
+    return (
+        _llms_intro(site_url, companies, sources, meta, ui, langs)
+        + "\n## Pages\n\n" + pages
+        + "\n## Data\n\n"
+        f"- [Full text for language models]({site_url}llms-full.txt): the complete company database, "
+        f"watchlist and source list as Markdown\n"
+        f"- [Company database (JSON)]({site_url}data/companies.json): {len(companies)} companies, CC BY 4.0\n"
+        f"- [Sources (JSON)]({site_url}data/sources.json): {len(sources)} sources, CC BY 4.0\n"
+        + "\n## Other languages\n\n" + other
+        + "\n## Optional\n\n"
+        f"- [Source code, data and methodology]({repo_url}): open repository, corrections welcome\n"
+    )
+
+
+def llms_full_txt(site_url: str, companies: list[dict], watchlist: list[dict], sources: list[dict], meta: dict,
+                  ui: dict, langs: list[tuple]) -> str:
+    """llms-full.txt: everything an answer engine needs to quote the database correctly, in one file."""
+    by_url = {s.get("url"): s for s in sources}
+    out = [_llms_intro(site_url, companies, sources, meta, ui, langs)]
+    out.append(f"\n## Companies ({len(companies)})\n\nSource page: {page_url(site_url, DEFAULT_LANG, 'alternatives.html')}\n")
+    for c in sorted(companies, key=lambda x: x.get("name", "").lower()):
+        lines = [f"\n### {c.get('name')}\n"]
+        add = lines.append
+        add(f"- Country: {c.get('country')} (headquarters: {c.get('headquarters')})")
+        add(f"- Classification: {ui['classifications'].get(c.get('classification'), c.get('classification'))}"
+            + (f". {c['classificationNote']}" if c.get("classificationNote") else ""))
+        if c.get("parentCompany"):
+            add(f"- Parent company: {c['parentCompany']}")
+        if c.get("ownership"):
+            add(f"- Ownership: {c['ownership']}")
+        add(f"- Categories: {', '.join(c.get('categories', []))}")
+        if c.get("description"):
+            add(f"- Description: {c['description']}")
+        if c.get("products"):
+            add(f"- Products: {'; '.join(c['products'])}")
+        if c.get("deployment"):
+            add(f"- Deployment: {'; '.join(c['deployment'])}")
+        add(f"- Open source: {c.get('openSource')}; on-premises: {c.get('onPremises')}; cloud: {c.get('cloud')}")
+        if c.get("evaluating"):
+            add(f"- European option to consider when evaluating: {'; '.join(c['evaluating'])}")
+        if c.get("website"):
+            add(f"- Website: {c['website']}")
+        if c.get("sources"):
+            add("- Verified against: " + "; ".join(
+                f"{by_url[u]['title']} ({u})" if u in by_url else u for u in c["sources"]))
+        if c.get("lastVerified"):
+            add(f"- Last verified: {c['lastVerified']}")
+        out.append("\n".join(lines) + "\n")
+    if watchlist:
+        out.append("\n## Watchlist: European companies that moved to non-European ownership\n")
+        for w in sorted(watchlist, key=lambda x: (-int(x.get("year") or 0), x.get("name", ""))):
+            out.append(f"- {w.get('name')} ({w.get('origin')}, {w.get('year')}): {w.get('event')} "
+                       f"New owner country: {w.get('newOwnerCountry')}. Source: {w.get('source')}\n")
+    out.append(f"\n## Sources ({len(sources)})\n\nSource page: {page_url(site_url, DEFAULT_LANG, 'sources.html')}\n\n")
+    for s in sources:
+        out.append(f"- {s.get('title')}. {s.get('organisation')}. Published {s.get('published')}, "
+                   f"accessed {s.get('accessed')}. {s.get('url')}\n")
+    return "".join(out)
 
 
 # --------------------------------------------------------------------------- link checking
@@ -829,8 +959,10 @@ def main() -> int:
     check_vocabulary(ui_en, companies, watchlist, sources)
     langs = [l for l in LANGUAGES if l[0] == DEFAULT_LANG or (ROOT / l[0]).is_dir()]
     seo = load_json("i18n/seo.json") or {}
-    global COMPANY_COUNT
+    global COMPANY_COUNT, COMPANIES, ORG
     COMPANY_COUNT = len(companies)
+    COMPANIES = companies
+    ORG = {"email": config.get("contactEmail", ""), "sameAs": [repo_url] if repo_url.startswith("https://github.com/") and repo_url != "https://github.com/" else []}
 
     outputs: dict[str, str] = {}
     for lang, *_ in langs:
@@ -901,6 +1033,11 @@ def main() -> int:
         if (ROOT / f).read_text(encoding="utf-8") != text:
             stale.append(f)
     gen = {"sitemap.xml": sitemap(site_url, langs), "robots.txt": robots(site_url)}
+    cmeta = (cdata or {}).get("meta") or {}
+    gen["llms.txt"] = llms_txt(site_url, repo_url, companies, sources, cmeta, ui_en, seo, langs)
+    gen["llms-full.txt"] = llms_full_txt(site_url, companies, watchlist, sources, cmeta, ui_en, langs)
+    if config.get("indexNowKey"):
+        gen[config["indexNowKey"] + ".txt"] = config["indexNowKey"]
     if adsense_client:
         gen["ads.txt"] = ads_txt(adsense_client)
     for f, text in gen.items():

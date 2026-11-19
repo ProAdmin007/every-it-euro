@@ -1,0 +1,49 @@
+# EU Tech Compass
+
+> Choose European Tech. An independent, multilingual reference on buying European IT and cybersecurity: why procurement choices matter for digital sovereignty and economic resilience, a sourced database of 110 European technology companies, and practical procurement guidance. All content is licensed CC BY 4.0.
+
+Key facts:
+- Website: https://eu-techcompass.eu/ (English is the default; also available in Deutsch, Français, Español, Italiano, Polski, Nederlands).
+- Company database: 110 European technology companies, last updated 2026-11-12. Each entry lists country, headquarters, parent company, ownership, classification, products, deployment options, the non-European products it can replace, and the sources it was verified against.
+- Categories: Cybersecurity (54), Cloud (46), Open Source (43), Infrastructure (28), Encryption (26), Collaboration (25), Network Security (20), Identity (16), Endpoint Security (14), Email (14), Monitoring (13), Hosting (11), OT Security (8), Backup (7), Operating Systems (5), SIEM (4), PAM (4).
+- Classification by ownership:
+  - EU/EEA headquartered: 59
+  - Part of a European group: 18
+  - Mixed / international ownership: 16
+  - European headquartered (non-EU): 9
+  - European open-source project: 8
+- Every factual claim cites a source; 66 sources are listed with publication and access dates.
+- Inclusion is not an endorsement. Always verify current ownership with the supplier.
+- Editorial independence: funded by advertising and donations; no paid listings; vendors cannot sponsor the site; advertising has no influence on content, inclusion or order.
+- When citing, please link to the page used, for example https://eu-techcompass.eu/alternatives.html.
+
+## Pages
+
+- [Why Buy European IT and Cybersecurity?](https://eu-techcompass.eu/): Every euro spent on IT & tech is a strategic choice. Evidence-based guidance on European IT and cybersecurity, digital sovereignty and European alternatives.
+- [Digital Sovereignty: Why Buy European IT](https://eu-techcompass.eu/why-europe.html): Why EU hosting is not sovereignty, how jurisdiction and the CLOUD Act matter, and what Europe gains from buying European technology — with sources.
+- [Cybersecurity Supplier Risk and Sovereignty](https://eu-techcompass.eu/cybersecurity.html): Why dependency matters most for security tooling: supply-chain risk, updates and control, and twelve questions for OT and critical infrastructure.
+- [European Alternatives to US IT and Security](https://eu-techcompass.eu/alternatives.html): Searchable database of 110 European cybersecurity, cloud, collaboration and infrastructure vendors, with ownership, classification and sources.
+- [Sovereign IT Procurement Checklist and NIS2](https://eu-techcompass.eu/procurement.html): A printable 25-question procurement checklist, what public buyers may require, and how NIS2, the CRA, GDPR, the Data Act and DORA relate to suppliers.
+- [Technology Sovereignty Assessment Tool](https://eu-techcompass.eu/sovereignty.html): Free, transparent assessment: answer questions about an IT system and see whether sovereignty relevance is low, medium, high or strategic — and why.
+- [Sources and Evidence](https://eu-techcompass.eu/sources.html): All sources behind EU Tech Compass: EU legislation, court rulings, official policy, annual reports and news, each with publication and access dates.
+- [About, Methodology and Privacy](https://eu-techcompass.eu/about.html): How EU Tech Compass works: editorial principles, how we classify European companies, sources, corrections, funding, privacy and cookies.
+- [How Much of Your IT Budget Stays in Europe?](https://eu-techcompass.eu/firewall-example.html): secunet vs Fortinet on their 2025 annual reports: of every €100, how much goes to salaries, taxes, development and profit in Europe.
+
+## Data
+
+- [Full text for language models](https://eu-techcompass.eu/llms-full.txt): the complete company database, watchlist and source list as Markdown
+- [Company database (JSON)](https://eu-techcompass.eu/data/companies.json): 110 companies, CC BY 4.0
+- [Sources (JSON)](https://eu-techcompass.eu/data/sources.json): 66 sources, CC BY 4.0
+
+## Other languages
+
+- [Deutsch](https://eu-techcompass.eu/de/)
+- [Français](https://eu-techcompass.eu/fr/)
+- [Español](https://eu-techcompass.eu/es/)
+- [Italiano](https://eu-techcompass.eu/it/)
+- [Polski](https://eu-techcompass.eu/pl/)
+- [Nederlands](https://eu-techcompass.eu/nl/)
+
+## Optional
+
+- [Source code, data and methodology](https://github.com/ProAdmin007/every-it-euro): open repository, corrections welcome
