@@ -95,6 +95,28 @@ GLOBE = (
 CSP = ("default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; "
        "connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'")
 
+# Simple Analytics (EU, cookieless): https://docs.simpleanalytics.com
+SA_SCRIPT = "https://scripts.simpleanalyticscdn.com/latest.js"
+SA_HOSTS = "https://scripts.simpleanalyticscdn.com https://queue.simpleanalyticscdn.com"
+
+
+def csp_for(config: dict) -> str:
+    """The strict policy above, widened only as far as the enabled third parties need.
+    Google AdSense (and its consent message) loads scripts, frames and images from many Google
+    domains, including country domains, which a host allowlist cannot cover. With ads on, the
+    policy therefore allows HTTPS sources but still blocks inline scripts and plugins."""
+    ads = (config.get("ads") or {}).get("enabled")
+    sa = config.get("simpleAnalytics")
+    if ads:
+        return ("default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; "
+                "script-src 'self' 'unsafe-eval' https:; connect-src 'self' https:; frame-src https:; "
+                "base-uri 'self'; form-action 'self'; object-src 'none'")
+    if sa:
+        return (f"default-src 'self'; img-src 'self' data: https://queue.simpleanalyticscdn.com; style-src 'self'; "
+                f"script-src 'self' {SA_HOSTS}; connect-src 'self' {SA_HOSTS}; "
+                "base-uri 'self'; form-action 'self'; object-src 'none'")
+    return CSP
+
 errors: list[str] = []
 warnings: list[str] = []  # reported, but never block a build
 
@@ -214,9 +236,14 @@ def header(file: str, lang: str, prefix: str, ui: dict, langs: list[tuple]) -> s
 </header>"""
 
 
-def footer(ui: dict) -> str:
+def footer(ui: dict, kofi: str = "", ads: bool = False) -> str:
     t = ui["footer"]
     note = f"\n      <p>{esc(t['translationNote'])}</p>" if t.get("translationNote") else ""
+    # Re-opens Google's consent message (assets/js/ads.js); only useful when ads are on.
+    consent = (f'\n          <li><button type="button" class="link-button consent-settings">{esc(t["cookieSettings"])}</button></li>'
+               if ads else "")
+    support = (f'\n    <p class="footer-support"><a class="kofi-link" href="https://ko-fi.com/{esc(kofi)}">'
+               f'<span aria-hidden="true">☕</span> {esc(t["kofi"])}</a></p>') if kofi else ""
     return f"""<footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
@@ -250,14 +277,14 @@ def footer(ui: dict) -> str:
           <li><a href="about.html">{esc(t['about'])}</a></li>
           <li><a href="sources.html">{esc(t['sources'])}</a></li>
           <li><a href="about.html#corrections">{esc(t['corrections'])}</a></li>
-          <li><a href="about.html#privacy">{esc(t['privacy'])}</a></li>
+          <li><a href="about.html#privacy">{esc(t['privacy'])}</a></li>{consent}
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <p>{esc(t['licence'])}</p>
       <p>{esc(t['disclaimer'])}</p>{note}
-    </div>
+    </div>{support}
   </div>
 </footer>"""
 
@@ -659,6 +686,57 @@ def apply_adsense(text: str, client: str) -> str:
                   lambda m: m.group(1) + f'<meta name="google-adsense-account" content="{client}">\n', text, count=1)
 
 
+AD_SLOTS = ("left", "right", "inline")
+
+
+def ad_unit(client: str, slot: str, name: str, label: str) -> str:
+    """One ad unit. Units start with class 'adsbygoogle-pending'; assets/js/ads.js turns only the
+    visible ones into real AdSense units, so hidden rails on small screens never request an ad.
+    Without a slot id, a visible placeholder is shown (local preview only; the build warns)."""
+    if not slot:
+        return f'<div class="ad-placeholder ad-{name}-unit">{esc(label)} ({name})</div>'
+    extra = ' data-ad-format="auto" data-full-width-responsive="true"' if name == "inline" else ""
+    return (f'<ins class="adsbygoogle-pending ad-{name}-unit" data-ad-client="{esc(client)}" '
+            f'data-ad-slot="{esc(slot)}"{extra}></ins>')
+
+
+def apply_third_party(text: str, prefix: str, ui: dict, config: dict, file: str) -> str:
+    """Analytics and advertising, all switched in site.config.json. Re-running removes earlier output."""
+    text = re.sub(r"<!-- BEGIN:3p -->.*?<!-- END:3p -->\n", "", text, flags=re.S)
+    text = re.sub(r"<!-- BEGIN:ads -->.*?<!-- END:ads -->\n", "", text, flags=re.S)
+    text = text.replace('<div class="ad-wrap">\n', "").replace("</div><!-- /ad-wrap -->\n", "")
+    ads = config.get("ads") or {}
+    client = config.get("adsenseClient", "")
+    head = []
+    if config.get("simpleAnalytics"):
+        head.append(f'<script data-detect-404="true" async src="{SA_SCRIPT}"></script>')
+    if ads.get("enabled") and client:
+        head.append(f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={esc(client)}" crossorigin="anonymous"></script>')
+        head.append(f'<script src="{prefix}assets/js/ads.js" defer></script>')
+    if head:
+        text = text.replace("</head>", "<!-- BEGIN:3p -->\n" + "\n".join(head) + "\n<!-- END:3p -->\n</head>", 1)
+    if not (ads.get("enabled") and client) or file == "404.html":
+        return text
+    slots = ads.get("slots") or {}
+    label = ui["ads"]["label"]
+    rails = "".join(
+        f'<aside class="ad-rail ad-rail-{side}" aria-label="{esc(label)}"><div class="ad-rail-inner"><p class="ad-label">{esc(label)}</p>'
+        f'{ad_unit(client, slots.get(side, ""), side, label)}</div></aside>\n' for side in ("left", "right"))
+    inline = (f'<aside class="ad-inline" aria-label="{esc(label)}"><div class="container"><p class="ad-label">{esc(label)}</p>'
+              f'{ad_unit(client, slots.get("inline", ""), "inline", label)}</div></aside>\n')
+    # After the first section of <main> (the page introduction): one inline unit for narrower
+    # screens, and side rails for wide screens. The rest of <main> is wrapped in .ad-wrap so the
+    # rails can span it and stay in view while scrolling (position: sticky), stopping above the footer.
+    m = re.search(r'<main id="main">.*?</section>\n', text, flags=re.S)
+    end = text.rfind("</main>")
+    if not m or end < m.end():
+        warnings.append(f"{file}: no introduction section found, no ads placed")
+        return text
+    block = "<!-- BEGIN:ads -->\n" + inline + "<!-- END:ads -->\n" + '<div class="ad-wrap">\n' + \
+            "<!-- BEGIN:ads -->\n" + rails + "<!-- END:ads -->\n"
+    return text[:m.end()] + block + text[m.end():end] + "</div><!-- /ad-wrap -->\n" + text[end:]
+
+
 def ads_txt(client: str) -> str:
     """ads.txt (IAB) declaring Google as the authorised seller for this site."""
     pub = client.replace("ca-", "", 1)
@@ -728,6 +806,12 @@ def main() -> int:
     config = load_json("site.config.json") or {}
     site_url = config.get("siteUrl", "https://USERNAME.github.io/REPOSITORY/")
     adsense_client = config.get("adsenseClient", "")
+    ads_cfg = config.get("ads") or {}
+    if ads_cfg.get("enabled"):
+        missing = [s for s in AD_SLOTS if not (ads_cfg.get("slots") or {}).get(s)]
+        if missing:
+            warnings.append(f"site.config.json: ad slot id missing for {', '.join(missing)} — placeholders shown, do not publish")
+    csp = csp_for(config)
     if not site_url.endswith("/"):
         site_url += "/"
     repo_url = config.get("repositoryUrl", "https://github.com/")
@@ -768,10 +852,11 @@ def main() -> int:
                 continue
             text = strip_versions(path.read_text(encoding="utf-8"))
             # One Content Security Policy for every page, defined above.
-            text = re.sub(r'(<meta http-equiv="Content-Security-Policy" content=")[^"]*(")', lambda m: m.group(1) + CSP + m.group(2), text)
+            text = re.sub(r'(<meta http-equiv="Content-Security-Policy" content=")[^"]*(")', lambda m: m.group(1) + csp + m.group(2), text)
             text = localise_paths(text, lang, prefix)
             text = replace_block(text, "header", header(f, lang, prefix, ui, langs), rel)
-            text = replace_block(text, "footer", footer(ui), rel)
+            text = replace_block(text, "footer", footer(ui, config.get("kofi", ""), bool(ads_cfg.get("enabled") and adsense_client)), rel)
+            text = apply_third_party(text, prefix, ui, config, f)
             text = number_citations(text, ui["citeLabel"])
             if f == "alternatives.html":
                 text = replace_block(text, "filters", render_filters(companies, ui), rel)

@@ -17,7 +17,7 @@
     "about.html": "À propos"
   },
   "footer": {
-    "intro": "Une ressource d’information indépendante et non commerciale sur les achats informatiques et de cybersécurité européens et sur la souveraineté numérique.",
+    "intro": "Une ressource d’information indépendante sur les achats informatiques et de cybersécurité européens et sur la souveraineté numérique, financée par la publicité et les dons.",
     "notAffiliated": "Sans lien avec les institutions de l’Union européenne ni avec aucune des entreprises répertoriées.",
     "explore": "Explorer",
     "whyEurope": "Pourquoi l’Europe",
@@ -34,10 +34,12 @@
     "about": "À propos et méthodologie",
     "sources": "Sources",
     "corrections": "Signaler une correction",
-    "privacy": "Confidentialité : ni cookies, ni pistage",
+    "privacy": "Confidentialité et cookies",
     "licence": "Textes sous licence CC BY 4.0 · Code sous licence MIT",
     "disclaimer": "À titre d’information uniquement — ne constitue pas un conseil juridique ni un conseil en matière d’achats.",
-    "translationNote": "Traduit de l’anglais. En cas de doute, la version anglaise fait foi."
+    "translationNote": "Traduit de l’anglais. En cas de doute, la version anglaise fait foi.",
+    "kofi": "Soutenir ce site sur Ko-fi",
+    "cookieSettings": "Paramètres des cookies"
   },
   "citeLabel": "Source {n}",
   "companies": {
@@ -179,5 +181,8 @@
       "Sovereignty": "Souveraineté",
       "Economy": "Économie"
     }
+  },
+  "ads": {
+    "label": "Publicité"
   }
 }

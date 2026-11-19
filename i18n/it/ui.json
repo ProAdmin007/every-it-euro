@@ -17,7 +17,7 @@
     "about.html": "Chi siamo"
   },
   "footer": {
-    "intro": "Una risorsa informativa indipendente e senza scopo di lucro sull’approvvigionamento europeo di IT e cybersicurezza e sulla sovranità digitale.",
+    "intro": "Una risorsa informativa indipendente sull’approvvigionamento europeo di IT e cybersicurezza e sulla sovranità digitale, finanziata da pubblicità e donazioni.",
     "notAffiliated": "Non affiliata alle istituzioni dell’Unione europea né ad alcuna delle aziende elencate.",
     "explore": "Esplora",
     "whyEurope": "Perché l’Europa",
@@ -34,10 +34,12 @@
     "about": "Chi siamo e metodologia",
     "sources": "Fonti",
     "corrections": "Segnala una correzione",
-    "privacy": "Privacy: nessun cookie, nessun tracciamento",
+    "privacy": "Privacy e cookie",
     "licence": "Testi con licenza CC BY 4.0 · Codice con licenza MIT",
     "disclaimer": "Solo a scopo informativo: non costituisce consulenza legale né in materia di appalti.",
-    "translationNote": "Tradotto dall’inglese. In caso di dubbio, fa fede la versione inglese."
+    "translationNote": "Tradotto dall’inglese. In caso di dubbio, fa fede la versione inglese.",
+    "kofi": "Sostenete questo sito su Ko-fi",
+    "cookieSettings": "Impostazioni cookie"
   },
   "citeLabel": "Fonte {n}",
   "companies": {
@@ -179,5 +181,8 @@
       "Sovereignty": "Sovranità",
       "Economy": "Economia"
     }
+  },
+  "ads": {
+    "label": "Pubblicità"
   }
 }

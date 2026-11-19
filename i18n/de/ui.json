@@ -17,7 +17,7 @@
     "about.html": "Über uns"
   },
   "footer": {
-    "intro": "Eine unabhängige, nicht kommerzielle Informationsquelle zur Beschaffung europäischer IT und Cybersicherheit und zur digitalen Souveränität.",
+    "intro": "Eine unabhängige Informationsquelle zur Beschaffung europäischer IT und Cybersicherheit und zur digitalen Souveränität, finanziert durch Werbung und Spenden.",
     "notAffiliated": "Nicht verbunden mit den Institutionen der Europäischen Union oder mit einem der aufgeführten Unternehmen.",
     "explore": "Entdecken",
     "whyEurope": "Warum Europa",
@@ -34,10 +34,12 @@
     "about": "Über uns & Methodik",
     "sources": "Quellen",
     "corrections": "Korrektur melden",
-    "privacy": "Datenschutz: keine Cookies, kein Tracking",
+    "privacy": "Datenschutz & Cookies",
     "licence": "Texte lizenziert unter CC BY 4.0 · Code unter der MIT-Lizenz",
     "disclaimer": "Nur zur Information – keine Rechts- oder Beschaffungsberatung.",
-    "translationNote": "Aus dem Englischen übersetzt. Im Zweifel gilt die englische Fassung."
+    "translationNote": "Aus dem Englischen übersetzt. Im Zweifel gilt die englische Fassung.",
+    "kofi": "Diese Website auf Ko-fi unterstützen",
+    "cookieSettings": "Cookie-Einstellungen"
   },
   "citeLabel": "Quelle {n}",
   "companies": {
@@ -179,5 +181,8 @@
       "Sovereignty": "Souveränität",
       "Economy": "Wirtschaft"
     }
+  },
+  "ads": {
+    "label": "Anzeige"
   }
 }

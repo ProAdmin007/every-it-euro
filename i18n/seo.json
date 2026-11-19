@@ -31,7 +31,7 @@
     },
     "about.html": {
       "title": "About, Methodology and Privacy",
-      "description": "How EU Tech Compass works: editorial principles, how we classify European companies, sources, corrections and privacy — no cookies, no tracking."
+      "description": "How EU Tech Compass works: editorial principles, how we classify European companies, sources, corrections, funding, privacy and cookies."
     },
     "firewall-example.html": {
       "title": "How Much of Your IT Budget Stays in Europe?",
@@ -69,7 +69,7 @@
     },
     "about.html": {
       "title": "Über uns, Methodik und Datenschutz",
-      "description": "Wie EU Tech Compass arbeitet: redaktionelle Grundsätze, Einstufung europäischer Unternehmen, Quellen, Korrekturen und Datenschutz – ohne Cookies und Tracking."
+      "description": "So funktioniert EU Tech Compass: redaktionelle Grundsätze, Einordnung europäischer Unternehmen, Quellen, Korrekturen, Finanzierung, Datenschutz und Cookies."
     },
     "firewall-example.html": {
       "title": "Wie viel Ihres IT-Budgets bleibt in Europa?",
@@ -107,7 +107,7 @@
     },
     "about.html": {
       "title": "À propos, méthodologie et confidentialité",
-      "description": "Le fonctionnement d’EU Tech Compass : principes éditoriaux, classification des entreprises européennes, sources, corrections et confidentialité, sans cookies."
+      "description": "Comment fonctionne EU Tech Compass : principes éditoriaux, classement des entreprises européennes, sources, corrections, financement, confidentialité, cookies."
     },
     "firewall-example.html": {
       "title": "Quelle part du budget IT reste en Europe ?",
@@ -145,7 +145,7 @@
     },
     "about.html": {
       "title": "Acerca de, metodología y privacidad",
-      "description": "Cómo funciona EU Tech Compass: principios editoriales, clasificación de empresas europeas, fuentes, correcciones y privacidad, sin cookies ni seguimiento."
+      "description": "Cómo funciona EU Tech Compass: principios editoriales, cómo clasificamos las empresas europeas, fuentes, correcciones, financiación, privacidad y cookies."
     },
     "firewall-example.html": {
       "title": "¿Cuánto del presupuesto TI queda en Europa?",
@@ -183,7 +183,7 @@
     },
     "about.html": {
       "title": "Chi siamo, metodologia e privacy",
-      "description": "Come funziona EU Tech Compass: principi editoriali, classificazione delle aziende europee, fonti, correzioni e privacy, senza cookie né tracciamento."
+      "description": "Come funziona EU Tech Compass: principi redazionali, come classifichiamo le aziende europee, fonti, correzioni, finanziamento, privacy e cookie."
     },
     "firewall-example.html": {
       "title": "Quanto del budget IT resta in Europa?",
@@ -221,7 +221,7 @@
     },
     "about.html": {
       "title": "O projekcie, metodologia i prywatność",
-      "description": "Jak działa EU Tech Compass: zasady redakcyjne, klasyfikacja firm europejskich, źródła, korekty i prywatność – bez plików cookie i śledzenia."
+      "description": "Jak działa EU Tech Compass: zasady redakcyjne, jak klasyfikujemy europejskie firmy, źródła, poprawki, finansowanie, prywatność i pliki cookie."
     },
     "firewall-example.html": {
       "title": "Ile z budżetu IT zostaje w Europie?",
@@ -259,7 +259,7 @@
     },
     "about.html": {
       "title": "Over, methodiek en privacy",
-      "description": "Hoe EU Tech Compass werkt: redactionele uitgangspunten, hoe we Europese bedrijven indelen, bronnen, correcties en privacy – zonder cookies en tracking."
+      "description": "Hoe EU Tech Compass werkt: redactionele uitgangspunten, hoe wij Europese bedrijven classificeren, bronnen, correcties, financiering, privacy en cookies."
     },
     "firewall-example.html": {
       "title": "Hoeveel van uw IT-budget blijft in Europa?",

@@ -17,7 +17,7 @@
     "about.html": "Over"
   },
   "footer": {
-    "intro": "Een onafhankelijke, niet-commerciële informatiebron over de inkoop van Europese IT en cybersecurity en over digitale soevereiniteit.",
+    "intro": "Een onafhankelijke informatiebron over de inkoop van Europese IT en cybersecurity en over digitale soevereiniteit, gefinancierd met advertenties en donaties.",
     "notAffiliated": "Niet verbonden aan de instellingen van de Europese Unie of aan een van de vermelde bedrijven.",
     "explore": "Ontdekken",
     "whyEurope": "Waarom Europa",
@@ -34,10 +34,12 @@
     "about": "Over ons & methodologie",
     "sources": "Bronnen",
     "corrections": "Een correctie melden",
-    "privacy": "Privacy: geen cookies, geen tracking",
+    "privacy": "Privacy & cookies",
     "licence": "Tekst onder licentie CC BY 4.0 · Code onder de MIT-licentie",
     "disclaimer": "Uitsluitend ter informatie — geen juridisch of inkoopadvies.",
-    "translationNote": "Vertaald uit het Engels. Bij twijfel geldt de Engelse versie."
+    "translationNote": "Vertaald uit het Engels. Bij twijfel geldt de Engelse versie.",
+    "kofi": "Steun deze website op Ko-fi",
+    "cookieSettings": "Cookie-instellingen"
   },
   "citeLabel": "Bron {n}",
   "companies": {
@@ -179,5 +181,8 @@
       "Sovereignty": "Soevereiniteit",
       "Economy": "Economie"
     }
+  },
+  "ads": {
+    "label": "Advertentie"
   }
 }

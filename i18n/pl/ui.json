@@ -17,7 +17,7 @@
     "about.html": "O projekcie"
   },
   "footer": {
-    "intro": "Niezależny, niekomercyjny serwis informacyjny o zakupach europejskich rozwiązań IT i cyberbezpieczeństwa oraz o suwerenności cyfrowej.",
+    "intro": "Niezależny serwis informacyjny o zakupach europejskich rozwiązań IT i cyberbezpieczeństwa oraz o suwerenności cyfrowej, finansowany z reklam i darowizn.",
     "notAffiliated": "Serwis nie jest powiązany z instytucjami Unii Europejskiej ani z żadną z wymienionych firm.",
     "explore": "Poznaj",
     "whyEurope": "Dlaczego Europa",
@@ -34,10 +34,12 @@
     "about": "O projekcie i metodologia",
     "sources": "Źródła",
     "corrections": "Zgłoś poprawkę",
-    "privacy": "Prywatność: bez plików cookie, bez śledzenia",
+    "privacy": "Prywatność i pliki cookie",
     "licence": "Tekst na licencji CC BY 4.0 · Kod na licencji MIT",
     "disclaimer": "Wyłącznie informacja — nie stanowi porady prawnej ani porady w zakresie zamówień.",
-    "translationNote": "Tłumaczenie z języka angielskiego. W razie wątpliwości rozstrzygająca jest wersja angielska."
+    "translationNote": "Tłumaczenie z języka angielskiego. W razie wątpliwości rozstrzygająca jest wersja angielska.",
+    "kofi": "Wesprzyj ten serwis na Ko-fi",
+    "cookieSettings": "Ustawienia plików cookie"
   },
   "citeLabel": "Źródło {n}",
   "companies": {
@@ -179,5 +181,8 @@
       "Sovereignty": "Suwerenność",
       "Economy": "Gospodarka"
     }
+  },
+  "ads": {
+    "label": "Reklama"
   }
 }

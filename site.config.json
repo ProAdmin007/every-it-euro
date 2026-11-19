@@ -1,5 +1,15 @@
 {
   "siteUrl": "https://eu-techcompass.eu/",
   "repositoryUrl": "https://github.com/ProAdmin007/every-it-euro",
-  "adsenseClient": "ca-pub-1409938663369323"
+  "adsenseClient": "ca-pub-1409938663369323",
+  "kofi": "proadmin007",
+  "simpleAnalytics": true,
+  "ads": {
+    "enabled": false,
+    "slots": {
+      "left": "",
+      "right": "",
+      "inline": ""
+    }
+  }
 }

@@ -616,3 +616,29 @@ html:not([lang="en"]) h1, html:not([lang="en"]) h2 { hyphens: auto; }
 .europe-table .where .scale-label { font-size: .85rem; font-weight: 600; }
 .europe-table .where .scale { width: 64px; flex: none; }
 .europe-table .where .scale-label { margin-top: 0; }
+
+/* ---------- Advertising (Google AdSense) and support link ----------
+   Wide screens (>= 1600px): one 160x600 unit in each margin beside the content.
+   Narrower screens: one responsive unit below the page introduction. */
+main { position: relative; }
+.ad-label { margin: 0 0 .35rem; font-size: .7rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--text-muted); text-align: center; }
+.ad-rail { display: none; }
+.ad-inline { padding: 1.25rem 0; border-bottom: 1px solid var(--border); }
+.ad-inline-unit { display: block; min-height: 100px; }
+.ad-left-unit, .ad-right-unit { display: inline-block; width: 160px; height: 600px; }
+.ad-placeholder { display: flex; align-items: center; justify-content: center; border: 2px dashed var(--border); border-radius: 8px; color: var(--text-muted); font-size: .8rem; text-align: center; padding: .5rem; }
+.ad-wrap { position: relative; }
+@media (min-width: 1600px) {
+  /* The rail spans the whole page body; the inner box sticks below the sticky header. */
+  .ad-rail { display: block; position: absolute; top: 0; bottom: 0; width: 160px; padding: 2rem 0; z-index: 5; }
+  .ad-rail-left { left: calc(50% - 580px - 200px); }
+  .ad-rail-right { right: calc(50% - 580px - 200px); }
+  .ad-rail-inner { position: sticky; top: 92px; }
+  .ad-inline { display: none; }
+}
+.footer-support { margin: 1.5rem 0 0; text-align: center; }
+.kofi-link { display: inline-flex; align-items: center; gap: .45rem; padding: .55rem 1.1rem; border-radius: 999px; background: var(--eu-yellow); color: var(--navy); font-weight: 700; text-decoration: none; }
+.kofi-link:hover, .kofi-link:focus-visible { background: #ffd83d; color: var(--navy); text-decoration: underline; }
+@media print { .ad-rail, .ad-inline { display: none !important; } }
+.link-button { background: none; border: 0; padding: 0; font: inherit; color: inherit; text-decoration: underline; cursor: pointer; }
+.site-footer .link-button { color: #e8ecf6; }

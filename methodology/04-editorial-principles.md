@@ -31,8 +31,11 @@ The site distinguishes four kinds of sovereignty within digital sovereignty (see
 
 ## Independence and money
 
-- No advertising, tracking, cookies or third-party scripts (see the privacy section in `about.html`).
-- No commercial relationship with any company listed. Any future funding (donations, sponsorship) must be disclosed and must not influence the database or the content.
+- The site is funded by Google AdSense advertising and voluntary donations (Ko-fi). Both are disclosed on `about.html#funding`.
+- **Advertising never influences the content.** Inclusion, classification and order in the database, the tools and every article follow only these principles and the published methodology.
+- No direct sponsorship and no paid placement: companies cannot pay to be listed, listed higher or removed. Companies in the database may not sponsor the site.
+- Ads are chosen by Google, labelled "Advertisement" and kept outside the content (page margins, or once below the introduction). In AdSense, ads from companies in the database and from IT security product categories are blocked where possible.
+- Visitor statistics are cookieless and aggregated (Simple Analytics, EU). Ad cookies are only used according to the visitor's choice in Google's consent message (see `about.html#privacy`).
 
 ## Not advice
 

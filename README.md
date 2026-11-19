@@ -2,7 +2,7 @@
 
 [![Validate site](https://github.com/ProAdmin007/every-it-euro/actions/workflows/validate.yml/badge.svg)](https://github.com/ProAdmin007/every-it-euro/actions/workflows/validate.yml)
 ![Static site](https://img.shields.io/badge/site-static%20HTML%2FCSS%2FJS-003399)
-![No tracking](https://img.shields.io/badge/tracking-none-FFCC00)
+[![Live site](https://img.shields.io/badge/site-eu--techcompass.eu-FFCC00)](https://eu-techcompass.eu/)
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue)](LICENSE)
 [![Content: CC BY 4.0](https://img.shields.io/badge/content-CC%20BY%204.0-lightgrey)](https://creativecommons.org/licenses/by/4.0/)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-FF5E5B?logo=ko-fi&logoColor=white)](https://ko-fi.com/proadmin007)
@@ -194,9 +194,18 @@ Each entry in `data/companies.json` has this shape:
 
 Corrections and suggestions are welcome via the issue templates.
 
-## Privacy and security
+## Privacy, analytics and advertising
 
-No cookies, analytics, tracking pixels, advertising, external fonts or third-party scripts. Every page has a strict Content Security Policy (`default-src 'self'`). The interactive tools run entirely in the browser and do not store answers. The only thing ever stored is a language the visitor picks in the switcher (`localStorage`, never transmitted).
+All third-party features are switched on or off in `site.config.json`; the build adds or removes them on every page.
+
+| Setting | What it does |
+|---|---|
+| `simpleAnalytics` | Cookieless visitor statistics by Simple Analytics (EU). |
+| `adsenseClient` | Google AdSense publisher id: verification meta tag and `ads.txt`. |
+| `ads.enabled`, `ads.slots` | Ad units: a 160×600 unit in each margin on screens ≥ 1600 px (sticky while scrolling), one responsive unit below the page introduction on smaller screens. Missing slot ids show placeholders and a build warning. Google's consent message (IAB TCF) handles cookie consent; the footer gets a *Cookie settings* button. |
+| `kofi` | Ko-fi support button at the bottom of every page. |
+
+The Content Security Policy is generated from the same settings: strict (`'self'` only) without third parties, and with ads on it allows HTTPS sources but still blocks inline scripts. The interactive tools run entirely in the browser and do not store answers; the only thing stored by the site itself is a language the visitor picks (`localStorage`). Editorial rules for advertising are in [methodology/04-editorial-principles.md](methodology/04-editorial-principles.md).
 
 ## Licence
 

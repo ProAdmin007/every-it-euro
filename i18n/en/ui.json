@@ -17,7 +17,7 @@
     "about.html": "About"
   },
   "footer": {
-    "intro": "An independent, non-commercial information resource on European IT and cybersecurity procurement and digital sovereignty.",
+    "intro": "An independent information resource on European IT and cybersecurity procurement and digital sovereignty, funded by advertising and donations.",
     "notAffiliated": "Not affiliated with the European Union institutions or with any company listed.",
     "explore": "Explore",
     "whyEurope": "Why Europe",
@@ -34,10 +34,12 @@
     "about": "About & methodology",
     "sources": "Sources",
     "corrections": "Report a correction",
-    "privacy": "Privacy: no cookies, no tracking",
+    "privacy": "Privacy & cookies",
     "licence": "Text licensed under CC BY 4.0 · Code under the MIT License",
     "disclaimer": "Information only — not legal or procurement advice.",
-    "translationNote": ""
+    "translationNote": "",
+    "kofi": "Support this site on Ko-fi",
+    "cookieSettings": "Cookie settings"
   },
   "citeLabel": "Source {n}",
   "companies": {
@@ -179,5 +181,8 @@
       "Sovereignty": "Sovereignty",
       "Economy": "Economy"
     }
+  },
+  "ads": {
+    "label": "Advertisement"
   }
 }

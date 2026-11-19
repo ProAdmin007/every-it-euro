@@ -17,7 +17,7 @@
     "about.html": "Acerca de"
   },
   "footer": {
-    "intro": "Un recurso informativo independiente y sin ánimo de lucro sobre la contratación europea de TI y ciberseguridad y sobre la soberanía digital.",
+    "intro": "Un recurso informativo independiente sobre la contratación europea de TI y ciberseguridad y sobre la soberanía digital, financiado mediante publicidad y donaciones.",
     "notAffiliated": "Sin vinculación con las instituciones de la Unión Europea ni con ninguna de las empresas incluidas.",
     "explore": "Explorar",
     "whyEurope": "Por qué Europa",
@@ -34,10 +34,12 @@
     "about": "Acerca de y metodología",
     "sources": "Fuentes",
     "corrections": "Notificar una corrección",
-    "privacy": "Privacidad: sin cookies, sin seguimiento",
+    "privacy": "Privacidad y cookies",
     "licence": "Textos con licencia CC BY 4.0 · Código con licencia MIT",
     "disclaimer": "Solo información; no constituye asesoramiento jurídico ni de contratación.",
-    "translationNote": "Traducido del inglés. En caso de duda, prevalece la versión en inglés."
+    "translationNote": "Traducido del inglés. En caso de duda, prevalece la versión en inglés.",
+    "kofi": "Apoye este sitio en Ko-fi",
+    "cookieSettings": "Configuración de cookies"
   },
   "citeLabel": "Fuente {n}",
   "companies": {
@@ -179,5 +181,8 @@
       "Sovereignty": "Soberanía",
       "Economy": "Economía"
     }
+  },
+  "ads": {
+    "label": "Publicidad"
   }
 }
