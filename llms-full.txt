@@ -178,7 +178,7 @@ Source page: https://eu-techcompass.eu/alternatives.html
 - Open source: Partly; on-premises: Yes; cloud: Optional
 - European option to consider when evaluating: Infrastructure monitoring tools such as Datadog, SolarWinds or PRTG
 - Website: https://checkmk.com
-- Verified against: https://www.pplaw.com/en/transactions/poellath-advises-shareholders-and-management-checkmk-psg-equity-investment; https://hengeler-news.com/en/articles/hengeler-mueller-advises-psg-equity-on-investment-in-checkmk; https://www.mainsights.io/ma-news/psg-equity-acquires-majority-stake-in-munich-based-it-firm-checkmk-a-ldquodevopsrdquo-and-ldquoitopsrdquo-software-provider
+- Verified against: https://www.pplaw.com/en/transactions/poellath-advises-shareholders-and-management-checkmk-psg-equity-investment; https://hengeler-news.com/en/articles/hengeler-mueller-advises-psg-equity-on-investment-in-checkmk
 - Last verified: 2026-11-12
 
 ### Clavister
@@ -322,7 +322,7 @@ Source page: https://eu-techcompass.eu/alternatives.html
 - Open source: No; on-premises: No; cloud: Yes
 - European option to consider when evaluating: External attack surface management (EASM); Dynamic application security testing (DAST)
 - Website: https://detectify.com
-- Verified against: https://www.pehub.com/insight-partners-picks-up-majority-stake-in-detectify/; https://www.govinfosecurity.com/detectify-eyes-appsec-expansion-after-insight-partners-buy-a-26689
+- Verified against: https://www.privateequityinternational.com/insight-partners-picks-up-majority-stake-in-detectify/; https://www.govinfosecurity.com/detectify-eyes-appsec-expansion-after-insight-partners-buy-a-26689
 - Last verified: 2026-11-12
 
 ### DriveLock
@@ -402,7 +402,7 @@ Source page: https://eu-techcompass.eu/alternatives.html
 - Open source: No; on-premises: Optional; cloud: Optional
 - European option to consider when evaluating: Endpoint protection platforms (EPP); EDR/XDR platforms; Managed detection and response (MDR); Full disk encryption
 - Website: https://www.eset.com
-- Verified against: https://eset.com/ca/about/newsroom/corporate-blog/why-being-a-privately-held-cybersecurity-company-matters; https://eset.com/int/about/newsroom/press-releases/company/cybersecurity-firm-eset-welcomes-new-member-of-the-board; https://www.eset.com/us/about/newsroom/company/eset-2025-annual-report/
+- Verified against: https://web.archive.org/web/20260718173023/https://www.eset.com/ca/about/newsroom/corporate-blog/why-being-a-privately-held-cybersecurity-company-matters/; https://web.archive.org/web/20250320185921/https://www.eset.com/int/about/newsroom/press-releases/company/cybersecurity-firm-eset-welcomes-new-member-of-the-board/; https://www.eset.com/us/about/newsroom/company/eset-2025-annual-report/
 - Last verified: 2026-11-12
 
 ### Eviden (Atos cybersecurity products)
@@ -482,7 +482,7 @@ Source page: https://eu-techcompass.eu/alternatives.html
 - Open source: No; on-premises: Yes; cloud: Optional
 - European option to consider when evaluating: Privileged access management (PAM); Privileged session monitoring and recording
 - Website: https://fudosecurity.com
-- Verified against: https://fudosecurity.com/blog/2025/01/21/fudo-security-secures-10-million-to-drive-technological-advancements-in-the-multibillion-dollar-pam-market; https://hbs.fudosecurity.com/portal-registration-form
+- Verified against: https://web.archive.org/web/20250512235026/https://fudosecurity.com/blog/2025/01/21/fudo-security-secures-10-million-to-drive-technological-advancements-in-the-multibillion-dollar-pam-market/; https://hbs.fudosecurity.com/portal-registration-form
 - Last verified: 2026-11-12
 
 ### G DATA CyberDefense
@@ -530,7 +530,7 @@ Source page: https://eu-techcompass.eu/alternatives.html
 - Open source: No; on-premises: Yes; cloud: No
 - European option to consider when evaluating: High-assurance firewalls; Data diodes; VPN gateways for classified data; Secure remote maintenance for OT
 - Website: https://www.genua.eu
-- Verified against: https://www.printedelectronicsnow.com/contents/view_breaking-news/2020-01-31/bundesdruckerei-concludes-acquisition-of-genua-gmbh/; https://www.bundesdruckerei.de/en/group/group-structure; https://www.lobbyregister.bundestag.de/media/8e/05/774461/2025_BDr-Gruppe-GmbH_Testat-KA.pdf
+- Verified against: https://www.bundesdruckerei.de/en/group/group-structure; https://www.lobbyregister.bundestag.de/media/8e/05/774461/2025_BDr-Gruppe-GmbH_Testat-KA.pdf
 - Last verified: 2026-11-12
 
 ### Grafana Labs
@@ -674,7 +674,7 @@ Source page: https://eu-techcompass.eu/alternatives.html
 - Open source: No; on-premises: No; cloud: Yes
 - European option to consider when evaluating: Bug bounty platforms; Vulnerability disclosure programme (VDP) platforms; Penetration testing as a service (PTaaS)
 - Website: https://www.intigriti.com
-- Verified against: https://tech.eu/2020/06/25/intigriti-funding/; https://siliconcanals.com/belgian-intigriti-gets-21m/; https://www.belganewsagency.eu/flemish-hacking-platform-gets-largest-crowdsourced-funding-in-the-sector-in-europe
+- Verified against: https://tech.eu/2020/06/25/intigriti-funding/; https://siliconcanals.com/belgian-intigriti-gets-21m/; https://web.archive.org/web/20260316030758/https://www.belganewsagency.eu/flemish-hacking-platform-gets-largest-crowdsourced-funding-in-the-sector-in-europe
 - Last verified: 2026-11-12
 
 ### IONOS
@@ -881,8 +881,8 @@ Source page: https://eu-techcompass.eu/alternatives.html
 - Deployment: On-premises; Private cloud; Public cloud / SaaS
 - Open source: No; on-premises: Yes; cloud: Optional
 - European option to consider when evaluating: PKI and certificate lifecycle management; Credential and smart-card management; IoT device identity
-- Website: https://www.nexusgroup.com
-- Verified against: https://www.nexusgroup.com/about-nexus; https://nexus.ingroupe.com/about-nexus/
+- Website: https://nexus.ingroupe.com
+- Verified against: https://nexus.ingroupe.com/about/; https://nexus.ingroupe.com/about-nexus/
 - Last verified: 2026-11-12
 
 ### Nitrokey
@@ -930,7 +930,7 @@ Source page: https://eu-techcompass.eu/alternatives.html
 - Open source: Partly; on-premises: Optional; cloud: Yes
 - European option to consider when evaluating: Consumer and business messengers such as WhatsApp, Signal or Telegram
 - Website: https://www.olvid.io
-- Verified against: https://www.ssi.gouv.fr/sites/default/files/2021/05/anssi-cspn-2021_12fr.pdf; https://www.publicsenat.fr/actualites/societe/elisabeth-borne-demande-aux-ministres-de-supprimer-whatsapp-signal-et-telegram-de-leurs-telephones-et-dutiliser-olvid; https://apps.apple.com/FR/app/id1414865219
+- Verified against: https://messervices.cyber.gouv.fr/visas/ANSSI-CSPN-2021-12-rapport.pdf; https://www.publicsenat.fr/actualites/societe/elisabeth-borne-demande-aux-ministres-de-supprimer-whatsapp-signal-et-telegram-de-leurs-telephones-et-dutiliser-olvid; https://apps.apple.com/FR/app/id1414865219
 - Last verified: 2026-11-12
 
 ### Open-Xchange (OX)
@@ -945,7 +945,7 @@ Source page: https://eu-techcompass.eu/alternatives.html
 - Deployment: On-premises; Private cloud; Public cloud / SaaS
 - Open source: Partly; on-premises: Yes; cloud: Optional
 - European option to consider when evaluating: Email and groupware platforms such as Microsoft Exchange or Gmail; Carrier-grade mail servers; Authoritative and recursive DNS software
-- Website: https://www.open-xchange.com
+- Website: https://ox.io
 - Verified against: https://ox.io/legal; https://ox.io/about
 - Last verified: 2026-11-12
 
@@ -1074,7 +1074,7 @@ Source page: https://eu-techcompass.eu/alternatives.html
 - Open source: No; on-premises: Yes; cloud: Optional
 - European option to consider when evaluating: Infrastructure and network monitoring tools such as SolarWinds or Datadog
 - Website: https://www.paessler.com
-- Verified against: https://paessler.com/press/pressreleases/paessler-secures-strategic-investment-from-turn-river-capital; https://orrick.com/News/2024/05/IT-and-OT-Monitoring-Turn-River-Capital-Makes-Strategic-Investment-in-Paessler-AG; https://www.mainsights.io/ma-news/us-based-private-equity-firm-turnriver-capital-acquires-a-majority-stake-in-paessler
+- Verified against: https://paessler.com/press/pressreleases/paessler-secures-strategic-investment-from-turn-river-capital; https://orrick.com/News/2024/05/IT-and-OT-Monitoring-Turn-River-Capital-Makes-Strategic-Investment-in-Paessler-AG
 - Last verified: 2026-11-12
 
 ### Pexip
@@ -1281,7 +1281,7 @@ Source page: https://eu-techcompass.eu/alternatives.html
 - Deployment: Public cloud / SaaS
 - Open source: No; on-premises: No; cloud: Yes
 - European option to consider when evaluating: Cloud SIEM; SOAR; Cyber threat intelligence platforms; Open XDR
-- Website: https://www.sekoia.io
+- Website: https://www.sekoia.com
 - Verified against: https://www.essential-business.pt/2025/04/09/bright-pixel-in-e26-million-investment-round-for-french-cybersecurity-company-sekoia/; https://www.gide.com/en/news-insights/gide-conseil-de-sekoia-io-dans-le-cadre-de-sa-levee-de-fonds-de-serie-b-de-26-millions-deuros/
 - Last verified: 2026-11-12
 
@@ -1410,7 +1410,7 @@ Source page: https://eu-techcompass.eu/alternatives.html
 - Open source: Partly; on-premises: Yes; cloud: Optional
 - European option to consider when evaluating: Network detection and response (NDR); Intrusion detection systems (Suricata-based)
 - Website: https://www.stamus-networks.com
-- Verified against: https://stamus-networks.com/contact-us; https://www.stamus-networks.com/about-us
+- Verified against: https://go.stamus-networks.com/contact-us; https://www.stamus-networks.com/about-us
 - Last verified: 2026-11-12
 
 ### Stormshield
@@ -1538,7 +1538,7 @@ Source page: https://eu-techcompass.eu/alternatives.html
 - Open source: No; on-premises: No; cloud: Yes
 - European option to consider when evaluating: Enterprise file sharing services such as Dropbox, Box or OneDrive
 - Website: https://tresorit.com
-- Verified against: https://www.swisspost.ch/en/about-us/media/press-releases/2021/swiss-post-acquires-majority-stake-in-tresorit; https://tresorit.com/blog/end-to-end-encrypted-collaboration-company-tresorit-acquired-by-swiss-post-to-further-its-mission-of-protecting-privacy; https://tresorit.com/about-us
+- Verified against: https://tresorit.com/blog/end-to-end-encrypted-collaboration-company-tresorit-acquired-by-swiss-post-to-further-its-mission-of-protecting-privacy; https://tresorit.com/about-us
 - Last verified: 2026-11-12
 
 ### Tuta
@@ -1570,7 +1570,7 @@ Source page: https://eu-techcompass.eu/alternatives.html
 - Open source: Yes; on-premises: Yes; cloud: Optional
 - European option to consider when evaluating: Directory and identity services such as Microsoft Active Directory or Entra ID
 - Website: https://www.univention.com
-- Verified against: https://www.univention.com/imprint/; https://www.univention.com/blog-en/2026/06/univention-makes-nubus-the-brand-for-identity-access-management/
+- Verified against: https://www.univention.com/imprint/; https://web.archive.org/web/20260712023455/https://www.univention.com/blog-en/2026/06/univention-makes-nubus-the-brand-for-identity-access-management/
 - Last verified: 2026-11-12
 
 ### UpCloud
@@ -1602,7 +1602,7 @@ Source page: https://eu-techcompass.eu/alternatives.html
 - Open source: No; on-premises: Yes; cloud: Optional
 - European option to consider when evaluating: Hardware security modules (HSM); Payment HSMs; Key management systems; File and folder encryption
 - Website: https://utimaco.com
-- Verified against: https://utimaco.com/current-topics/press-releases/utimaco-closes-investment-round-led-sgt-capital; https://utimaco.com/news/press-releases/invision-and-pinova-acquire-utimacos-lawful-interception-business; https://www.privateequitywire.co.uk/sgt-capital-acquires-utimaco/; https://www.bloomberg.com/news/articles/2021-08-13/eqt-sells-cybersecurity-firm-utimaco-to-sgt-in-500-million-deal
+- Verified against: https://web.archive.org/web/20250426200821/https://utimaco.com/current-topics/press-releases/utimaco-closes-investment-round-led-sgt-capital; https://utimaco.com/news/press-releases/invision-and-pinova-acquire-utimacos-lawful-interception-business; https://privateequitywire.com/news/sgt-capital-acquires-utimaco; https://www.bloomberg.com/news/articles/2021-08-13/eqt-sells-cybersecurity-firm-utimaco-to-sgt-in-500-million-deal
 - Last verified: 2026-11-12
 
 ### Vates (XCP-ng / Xen Orchestra)
@@ -1633,8 +1633,8 @@ Source page: https://eu-techcompass.eu/alternatives.html
 - Deployment: On-premises
 - Open source: Yes; on-premises: Yes; cloud: No
 - European option to consider when evaluating: Full disk encryption; Encrypted containers / volumes
-- Website: https://www.veracrypt.fr
-- Verified against: https://veracrypt.fr/code/VeraCrypt/plain/doc/html/Authors.html; https://www.ossir.org/paris/supports/2016/2016-05-10/VeraCrypt-IDRIX-presentation.pdf
+- Website: https://veracrypt.io
+- Verified against: https://veracrypt.io/en/Authors.html; https://www.ossir.org/paris/supports/2016/2016-05-10/VeraCrypt-IDRIX-presentation.pdf
 - Last verified: 2026-11-12
 
 ### WALLIX
@@ -1714,7 +1714,7 @@ Source page: https://eu-techcompass.eu/alternatives.html
 - Open source: Yes; on-premises: Yes; cloud: Optional
 - European option to consider when evaluating: Wiki and knowledge platforms such as Confluence or SharePoint; Online document editors such as Google Docs
 - Website: https://xwiki.com
-- Verified against: https://xwiki.fr/en/company/; https://cryptpad.org/about; https://fosdem.org/2025/events/attachments/fosdem-2025-4601-20-years-of-hacking-the-funding-of-xwiki-and-cryptpad/slides/237318/FOSDEM-25_oKohxQK.pdf
+- Verified against: https://xwiki.com/en/about; https://cryptpad.org/about; https://web.archive.org/web/20250221083538/https://fosdem.org/2025/events/attachments/fosdem-2025-4601-20-years-of-hacking-the-funding-of-xwiki-and-cryptpad/slides/237318/FOSDEM-25_oKohxQK.pdf
 - Last verified: 2026-11-12
 
 ### YesWeHack
@@ -1787,7 +1787,7 @@ Source page: https://eu-techcompass.eu/alternatives.html
 - Vade (France, 2025): Acquired by Hornetsecurity (Germany) in March 2024; came under US ownership when Proofpoint (United States) completed its acquisition of Hornetsecurity in December 2025. New owner country: United States. Source: https://www.bankinfosecurity.com/hornetsecurity-buys-vade-to-fuel-strength-in-france-germany-a-24523
 - Zivver (Netherlands, 2025): Amsterdam-based secure email provider acquired by Kiteworks (United States), announced June 2025. New owner country: United States. Source: https://www.kiteworks.com/company/press-releases/kiteworks-acquires-zivver-expanding-private-data-network-with-zero-knowledge-encryption/
 - Tessian (United Kingdom, 2023): Acquired by Proofpoint (United States); completed 19 December 2023. New owner country: United States. Source: https://www.proofpoint.com/au/newsroom/press-releases/proofpoint-closes-acquisition-tessian
-- ownCloud (Germany (Nuremberg), 2023): US-based Kiteworks announced a combination with ownCloud and Regensburg-based DRACOON in November 2023, bringing both German file-sharing vendors under Kiteworks. New owner country: United States. Source: https://pplaw.com/en/transactions/poellath-advises-shareholders-owncloud-merger-kiteworks
+- ownCloud (Germany (Nuremberg), 2023): US-based Kiteworks announced a combination with ownCloud and Regensburg-based DRACOON in November 2023, bringing both German file-sharing vendors under Kiteworks. New owner country: United States. Source: https://www.pplaw.com/en/transactions/poellath-advises-shareholders-owncloud-merger-kiteworks
 - Avast (Czech Republic, 2022): Merged into NortonLifeLock (United States, renamed Gen Digital); completed 12 September 2022. New owner country: United States. Source: https://investor.gendigital.com/news/news-details/2022/NortonLifeLock-Completes-Merger-with-Avast/default.aspx
 - Boxcryptor (Secomba) (Germany, 2022): Dropbox (United States) acquired the key technology and IP assets of Boxcryptor from Secomba GmbH, announced November 2022; the standalone Boxcryptor service was discontinued. New owner country: United States. Source: https://www.storagenewsletter.com/?p=256535
 - Avira (Germany, 2021): Acquired by NortonLifeLock (United States, now Gen Digital) from Investcorp; completed 8 January 2021. New owner country: United States. Source: https://www.sec.gov/Archives/edgar/data/849399/000084939921000010/nlok-20210402.htm
