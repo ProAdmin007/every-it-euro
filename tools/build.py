@@ -650,6 +650,21 @@ def sitemap(site_url: str, langs: list[tuple]) -> str:
             + "\n".join(urls) + "\n</urlset>\n")
 
 
+def apply_adsense(text: str, client: str) -> str:
+    """Google AdSense site verification: <meta name="google-adsense-account"> after the canonical link."""
+    text = re.sub(r'<meta name="google-adsense-account" content="[^"]*">\n', "", text)
+    if not client:
+        return text
+    return re.sub(r'(<link rel="canonical" href="[^"]*">\n)',
+                  lambda m: m.group(1) + f'<meta name="google-adsense-account" content="{client}">\n', text, count=1)
+
+
+def ads_txt(client: str) -> str:
+    """ads.txt (IAB) declaring Google as the authorised seller for this site."""
+    pub = client.replace("ca-", "", 1)
+    return f"google.com, {pub}, DIRECT, f08c47fec0942fa0\n"
+
+
 def robots(site_url: str) -> str:
     return f"User-agent: *\nAllow: /\n\nSitemap: {site_url}sitemap.xml\n"
 
@@ -712,6 +727,7 @@ def main() -> int:
     check_only = "--check" in sys.argv
     config = load_json("site.config.json") or {}
     site_url = config.get("siteUrl", "https://USERNAME.github.io/REPOSITORY/")
+    adsense_client = config.get("adsenseClient", "")
     if not site_url.endswith("/"):
         site_url += "/"
     repo_url = config.get("repositoryUrl", "https://github.com/")
@@ -770,6 +786,7 @@ def main() -> int:
                 text = re.sub(r'<base href="[^"]*">', f'<base href="{base_path}">', text)
             else:
                 text = apply_site_url(text, f, lang, site_url, langs)
+                text = apply_adsense(text, adsense_client)
                 text, title, desc = apply_seo(text, f, lang, seo, rel)
                 text = structured_data(text, f, lang, title, desc, site_url, ui, langs,
                                        (cdata or {}).get("meta") if f == "alternatives.html" else None)
@@ -799,6 +816,8 @@ def main() -> int:
         if (ROOT / f).read_text(encoding="utf-8") != text:
             stale.append(f)
     gen = {"sitemap.xml": sitemap(site_url, langs), "robots.txt": robots(site_url)}
+    if adsense_client:
+        gen["ads.txt"] = ads_txt(adsense_client)
     for f, text in gen.items():
         existing = (ROOT / f).read_text(encoding="utf-8") if (ROOT / f).exists() else ""
         # lastmod dates change daily; only compare the URLs for staleness.
