@@ -1,6 +1,6 @@
 # EU Tech Compass — Why buying European IT and cybersecurity products strengthens Europe
 
-[![Validate site](https://github.com/ProAdmin007/every-it-euro/actions/workflows/validate.yml/badge.svg)](https://github.com/ProAdmin007/every-it-euro/actions/workflows/validate.yml)
+[![Validate site](https://github.com/ProAdmin007/eu-techcompass/actions/workflows/validate.yml/badge.svg)](https://github.com/ProAdmin007/eu-techcompass/actions/workflows/validate.yml)
 ![Static site](https://img.shields.io/badge/site-static%20HTML%2FCSS%2FJS-003399)
 [![Live site](https://img.shields.io/badge/site-eu--techcompass.eu-FFCC00)](https://eu-techcompass.eu/)
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue)](LICENSE)
@@ -101,7 +101,7 @@ All paths are relative, so the site works both at `https://USERNAME.github.io/` 
 ### 1. Create a GitHub repository
 
 1. Sign in to GitHub and click **New repository** (or go to <https://github.com/new>).
-2. Enter a name, for example `every-it-euro`.
+2. Enter a name, for example `eu-techcompass`.
 3. Choose **Public**. GitHub Pages on private repositories requires a paid plan.
 4. Do **not** add a README, .gitignore or licence; this project already contains them.
 5. Click **Create repository**.
@@ -112,8 +112,8 @@ Edit `site.config.json`:
 
 ```json
 {
-  "siteUrl": "https://YOUR-USERNAME.github.io/every-it-euro/",
-  "repositoryUrl": "https://github.com/YOUR-USERNAME/every-it-euro"
+  "siteUrl": "https://YOUR-USERNAME.github.io/eu-techcompass/",
+  "repositoryUrl": "https://github.com/YOUR-USERNAME/eu-techcompass"
 }
 ```
 
@@ -127,7 +127,7 @@ git init
 git add .
 git commit -m "Initial commit: EU Tech Compass website"
 git branch -M main
-git remote add origin https://github.com/YOUR-USERNAME/every-it-euro.git
+git remote add origin https://github.com/YOUR-USERNAME/eu-techcompass.git
 git push -u origin main
 ```
 
@@ -143,7 +143,7 @@ git push -u origin main
 ### 6. Publish from the repository root
 
 4. In the folder drop-down next to the branch, select **`/ (root)`** and click **Save**.
-5. After a minute or two, the site is live at `https://YOUR-USERNAME.github.io/every-it-euro/`. The URL is shown at the top of the Pages settings.
+5. After a minute or two, the site is live at `https://YOUR-USERNAME.github.io/eu-techcompass/`. The URL is shown at the top of the Pages settings.
 
 ### 7. Use a custom domain later (optional)
 

@@ -46,4 +46,4 @@ Key facts:
 
 ## Optional
 
-- [Source code, data and methodology](https://github.com/ProAdmin007/every-it-euro): open repository, corrections welcome
+- [Source code, data and methodology](https://github.com/ProAdmin007/eu-techcompass): open repository, corrections welcome
